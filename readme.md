@@ -6,14 +6,17 @@
 Quick & dirty Go program to read a text file definition of a keyboard layout 
 and output an autokey keys remapping script
 
-Takes something like this from a text file:
-(only the 30 main keys, whitespace will be removed)
+Representation of a kbd (main 30 keys in this example):
+(no whitespace kept in internal representation)
 
-		B L O U / J D C P Y
-		H R E A ? G T S N I
-		K X < > Z W M F V Q
+Keyboard
 
-		b l o u ; j d c p y  
-		h r e a , g t s n i  
-		k x : . z w m f v q  
+  KbdRows
+	Q W E R T Y U I O P		// KbdRow
+	A S D F G H J K L ;
+	Z X C V B N M , . /
 
+  KbdRows
+	q w e r t y u i o p
+	a s d f g h j k l ;
+	z x c v b n m , . /

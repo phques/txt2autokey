@@ -1,12 +1,12 @@
 // txt2autokey project
-// Copyright 2016 Philippe Quesnel
+// Copyright 2017 Philippe Quesnel
 // Licensed under the Academic Free License version 3.0
-// see README !!
 package main
 
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"log"
 	"os"
 	"regexp"
@@ -49,12 +49,34 @@ type Keyboard struct {
 
 //-------
 
-func (row KbdRow) String() string {
-	return string(row)
-}
+//func (row KbdRow) String() string {
+//	return string(row)
+//}
 
 func (row KbdRow) Equal(other KbdRow) bool {
 	return string(row) == string(other)
+}
+
+func NewRow(line []byte) KbdRow {
+	// remove all whitespace, end up with only the keys
+	// nb: returns a copy, so we can just return this
+	return KbdRow(re.ReplaceAllLiteral(line, nil))
+}
+
+// return row separated with spaces
+func (row KbdRow) String() string {
+	if len(row) == 0 {
+		return ""
+	}
+
+	line := make([]byte, len(row)*2)
+	for i := 0; i < len(row); i++ {
+		line[i*2] = row[i]
+		line[i*2+1] = ' '
+	}
+
+	// strip last space
+	return string(line[:len(line)-1])
 }
 
 //----
@@ -77,31 +99,88 @@ func (rows KbdRows) Equal(others KbdRows) bool {
 	return true
 }
 
-func NewRow(line []byte) KbdRow {
-	// remove all whitespace, end up with only the keys
-	// nb: returns a copy, so we can just return this
-	return KbdRow(re.ReplaceAllLiteral(line, nil))
-}
-
 //------
 
-func main() {
-	file, err := os.Open("cmk_moddh.txt")
-	if err != nil {
-		log.Fatal(err)
+// CheckLayout returns an error if the upper and lower rows have
+// different shapes
+func (kbd *Keyboard) CheckLayout() error {
+	// check nbr rows
+	if len(kbd.UpperCase) != len(kbd.LowerCase) {
+		return fmt.Errorf("upper and lower parts have different nbr rows")
 	}
-	defer file.Close()
+	if len(kbd.UpperCase) == 0 {
+		return fmt.Errorf("no rows found!")
+	}
 
-	scanner := bufio.NewScanner(file)
+	// check that all rows have same length
+	for i := 0; i < len(kbd.LowerCase); i++ {
+		if len(kbd.LowerCase) != len(kbd.UpperCase) {
+			return fmt.Errorf("rows %d len = %d %d",
+				i+1, len(kbd.UpperCase), len(kbd.LowerCase))
+		}
+	}
+
+	return nil
+}
+
+// ReadKeyboardFile reads a keyboard definition from a reader
+func (kbd *Keyboard) ReadKeyboardDefinition(rdr io.Reader) error {
+	scanner := bufio.NewScanner(rdr)
+	readingUpper := true
+
 	for scanner.Scan() {
+		// read line, convert to row
 		line := scanner.Text()
-		line2 := re.ReplaceAllLiteral([]byte(line), nil)
-		if len(line2) > 0 {
-			fmt.Printf("%s\n", line2)
+		row := NewRow([]byte(line))
+
+		// empty line?
+		if len(row) == 0 {
+			// skip initial blank lines
+			if len(kbd.UpperCase) == 0 {
+				continue
+			}
+
+			// if lower case rows already done, stop
+			if !readingUpper {
+				break
+			} else {
+				// done with upper case rows, switch to lower
+				readingUpper = false
+			}
+		}
+
+		// add new row
+		if readingUpper {
+			kbd.UpperCase = kbd.UpperCase.AddRow(row)
+		} else {
+			kbd.LowerCase = kbd.LowerCase.AddRow(row)
 		}
 	}
 
 	if err := scanner.Err(); err != nil {
 		log.Fatal(err)
+	}
+
+	return kbd.CheckLayout()
+}
+
+// ReadKeyboardFile reads a keyboard definition from a file
+func (kbd *Keyboard) ReadKeyboardFile(filename string) error {
+	// open the file
+	file, err := os.Open(filename)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	return kbd.ReadKeyboardDefinition(file)
+}
+
+//------
+
+func main() {
+	kbd := new(Keyboard)
+	if kbd.ReadKeyboardFile("cmk_moddh.txt") != nil {
+		//fmt.Print(kbd.String())
 	}
 }

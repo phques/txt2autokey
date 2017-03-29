@@ -1,7 +1,7 @@
 // txt2autokey project
-// Copyright 2016 Philippe Quesnel
+// Copyright 2017 Philippe Quesnel
 // Licensed under the Academic Free License version 3.0
-// see README !!
+
 package main
 
 import "testing"
@@ -11,9 +11,9 @@ func TestKbdRow(t *testing.T) {
 
 	// check internal representation
 	expStr := "12acd"
-	resStr := row1.String()
+	resStr := string(row1)
 	if resStr != expStr {
-		t.Error("Expected row string", expStr, "got", resStr)
+		t.Errorf("Expected internal row string '%s' got '%s'", expStr, resStr)
 	}
 
 	// check equality
@@ -29,6 +29,13 @@ func TestKbdRow(t *testing.T) {
 	if row1.Equal(row2) {
 		t.Error("Expected", row1, "!=", row2)
 	}
+
+	//check String
+	expStr = "a b c d"
+	resStr = row1.String()
+	if resStr != expStr {
+		t.Errorf("Expected row string '%s' got '%s'", expStr, resStr)
+	}
 }
 
 func TestKbdRows(t *testing.T) {
@@ -37,7 +44,7 @@ func TestKbdRows(t *testing.T) {
 	row0 := NewRow([]byte("1234"))
 	row1 := NewRow([]byte("5678"))
 
-	// check that row is correctly added
+	// check that row is added
 	rows = rows.AddRow(row0)
 	if len(rows) != 1 {
 		t.Error("Expected len() == 1, got", len(rows))
@@ -54,5 +61,26 @@ func TestKbdRows(t *testing.T) {
 	}
 	if !rows[1].Equal(row1) {
 		t.Error("rows[1] != row1")
+	}
+
+	// test equality
+	var rows2 KbdRows = nil
+	rows2 = rows2.AddRow(row0)
+	rows2 = rows2.AddRow(row1)
+	if !rows.Equal(rows2) {
+		t.Error("Expected rows == rows2")
+	}
+	// <> len
+	rows2 = rows2.AddRow(row1)
+	if rows.Equal(rows2) {
+		t.Error("Expected rows != rows2")
+	}
+
+	// <> content
+	rows2 = nil
+	rows2 = rows2.AddRow(row1)
+	rows2 = rows2.AddRow(row0)
+	if rows.Equal(rows2) {
+		t.Error("Expected rows != rows2")
 	}
 }
