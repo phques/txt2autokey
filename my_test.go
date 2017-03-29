@@ -36,6 +36,14 @@ func TestKbdRow(t *testing.T) {
 	if resStr != expStr {
 		t.Errorf("Expected row string '%s' got '%s'", expStr, resStr)
 	}
+
+	row2 = NewRow([]byte(""))
+	expStr = ""
+	resStr = row2.String()
+	if resStr != expStr {
+		t.Errorf("Expected row string '%s' got '%s'", expStr, resStr)
+	}
+
 }
 
 func TestKbdRows(t *testing.T) {
@@ -83,4 +91,27 @@ func TestKbdRows(t *testing.T) {
 	if rows.Equal(rows2) {
 		t.Error("Expected rows != rows2")
 	}
+
+	//check String
+	expStr := "1 2 3 4\n5 6 7 8"
+	resStr := rows.String()
+	if resStr != expStr {
+		t.Errorf("Expected rows string '%s' got '%s'", expStr, resStr)
+	}
+
+	expStr = "1 2 3 4\n5 6 7 8"
+	resStr = rows.String()
+	if resStr != expStr {
+		t.Errorf("Expected rows string '%s' got '%s'", expStr, resStr)
+	}
+
+	rows = nil
+	expStr = ""
+	resStr = rows.String()
+	if resStr != expStr {
+		t.Errorf("Expected rows string '%s' got '%s'", expStr, resStr)
+	}
+}
+
+func TestKeyboard(t *testing.T) {
 }

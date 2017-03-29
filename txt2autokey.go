@@ -5,6 +5,7 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"io"
 	"log"
@@ -99,7 +100,30 @@ func (rows KbdRows) Equal(others KbdRows) bool {
 	return true
 }
 
+func (rows KbdRows) String() string {
+	if rows == nil || len(rows) == 0 {
+		return ""
+	}
+
+	// concat rows string()
+	var buffer bytes.Buffer
+	for _, row := range rows {
+		buffer.WriteString(row.String())
+		buffer.WriteString("\n")
+	}
+
+	// strip last return
+	text := buffer.String()
+	return string(text[:len(text)-1])
+
+}
+
 //------
+
+func (kbd *Keyboard) String() string {
+	return kbd.UpperCase.String() + "\n\n" +
+		kbd.LowerCase.String()
+}
 
 // CheckLayout returns an error if the upper and lower rows have
 // different shapes
@@ -146,6 +170,7 @@ func (kbd *Keyboard) ReadKeyboardDefinition(rdr io.Reader) error {
 			} else {
 				// done with upper case rows, switch to lower
 				readingUpper = false
+				continue
 			}
 		}
 
@@ -180,7 +205,10 @@ func (kbd *Keyboard) ReadKeyboardFile(filename string) error {
 
 func main() {
 	kbd := new(Keyboard)
-	if kbd.ReadKeyboardFile("cmk_moddh.txt") != nil {
-		//fmt.Print(kbd.String())
+	err := kbd.ReadKeyboardFile("cmk_moddh.txt")
+	if err == nil {
+		fmt.Println(kbd.String())
+	} else {
+		fmt.Println(err)
 	}
 }
