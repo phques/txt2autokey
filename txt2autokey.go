@@ -35,6 +35,18 @@ func outputMapping(fromKbd, toKbd *kbdRdr.Keyboard) {
 	}
 }
 
+func outputRowMapping(fromRow, toRow kbdRdr.KbdRow) {
+	for i := 0; i < len(fromRow); i++ {
+		from := escape(fromRow[i])
+		to := escape(toRow[i])
+		if from == to {
+			fmt.Printf(";%s::%s\n", from, to)
+		} else {
+			fmt.Printf(" %s::%s\n", from, to)
+		}
+	}
+}
+
 // output upper row then lower row, upper, lower etc
 func outputMapping0(fromKbd, toKbd *kbdRdr.Keyboard) {
 	for i := 0; i < len(fromKbd.LowerCase); i++ {
@@ -79,18 +91,6 @@ func outputMapping1(fromKbd, toKbd *kbdRdr.Keyboard) {
 		}
 
 		fmt.Println("")
-	}
-}
-
-func outputRowMapping(fromRow, toRow kbdRdr.KbdRow) {
-	for i := 0; i < len(fromRow); i++ {
-		from := escape(fromRow[i])
-		to := escape(toRow[i])
-		if from == to {
-			fmt.Printf(";%s::%s\n", from, to)
-		} else {
-			fmt.Printf(" %s::%s\n", from, to)
-		}
 	}
 }
 
