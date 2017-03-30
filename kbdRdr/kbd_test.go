@@ -111,6 +111,13 @@ func TestKbdRows(t *testing.T) {
 	if resStr != expStr {
 		t.Errorf("Expected rows string '%s' got '%s'", expStr, resStr)
 	}
+
+	// test LayoutString
+	expStr = "4,4"
+	resStr = rows2.LayoutString()
+	if resStr != expStr {
+		t.Errorf("Expected rows layout string '%s' got '%s'", expStr, resStr)
+	}
 }
 
 func TestKeyboard(t *testing.T) {

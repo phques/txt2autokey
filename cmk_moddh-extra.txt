@@ -1,0 +1,4 @@
+; other changes to add
+; to be #included in ahk script
+
+CapsLock::BackSpace

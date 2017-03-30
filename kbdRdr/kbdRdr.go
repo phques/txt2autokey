@@ -116,7 +116,21 @@ func (rows KbdRows) String() string {
 	// strip last return
 	text := buffer.String()
 	return string(text[:len(text)-1])
+}
 
+// creates a string representing the 'form' / layout in terms of nbr keys
+// eg: "10,10,10" or "13,13,11,10"
+func (rows KbdRows) LayoutString() string {
+	// concat rows
+	text := ""
+	for i, row := range rows {
+		if i > 0 {
+			text = text + ","
+		}
+		text = text + fmt.Sprintf("%d", len(row))
+	}
+
+	return text
 }
 
 //------
@@ -124,6 +138,13 @@ func (rows KbdRows) String() string {
 func (kbd *Keyboard) String() string {
 	return kbd.UpperCase.String() + "\n\n" +
 		kbd.LowerCase.String()
+}
+
+// creates a string representing the 'form' / layout in terms of nbr keys
+// eg: "10,10,10" or "13,13,11,10"
+// since upper and lower have the same layout we use the layout of upper
+func (kbd *Keyboard) LayoutString() string {
+	return kbd.UpperCase.LayoutString()
 }
 
 // CheckLayout returns an error if the upper and lower rows have
