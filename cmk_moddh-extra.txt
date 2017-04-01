@@ -1,4 +1,6 @@
 ; other changes to add
 ; to be #included in ahk script
 
-CapsLock::BackSpace
+#include capsLock.ahk
+
++^0:: Suspend Toggle
