@@ -19,26 +19,27 @@ x c d v z k h , . /
 
 */
 
-e::f
-r::p
-t::b
-y::j
-u::l
-i::u
-o::y
-p::`;
-s::r
-d::s
-f::t
-h::m
-j::n
-k::e
-l::i
-`;::o
-z::x
-x::c
-c::d
-b::z
-n::k
-m::h
 #Include includes.ahk
+
+*sc012::sc021			; e :: f
+*sc013::sc019			; r :: p
+*sc014::sc030			; t :: b
+*sc015::sc024			; y :: j
+*sc016::sc026			; u :: l
+*sc017::sc016			; i :: u
+*sc018::sc015			; o :: y
+*sc019::sc027			; p :: ;
+*sc01f::sc013			; s :: r
+*sc020::sc01f			; d :: s
+*sc021::sc014			; f :: t
+*sc023::sc032			; h :: m
+*sc024::sc031			; j :: n
+*sc025::sc012			; k :: e
+*sc026::sc017			; l :: i
+*sc027::sc018			; ; :: o
+*sc02c::sc02d			; z :: x
+*sc02d::sc02e			; x :: c
+*sc02e::sc020			; c :: d
+*sc030::sc02c			; b :: z
+*sc031::sc025			; n :: k
+*sc032::sc023			; m :: h

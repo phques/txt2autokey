@@ -1,0 +1,22 @@
+// 2016-04-24
+// 'straight' no var changes
+// mtgap curlrev3
+// modified version of mtgap based on my personal preferences
+
+// for this version, I also added a 'programmers' on the digits top row
+
+
+// Hands: 47% 52%
+// Fingers: 6.0% 11% 14% 15% 0.00% 0.00% 18% 16% 11% 7.0%
+
+
+` 1 2 3 4 5 6 7 8 9 0 & ~
+   X C D M K @ ! U P Q [ ] |
+    R S T H V / A E N I '
+     G B L F Z ? O Y W J
+
+$ * ( { < = % _ > } ) - ^
+   x c d m k : . u p q + # \
+    r s t h v ; a e n i "
+     g b l f z , o y w j
+ 

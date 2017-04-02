@@ -21,35 +21,35 @@ g b l f z , o y w j
 
 #Include includes.ahk
 
-q::x
-w::c
-e::d
-r::m
-t::k
-+y::<
-*y:::
-u::.
-i::u
-o::p
-p::q
-a::r
-d::t
-f::h
-g::v
-+h::Send {/}
-*h::`;
-j::a
-k::e
-l::n
-`;::i
-z::g
-x::b
-c::l
-v::f
-b::z
-+n::?
-*n::,
-m::o
-,::y
-.::w
-/::j
+*sc010::sc02d			; q :: x
+*sc011::sc02e			; w :: c
+*sc012::sc020			; e :: d
+*sc013::sc032			; r :: m
+*sc014::sc025			; t :: k
++sc015::+sc033			; Y :: <
+ sc015::+sc027			; y :: :
+*sc016::sc034			; u :: .
+*sc017::sc016			; i :: u
+*sc018::sc019			; o :: p
+*sc019::sc010			; p :: q
+*sc01e::sc013			; a :: r
+*sc020::sc014			; d :: t
+*sc021::sc023			; f :: h
+*sc022::sc02f			; g :: v
++sc023::Send {sc035}	; H :: /
+ sc023::sc027			; h :: ;
+*sc024::sc01e			; j :: a
+*sc025::sc012			; k :: e
+*sc026::sc031			; l :: n
+*sc027::sc017			; ; :: i
+*sc02c::sc022			; z :: g
+*sc02d::sc030			; x :: b
+*sc02e::sc026			; c :: l
+*sc02f::sc021			; v :: f
+*sc030::sc02c			; b :: z
++sc031::+sc035			; N :: ?
+ sc031::sc033			; n :: ,
+*sc032::sc018			; m :: o
+*sc033::sc015			; , :: y
+*sc034::sc011			; . :: w
+*sc035::sc024			; / :: j
