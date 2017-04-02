@@ -19,70 +19,26 @@ x c d v z k h , . /
 
 */
 
-;Q::Q
-;W::W
- E::F
- R::P
- T::B
- Y::J
- U::L
- I::U
- O::Y
- P:::
-
-;A::A
- S::R
- D::S
- F::T
-;G::G
- H::M
- J::N
- K::E
- L::I
- :::O
-
- Z::X
- X::C
- C::D
-;V::V
- B::Z
- N::K
- M::H
-;<::<
-;>::>
-;?::?
-
-;q::q
-;w::w
- e::f
- r::p
- t::b
- y::j
- u::l
- i::u
- o::y
- p::`;
-
-;a::a
- s::r
- d::s
- f::t
-;g::g
- h::m
- j::n
- k::e
- l::i
- `;::o
-
- z::x
- x::c
- c::d
-;v::v
- b::z
- n::k
- m::h
-;,::,
-;.::.
-;/::/
-
+e::f
+r::p
+t::b
+y::j
+u::l
+i::u
+o::y
+p::`;
+s::r
+d::s
+f::t
+h::m
+j::n
+k::e
+l::i
+`;::o
+z::x
+x::c
+c::d
+b::z
+n::k
+m::h
 #Include includes.ahk

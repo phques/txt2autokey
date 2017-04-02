@@ -1,33 +1,55 @@
+/*
+From  (../../qwertyMain30.txt)
+Q W E R T Y U I O P
+A S D F G H J K L :
+Z X C V B N M < > ?
 
+q w e r t y u i o p
+a s d f g h j k l ;
+z x c v b n m , . /
 
-;*h::Send {Blind}{U+0077}
+To  (mtgap-curlRev3.txt)
+X C D M K < > U P Q
+R S T H V / A E N I
+G B L F Z ? O Y W J
 
+x c d m k : . u p q
+r s t h v ; a e n i
+g b l f z , o y w j
 
-; +h::
-; SetKeyDelay -1   ; If the destination key is a mouse button, SetMouseDelay is used instead.
-; Send {/ DownTemp}  ; DownTemp is like Down except that other Send commands in the script won't assume "b" should stay down during their Send.
-; return
+*/
 
-; +h up::
-; SetKeyDelay -1  ; See note below for why press-duration is not specified with either of these SetKeyDelays.
-; Send {/ Up}
-; return
+#Include includes.ahk
 
-+h:: Send {/}
-h::<
-
-?::.
-/::k
-
-; SetKeyDelay -1   ; If the destination key is a mouse button, SetMouseDelay is used instead.
-; Send {Blind}{; DownTemp}  ; DownTemp is like Down except that other Send commands in the script won't assume "b" should stay down during their Send.
-; return
-
-; h up::
-; SetKeyDelay -1  ; See note below for why press-duration is not specified with either of these SetKeyDelays.
-; Send {Blind}{; Up}
-; return
-
- 
-+^0:: Suspend Toggle
-+^9:: Reload
+q::x
+w::c
+e::d
+r::m
+t::k
++y::<
+*y:::
+u::.
+i::u
+o::p
+p::q
+a::r
+d::t
+f::h
+g::v
++h::Send {/}
+*h::`;
+j::a
+k::e
+l::n
+`;::i
+z::g
+x::b
+c::l
+v::f
+b::z
++n::?
+*n::,
+m::o
+,::y
+.::w
+/::j

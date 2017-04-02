@@ -176,8 +176,14 @@ func (kbd *Keyboard) ReadKeyboardDefinition(rdr io.Reader) error {
 
 	for scanner.Scan() {
 		// read line, convert to row
-		line := scanner.Text()
-		row := NewRow([]byte(line))
+		line := []byte(scanner.Text())
+
+		// skip comments
+		if bytes.HasPrefix(line, []byte("//")) {
+			continue
+		}
+
+		row := NewRow(line)
 
 		// empty line?
 		if len(row) == 0 {
@@ -199,8 +205,10 @@ func (kbd *Keyboard) ReadKeyboardDefinition(rdr io.Reader) error {
 		// add new row
 		if readingUpper {
 			kbd.UpperCase = kbd.UpperCase.AddRow(row)
+			//			fmt.Printf("add upper %s\n", row)
 		} else {
 			kbd.LowerCase = kbd.LowerCase.AddRow(row)
+			//			fmt.Printf("add lower %s\n", row)
 		}
 	}
 
