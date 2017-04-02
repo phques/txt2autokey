@@ -1,5 +1,7 @@
-; other changes to add / to be #included in ahk script
+; PLace #includes and things to add to ahk script here 
 
-#include ../../capsLock.ahk
+#include ../../extend.ahk
 
 +^0:: Suspend Toggle
+;;+^9:: Reload
+
