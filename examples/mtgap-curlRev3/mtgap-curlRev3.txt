@@ -1,0 +1,18 @@
+// 2016-04-24
+// 'straight' no var changes
+// mtgap curlrev3
+// modified version of mtgap based on my personal preferences
+
+// Hands: 47% 52%
+// Fingers: 6.0% 11% 14% 15% 0.00% 0.00% 18% 16% 11% 7.0%
+
+
+
+ X  C  D  M  K   <  >  U  P  Q
+ R  S  T  H  V   /  A  E  N  I
+ G  B  L  F  Z   ?  O  Y  W  J
+
+ x  c  d  m  k   :  .  u  p  q
+ r  s  t  h  v   ;  a  e  n  i
+ g  b  l  f  z   ,  o  y  w  j
+ 

@@ -1,3 +1,5 @@
+// colemak AngleZ / Curl-DH[DvbgHm]
+
 Q W F P B  J L U Y :
  A R S T G  M N E I O
   X C D V Z  K H < > ?
