@@ -12,6 +12,14 @@ global HasAltGr := 0
 #include ../../fromPkl/pkl_gui.ahk
 
 
-+^0:: Suspend Toggle
++^0::
+    Suspend Toggle
+    if (A_IsSuspended)
+        gosub displayHelpImageSuspendOn
+    else 
+        gosub displayHelpImageSuspendOff
+return
+
 ;;+^9:: Reload
 +^9:: gosub displayHelpImageToggle
+

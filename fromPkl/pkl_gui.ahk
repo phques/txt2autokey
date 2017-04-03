@@ -7,6 +7,14 @@ displayHelpImageToggle:
 	pkl_displayHelpImage( 2 )
 return
 
+displayHelpImageSuspendOn:
+	pkl_displayHelpImage( 3 )
+return
+
+displayHelpImageSuspendOff:
+	pkl_displayHelpImage( 4 )
+return
+
 
 
 pkl_displayHelpImage( activate := 0 )
