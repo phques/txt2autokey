@@ -1,4 +1,4 @@
-;;Created from extend.txt
+;;Generated from extend.txt
 ;; extend key is CapsLock
 
 ;; q => Escape
@@ -263,5 +263,16 @@ return
 CapsLock & sc035 up::
   SetKeyDelay -1
   Send {Blind}{}^{z Up}
+return
+
+;; sp => Enter
+CapsLock & sc039::
+ SetKeyDelay -1
+ Send {Blind}{Enter DownTemp}
+return
+
+CapsLock & sc039 up::
+  SetKeyDelay -1
+  Send {Blind}{Enter Up}
 return
 
