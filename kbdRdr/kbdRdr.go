@@ -159,11 +159,15 @@ func (kbd *Keyboard) CheckLayout() error {
 	}
 
 	// check that all rows have same length
-	for i := 0; i < len(kbd.LowerCase); i++ {
-		if len(kbd.LowerCase) != len(kbd.UpperCase) {
-			return fmt.Errorf("rows %d len = %d %d",
-				i+1, len(kbd.UpperCase), len(kbd.LowerCase))
-		}
+	//	for i := 0; i < len(kbd.LowerCase); i++ {
+	//		if len(kbd.LowerCase) != len(kbd.UpperCase) {
+	//			return fmt.Errorf("rows %d len = %d %d",
+	//				i+1, len(kbd.UpperCase), len(kbd.LowerCase))
+	//		}
+	//	}
+	if kbd.LowerCase.LayoutString() != kbd.UpperCase.LayoutString() {
+		return fmt.Errorf("rows layout dont match: upper %s, lower %s",
+			kbd.UpperCase.LayoutString(), kbd.LowerCase.LayoutString())
 	}
 
 	return nil

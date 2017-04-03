@@ -4,7 +4,10 @@
 
 package kbdRdr
 
-import "testing"
+import (
+	"strings"
+	"testing"
+)
 
 func TestKbdRow(t *testing.T) {
 	row1 := NewRow([]byte(" 1 2 a c  d \n"))
@@ -120,5 +123,46 @@ func TestKbdRows(t *testing.T) {
 	}
 }
 
-func TestKeyboard(t *testing.T) {
+func TestKeyboard1(t *testing.T) {
+	// read a kbd def from string, missing 1 char/row in lower case rows
+	kbdDefStr :=
+		`	Q W E R T Y
+			A S D F G		
+			
+			q w e r t 
+			a s d f`
+
+	kbd := new(Keyboard)
+	rdr := strings.NewReader(kbdDefStr)
+	err := kbd.ReadKeyboardDefinition(rdr)
+	if err == nil {
+		t.Error("Expecting error creating kbd from bad layout string")
+	}
+}
+
+func TestKeyboard2(t *testing.T) {
+	// read a kbd def from string
+	kbdStr :=
+		`	Q W E R T Y
+			A S D F G		
+			Z X C V
+			
+			q w e r t y
+			a s d f g
+			z x c v`
+
+	kbd := new(Keyboard)
+	rdr := strings.NewReader(kbdStr)
+	err := kbd.ReadKeyboardDefinition(rdr)
+	if err != nil {
+		t.Errorf("error creating kbd from string: %v", err)
+	}
+
+	// test layout string
+	expStr := "6,5,4"
+	resStr := kbd.LayoutString()
+	if resStr != expStr {
+		t.Errorf("Expected kbd layout string %q, got %q", expStr, resStr)
+	}
+
 }
