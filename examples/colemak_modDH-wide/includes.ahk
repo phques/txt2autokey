@@ -8,8 +8,8 @@ global ImgWidth := 296
 global ImgHeight := 112
 global HasAltGr := 1
 
-#include ../../capsLock.ahk
-; #include ../../extend.ahk
+;#include ../../capsLock.ahk
+#include ../../extend-wide.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
 

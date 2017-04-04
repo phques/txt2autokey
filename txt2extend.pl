@@ -10,7 +10,7 @@ use warnings;
 # and j|024::Left is letter 'j' / scancode 024 (3 digits hex !) maps to Left arrow
 # the letter is for human ref on Qwerty kbd only, we will use the scancode
 
-my $filename = 'extend.txt';
+my $filename = $ARGV[0];
 open(my $fh, '<:encoding(UTF-8)', $filename)
 	or die "Could not open file '$filename' $!";
  

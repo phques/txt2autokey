@@ -1,4 +1,4 @@
-;;Generated from extend.txt
+;;Generated from extend-wide.txt
 ;; extend key is CapsLock
 
 ;; q => Escape
@@ -45,136 +45,125 @@ CapsLock & sc020 up::
   Send {Blind}{Control Up}
 return
 
-;; y => PgUp
-CapsLock & sc015::
+;; u => PgUp
+CapsLock & sc016::
  SetKeyDelay -1
  Send {Blind}{PgUp DownTemp}
 return
 
-CapsLock & sc015 up::
+CapsLock & sc016 up::
   SetKeyDelay -1
   Send {Blind}{PgUp Up}
 return
 
-;; u => Home
-CapsLock & sc016::
+;; i => Home
+CapsLock & sc017::
  SetKeyDelay -1
  Send {Blind}{Home DownTemp}
 return
 
-CapsLock & sc016 up::
+CapsLock & sc017 up::
   SetKeyDelay -1
   Send {Blind}{Home Up}
 return
 
-;; i => Up
-CapsLock & sc017::
+;; o => Up
+CapsLock & sc018::
  SetKeyDelay -1
  Send {Blind}{Up DownTemp}
 return
 
-CapsLock & sc017 up::
+CapsLock & sc018 up::
   SetKeyDelay -1
   Send {Blind}{Up Up}
 return
 
-;; o => End
-CapsLock & sc018::
+;; p => End
+CapsLock & sc019::
  SetKeyDelay -1
  Send {Blind}{End DownTemp}
 return
 
-CapsLock & sc018 up::
+CapsLock & sc019 up::
   SetKeyDelay -1
   Send {Blind}{End Up}
 return
 
-;; p => Delete
-CapsLock & sc019::
+;; [ => Delete
+CapsLock & sc01A::
  SetKeyDelay -1
  Send {Blind}{Delete DownTemp}
 return
 
-CapsLock & sc019 up::
+CapsLock & sc01A up::
   SetKeyDelay -1
   Send {Blind}{Delete Up}
 return
 
-;; [ => Escape
-CapsLock & sc01A::
+;; ] => Escape
+CapsLock & sc01B::
  SetKeyDelay -1
  Send {Blind}{Escape DownTemp}
 return
 
-CapsLock & sc01A up::
+CapsLock & sc01B up::
   SetKeyDelay -1
   Send {Blind}{Escape Up}
 return
 
-;; h => PgDn
-CapsLock & sc023::
+;; j => PgDn
+CapsLock & sc024::
  SetKeyDelay -1
  Send {Blind}{PgDn DownTemp}
 return
 
-CapsLock & sc023 up::
+CapsLock & sc024 up::
   SetKeyDelay -1
   Send {Blind}{PgDn Up}
 return
 
-;; j => Left
-CapsLock & sc024::
+;; k => Left
+CapsLock & sc025::
  SetKeyDelay -1
  Send {Blind}{Left DownTemp}
 return
 
-CapsLock & sc024 up::
+CapsLock & sc025 up::
   SetKeyDelay -1
   Send {Blind}{Left Up}
 return
 
-;; k => Down
-CapsLock & sc025::
+;; l => Down
+CapsLock & sc026::
  SetKeyDelay -1
  Send {Blind}{Down DownTemp}
 return
 
-CapsLock & sc025 up::
+CapsLock & sc026 up::
   SetKeyDelay -1
   Send {Blind}{Down Up}
 return
 
-;; l => Right
-CapsLock & sc026::
+;; ; => Right
+CapsLock & sc027::
  SetKeyDelay -1
  Send {Blind}{Right DownTemp}
 return
 
-CapsLock & sc026 up::
+CapsLock & sc027 up::
   SetKeyDelay -1
   Send {Blind}{Right Up}
 return
 
-;; ; => Backspace
-CapsLock & sc027::
+;; ' => Backspace
+CapsLock & sc028::
  SetKeyDelay -1
  Send {Blind}{Backspace DownTemp}
 return
 
-CapsLock & sc027 up::
-  SetKeyDelay -1
-  Send {Blind}{Backspace Up}
-return
-
-;; ' => AppsKey
-CapsLock & sc028::
- SetKeyDelay -1
- Send {Blind}{AppsKey DownTemp}
-return
-
 CapsLock & sc028 up::
   SetKeyDelay -1
-  Send {Blind}{AppsKey Up}
+  Send {Blind}{Backspace Up}
 return
 
 ;; z => }^{z
@@ -221,48 +210,48 @@ CapsLock & sc02F up::
   Send {Blind}{}^{v Up}
 return
 
-;; m => }^{c
+;; m => }^{z
 CapsLock & sc032::
- SetKeyDelay -1
- Send {Blind}{}^{c DownTemp}
-return
-
-CapsLock & sc032 up::
-  SetKeyDelay -1
-  Send {Blind}{}^{c Up}
-return
-
-;; , => }^{x
-CapsLock & sc033::
- SetKeyDelay -1
- Send {Blind}{}^{x DownTemp}
-return
-
-CapsLock & sc033 up::
-  SetKeyDelay -1
-  Send {Blind}{}^{x Up}
-return
-
-;; . => }^{v
-CapsLock & sc034::
- SetKeyDelay -1
- Send {Blind}{}^{v DownTemp}
-return
-
-CapsLock & sc034 up::
-  SetKeyDelay -1
-  Send {Blind}{}^{v Up}
-return
-
-;; / => }^{z
-CapsLock & sc035::
  SetKeyDelay -1
  Send {Blind}{}^{z DownTemp}
 return
 
-CapsLock & sc035 up::
+CapsLock & sc032 up::
   SetKeyDelay -1
   Send {Blind}{}^{z Up}
+return
+
+;; , => }^{c
+CapsLock & sc033::
+ SetKeyDelay -1
+ Send {Blind}{}^{c DownTemp}
+return
+
+CapsLock & sc033 up::
+  SetKeyDelay -1
+  Send {Blind}{}^{c Up}
+return
+
+;; . => }^{x
+CapsLock & sc034::
+ SetKeyDelay -1
+ Send {Blind}{}^{x DownTemp}
+return
+
+CapsLock & sc034 up::
+  SetKeyDelay -1
+  Send {Blind}{}^{x Up}
+return
+
+;; / => }^{v
+CapsLock & sc035::
+ SetKeyDelay -1
+ Send {Blind}{}^{v DownTemp}
+return
+
+CapsLock & sc035 up::
+  SetKeyDelay -1
+  Send {Blind}{}^{v Up}
 return
 
 ;; sp => Enter

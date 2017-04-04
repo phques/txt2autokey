@@ -13,7 +13,7 @@ o|018::End
 p|019::Delete
 [|01A::Escape
 
-h|023::PgDown
+h|023::PgDn
 j|024::Left
 k|025::Down
 l|026::Right
