@@ -5,11 +5,13 @@
 global LayoutDir := "%A_ScriptDir%"
 global ExtendKey := "CapsLock"
 global ImgWidth := 296
-global ImgHeight := 108
-global HasAltGr := 1 ;; ok not really, but images are there ;-)
+global ImgHeight := 112
+global HasAltGr := 1
 
-#include ../../extend.ahk
+#include ../../capsLock.ahk
+; #include ../../extend.ahk
 #include ../../fromPkl/pkl_gui.ahk
+
 
 ; +^9 qwerty
 +^sc00A:: gosub displayHelpImageToggle
@@ -22,3 +24,4 @@ global HasAltGr := 1 ;; ok not really, but images are there ;-)
     else 
         gosub displayHelpImageSuspendOff
 return
+
