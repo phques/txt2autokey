@@ -1,14 +1,7 @@
 use strict;
 use warnings;
-# Read extend keys def and output to autokey hotkeys:
-#
-# CapsLock
-# j|024::Left
-# l|026::Right
-#
-# 1st line is extend key
-# and j|024::Left is letter 'j' / scancode 024 (3 digits hex !) maps to Left arrow
-# the letter is for human ref on Qwerty kbd only, we will use the scancode
+
+# Read extend keys def and output to autokey hotkeys, cf Extend-Notes.txt
 
 my $filename = $ARGV[0];
 open(my $fh, '<:encoding(UTF-8)', $filename)
