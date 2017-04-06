@@ -8,7 +8,7 @@ open(my $fh, '<:encoding(UTF-8)', $filename)
 	or die "Could not open file '$filename' $!";
  
 my $extendKey = <$fh>;
-chomp $extendKey;
+$extendKey =~ s/^\s+|\s+$//g;
 
 print ";;Generated from $filename\n";
 print ";; extend key is $extendKey\n\n";
@@ -27,18 +27,16 @@ while (my $row = <$fh>) {
 	$fromScancode =~ s/^\s+|\s+$//g;
 	$toKey =~ s/^\s+|\s+$//g;;
 	
-	# print "from $fromScancode, to $toKey\n";
-
 	# print output
 	print 
 ";; $fromKey => $toKey
-CapsLock & sc$fromScancode\::
+$extendKey & sc$fromScancode\::
  SetKeyDelay -1
  Send {Blind}{$toKey DownTemp}
 return\n\n";
 
     print
-"CapsLock & sc$fromScancode up::
+"$extendKey & sc$fromScancode up::
   SetKeyDelay -1
   Send {Blind}{$toKey Up}
 return\n\n";

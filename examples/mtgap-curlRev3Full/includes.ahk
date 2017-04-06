@@ -8,8 +8,8 @@ global ImgWidth := 296
 global ImgHeight := 108
 global HasAltGr := 1 ;; ok not really, but images are there ;-)
 ; Define one of the two or none to use xCenter (on 1st monitor)
-global CenterOnCurrWindow := 1
-; global CenterOnCurrWndMonitor := 1
+; global CenterOnCurrWindow := 1
+global CenterOnCurrWndMonitor := 1
 
 #include ../../extend.ahk
 #include ../../fromPkl/pkl_gui.ahk
