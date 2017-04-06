@@ -105,6 +105,7 @@ pkl_displayHelpImage( activate := 0 )
 	; find current active window and its coords
 	id := WinExist("A")
 	WinGetPos, x, y, width, height, ahk_id %id%
+    currWinCenter := x + (width / 2)
 
 	xpos := 0
 	if (CenterOnCurrWndMonitor) {
@@ -113,7 +114,7 @@ pkl_displayHelpImage( activate := 0 )
 		;  but doesnt seem to take CPU (because of timer speed))
 		Loop(MonitorGetCount()) {
 			if (MonitorGet(A_Index, left, top, right, bottom)) {
-				if (x >= left and x <= right) {
+				if (currWinCenter >= left and currWinCenter <= right) {
 					; found it
 					; X center on current monitor
 					xpos := ((left + right) / 2) - (ImgWidth / 2)
@@ -123,7 +124,7 @@ pkl_displayHelpImage( activate := 0 )
 		}
 	} else if (CenterOnCurrWindow) {
 		;or X center on current window
-		xpos := (x + (Width / 2)) - (ImgWidth / 2)
+		xpos := currWinCenter - (ImgWidth / 2)
 	}
 
 	; might want to avoid Show if same coords ..
