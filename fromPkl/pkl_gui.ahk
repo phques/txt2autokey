@@ -69,7 +69,7 @@ pkl_displayHelpImage( activate := 0 )
 	if ( activate == 1 ) {
 		; Menu, tray, Check, % getPklInfo( "DisplayHelpImageMenuName" )
 		if ( yPosition == -1 ) {
-			yPosition := A_ScreenHeight - 160
+			yPosition :=  A_ScreenHeight - ImgHeight - 60
 			; IniRead, ImgWidth, %LayoutDir%\layout.ini, global, img_width, 300
 			; IniRead, ImgHeight, %LayoutDir%\layout.ini, global, img_height, 100
 		}
@@ -88,6 +88,9 @@ pkl_displayHelpImage( activate := 0 )
 	if ( guiActive == 0 )
 		return
 
+
+	; check if mouse is over the help image
+	; and adjust y position of image (move to top or bottom.. toggle)
 	MouseGetPos, , , id
 	WinGetTitle, title, ahk_id %id%
 	if ( title == "pklHelperImage" ) {
@@ -96,6 +99,37 @@ pkl_displayHelpImage( activate := 0 )
 			yPosition := 5
 		else
 			yPosition := A_ScreenHeight - ImgHeight - 60
+		; Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
+	}
+
+	; find current active window and its coords
+	id := WinExist("A")
+	WinGetPos, x, y, width, height, ahk_id %id%
+
+	xpos := 0
+	if (CenterOnCurrWndMonitor) {
+		; find out on which monitor the window is
+		; (could get all monitors info beforehand
+		;  but doesnt seem to take CPU (because of timer speed))
+		Loop(MonitorGetCount()) {
+			if (MonitorGet(A_Index, left, top, right, bottom)) {
+				if (x >= left and x <= right) {
+					; found it
+					; X center on current monitor
+					xpos := ((left + right) / 2) - (ImgWidth / 2)
+					break
+				}
+			}
+		}
+	} else if (CenterOnCurrWindow) {
+		;or X center on current window
+		xpos := (x + (Width / 2)) - (ImgWidth / 2)
+	}
+
+	; might want to avoid Show if same coords ..
+	if (xpos) {
+		Gui, 2:Show, x%xpos% y%yPosition% AutoSize NA, pklHelperImage
+	} else {
 		Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
 	}
 	
