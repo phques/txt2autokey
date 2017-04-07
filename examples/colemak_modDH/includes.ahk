@@ -6,12 +6,13 @@ global LayoutDir := "%A_ScriptDir%"
 global ExtendKey := "CapsLock"
 global ImgWidth := 296
 global ImgHeight := 112
-global HasAltGr := 0
+global HasAltGr := 1
 ; Define one of the two or none to use xCenter (on 1st monitor)
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
 #include ../../extend.ahk
+#include ../../altGr.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
 ;;+^9:: Reload
@@ -24,3 +25,4 @@ global CenterOnCurrWndMonitor := 1
     else 
         gosub displayHelpImageSuspendOff
 return
+

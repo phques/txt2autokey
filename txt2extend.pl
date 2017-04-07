@@ -13,6 +13,13 @@ $extendKey =~ s/^\s+|\s+$//g;
 print ";;Generated from $filename\n";
 print ";; extend key is $extendKey\n\n";
 
+my $blind = "{Blind}";
+if ($extendKey =~ /alt/i) {
+	print ";; # WARNING, using Alt as an extend key usually does not work with Send {Blind}\n";
+	print ";; # Send Blind will not be used\n\n";
+	$blind = "";
+}
+
 while (my $row = <$fh>) {
 	# skip emtpy lines
 	$row =~ s/^\s+|\s+$//g;;
@@ -20,7 +27,7 @@ while (my $row = <$fh>) {
 		next;
 	}
 	
-	# get fromScanCode & toKey
+	# get fromScanCode & toKey (letter|scanCode::toKey)
 	my ($from, $toKey) = split /::/, $row;
 	my ($fromKey, $fromScancode) = split /\|/, $from;
 	$fromKey =~ s/^\s+|\s+$//g;
@@ -32,12 +39,12 @@ while (my $row = <$fh>) {
 ";; $fromKey => $toKey
 $extendKey & sc$fromScancode\::
  SetKeyDelay -1
- Send {Blind}{$toKey DownTemp}
+ Send $blind\{$toKey DownTemp}
 return\n\n";
 
     print
 "$extendKey & sc$fromScancode up::
   SetKeyDelay -1
-  Send {Blind}{$toKey Up}
+  Send $blind\{$toKey Up}
 return\n\n";
 }
