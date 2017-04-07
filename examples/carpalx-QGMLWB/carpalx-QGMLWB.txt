@@ -1,0 +1,9 @@
+// Q G MLW B - fully optimized - Colemak mask (i.e. ; is a letter)
+
+Q G M L W B Y U V :
+D S T N R I A E O H
+Z X C F J K P < > ?
+
+q g m l w b y u v ;
+d s t n r i a e o h
+z x c f j k p , . /
