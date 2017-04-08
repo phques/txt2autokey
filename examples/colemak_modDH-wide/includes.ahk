@@ -13,6 +13,8 @@ global CenterOnCurrWndMonitor := 1
 
 ;#include ../../capsLock.ahk
 #include ../../extend-wide.ahk
+#include ../../altGrWide.ahk
+#include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
 
