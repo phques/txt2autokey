@@ -13,9 +13,10 @@ global CenterOnCurrWndMonitor := 1
 
 #include ../../extend.ahk
 #include ../../altGr.ahk
+#include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
-;;+^9:: Reload
++^8:: gosub clipboardToBash
 +^9:: gosub displayHelpImageToggle
 
 +^0::

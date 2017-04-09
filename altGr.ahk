@@ -136,6 +136,17 @@ RAlt & sc02F up::
   Send {| Up}
 return
 
+;; i => ?
+RAlt & sc017::
+ SetKeyDelay -1
+ Send {? DownTemp}
+return
+
+RAlt & sc017 up::
+  SetKeyDelay -1
+  Send {? Up}
+return
+
 ;; j => }
 RAlt & sc024::
  SetKeyDelay -1
