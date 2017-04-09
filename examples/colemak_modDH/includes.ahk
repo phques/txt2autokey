@@ -1,7 +1,7 @@
 ; PLace #includes and things to add to ahk script here 
 
-; Global variables
-; MUST be declared *before* including scripts
+; Global variables for pkl_gui.ahk / layout image
+; MUST be declared *before* scripts that use them
 global LayoutDir := "%A_ScriptDir%"
 global ExtendKey := "CapsLock"
 global ImgWidth := 296
@@ -11,8 +11,9 @@ global HasAltGr := 1
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
-#include ../../extend.ahk
 #include ../../altGr.ahk
+#include ../../extend.ahk
+
 #include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
@@ -26,4 +27,7 @@ global CenterOnCurrWndMonitor := 1
     else 
         gosub displayHelpImageSuspendOff
 return
+
+
+
 
