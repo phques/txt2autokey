@@ -11,9 +11,9 @@ global HasAltGr := 1
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
-;#include ../../capsLock.ahk
-#include ../../extend-wide.ahk
 #include ../../altGrWide.ahk
+#include ../../extend-wide.ahk
+
 #include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
 

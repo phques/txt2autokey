@@ -1,204 +1,45 @@
-;;Generated from altGrWide.txt
-;; extend key is RAlt
+;; 'AltGr' wide (on RAlt) mappings
+;; (hand maid ;-)
 
-;; # WARNING, using Alt as an extend key usually does not work with Send {Blind}
-;; # Send Blind will not be used
+; a 'numpad' on Shift-RAlt
 
-;; q => #
-RAlt & sc010::
- SetKeyDelay -1
- Send {# DownTemp}
-return
+>!+sc011::Send {1}    ; w
+>!+sc012::Send {2}    ; e
+>!+sc013::Send {3}    ; r
 
-RAlt & sc010 up::
-  SetKeyDelay -1
-  Send {# Up}
-return
+>!+sc01E::Send {0}    ; a
+>!+sc01F::Send {4}    ; s
+>!+sc020::Send {5}    ; d
+>!+sc021::Send {6}    ; f
 
-;; w => *
-RAlt & sc011::
- SetKeyDelay -1
- Send {* DownTemp}
-return
+>!+sc02C::Send {7}    ; z
+>!+sc02D::Send {8}    ; x
+>!+sc02E::Send {9}    ; c
 
-RAlt & sc011 up::
-  SetKeyDelay -1
-  Send {* Up}
-return
+;;---- special symbols on RAlt
 
-;; e => -
-RAlt & sc012::
- SetKeyDelay -1
- Send {- DownTemp}
-return
+>!sc010::Send {#}   ; q
+>!sc011::Send {*}   ; w
+>!sc012::Send {-}   ; e
+>!sc013::Send {_}   ; r
 
-RAlt & sc012 up::
-  SetKeyDelay -1
-  Send {- Up}
-return
+>!sc01E::Send {<}   ; a
+>!sc01F::Send {[}   ; s
+>!sc020::Send {(}   ; d
+>!sc021::Send {{}   ; f
+>!sc022::Send {&}   ; g
 
-;; r => _
-RAlt & sc013::
- SetKeyDelay -1
- Send {_ DownTemp}
-return
+>!sc02D::Send {!}   ; x
+>!sc02E::Send {=}   ; c
+>!sc02F::Send {|}   ; v
 
-RAlt & sc013 up::
-  SetKeyDelay -1
-  Send {_ Up}
-return
+>!sc018::Send {?}   ; o
 
-;; a => <
-RAlt & sc01E::
- SetKeyDelay -1
- Send {< DownTemp}
-return
 
-RAlt & sc01E up::
-  SetKeyDelay -1
-  Send {< Up}
-return
+>!sc025::Send {}}   ; k
+>!sc026::Send {)}   ; l
+>!sc027::Send {]}   ; ;
+>!sc028::Send {>}   ; '
 
-;; s => [
-RAlt & sc01F::
- SetKeyDelay -1
- Send {[ DownTemp}
-return
-
-RAlt & sc01F up::
-  SetKeyDelay -1
-  Send {[ Up}
-return
-
-;; d => (
-RAlt & sc020::
- SetKeyDelay -1
- Send {( DownTemp}
-return
-
-RAlt & sc020 up::
-  SetKeyDelay -1
-  Send {( Up}
-return
-
-;; f => {
-RAlt & sc021::
- SetKeyDelay -1
- Send {{ DownTemp}
-return
-
-RAlt & sc021 up::
-  SetKeyDelay -1
-  Send {{ Up}
-return
-
-;; g => &
-RAlt & sc022::
- SetKeyDelay -1
- Send {& DownTemp}
-return
-
-RAlt & sc022 up::
-  SetKeyDelay -1
-  Send {& Up}
-return
-
-;; x => !
-RAlt & sc02D::
- SetKeyDelay -1
- Send {! DownTemp}
-return
-
-RAlt & sc02D up::
-  SetKeyDelay -1
-  Send {! Up}
-return
-
-;; c => =
-RAlt & sc02E::
- SetKeyDelay -1
- Send {= DownTemp}
-return
-
-RAlt & sc02E up::
-  SetKeyDelay -1
-  Send {= Up}
-return
-
-;; v => |
-RAlt & sc02F::
- SetKeyDelay -1
- Send {| DownTemp}
-return
-
-RAlt & sc02F up::
-  SetKeyDelay -1
-  Send {| Up}
-return
-
-;; o => ?
-RAlt & sc018::
- SetKeyDelay -1
- Send {? DownTemp}
-return
-
-RAlt & sc018 up::
-  SetKeyDelay -1
-  Send {? Up}
-return
-
-;; k => }
-RAlt & sc025::
- SetKeyDelay -1
- Send {} DownTemp}
-return
-
-RAlt & sc025 up::
-  SetKeyDelay -1
-  Send {} Up}
-return
-
-;; l => )
-RAlt & sc026::
- SetKeyDelay -1
- Send {) DownTemp}
-return
-
-RAlt & sc026 up::
-  SetKeyDelay -1
-  Send {) Up}
-return
-
-;; ; => ]
-RAlt & sc027::
- SetKeyDelay -1
- Send {] DownTemp}
-return
-
-RAlt & sc027 up::
-  SetKeyDelay -1
-  Send {] Up}
-return
-
-;; ' => >
-RAlt & sc028::
- SetKeyDelay -1
- Send {> DownTemp}
-return
-
-RAlt & sc028 up::
-  SetKeyDelay -1
-  Send {> Up}
-return
-
-;; , => +
-RAlt & sc033::
- SetKeyDelay -1
- Send {+ DownTemp}
-return
-
-RAlt & sc033 up::
-  SetKeyDelay -1
-  Send {+ Up}
-return
+>!sc033::Send {+}   ; ,
 
