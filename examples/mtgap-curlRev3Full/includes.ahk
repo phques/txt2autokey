@@ -6,13 +6,19 @@ global LayoutDir := "%A_ScriptDir%"
 global ExtendKey := "CapsLock"
 global ImgWidth := 296
 global ImgHeight := 108
-global HasAltGr := 1 ;; ok not really, but images are there ;-)
+global HasAltGr := 1 
 ; Define one of the two or none to use xCenter (on 1st monitor)
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
+#include ../../altGr.ahk
 #include ../../extend.ahk
+
+#include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
+
+; +^8 qwerty
++^sc009:: gosub clipboardToBash
 
 ; +^9 qwerty
 +^sc00A:: gosub displayHelpImageToggle
