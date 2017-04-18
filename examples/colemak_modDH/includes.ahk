@@ -11,11 +11,28 @@ global HasAltGr := 1
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
+#include ../../groups.ahk
+
 #include ../../altGr.ahk
 #include ../../extend.ahk
 
 #include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
+
+return
+
+;------- groups hotkeys
+
+; +^1 qwerty
++^sc002:: GroupActivate, NotepadPP
+
+; +^2 qwerty
++^sc003:: GroupActivate, DevStudio
+
+; +^3 qwerty
++^sc004:: GroupActivate, PLineClient
+
+;------- help image & suspend hotkeys
 
 +^8:: gosub clipboardToBash
 +^9:: gosub displayHelpImageToggle
