@@ -34,6 +34,7 @@
 >!sc02F::Send {|}   ; v
 
 >!sc018::Send {?}   ; o
+>!sc019::Send {@}   ; p
 
 
 >!sc025::Send {}}   ; k
