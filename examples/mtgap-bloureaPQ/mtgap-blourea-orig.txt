@@ -1,0 +1,9 @@
+// this is the keybaord mtgap-bloureaPQ is based on
+// from 'mtgap' article: 
+// https://mathematicalmulticore.wordpress.com/2010/06/24/new-keyboard-layout-project-have-we-been-mistaken-all-along/
+//nb: I believe it should be "k x /" bottom left row !??
+
+b l o u ; j d c p y
+h r e a , m t s n i
+k x ‘ . z w g f v q
+
