@@ -1,0 +1,187 @@
+v l c g k j y u m ;
+ i n s h p b  e t a o
+  z x r w q f d , . /
+  
+  --- 
+try to place letters in freq order / best placement 
+
+  h n o t  a i s r
+  
+here, E (1st freq) is not placed on home row (trying this idea, who knows)
+
+ q c u f v ? w m l ?
+  r s i a g y t o n h
+   j x e b z p d ? ? k
+   
+ q c u f v / w m l ;
+  r s i a g y t o n h
+   j x d b z p e , . k
+
+ q c u f v / w m l ;
+  r s i a g y t o n h
+   j x e b z p d , . k
+
+1.3
+>>> improve myown
+Layout to Improve:
+
+Hands: 44% 55%
+Fingers: 6.0% 10% 10% 18% 0.00% 0.00% 27% 11% 12% 6.0% 
+
+ Q  C  U  F  V   ?  W  M  L  :
+ R  S  I  A  G   Y  T  O  N  H
+ J  X  D  B  Z   P  E  <  >  K
+
+ q  c  u  f  v   /  w  m  l  ;
+ r  s  i  a  g   y  t  o  n  h
+ j  x  d  b  z   p  e  ,  .  k
+
+Fitness:       24535678
+Distance:      14189400
+Finger work:   765523
+Inward rolls:  2.24%
+Outward rolls: 4.50%
+Same hand:     47.25%
+Same finger:   7.08%
+Row change:    25.96%
+Home jump:     4.51%
+Ring jump:     2.46%
+To center:     6.19%
+
+
+Hands: 46% 53%
+Fingers: 8.0% 9.0% 11% 18% 0.00% 0.00% 21% 15% 11% 6.0% 
+
+ X  B  U  P  J   <  >  D  C  K
+ A  R  I  N  Y   Q  E  T  S  L
+ W  ?  H  F  Z   /  O  M  G  V
+
+ x  b  u  p  j   :  .  d  c  k
+ a  r  i  n  y   q  e  t  s  l
+ w  ,  h  f  z   ;  o  m  g  v
+
+Fitness:       17717500
+Distance:      13846765
+Finger work:   0
+Inward rolls:  7.31%
+Outward rolls: 3.02%
+Same hand:     43.34%
+Same finger:   1.62%
+Row change:    21.78%
+Home jump:     1.99%
+Ring jump:     1.54%
+To center:     1.69%
+
+// ktouch lesson generator keyboard
+inet
+rs
+al
+ho
+ud
+bc
+p.
+f;
+,m
+yq
+wg
+xk
+j:
+zv
+
+
+Finger Frequency
+finger 0	0.07932	 finger 9	0.05698
+finger 1	0.09393	 finger 8	0.10312
+finger 2	0.11359	 finger 7	0.15580
+finger 3	0.18672	 finger 6	0.21053
+total L	0.47356	 total R	0.52644
+
+Finger Bigram Frequency
+finger 0	0.00025	 finger 9	0.00078
+finger 1	0.00202	 finger 8	0.00169
+finger 2	0.00147	 finger 7	0.00035
+finger 3	0.00328	 finger 6	0.00472
+total	0.01454
+
+Top Finger Bigrams
+finger 6	E.	0.002485
+finger 1	BR	0.001272
+finger 3	NY	0.001076
+finger 2	UI	0.000987
+finger 8	SC	0.000982
+
+Finger Effort
+position	bigrams	total
+finger 0	0.12187	0.00061	0.12249
+finger 1	0.16800	0.00507	0.17306
+finger 2	0.16935	0.00394	0.17329
+finger 3	0.32617	0.00864	0.33481
+finger 6	0.28454	0.01214	0.29668
+finger 7	0.23809	0.00102	0.23911
+finger 8	0.18259	0.00422	0.18681
+finger 9	0.11972	0.00195	0.12167
+total *	1.61031	0.03761	1.64792
+
+---------
+E on right hand pinky
+
+ ; u w f k / g m c ,
+  r s i a b v t o n h
+   z x l p q y d j . e
+ : U W F K ? G M C <
+  R S I A B V T O N H
+   Z X L P Q Y D J > E
+
+>>> improve myown
+Layout to Improve:
+
+Hands: 43% 56%
+Fingers: 6.0% 9.0% 9.0% 18% 0.00% 0.00% 18% 10% 11% 18%
+
+ :  U  W  F  K   ?  G  M  C  <
+ R  S  I  A  B   V  T  O  N  H
+ Z  X  L  P  Q   Y  D  J  >  E
+
+ ;  u  w  f  k   /  g  m  c  ,
+ r  s  i  a  b   v  t  o  n  h
+ z  x  l  p  q   y  d  j  .  e
+
+Fitness:       35071398
+Distance:      18596553
+Finger work:   2588120
+Inward rolls:  2.30%
+Outward rolls: 4.02%
+Same hand:     50.99%
+Same finger:   9.50%
+Row change:    29.47%
+Home jump:     4.66%
+Ring jump:     2.88%
+To center:     5.14%
+
+
+Hands: 52% 47%
+Fingers: 7.0% 11% 15% 20% 0.00% 0.00% 16% 13% 11% 7.0%
+
+ Z  /  D  W  <   Q  M  H  P  X
+ O  A  T  E  >   V  S  N  I  R
+ ?  G  C  U  J   F  L  B  Y  K
+
+ z  ,  d  w  :   q  m  h  p  x
+ o  a  t  e  ;   v  s  n  i  r
+ .  g  c  u  j   f  l  b  y  k
+
+Fitness:       18296537
+Distance:      13398772
+Finger work:   0
+Inward rolls:  6.50%
+Outward rolls: 2.11%
+Same hand:     38.04%
+Same finger:   3.27%
+Row change:    20.26%
+Home jump:     1.15%
+Ring jump:     2.81%
+To center:     2.02%
+
+===============
+
+
