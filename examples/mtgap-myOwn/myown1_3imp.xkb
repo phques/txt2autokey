@@ -1,0 +1,51 @@
+partial alphanumeric_keys
+xkb_symbols "??" {
+  name[Group1]= "US - Custom";
+  key <TLDE> { [ U0060, U007e ] };  // GRAVE ACCENT, TILDE, <none>
+  key <AE01> { [ 1, U0021 ] };  // DIGIT ONE, EXCLAMATION MARK, <none>
+  key <AE02> { [ 2, U0040 ] };  // DIGIT TWO, COMMERCIAL AT, <none>
+  key <AE03> { [ 3, U0023 ] };  // DIGIT THREE, NUMBER SIGN, <none>
+  key <AE04> { [ 4, U0024 ] };  // DIGIT FOUR, DOLLAR SIGN, <none>
+  key <AE05> { [ 5, U0025 ] };  // DIGIT FIVE, PERCENT SIGN, <none>
+  key <AE06> { [ 6, U005e ] };  // DIGIT SIX, CIRCUMFLEX ACCENT, <none>
+  key <AE07> { [ 7, U0026 ] };  // DIGIT SEVEN, AMPERSAND, <none>
+  key <AE08> { [ 8, U002a ] };  // DIGIT EIGHT, ASTERISK, <none>
+  key <AE09> { [ 9, U0028 ] };  // DIGIT NINE, LEFT PARENTHESIS, <none>
+  key <AE10> { [ 0, U0029 ] };  // DIGIT ZERO, RIGHT PARENTHESIS, <none>
+  key <AE11> { [ U002d, U005f ] };  // HYPHEN-MINUS, LOW LINE, <none>
+  key <AE12> { [ U003d, U002b ] };  // EQUALS SIGN, PLUS SIGN, <none>
+  key <AD01> { [ x, X ] };  // x X
+  key <AD02> { [ b, B ] };  // b B
+  key <AD03> { [ u, U ] };  // u U
+  key <AD04> { [ p, P ] };  // p P
+  key <AD05> { [ j, J ] };  // j J
+  key <AD06> { [ U003a, U003c ] };  // : <
+  key <AD07> { [ U002e, U003e ] };  // . >
+  key <AD08> { [ d, D ] };  // d D
+  key <AD09> { [ c, C ] };  // c C
+  key <AD10> { [ k, K ] };  // k K
+  key <AC01> { [ a, A ] };  // a A
+  key <AC02> { [ r, R ] };  // r R
+  key <AC03> { [ i, I ] };  // i I
+  key <AC04> { [ n, N ] };  // n N
+  key <AC05> { [ y, Y ] };  // y Y
+  key <AC06> { [ q, Q ] };  // q Q
+  key <AC07> { [ e, E ] };  // e E
+  key <AC08> { [ t, T ] };  // t T
+  key <AC09> { [ s, S ] };  // s S
+  key <AC10> { [ l, L ] };  // l L
+  key <AB01> { [ w, W ] };  // w W
+  key <AB02> { [ U002c, U003f ] };  // , ?
+  key <AB03> { [ h, H ] };  // h H
+  key <AB04> { [ f, F ] };  // f F
+  key <AB05> { [ z, Z ] };  // z Z
+  key <AB06> { [ U003b, U002f ] };  // ; /
+  key <AB07> { [ o, O ] };  // o O
+  key <AB08> { [ m, M ] };  // m M
+  key <AB09> { [ g, G ] };  // g G
+  key <AB10> { [ v, V ] };  // v V
+  key <AD11> { [ U005b, U007b ] };  // LEFT SQUARE BRACKET, LEFT CURLY BRACKET, ESCAPE
+  key <AD12> { [ U005d, U007d ] };  // RIGHT SQUARE BRACKET, RIGHT CURLY BRACKET, INFORMATION SEPARATOR THREE
+  key <BKSL> { [ U005c, U007c ] };  // REVERSE SOLIDUS, VERTICAL LINE, INFORMATION SEPARATOR FOUR
+  key <AC11> { [ U0027, U0022 ] };  // APOSTROPHE, QUOTATION MARK, <none>
+};
