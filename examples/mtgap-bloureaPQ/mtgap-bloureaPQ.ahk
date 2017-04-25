@@ -1,20 +1,20 @@
 /*
-From  (../../qwertyMain30.txt)
-Q W E R T Y U I O P
-A S D F G H J K L :
+From  (../../qwertyMain30Plus.txt)
+Q W E R T Y U I O P { } |
+A S D F G H J K L : "
 Z X C V B N M < > ?
 
-q w e r t y u i o p
-a s d f g h j k l ;
+q w e r t y u i o p [ ] \
+a s d f g h j k l ; '
 z x c v b n m , . /
 
 To  (mtgap-bloureaPQ.txt)
-B L O U ? J D C P Y
-H R E A / G T S N I
+B L O U ? J D C P Y { } |
+H R E A / G T S N I '
 K X < > Z W M F V Q
 
-b l o u : j d c p y
-h r e a ; g t s n i
+b l o u : j d c p y [ ] \
+h r e a ; g t s n i "
 k x , . z w m f v q
 
 */
@@ -43,6 +43,8 @@ k x , . z w m f v q
 *sc025::sc01f			; k :: s
 *sc026::sc031			; l :: n
 *sc027::sc017			; ; :: i
++sc028::Send {sc028}	; " :: '
+ sc028::+sc028			; ' :: "
 *sc02c::sc025			; z :: k
 *sc02e::sc033			; c :: ,
 *sc02f::sc034			; v :: .

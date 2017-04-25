@@ -3,10 +3,10 @@
 // g - m were swapped
 // punctation was re-arranged (shift/nonshift chars are split for some keys, ie ".,;:" all non-shifted)
 
-B L O U ? J D C P Y
-H R E A / G T S N I
+B L O U ? J D C P Y { } |
+H R E A / G T S N I '
 K X < > Z W M F V Q
 
-b l o u : j d c p y
-h r e a ; g t s n i
+b l o u : j d c p y [ ] \
+h r e a ; g t s n i "
 k x , . z w m f v q
