@@ -1,0 +1,42 @@
+mtgap 2017-04-26
+left hand costs +10 (more load on right hand)
+
+>>> get distance
+distance = 1
+
+>>> set distance 7
+distance set to 7.
+
+>>> get sameHand
+sameHand = 5
+
+>>> set sameHand 1
+sameHand set to 1.
+
+>>> run
+
+
+***Found from greatToBest()***
+
+Hands: 43% 56%
+Fingers: 5.0% 11% 12% 16% 0.00% 0.00% 24% 15% 11% 6.0% 
+
+ <  F  U  M  X   Q  .  D  C  >
+ H  A  I  N  V   /  E  T  S  R
+ K  Y  L  W  Z   G  O  P  B  J
+
+ ?  f  u  m  x   q  ,  d  c  :
+ h  a  i  n  v   ;  e  t  s  r
+ k  y  l  w  z   g  o  p  b  j
+
+Fitness:       117330126
+Distance:      112161490
+Finger work:   298431
+Inward rolls:  7.28%
+Outward rolls: 2.15%
+Same hand:     47.15%
+Same finger:   2.96%
+Row change:    23.81%
+Home jump:     2.39%
+Ring jump:     2.38%
+To center:     2.75%

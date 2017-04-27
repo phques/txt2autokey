@@ -1,0 +1,57 @@
+run mtgap Improve on colemak 
+(with costs higher on left hand)
+
+--- run 1 ----
+
+Layout to Improve:
+
+Hands: 46% 53%
+Fingers: 8.0% 8.0% 9.0% 22% 0.00% 0.00% 19% 16% 10% 8.0% 
+
+ Q  W  F  P  G   J  L  U  Y  :
+ A  R  S  T  D   H  N  E  I  O
+ Z  X  C  V  B   K  M  <  >  ?
+
+ q  w  f  p  g   j  l  u  y  ;
+ a  r  s  t  d   h  n  e  i  o
+ z  x  c  v  b   k  m  ,  .  /
+
+Fitness:       23853125
+Distance:      18437069
+Finger work:   46011
+Inward rolls:  4.70%
+Outward rolls: 2.57%
+Same hand:     42.18%
+Same finger:   1.81%
+Row change:    17.85%
+Home jump:     0.98%
+Ring jump:     2.74%
+To center:     7.86%
+
+
+Hands: 48% 51%
+Fingers: 6.0% 11% 11% 19% 0.00% 0.00% 19% 15% 10% 8.0% 
+
+ X  F  C  P  V   J  L  U  Y  Z
+ R  A  S  T  B   K  N  E  I  O
+ ?  W  D  G  Q   M  H  /  <  >
+
+ x  f  c  p  v   j  l  u  y  z
+ r  a  s  t  b   k  n  e  i  o
+ ,  w  d  g  q   m  h  ;  .  :
+
+Fitness:       21626299
+Distance:      16665589
+Finger work:   0
+Inward rolls:  4.69%
+Outward rolls: 3.30%
+Same hand:     42.40%
+Same finger:   1.59%
+Row change:    21.54%
+Home jump:     0.87%
+Ring jump:     2.04%
+To center:     5.30%
+
+
+--- run 2 ----
+

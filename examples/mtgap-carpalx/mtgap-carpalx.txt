@@ -1,0 +1,52 @@
+run mtgap Improve on carpalx QFMLWY 
+(with costs higher on left hand)
+
+>>> improve tt
+Layout to Improve:
+
+Hands: 46% 53%
+Fingers: 4.0% 9.0% 12% 23% 0.00% 0.00% 22% 16% 10% 5.0% 
+
+ Q  G  M  L  W   Y  F  U  B  :
+ D  S  T  N  R   I  A  E  O  H
+ Z  X  C  V  J   K  P  <  >  ?
+
+ q  g  m  l  w   y  f  u  b  ;
+ d  s  t  n  r   i  a  e  o  h
+ z  x  c  v  j   k  p  ,  .  /
+
+Fitness:       27147511
+Distance:      19767455
+Finger work:   96611
+Inward rolls:  2.89%
+Outward rolls: 1.59%
+Same hand:     33.06%
+Same finger:   5.28%
+Row change:    15.66%
+Home jump:     0.93%
+Ring jump:     3.00%
+To center:     8.52%
+
+
+Hands: 49% 50%
+Fingers: 8.0% 9.0% 12% 21% 0.00% 0.00% 18% 15% 10% 8.0% 
+
+ <  W  U  H  J   Z  P  /  C  Q
+ A  S  I  N  F   K  T  E  R  O
+ V  Y  L  M  X   G  D  >  B  ?
+
+ :  w  u  h  j   z  p  ,  c  q
+ a  s  i  n  f   k  t  e  r  o
+ v  y  l  m  x   g  d  .  b  ;
+
+Fitness:       21595440
+Distance:      17011075
+Finger work:   0
+Inward rolls:  7.16%
+Outward rolls: 6.07%
+Same hand:     46.18%
+Same finger:   1.74%
+Row change:    22.66%
+Home jump:     1.17%
+Ring jump:     1.44%
+To center:     3.49%

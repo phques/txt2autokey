@@ -1,0 +1,51 @@
+partial alphanumeric_keys
+xkb_symbols "??" {
+  name[Group1]= "mtgap-colemak";
+  key <TLDE> { [ U0060, U007e ] };  // GRAVE ACCENT, TILDE, <none>
+  key <AE01> { [ 1, U0021 ] };  // DIGIT ONE, EXCLAMATION MARK, <none>
+  key <AE02> { [ 2, U0040 ] };  // DIGIT TWO, COMMERCIAL AT, <none>
+  key <AE03> { [ 3, U0023 ] };  // DIGIT THREE, NUMBER SIGN, <none>
+  key <AE04> { [ 4, U0024 ] };  // DIGIT FOUR, DOLLAR SIGN, <none>
+  key <AE05> { [ 5, U0025 ] };  // DIGIT FIVE, PERCENT SIGN, <none>
+  key <AE06> { [ 6, U005e ] };  // DIGIT SIX, CIRCUMFLEX ACCENT, <none>
+  key <AE07> { [ 7, U0026 ] };  // DIGIT SEVEN, AMPERSAND, <none>
+  key <AE08> { [ 8, U002a ] };  // DIGIT EIGHT, ASTERISK, <none>
+  key <AE09> { [ 9, U0028 ] };  // DIGIT NINE, LEFT PARENTHESIS, <none>
+  key <AE10> { [ 0, U0029 ] };  // DIGIT ZERO, RIGHT PARENTHESIS, <none>
+  key <AE11> { [ U002d, U005f ] };  // HYPHEN-MINUS, LOW LINE, <none>
+  key <AE12> { [ U003d, U002b ] };  // EQUALS SIGN, PLUS SIGN, <none>
+  key <AD01> { [ x, X ] };  // x X
+  key <AD02> { [ f, F ] };  // f F
+  key <AD03> { [ c, C ] };  // c C
+  key <AD04> { [ p, P ] };  // p P
+  key <AD05> { [ v, V ] };  // v V
+  key <AD06> { [ j, J ] };  // j J
+  key <AD07> { [ l, L ] };  // l L
+  key <AD08> { [ u, U ] };  // u U
+  key <AD09> { [ y, Y ] };  // y Y
+  key <AD10> { [ z, Z ] };  // z Z
+  key <AC01> { [ r, R ] };  // r R
+  key <AC02> { [ a, A ] };  // a A
+  key <AC03> { [ s, S ] };  // s S
+  key <AC04> { [ t, T ] };  // t T
+  key <AC05> { [ b, B ] };  // b B
+  key <AC06> { [ k, K ] };  // k K
+  key <AC07> { [ n, N ] };  // n N
+  key <AC08> { [ e, E ] };  // e E
+  key <AC09> { [ i, I ] };  // i I
+  key <AC10> { [ o, O ] };  // o O
+  key <AB01> { [ U002c, U003f ] };  // , ?
+  key <AB02> { [ w, W ] };  // w W
+  key <AB03> { [ d, D ] };  // d D
+  key <AB04> { [ g, G ] };  // g G
+  key <AB05> { [ q, Q ] };  // q Q
+  key <AB06> { [ m, M ] };  // m M
+  key <AB07> { [ h, H ] };  // h H
+  key <AB08> { [ U003b, U002f ] };  // ; /
+  key <AB09> { [ U002e, U003c ] };  // . <
+  key <AB10> { [ U003a, U003e ] };  // : >
+  key <AD11> { [ U005b, U007b ] };  // LEFT SQUARE BRACKET, LEFT CURLY BRACKET, ESCAPE
+  key <AD12> { [ U005d, U007d ] };  // RIGHT SQUARE BRACKET, RIGHT CURLY BRACKET, INFORMATION SEPARATOR THREE
+  key <BKSL> { [ U005c, U007c ] };  // REVERSE SOLIDUS, VERTICAL LINE, INFORMATION SEPARATOR FOUR
+  key <AC11> { [ U0027, U0022 ] };  // APOSTROPHE, QUOTATION MARK, <none>
+};
