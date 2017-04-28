@@ -1,0 +1,160 @@
+mtgap 2017-04-27
+left hand costs +15 (more load on right hand)
+
+AND use thumb (same cost as left hand index) for bottom row middle key (qwerty N)
+this makes (some?) sense on my Microsoft Sculpt Ergo kbd
+
+---- run 1 (1 thumb, right hand) ----
+
+Hands: 41% 58%
+Fingers: 4.0% 10% 13% 15% 0.00% 6.0% 18% 16% 11% 8.0% 
+
+ X  C  G  M  Q   <  >  U  P  J
+ D  S  T  H  K   /  A  E  N  I
+ V  B  L  F  Z   R  O  Y  W  ?
+
+ x  c  g  m  q   :  .  u  p  j
+ d  s  t  h  k   ,  a  e  n  i
+ v  b  l  f  z   r  o  y  w  ;
+
+Fitness:       19415902
+Distance:      17115822
+Finger work:   0
+Inward rolls:  9.08%
+Outward rolls: 2.33%
+Same hand:     42.52%
+Same finger:   1.29%
+Row change:    21.21%
+Home jump:     3.48%
+Ring jump:     0.95%
+To center:     10.84%
+
+
+---- run 2 (2 thumbs) ----
+
+Hands: 45% 54%
+Fingers: 4.0% 10% 13% 13% 7.0% 8.0% 12% 16% 11% 8.0% 
+
+ Z  F  G  M  Q   J  W  U  P  <
+ D  S  T  H  X   /  R  E  N  I
+ V  B  L  K  O   A  C  >  Y  ?
+
+ z  f  g  m  q   j  w  u  p  :
+ d  s  t  h  x   .  r  e  n  i
+ v  b  l  k  o   a  c  ,  y  ;
+
+							with thumbs <> CENTER (to center is lower;-)
+Fitness:       17468149		Fitness:       17468149
+Distance:      15922554     Distance:      15922554
+Finger work:   0            Finger work:   0
+Inward rolls:  10.01%       Inward rolls:  10.93%
+Outward rolls: 4.08%        Outward rolls: 4.91%
+Same hand:     44.29%       Same hand:     44.29%
+Same finger:   1.31%        Same finger:   1.31%
+Row change:    22.10%       Row change:    22.10%
+Home jump:     4.46%        Home jump:     4.46%
+Ring jump:     0.76%        Ring jump:     0.76%
+To center:     15.35%       To center:     0.99%
+
+
+Hands: 43% 56%
+Fingers: 4.0% 11% 11% 11% 6.0% 8.0% 21% 9.0% 12% 7.0% 
+
+ Q  U  M  P  Z   <  >  Y  G  X
+ L  I  N  D  V   /  E  H  T  S
+ ?  W  C  B  R   A  O  F  K  J
+
+ q  u  m  p  z   :  .  y  g  x
+ l  i  n  d  v   ;  e  h  t  s
+ ,  w  c  b  r   a  o  f  k  j
+
+Fitness:       17462284
+Distance:      16334347
+Finger work:   59992
+Inward rolls:  12.36%
+Outward rolls: 2.26%
+Same hand:     46.44%
+Same finger:   0.86%
+Row change:    21.67%
+Home jump:     3.56%
+Ring jump:     0.68%
+To center:     10.39%
+
+
+---- run 3 (higher cosr on thumbs) ----
+
+Hands: 43% 56%
+Fingers: 4.0% 10% 13% 13% 3.0% 6.0% 17% 16% 11% 7.0% 
+
+ X  G  M  F  Z   <  >  U  P  Q
+ L  S  T  H  K   ?  A  E  N  I
+ W  V  D  B  C   R  O  /  Y  J
+
+ x  g  m  f  z   :  .  u  p  q
+ l  s  t  h  k   ;  a  e  n  i
+ w  v  d  b  c   r  o  ,  y  j
+
+Fitness:       19084884
+Distance:      17286979
+Finger work:   0
+Inward rolls:  9.81%
+Outward rolls: 3.03%
+Same hand:     41.19%
+Same finger:   1.02%
+Row change:    20.60%
+Home jump:     3.32%
+Ring jump:     1.28%
+To center:     0.60%
+
+
+---- run 4 (higher cost on thumbs, left thumb moved left to V (vs B)) ----
+
+
+Hands: 41% 58%
+Fingers: 4.0% 10% 13% 14% 1.0% 6.0% 18% 16% 11% 8.0% 
+
+ Z  C  G  F  Q   <  >  U  P  J
+ D  S  T  H  X   /  A  E  N  I
+ V  B  L  M  K   R  O  Y  W  ?
+
+ z  c  g  f  q   :  .  u  p  j
+ d  s  t  h  x   ,  a  e  n  i
+ v  b  l  m  k   r  o  y  w  ;
+
+Fitness:       19558632
+Distance:      17362702
+Finger work:   0
+Inward rolls:  10.23%
+Outward rolls: 3.09%
+Same hand:     42.52%
+Same finger:   1.24%
+Row change:    21.27%
+Home jump:     3.69%
+Ring jump:     0.89%
+To center:     0.96%
+
+---- run 4 (higher cost on thumbs, two left thumbs V and B) ----
+
+Hands: 43% 56%
+Fingers: 4.0% 10% 13% 12% 5.0% 6.0% 17% 16% 11% 7.0% 
+
+ X  F  G  M  Z   <  >  U  P  Q
+ D  S  T  H  K   ?  A  E  N  I
+ V  B  L  C  W   R  O  /  Y  J
+
+ x  f  g  m  z   :  .  u  p  q
+ d  s  t  h  k   ;  a  e  n  i
+ v  b  l  c  w   r  o  ,  y  j
+
+Fitness:       18790161
+Distance:      17156846
+Finger work:   0
+Inward rolls:  10.06%
+Outward rolls: 3.16%
+Same hand:     41.19%
+Same finger:   0.96%
+Row change:    20.46%
+Home jump:     3.49%
+Ring jump:     1.05%
+To center:     0.60%
+
