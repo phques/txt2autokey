@@ -15,6 +15,7 @@
 >!+sc02C::Send {7}    ; z
 >!+sc02D::Send {8}    ; x
 >!+sc02E::Send {9}    ; c
+>!+sc02F::Send {.}    ; v
 
 ;;---- special symbols on RAlt
 
@@ -43,4 +44,5 @@
 >!sc028::Send {>}   ; '
 
 >!sc033::Send {+}   ; ,
+>!sc032::Send {\}   ; m
 
