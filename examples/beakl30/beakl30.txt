@@ -1,0 +1,40 @@
+http://shenafu.com/smf/index.php?topic=89.msg785#msg785
+
+keyboard effort 
+7 1 1 1 3 3 1 1 1 7
+5 0 0 0 2 2 0 0 0 5
+7 2 3 1 3 3 1 3 2 7
+
+which is newest? (I prefer this one I think)
+(also think this is newest)
+9   1   1   1   5   5   1   1   1   9
+5   0.5 0.5 0.5 2   2   0.5 0.5 0.5 5
+9   2   3   1   5   5   1   3   2   9
+
+beakl 3.0 (http://shenafu.com/smf/index.php?topic=89.msg850#msg850)
+"BTW I recommend BEAKL 3.0 as the best overall layout for now"
+ July 15, 2016, 07:45:07 PM
+qnlcf	x.ohj		QNLCF	X:OHJ
+prtsd	uaeik		PRTSD	UAEIK
+vbmgw	',"yz		VBMGW	;()YZ
+
+(choice of punctuation / special chars from dvorak ?)
+Q N L C F  X : O H J
+P R T S D  U A E I K
+V B M G W  ; ( ) Y Z
+
+q n l c f  x . o h j
+p r t s d  u a e i k
+v b m g w  ' , " y z
+
+
+adjusted PQ 
+()'" are not main30 US
+missing <>/?
+Q N L C F  X : O H J
+P R T S D  U A E I K
+V B M G W  ; < > Y Z
+
+q n l c f  x . o h j
+p r t s d  u a e i k
+v b m g w  / , ? y z
