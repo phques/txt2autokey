@@ -42,3 +42,5 @@
 >!sc027::Send {>}    ; ;
 
 >!sc032::Send {+}    ; m
+
+>!Enter::Send {Enter}

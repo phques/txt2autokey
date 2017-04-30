@@ -15,9 +15,12 @@ print ";; extend key is $extendKey\n\n";
 
 my $blind = "{Blind}";
 if ($extendKey =~ /alt/i) {
+	$blind = "";
 	print ";; # WARNING, using Alt as an extend key usually does not work with Send {Blind}\n";
 	print ";; # Send Blind will not be used\n\n";
-	$blind = "";
+	print "#include extendDoKeyAlt.ahk\n\n";
+} else {
+	print "#include extendDoKey.ahk\n\n";
 }
 
 while (my $row = <$fh>) {
@@ -34,17 +37,7 @@ while (my $row = <$fh>) {
 	$fromScancode =~ s/^\s+|\s+$//g;
 	$toKey =~ s/^\s+|\s+$//g;;
 	
-	# print output
-	print 
-";; $fromKey => $toKey
-$extendKey & sc$fromScancode\::
- SetKeyDelay -1
- Send $blind\{$toKey DownTemp}
-return\n\n";
-
-    print
-"$extendKey & sc$fromScancode up::
-  SetKeyDelay -1
-  Send $blind\{$toKey Up}
-return\n\n";
+	print ";; $fromKey => $toKey\n";
+	print "$extendKey & sc$fromScancode\::dokey(\"$toKey\", 0)\n";
+	print "$extendKey & sc$fromScancode up::dokey(\"$toKey\", 1)\n\n";
 }

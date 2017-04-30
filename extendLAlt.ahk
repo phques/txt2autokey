@@ -1,281 +1,108 @@
-;;Generated from extend.txt
+;;Generated from extendLAlt.txt
 ;; extend key is LAlt
 
 ;; # WARNING, using Alt as an extend key usually does not work with Send {Blind}
 ;; # Send Blind will not be used
 
-;; q => Escape
-LAlt & sc010::
- SetKeyDelay -1
- Send {Escape DownTemp}
-return
+#include extendDoKeyAlt.ahk
 
-LAlt & sc010 up::
-  SetKeyDelay -1
-  Send {Escape Up}
-return
+;; q => Escape
+LAlt & sc010::dokey("Escape", 0)
+LAlt & sc010 up::dokey("Escape", 1)
 
 ;; a => Shift
-LAlt & sc01E::
- SetKeyDelay -1
- Send {Shift DownTemp}
-return
-
-LAlt & sc01E up::
-  SetKeyDelay -1
-  Send {Shift Up}
-return
+LAlt & sc01E::dokey("Shift", 0)
+LAlt & sc01E up::dokey("Shift", 1)
 
 ;; s => Alt
-LAlt & sc01F::
- SetKeyDelay -1
- Send {Alt DownTemp}
-return
-
-LAlt & sc01F up::
-  SetKeyDelay -1
-  Send {Alt Up}
-return
+LAlt & sc01F::dokey("Alt", 0)
+LAlt & sc01F up::dokey("Alt", 1)
 
 ;; d => Control
-LAlt & sc020::
- SetKeyDelay -1
- Send {Control DownTemp}
-return
-
-LAlt & sc020 up::
-  SetKeyDelay -1
-  Send {Control Up}
-return
+LAlt & sc020::dokey("Control", 0)
+LAlt & sc020 up::dokey("Control", 1)
 
 ;; y => PgUp
-LAlt & sc015::
- SetKeyDelay -1
- Send {PgUp DownTemp}
-return
-
-LAlt & sc015 up::
-  SetKeyDelay -1
-  Send {PgUp Up}
-return
+LAlt & sc015::dokey("PgUp", 0)
+LAlt & sc015 up::dokey("PgUp", 1)
 
 ;; u => Home
-LAlt & sc016::
- SetKeyDelay -1
- Send {Home DownTemp}
-return
-
-LAlt & sc016 up::
-  SetKeyDelay -1
-  Send {Home Up}
-return
+LAlt & sc016::dokey("Home", 0)
+LAlt & sc016 up::dokey("Home", 1)
 
 ;; i => Up
-LAlt & sc017::
- SetKeyDelay -1
- Send {Up DownTemp}
-return
-
-LAlt & sc017 up::
-  SetKeyDelay -1
-  Send {Up Up}
-return
+LAlt & sc017::dokey("Up", 0)
+LAlt & sc017 up::dokey("Up", 1)
 
 ;; o => End
-LAlt & sc018::
- SetKeyDelay -1
- Send {End DownTemp}
-return
-
-LAlt & sc018 up::
-  SetKeyDelay -1
-  Send {End Up}
-return
+LAlt & sc018::dokey("End", 0)
+LAlt & sc018 up::dokey("End", 1)
 
 ;; p => Delete
-LAlt & sc019::
- SetKeyDelay -1
- Send {Delete DownTemp}
-return
-
-LAlt & sc019 up::
-  SetKeyDelay -1
-  Send {Delete Up}
-return
+LAlt & sc019::dokey("Delete", 0)
+LAlt & sc019 up::dokey("Delete", 1)
 
 ;; [ => Escape
-LAlt & sc01A::
- SetKeyDelay -1
- Send {Escape DownTemp}
-return
-
-LAlt & sc01A up::
-  SetKeyDelay -1
-  Send {Escape Up}
-return
+LAlt & sc01A::dokey("Escape", 0)
+LAlt & sc01A up::dokey("Escape", 1)
 
 ;; h => PgDn
-LAlt & sc023::
- SetKeyDelay -1
- Send {PgDn DownTemp}
-return
-
-LAlt & sc023 up::
-  SetKeyDelay -1
-  Send {PgDn Up}
-return
+LAlt & sc023::dokey("PgDn", 0)
+LAlt & sc023 up::dokey("PgDn", 1)
 
 ;; j => Left
-LAlt & sc024::
- SetKeyDelay -1
- Send {Left DownTemp}
-return
-
-LAlt & sc024 up::
-  SetKeyDelay -1
-  Send {Left Up}
-return
+LAlt & sc024::dokey("Left", 0)
+LAlt & sc024 up::dokey("Left", 1)
 
 ;; k => Down
-LAlt & sc025::
- SetKeyDelay -1
- Send {Down DownTemp}
-return
-
-LAlt & sc025 up::
-  SetKeyDelay -1
-  Send {Down Up}
-return
+LAlt & sc025::dokey("Down", 0)
+LAlt & sc025 up::dokey("Down", 1)
 
 ;; l => Right
-LAlt & sc026::
- SetKeyDelay -1
- Send {Right DownTemp}
-return
-
-LAlt & sc026 up::
-  SetKeyDelay -1
-  Send {Right Up}
-return
+LAlt & sc026::dokey("Right", 0)
+LAlt & sc026 up::dokey("Right", 1)
 
 ;; ; => Backspace
-LAlt & sc027::
- SetKeyDelay -1
- Send {Backspace DownTemp}
-return
-
-LAlt & sc027 up::
-  SetKeyDelay -1
-  Send {Backspace Up}
-return
+LAlt & sc027::dokey("Backspace", 0)
+LAlt & sc027 up::dokey("Backspace", 1)
 
 ;; ' => AppsKey
-LAlt & sc028::
- SetKeyDelay -1
- Send {AppsKey DownTemp}
-return
-
-LAlt & sc028 up::
-  SetKeyDelay -1
-  Send {AppsKey Up}
-return
+LAlt & sc028::dokey("AppsKey", 0)
+LAlt & sc028 up::dokey("AppsKey", 1)
 
 ;; z => }^{z
-LAlt & sc02C::
- SetKeyDelay -1
- Send {}^{z DownTemp}
-return
-
-LAlt & sc02C up::
-  SetKeyDelay -1
-  Send {}^{z Up}
-return
+LAlt & sc02C::dokey("}^{z", 0)
+LAlt & sc02C up::dokey("}^{z", 1)
 
 ;; x => }^{x
-LAlt & sc02D::
- SetKeyDelay -1
- Send {}^{x DownTemp}
-return
-
-LAlt & sc02D up::
-  SetKeyDelay -1
-  Send {}^{x Up}
-return
+LAlt & sc02D::dokey("}^{x", 0)
+LAlt & sc02D up::dokey("}^{x", 1)
 
 ;; c => }^{c
-LAlt & sc02E::
- SetKeyDelay -1
- Send {}^{c DownTemp}
-return
-
-LAlt & sc02E up::
-  SetKeyDelay -1
-  Send {}^{c Up}
-return
+LAlt & sc02E::dokey("}^{c", 0)
+LAlt & sc02E up::dokey("}^{c", 1)
 
 ;; v => }^{v
-LAlt & sc02F::
- SetKeyDelay -1
- Send {}^{v DownTemp}
-return
-
-LAlt & sc02F up::
-  SetKeyDelay -1
-  Send {}^{v Up}
-return
+LAlt & sc02F::dokey("}^{v", 0)
+LAlt & sc02F up::dokey("}^{v", 1)
 
 ;; m => }^{c
-LAlt & sc032::
- SetKeyDelay -1
- Send {}^{c DownTemp}
-return
-
-LAlt & sc032 up::
-  SetKeyDelay -1
-  Send {}^{c Up}
-return
+LAlt & sc032::dokey("}^{c", 0)
+LAlt & sc032 up::dokey("}^{c", 1)
 
 ;; , => }^{x
-LAlt & sc033::
- SetKeyDelay -1
- Send {}^{x DownTemp}
-return
-
-LAlt & sc033 up::
-  SetKeyDelay -1
-  Send {}^{x Up}
-return
+LAlt & sc033::dokey("}^{x", 0)
+LAlt & sc033 up::dokey("}^{x", 1)
 
 ;; . => }^{v
-LAlt & sc034::
- SetKeyDelay -1
- Send {}^{v DownTemp}
-return
-
-LAlt & sc034 up::
-  SetKeyDelay -1
-  Send {}^{v Up}
-return
+LAlt & sc034::dokey("}^{v", 0)
+LAlt & sc034 up::dokey("}^{v", 1)
 
 ;; / => }^{z
-LAlt & sc035::
- SetKeyDelay -1
- Send {}^{z DownTemp}
-return
-
-LAlt & sc035 up::
-  SetKeyDelay -1
-  Send {}^{z Up}
-return
+LAlt & sc035::dokey("}^{z", 0)
+LAlt & sc035 up::dokey("}^{z", 1)
 
 ;; sp => Enter
-LAlt & sc039::
- SetKeyDelay -1
- Send {Enter DownTemp}
-return
-
-LAlt & sc039 up::
-  SetKeyDelay -1
-  Send {Enter Up}
-return
+LAlt & sc039::dokey("Enter", 0)
+LAlt & sc039 up::dokey("Enter", 1)
 

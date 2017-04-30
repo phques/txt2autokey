@@ -6,6 +6,7 @@ a|01E::Shift
 s|01F::Alt
 d|020::Control
 
+
 y|015::PgUp
 u|016::Home
 i|017::Up
