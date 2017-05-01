@@ -56,3 +56,40 @@ To center:     2.89%
 To outside:    0.87%
 
 Time elapsed: 1 hours, 1 minutes, 40 seconds
+
+--- handbias -10 ----
+
+Hands: 47% 52%
+Fingers: 4.0% 11% 15% 17% 0.00% 0.00% 20% 19% 10% 4.0%
+
+ Z  [  ]  <  >  +   ^  %  {  }  |  &  `
+    X  C  N  D  V   *  U  O  L  J  $  @  ~
+    Y  R  S  T  P   ;  A  E  H  G  K
+    F  W  M  B  Q   ?  I  =  !  #
+
+ z  1  2  3  4  5   6  7  8  9  0  :  /
+    x  c  n  d  v   -  u  o  l  j  (  )  \
+    y  r  s  t  p   ,  a  e  h  g  k
+    f  w  m  b  q   _  i  "  .  '
+
+Fitness:       19215245
+Distance:      14308300
+Finger work:   0
+Inward rolls:  7.85%
+Outward rolls: 1.32%
+Same hand:     33.47%
+Same finger:   2.60%
+Row change:    15.74%
+Home jump:     2.52%
+Ring jump:     1.96%
+To center:     2.67%
+To outside:    1.44%
+
+Time elapsed: 0 hours, 18 minutes, 32 seconds
+Time elapsed: 0 hours, 18 minutes, 36 seconds
+Chance to use previous layout is now 0.664249.
+Number of swaps between rounds is now 16.
+Number of rounds in greatToBest() is now 2048.
+Time elapsed: 0 hours, 30 minutes, 47 seconds
+Number of rounds in greatToBest() is now 4096.
+Time elapsed: 0 hours, 50 minutes, 43 seconds
