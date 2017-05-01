@@ -14,38 +14,12 @@ global CenterOnCurrWndMonitor := 1
 #include ../../groups.ahk
 
 #include ../../altGr.ahk
-#include ../../extendLAlt.ahk
+#include ../../extend.ahk
 
 #include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
+#include ../../commonHotkeys.ahk
+
 return
-
-;------- groups hotkeys
-
-; +^1 qwerty
-+^sc002:: GroupActivate, NotepadPP
-
-; +^2 qwerty
-+^sc003:: GroupActivate, DevStudio
-
-; +^3 qwerty
-+^sc004:: GroupActivate, PLineClient
-
-
-;------- help image & suspend hotkeys
-
-+^8:: gosub clipboardToBash
-+^9:: gosub displayHelpImageToggle
-
-+^0::
-    Suspend Toggle
-    if (A_IsSuspended)
-        gosub displayHelpImageSuspendOn
-    else 
-        gosub displayHelpImageSuspendOff
-return
-
-
-
 
