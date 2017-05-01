@@ -1,12 +1,12 @@
 ; PLace #includes and things to add to ahk script here 
 
-; Global variables for pkl_gui.ahk / layout image
-; MUST be declared *before* scripts that use them
+; Global variables
+; MUST be declared *before* including scripts
 global LayoutDir := "%A_ScriptDir%"
-;global ExtendKey := "CapsLock"
+global ExtendKey := ""
 global ImgWidth := 296
-global ImgHeight := 112
-global HasAltGr := 1
+global ImgHeight := 108
+global HasAltGr := 1 
 ; Define one of the two or none to use xCenter (on 1st monitor)
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
@@ -18,8 +18,6 @@ global CenterOnCurrWndMonitor := 1
 
 #include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
-
-return
 
 ;------- groups hotkeys
 
@@ -34,17 +32,17 @@ return
 
 ;------- help image & suspend hotkeys
 
-+^8:: gosub clipboardToBash
-+^9:: gosub displayHelpImageToggle
+; +^8 qwerty
++^sc009:: gosub clipboardToBash
 
-+^0::
+; +^9 qwerty
++^sc00A:: gosub displayHelpImageToggle
+
+; +^0 qwerty
++^sc00B::
     Suspend Toggle
     if (A_IsSuspended)
         gosub displayHelpImageSuspendOn
     else 
         gosub displayHelpImageSuspendOff
 return
-
-
-
-

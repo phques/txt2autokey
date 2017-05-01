@@ -3,7 +3,7 @@
 ; Global variables for pkl_gui.ahk / layout image
 ; MUST be declared *before* scripts that use them
 global LayoutDir := "%A_ScriptDir%"
-global ExtendKey := "CapsLock"
+; global ExtendKey := "CapsLock"
 global ImgWidth := 296
 global ImgHeight := 112
 global HasAltGr := 1
