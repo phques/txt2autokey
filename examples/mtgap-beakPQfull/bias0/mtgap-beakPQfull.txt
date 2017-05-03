@@ -60,3 +60,13 @@ Chance to use previous layout is now 0.634732.
 Number of swaps between rounds is now 15.
 Number of rounds in greatToBest() is now 1024.
 Time elapsed: 0 hours, 10 minutes, 37 seconds
+Time elapsed: 0 hours, 17 minutes, 29 seconds
+Chance to use previous layout is now 0.664249.
+Number of swaps between rounds is now 16.
+Number of rounds in greatToBest() is now 2048.
+Time elapsed: 0 hours, 28 minutes, 49 seconds
+Number of rounds in greatToBest() is now 4096.
+Time elapsed: 0 hours, 47 minutes, 3 seconds
+Chance to use previous layout is now 0.691987.
+Number of swaps between rounds is now 17.
+Time elapsed: 1 hours, 5 minutes, 15 seconds
