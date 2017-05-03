@@ -11,14 +11,14 @@ global HasAltGr := 1
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
-#include ../../groups.ahk
+#include ../../../groups.ahk
 
-#include ../../altGr.ahk
-#include ../../extend.ahk
+#include ../../../altGr.ahk
+#include ../../../extendlalt.ahk
 
-#include ../../clipboardToBash.ahk
-#include ../../fromPkl/pkl_gui.ahk
+#include ../../../clipboardToBash.ahk
+#include ../../../fromPkl/pkl_gui.ahk
 
-#include ../../commonHotkeys.ahk
+#include ../../../commonHotkeys.ahk
 
 return
