@@ -29,13 +29,13 @@
 >!sc01F::Send {[}    ; s
 >!sc020::Send {(}    ; d
 >!sc021::Send {{}    ; f
->!sc022::Send {&}    ; g
+>!sc022::Send {?}    ; g
 
 >!sc02D::Send {!}    ; x
 >!sc02E::Send {=}    ; c
 >!sc02F::Send {|}    ; v
 
->!sc017::Send {?}    ; i
+>!sc017::Send {&}    ; i
 >!sc018::Send {@}    ; i
 
 >!sc024::Send {}}    ; j
