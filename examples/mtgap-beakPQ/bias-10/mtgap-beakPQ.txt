@@ -1,0 +1,81 @@
+mtgap using weights from beak
+
+
+http://shenafu.com/smf/index.php?topic=89.msg785#msg785
+
+keyboard effort 
+7 1 1 1 3 3 1 1 1 7
+5 0 0 0 2 2 0 0 0 5
+7 2 3 1 3 3 1 3 2 7
+
+which is newest? (I prefer this one I think)
+(also think this is newest)
+9   1   1   1   5   5   1   1   1   9
+5   0.5 0.5 0.5 2   2   0.5 0.5 0.5 5
+9   2   3   1   5   5   1   3   2   9
+
+=== orig BEAK weights ====
+
+--hand bias -10 --
+
+Hands: 46% 53%
+Fingers: 2.0% 11% 14% 19% 0.00% 0.00% 20% 20% 11% 2.0%
+
+ X  P  T  H  V   <  U  O  C  J
+ W  N  D  R  M   /  A  E  S  Y
+ Q  F  B  L  K   ?  I  >  G  Z
+
+ x  p  t  h  v   :  u  o  c  j
+ w  n  d  r  m   ,  a  e  s  y
+ q  f  b  l  k   ;  i  .  g  z
+
+Fitness:       15465410
+Distance:      11931035
+Finger work:   0
+Inward rolls:  8.61%
+Outward rolls: 1.75%
+Same hand:     33.83%
+Same finger:   2.41%
+Row change:    16.57%
+Home jump:     2.89%
+Ring jump:     1.04%
+To center:     2.11%
+
+
+=== PQ adjusted weights (higher cost top row index, left hand bottom anglez / curl)====
+
+90, 10, 10, 15, 50, 50, 15, 10, 10, 90,
+50,  5,  5,  5, 20, 20,  5,  5,  5, 50,
+20, 30, 10, 50, 80, 50, 10, 30, 20, 90
+
+ie
+9 1 1 1.5 5 5 1.5 1 1 9
+5 0.5 0.5 0.5 2 2 0.5 0.5 0.5 5
+2 3 1 5 8 5 1 3 2 9
+
+
+--hand bias -10 --
+
+Hands: 46% 53%
+Fingers: 2.0% 11% 15% 19% 0.00% 0.00% 20% 20% 10% 2.0%
+
+ Z  C  N  D  V   ?  U  O  L  Q
+ P  R  S  T  F   Y  A  E  H  G
+ W  B  M  K  J   /  I  <  >  X
+
+ z  c  n  d  v   :  u  o  l  q
+ p  r  s  t  f   y  a  e  h  g
+ w  b  m  k  j   ;  i  .  ,  x
+
+Fitness:       15650285
+Distance:      12120835
+Finger work:   0
+Inward rolls:  8.34%
+Outward rolls: 1.24%
+Same hand:     33.30%
+Same finger:   2.86%
+Row change:    16.07%
+Home jump:     2.71%
+Ring jump:     1.46%
+To center:     2.49%
+
