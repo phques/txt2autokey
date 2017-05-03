@@ -29,7 +29,7 @@ ie
 
 --hand bias -15 --
 
-##strangely (after8min) even with bias -15, I get same results as bias 0 !! ##
+##** strangely (after8min) even with bias -15, I get same results as bias 0 !! **##
 
 Hands: 49% 50%
 Fingers: 3.0% 7.0% 19% 21% 0.00% 0.00% 20% 15% 11% 4.0%
@@ -58,3 +58,45 @@ To center:     2.52%
 To outside:    0.39%
 
 Time elapsed: 0 hours, 7 minutes, 11 seconds
+
+------
+
+handBias -15
+sameHand -15
+
+interesting, got good same hand / rolls,
+but very bad home jump ! 
+same finger not very good
+
+Hands: 46% 53%
+Fingers: 2.0% 11% 14% 19% 0.00% 0.00% 20% 20% 11% 4.0%
+
+ Z  [  ]  {  +  ~   ^  \  }  *  %  |  &
+    <  C  D  M  B   ?  U  O  L  >  J  Q  `
+    Y  S  T  H  F   ;  A  E  R  P  @
+    G  W  N  V  X   !  I  =  K  #
+
+ z  1  2  3  4  5   6  7  8  9  0  :  /
+    (  c  d  m  b   -  u  o  l  )  j  q  $
+    y  s  t  h  f   ,  a  e  r  p  '
+    g  w  n  v  x   _  i  .  k  "
+
+Fitness:       16651235
+Distance:      16124765
+Finger work:   0
+Inward rolls:  8.64%
+Outward rolls: 2.75%
+Same hand:     40.32%
+Same finger:   2.42%
+Row change:    19.62%
+Home jump:     4.07%
+Ring jump:     1.91%
+To center:     2.26%
+To outside:    0.81%
+
+Time elapsed: 0 hours, 6 minutes, 58 seconds
+Time elapsed: 0 hours, 7 minutes, 2 seconds
+Chance to use previous layout is now 0.634732.
+Number of swaps between rounds is now 15.
+Number of rounds in greatToBest() is now 1024.
+Time elapsed: 0 hours, 10 minutes, 28 seconds
