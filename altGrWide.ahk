@@ -46,3 +46,13 @@
 >!sc033::Send {+}   ; ,
 >!sc032::Send {\}   ; m
 
+;----
+
+>!+sc005::Send philippe.quesnel
+>!+sc006::Send @cgi.com
+>!+sc007::Send @gmail.com
+
+>!Enter::Send {End}{Enter}
+>!+sc027::Send {End}{;}   ;  ';'
+
+

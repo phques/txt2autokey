@@ -17,10 +17,6 @@
 >!+sc02E::Send {9}    ; c
 >!+sc02F::Send {.}    ; v
 
->!+sc025::Send philippe.quesnel
->!+sc026::Send @cgi.com
->!+sc027::Send @gmail.com
-
 
 ;;---- special symbols on RAlt
 
@@ -50,4 +46,12 @@
 >!sc031::Send {\}    ; n
 >!sc032::Send {+}    ; m
 
->!Enter::Send {Enter}
+;----
+
+>!+sc005::Send philippe.quesnel
+>!+sc006::Send @cgi.com
+>!+sc007::Send @gmail.com
+
+>!Enter::Send {End}{Enter}
+>!+sc027::Send {End}{;}   ;  ';'
+
