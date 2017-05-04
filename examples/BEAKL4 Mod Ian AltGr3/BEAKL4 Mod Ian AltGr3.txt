@@ -1,0 +1,23 @@
+http://kla.keyboard-design.com/#/config
+
+BeakL for US kbd
+Does not use top (num) row
+uses AltGr layer for special chars & numbers (ie Arensito)
+
+Also has remapped special / control keys, cf PNG
+
+
+K Y O % @ f c l p q z
+H I E A U D S T N R V
+J ~ | `   W G M B X    <- missing mid key is `copyright`symbol !
+
+k y o / ! f c l p q z
+h i e a u d s t n r v
+j ? | ( ) w g m b x
+
+AltGr layer
+[ $ = < _ & " ; + ] \
+4 2 , 0 { } 1 . 3 5 ^
+6 8 - '   : * > 9 7
+
+
