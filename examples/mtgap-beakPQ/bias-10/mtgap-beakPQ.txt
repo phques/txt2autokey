@@ -79,3 +79,40 @@ Home jump:     2.71%
 Ring jump:     1.46%
 To center:     2.49%
 
+-- hand bias -15, samehand -15 --
+
+nb: similar main keys as beakpqfull with same params !
+
+Hands: 46% 53%
+Fingers: 1.0% 11% 15% 19% 0.00% 0.00% 20% 20% 11% 2.0%
+
+ X  C  D  M  B   /  U  O  L  J
+ K  S  T  H  F   Y  A  E  R  P
+ G  W  N  V  Q   ?  I  <  >  Z
+
+ x  c  d  m  b   :  u  o  l  j
+ k  s  t  h  f   y  a  e  r  p
+ g  w  n  v  q   ;  i  .  ,  z
+
+Fitness:       13179300
+Distance:      13569595
+Finger work:   0
+Inward rolls:  8.97%
+Outward rolls: 2.88%
+Same hand:     40.37%
+Same finger:   2.64%
+Row change:    19.76%
+Home jump:     3.87%
+Ring jump:     1.42%
+To center:     2.54%
+
+Time elapsed: 0 hours, 1 minutes, 47 seconds
+Chance to use previous layout is now 0.664249.
+Number of swaps between rounds is now 15.
+Number of rounds in greatToBest() is now 2048.
+...
+Chance to use previous layout is now 0.691987.
+Number of swaps between rounds is now 16.
+Number of rounds in greatToBest() is now 8192.
+Time elapsed: 0 hours, 10 minutes, 45 seconds
+
