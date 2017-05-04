@@ -64,7 +64,7 @@ Time elapsed: 0 hours, 7 minutes, 11 seconds
 handBias -15
 sameHand -15
 
-interesting, got good same hand / rolls,
+interesting, got good same hand / rolls, 
 but very bad home jump ! 
 same finger not very good
 
@@ -100,3 +100,60 @@ Chance to use previous layout is now 0.634732.
 Number of swaps between rounds is now 15.
 Number of rounds in greatToBest() is now 1024.
 Time elapsed: 0 hours, 10 minutes, 28 seconds
+
+
+manually adjusted special chars
+
+ Z  [  ]  {  +  ~   ^  \  }  *  %  |  &
+ 
+ Z  ~  [  ]  +  *   ^  %  \  {  }  |  &
+    <  C  D  M  B   ?  U  O  L  >  J  Q  `
+    Y  S  T  H  F   ;  A  E  R  P  @
+    G  W  N  V  X   !  I  =  K  #
+
+ z  1  2  3  4  5   6  7  8  9  0  :  /
+    (  c  d  m  b   -  u  o  l  )  j  q  $
+    y  s  t  h  f   ,  a  e  r  p  '
+    g  w  n  v  x   _  i  .  k  "
+
+
+
+
+
+--- test same params, with allCharsProg ---
+
+Hands: 46% 53%
+Fingers: 2.0% 11% 14% 19% 0.00% 0.00% 21% 19% 11% 3.0%
+
+orig top shifted
+ Q  [  ]  +  $  @   ~  \  {  }  %  J  ^
+
+adjusted manually
+ Q  $  [  ]  +  @   ~  %  \  {  }  J  ^
+    X  C  D  M  B   =  U  O  L  <  >  |  `
+    Y  S  T  H  F   /  A  E  R  P  #
+    G  W  N  V  &   :  I  *  K  Z
+
+ q  1  2  3  4  5   6  7  8  9  0  j  !
+    x  c  d  m  b   (  u  o  l  ,  -  '  ?
+    y  s  t  h  f   .  a  e  r  p  _
+    g  w  n  v  "   ;  i  )  k  z
+
+Fitness:       16261285
+Distance:      15792660
+Finger work:   0
+Inward rolls:  8.63%
+Outward rolls: 2.79%
+Same hand:     40.20%
+Same finger:   2.31%
+Row change:    19.57%
+Home jump:     3.95%
+Ring jump:     2.18%
+To center:     1.87%
+To outside:    1.02%
+
+Time elapsed: 0 hours, 27 minutes, 44 seconds
+Time elapsed: 0 hours, 27 minutes, 48 seconds
+Number of rounds in greatToBest() is now 4096.
+Time elapsed: 0 hours, 45 minutes, 24 seconds
+

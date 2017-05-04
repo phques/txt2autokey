@@ -11,7 +11,7 @@ a s d f g h j k l ; '
 z x c v b n m , . /
 
 To  (kbd.txt)
-Z [ ] { + ~ ^ \ } * % | &
+Z ~ [ ] + * ^ % \ { } | &
 < C D M B ? U O L > J Q `
 Y S T H F ; A E R P @
 G W N V X ! I = K #
@@ -26,23 +26,23 @@ g w n v x _ i . k "
 #Include includes.ahk
 
 *sc029::sc02c			; ` :: z
-+sc002::Send {sc01a}	; ! :: [
++sc002::+sc029			; ! :: ~
  sc002::sc002			; 1 :: 1
-+sc003::Send {sc01b}	; @ :: ]
++sc003::Send {sc01a}	; @ :: [
  sc003::sc003			; 2 :: 2
-+sc004::+sc01a			; # :: {
++sc004::Send {sc01b}	; # :: ]
  sc004::sc004			; 3 :: 3
 +sc005::+sc00d			; $ :: +
  sc005::sc005			; 4 :: 4
-+sc006::+sc029			; % :: ~
++sc006::+sc009			; % :: *
  sc006::sc006			; 5 :: 5
-+sc008::Send {sc02b}	; & :: \
++sc008::+sc006			; & :: %
  sc008::sc008			; 7 :: 7
-+sc009::+sc01b			; * :: }
++sc009::Send {sc02b}	; * :: \
  sc009::sc009			; 8 :: 8
-+sc00a::+sc009			; ( :: *
++sc00a::+sc01a			; ( :: {
  sc00a::sc00a			; 9 :: 9
-+sc00b::+sc006			; ) :: %
++sc00b::+sc01b			; ) :: }
  sc00b::sc00b			; 0 :: 0
 +sc00c::+sc02b			; _ :: |
  sc00c::+sc027			; - :: :
