@@ -13,7 +13,7 @@ J ~ | `   W G M B X    <- missing mid key is `copyright`symbol !
 
 k y o / ! f c l p q z
 h i e a u d s t n r v
-j ? | ( ) w g m b x
+j ? ( ) # w g m b x
 
 AltGr layer
 [ $ = < _ & " ; + ] \
@@ -21,3 +21,14 @@ AltGr layer
 6 8 - '   : * > 9 7
 
 
+----
+
+quick mod PQ, I want punctuation! (dont have easy access to AltGr)
+
+K Y O % ? f c l p q z
+H I E A U D S T N R V
+J : ! ` @ W G M B X
+
+k y o / \ f c l p q z
+h i e a u d s t n r v
+j ; . , # w g m b x

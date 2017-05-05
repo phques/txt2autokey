@@ -9,26 +9,25 @@ a s d f g h j k l ; '
 z x c v b n m , . /
 
 To  (kbd.txt)
-K Y O % @ f c l p q z
+K Y O % ? f c l p q z
 H I E A U D S T N R V
-J ~ | ` @ W G M B X
+J : ! ` @ W G M B X
 
-k y o / ! f c l p q z
+k y o / \ f c l p q z
 h i e a u d s t n r v
-j ? | ( ) w g m b x
+j ; . , # w g m b x
 
 */
 
 #Include includes.ahk
-
 
 *sc010::sc025			; q :: k
 *sc011::sc015			; w :: y
 *sc012::sc018			; e :: o
 +sc013::+sc006			; R :: %
  sc013::sc035			; r :: /
-+sc014::+sc003			; T :: @
- sc014::+sc002			; t :: !
++sc014::+sc035			; T :: ?
+ sc014::sc02b			; t :: \
 *sc015::sc021			; y :: f
 *sc016::sc02e			; u :: c
 *sc017::sc026			; i :: l
@@ -47,14 +46,13 @@ j ? | ( ) w g m b x
 *sc027::sc013			; ; :: r
 *sc028::sc02f			; ' :: v
 *sc02c::sc024			; z :: j
-+sc02d::+sc029			; X :: ~
- sc02d::+sc035			; x :: ?
-+sc02e::+sc02b			; C :: |
- sc02e::+sc02b			; c :: |
+*sc02d::sc027			; x :: ;
++sc02e::+sc002			; C :: !
+ sc02e::sc034			; c :: .
 +sc02f::Send {sc029}	; V :: `
- sc02f::+sc00a			; v :: (
+ sc02f::sc033			; v :: ,
 +sc030::+sc003			; B :: @
- sc030::+sc00b			; b :: )
+ sc030::+sc004			; b :: #
 *sc031::sc011			; n :: w
 *sc032::sc022			; m :: g
 *sc033::sc032			; , :: m
