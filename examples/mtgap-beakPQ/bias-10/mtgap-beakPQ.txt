@@ -116,3 +116,38 @@ Number of swaps between rounds is now 16.
 Number of rounds in greatToBest() is now 8192.
 Time elapsed: 0 hours, 10 minutes, 45 seconds
 
+
+===new adjusted weights===
+
+9.0  2.0  1.5  4.0 8.0  9.3 4.0 1.5  2.0  9.0
+5.0  0.6  0.0   0  4.5  4.5   0   0  0.6  5.0
+2.5  3.0  1.0  5.0 9.3  5.0 1.0 3.0  2.5  8.3
+
+
+--- -15, -15 ---
+Hands: 45% 54%
+Fingers: 2.0% 11% 15% 17% 0.00% 0.00% 21% 20% 11% 2.0%
+
+ X  C  M  B  Q   /  U  O  L  J
+ W  S  T  H  F   Y  A  E  R  P
+ G  D  N  V  <   >  I  ;  K  Z
+
+ x  c  m  b  q   :  u  o  l  j
+ w  s  t  h  f   y  a  e  r  p
+ g  d  n  v  ?   ,  i  .  k  z
+
+Fitness:       14808295
+Distance:      15333455
+Finger work:   0
+Inward rolls:  9.00%
+Outward rolls: 4.07%
+Same hand:     40.85%
+Same finger:   2.60%
+Row change:    18.39%
+Home jump:     2.76%
+Ring jump:     1.50%
+To center:     2.74%
+
+
+
+
