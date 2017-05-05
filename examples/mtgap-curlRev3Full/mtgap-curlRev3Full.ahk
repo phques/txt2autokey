@@ -12,12 +12,12 @@ z x c v b n m , . /
 
 To  (mtgap-curlRev3Full.txt)
 ` 1 2 3 4 5 6 7 8 9 0 & ~
-X C D M K @ ! U P Q [ ] |
+K C D M X @ ! U P Q [ ] |
 R S T H V / A E N I '
 G B L F Z ? O Y W J
 
 $ * ( { < = % _ > } ) - ^
-x c d m k : . u p q + # \
+k c d m x : . u p q + # \
 r s t h v ; a e n i "
 g b l f z , o y w j
 
@@ -51,11 +51,11 @@ g b l f z , o y w j
  sc00c::sc00c			; - :: -
 +sc00d::+sc029			; + :: ~
  sc00d::+sc007			; = :: ^
-*sc010::sc02d			; q :: x
+*sc010::sc025			; q :: k
 *sc011::sc02e			; w :: c
 *sc012::sc020			; e :: d
 *sc013::sc032			; r :: m
-*sc014::sc025			; t :: k
+*sc014::sc02d			; t :: x
 +sc015::+sc003			; Y :: @
  sc015::+sc027			; y :: :
 +sc016::+sc002			; U :: !
