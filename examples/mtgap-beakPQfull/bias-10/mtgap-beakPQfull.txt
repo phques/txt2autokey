@@ -118,8 +118,6 @@ manually adjusted special chars
 
 
 
-
-
 --- test same params, with allCharsProg ---
 
 Hands: 46% 53%
@@ -157,3 +155,44 @@ Time elapsed: 0 hours, 27 minutes, 48 seconds
 Number of rounds in greatToBest() is now 4096.
 Time elapsed: 0 hours, 45 minutes, 24 seconds
 
+================
+
+2017-05-05
+
+new weights adju.
+70,  20,  15,  35,  80,  93,  35,  15,  20,  70,
+50,   6,   0,   0,  45,  45,   0,   0,   6,  50,
+20,  30,  10,  50,  93,  50,  10,  30,  20,  75,
+
+sethandbias -15
+set sameHand -5
+set numThreads 4
+
+Hands: 46% 53%
+Fingers: 3.0% 11% 15% 17% 0.00% 0.00% 19% 20% 10% 4.0%
+
+ Z  <  >  [  ]  #   ~  @  {  }  %  |  ^
+    V  C  D  F  *   \  U  O  L  +  J  Q  `
+    W  S  T  H  B   =  A  E  R  Y  &
+    G  M  N  P  X   ?  I  "  K  !
+
+ z  1  2  3  4  5   6  7  8  9  0  :  /
+    v  c  d  f  )   ;  u  o  l  _  j  q  $
+    w  s  t  h  b   ,  a  e  r  y  (
+    g  m  n  p  x   -  i  .  k  '
+
+Fitness:       20239298
+Distance:      17442898
+Finger work:   0
+Inward rolls:  8.38%
+Outward rolls: 2.98%
+Same hand:     39.10%
+Same finger:   2.33%
+Row change:    18.81%
+Home jump:     4.15%
+Ring jump:     1.26%
+To center:     1.74%
+To outside:    0.72%
+
+Time elapsed: 0 hours, 47 minutes, 33 seconds
+Time elapsed: 0 hours, 47 minutes, 37 seconds

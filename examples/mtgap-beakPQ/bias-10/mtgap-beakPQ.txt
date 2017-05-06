@@ -148,6 +148,66 @@ Home jump:     2.76%
 Ring jump:     1.50%
 To center:     2.74%
 
+---------
+
+weights adjusted again (2017-05-05)
+
+setksize beakpq
+sethandbias -15
+set sameHand -5
 
 
+Hands: 47% 52%
+Fingers: 3.0% 11% 15% 18% 0.00% 0.00% 20% 20% 11% 2.0%
+
+ V  C  M  P  Q   <  U  O  L  J
+ W  S  T  H  F   ?  A  E  R  Y
+ G  D  N  B  Z   >  I  /  K  X
+
+ v  c  m  p  q   :  u  o  l  j
+ w  s  t  h  f   ,  a  e  r  y
+ g  d  n  b  z   ;  i  .  k  x
+
+Fitness:       16691062
+Distance:      15402762
+Finger work:   0
+Inward rolls:  8.71%
+Outward rolls: 4.28%
+Same hand:     38.80%
+Same finger:   2.11%
+Row change:    17.34%
+Home jump:     2.84%
+Ring jump:     1.18%
+To center:     1.12%
+
+----------
+
+(slightly adj from above)
+setksize beakpq
+sethandbias -15
+set sameHand 0
+
+
+Hands: 46% 53%
+Fingers: 3.0% 12% 15% 17% 0.00% 0.00% 20% 20% 11% 2.0%
+
+ K  L  D  F  X   <  U  O  C  J
+ P  R  T  H  V   ?  A  E  S  Y
+ W  M  N  B  Q   >  I  /  G  Z
+
+ k  l  d  f  x   :  u  o  c  j
+ p  r  t  h  v   ,  a  e  s  y
+ w  m  n  b  q   ;  i  .  g  z
+
+Fitness:       17639989
+Distance:      14873737
+Finger work:   56932
+Inward rolls:  7.90%
+Outward rolls: 2.05%
+Same hand:     33.83%
+Same finger:   2.05%
+Row change:    17.15%
+Home jump:     4.14%
+Ring jump:     1.22%
+To center:     1.36%
 

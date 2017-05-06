@@ -3,16 +3,64 @@
 // mtgap curlrev3
 // modified version of mtgap based on my personal preferences
 
-// Hands: 47% 52%
-// Fingers: 6.0% 11% 14% 15% 0.00% 0.00% 18% 16% 11% 7.0%
+Hands: 47% 52%
+Fingers: 6.0% 11% 14% 15% 0.00% 0.00% 18% 16% 11% 7.0%
 
-
-
+ orig
  X  C  D  M  K   <  >  U  P  Q
+ 
+ 3.2
+ manually swapped x -- k
+ K  C  D  M  X   <  >  U  P  Q
  R  S  T  H  V   /  A  E  N  I
  G  B  L  F  Z   ?  O  Y  W  J
 
- x  c  d  m  k   :  .  u  p  q
+ k  c  d  m  x   :  .  u  p  q
  r  s  t  h  v   ;  a  e  n  i
  g  b  l  f  z   ,  o  y  w  j
- 
+
+Fitness:       16239876
+Distance:      13492841
+Finger work:   0
+Inward rolls:  9.34%
+Outward rolls: 2.32%
+Same hand:     35.73%
+Same finger:   1.41%
+Row change:    15.36%
+Home jump:     2.72%
+Ring jump:     2.17%
+To center:     1.44%
+
+--------
+
+3.3
+2017-05-05
+new weights, slightly adjusted (lower effort on pinkys actyually !)
+
+sethandbias -15
+set sameHand -5
+
+
+Hands: 47% 52%
+Fingers: 7.0% 11% 14% 15% 0.00% 0.00% 18% 16% 11% 8.0%
+
+ K  C  D  M  X   <  >  U  P  J
+ R  S  T  H  V   Q  A  E  N  I
+ G  B  L  F  Z   ?  O  Y  W  /
+
+ k  c  d  m  x   :  .  u  p  j
+ r  s  t  h  v   q  a  e  n  i
+ g  b  l  f  z   ,  o  y  w  ;
+
+Fitness:       21075860
+Distance:      18341290
+Finger work:   0
+Inward rolls:  9.32%
+Outward rolls: 2.52%
+Same hand:     35.73%
+Same finger:   1.45%
+Row change:    15.43%
+Home jump:     2.71%
+Ring jump:     1.97%
+To center:     1.20%
+

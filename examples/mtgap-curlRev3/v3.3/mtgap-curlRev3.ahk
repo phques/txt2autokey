@@ -9,13 +9,13 @@ a s d f g h j k l ;
 z x c v b n m , . /
 
 To  (kbd.txt)
-K C D M X < > U P Q
-R S T H V / A E N I
-G B L F Z ? O Y W J
+K C D M X < > U P J
+R S T H V Q A E N I
+G B L F Z ? O Y W /
 
-k c d m x : . u p q
-r s t h v ; a e n i
-g b l f z , o y w j
+k c d m x : . u p j
+r s t h v q a e n i
+g b l f z , o y w ;
 
 */
 
@@ -31,13 +31,12 @@ g b l f z , o y w j
 *sc016::sc034			; u :: .
 *sc017::sc016			; i :: u
 *sc018::sc019			; o :: p
-*sc019::sc010			; p :: q
+*sc019::sc024			; p :: j
 *sc01e::sc013			; a :: r
 *sc020::sc014			; d :: t
 *sc021::sc023			; f :: h
 *sc022::sc02f			; g :: v
-+sc023::Send {sc035}	; H :: /
- sc023::sc027			; h :: ;
+*sc023::sc010			; h :: q
 *sc024::sc01e			; j :: a
 *sc025::sc012			; k :: e
 *sc026::sc031			; l :: n
@@ -52,4 +51,5 @@ g b l f z , o y w j
 *sc032::sc018			; m :: o
 *sc033::sc015			; , :: y
 *sc034::sc011			; . :: w
-*sc035::sc024			; / :: j
++sc035::Send {sc035}	; ? :: /
+ sc035::sc027			; / :: ;
