@@ -1,0 +1,41 @@
+From text
+---------
+creae a new text file in notepad++,
+paste the kbd def at the top:
+
+K Y O % ? f c l p q z
+ H I E A U D S T N R V
+  J : ! ` @ W G M B X
+k y o / \ f c l p q z
+ H I E A u d S T N R v
+  j ; . , # w g m b x
+
+switch to style Bespin
+(font dejaVu sans mono, 10)
+
+do a screen capture of the wimdow (ie snipit)
+then run these commands under Bash Ubuntu on Windows (or linux)
+
+convert Capture.PNG -crop 250x46+50+104 state1.png
+convert Capture.PNG -crop 250x46+50+149 state0.png
+
+(prev vzals, diff font)
+convert Capture.PNG -crop 202x56+50+158 state0.png
+convert Capture.PNG -crop 202x56+50+104 state1.png
+
+-----------
+
+Otherwise, for a nice graphic image with letters color coded by finger
+
+create a KLC file
+- for a 30 chars kbd, use \txtkbd2Klc.exe
+- else .. microsoft keyboard layout creator
+
+then use the perl scripts from PKL
+klc2ini.pl : creates a PKL layout.ini
+ini2html.pl : creates an HTML page from layout.ini
+cutycapt --url="file://fullPath/layout.html" --out=layoutGrab.png
+(creates layoutGrab.png out of the HTML page)
+perl split_png.pl : creates PNGs from layoutGrab.png
+
+

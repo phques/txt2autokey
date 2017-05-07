@@ -33,7 +33,7 @@ To center:     1.44%
 
 --------
 
-3.3
+v3.3
 2017-05-05
 new weights, slightly adjusted (lower effort on pinkys actyually !)
 
@@ -64,3 +64,81 @@ Home jump:     2.71%
 Ring jump:     1.97%
 To center:     1.20%
 
+----------
+
+v3.4
+2017-05-06
+
+trying out idea of smaller 'curl' effect
+70,  35,  33,  40,  80,  93,  40,  33,  35,  70,
+16,   6,   0,   0,  50,  50,   0,   0,   6,  16,
+50,  60,  30,  55,  93,  55,  30,  60,  50,  75,
+
+Not so crazy about it for now .. not used to it though.
+
+
+setksize curlaz30
+sethandbias -15
+set sameHand -5
+set numThreads 4
+
+Hands: 44% 55%
+Fingers: 6.0% 10% 14% 13% 0.00% 0.00% 16% 20% 11% 8.0%
+
+ X  G  D  M  Z   /  F  O  U  Q
+ R  S  T  H  V   P  N  E  I  A
+ W  B  L  K  J   Y  C  <  >  ?
+
+ x  g  d  m  z   :  f  o  u  q
+ r  s  t  h  v   p  n  e  i  a
+ w  b  l  k  j   y  c  .  ,  ;
+
+Fitness:       19527034
+Distance:      18546684
+Finger work:   0
+Inward rolls:  8.06%
+Outward rolls: 3.18%
+Same hand:     38.60%
+Same finger:   1.53%
+Row change:    16.04%
+Home jump:     2.20%
+Ring jump:     2.19%
+To center:     3.76%
+
+-----
+
+v3.5
+2017-05-06
+
+NB: this actually changed to about the same thing as v3.4 eventually,
+but went through strange steps, including this one just before .. intersting
+
+setksize curlaz30
+sethandbias -5
+set sameHand -5
+set numThreads 4
+set toCenter 10
+
+??????
+Hands: 47% 52%
+Fingers: 6.0% 10% 12% 19% 0.00% 0.00% 16% 19% 9.0% 8.0%
+
+ X  P  L  M  K   J  F  O  U  Q
+ R  I  N  T  B   G  S  E  H  A
+ ?  V  D  W  Z   Y  C  /  <  >
+
+ x  p  l  m  k   j  f  o  u  q
+ r  i  n  t  b   g  s  e  h  a
+ .  v  d  w  z   y  c  ;  ,  :
+
+Fitness:       15960562
+Distance:      15487817
+Finger work:   0
+Inward rolls:  9.10%
+Outward rolls: 4.20%
+Same hand:     41.97%
+Same finger:   1.53%
+Row change:    18.23%
+Home jump:     2.16%
+Ring jump:     1.26%
+To center:     4.63%
