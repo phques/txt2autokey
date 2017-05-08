@@ -32,3 +32,20 @@ J : ! ` @ W G M B X
 k y o / \ f c l p q z
 h i e a u d s t n r v
 j ; . , # w g m b x
+
+----
+
+quick mod II 
+PQ, curl !
+swap G D
+swap U .
+
+not very good, creates LD DL, OU UO home jumps
+
+K Y O % ? f c l p q z
+H I E A ! G S T N R V
+J : U ` @ W D M B X
+
+k y o / \ f c l p q z
+h i e a . g s t n r v
+j ; u , # w d m b x
