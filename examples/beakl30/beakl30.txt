@@ -38,3 +38,34 @@ V B M G W  ; < > Y Z
 q n l c f  x . o h j
 p r t s d  u a e i k
 v b m g w  / , ? y z
+
+---------
+
+2017-05-06
+
+mtgap
+setksize beakpq
+improve tt 
+
+Hands: 50% 49%
+Fingers: 4.0% 12% 16% 19% 0.00% 0.00% 19% 21% 9.0% 1.0%
+
+ V  W  N  G  Q   <  U  O  F  J
+ C  R  S  T  B   ?  A  E  H  K
+ L  M  D  P  Z   >  I  /  Y  X
+
+ v  w  n  g  q   :  u  o  f  j
+ c  r  s  t  b   .  a  e  h  k
+ l  m  d  p  z   ;  i  ,  y  x
+
+Fitness:       13380818
+Distance:      10181981
+Finger work:   56932
+Inward rolls:  8.17%
+Outward rolls: 1.45%
+Same hand:     31.12%
+Same finger:   2.54%
+Row change:    14.34%
+Home jump:     3.39%
+Ring jump:     1.39%
+To center:     1.26%
