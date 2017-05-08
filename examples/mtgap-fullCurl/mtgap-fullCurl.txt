@@ -1,0 +1,78 @@
+
+2017-05-07
+
+using costs from curl angleZ 30 chars...
+110, 100,  90,  75, 100, 120, 160, 100,  75,  90, 100, 110, 120, 999,
+999,  70,  35,  33,  45,  80,  93,  40,  33,  35,  70,  80,  90, 140,
+999,  16,   6,   0,   0,  55,  50,   0,   0,   6,  16,  50, 999, 999,
+999,  50,  60,  30,  58,  93,  55,  30,  60,  50,  75, 999, 999, 999,
+
+setksize standard
+set numThreads 4
+
+
+Hands: 51% 48%
+Fingers: 9.0% 9.0% 20% 13% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ ^  &  [  {  +  @   ~  \  }  ]  %  #  Z
+    $  P  O  U  <   >  M  D  C  K  X  Q  `
+    I  N  E  A  :   F  H  T  S  R  W
+    ?  *  =  Y  |   V  L  B  G  J
+
+ ;  1  2  3  4  5   6  7  8  9  0  /  z
+    _  p  o  u  (   )  m  d  c  k  x  q  !
+    i  n  e  a  -   f  h  t  s  r  w
+    .  "  ,  y  '   v  l  b  g  j
+
+Fitness:       19934022
+Distance:      16100034
+Finger work:   68658
+Inward rolls:  9.95%
+Outward rolls: 2.65%
+Same hand:     34.44%
+Same finger:   1.92%
+Row change:    12.80%
+Home jump:     1.51%
+Ring jump:     2.90%
+To center:     1.54%
+To outside:    0.98%
+
+Time elapsed: 0 hours, 9 minutes, 10 seconds
+Number of rounds in greatToBest() is now 1024.
+Time elapsed: 0 hours, 10 minutes, 24 seconds
+
+---
+
+setksize standard
+set numThreads 4
+set keepNumbers 1
+
+Hands: 51% 48%
+Fingers: 9.0% 9.0% 20% 13% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ `  &  |  {  <  @   ^  >  }  +  %  #  Z
+    $  P  O  U  [   ]  M  D  C  K  X  Q  ~
+    I  N  E  A  *   F  H  T  S  R  W
+    =  ?  ;  Y  \   V  L  B  G  J
+
+ :  1  2  3  4  5   6  7  8  9  0  /  z
+    _  p  o  u  (   )  m  d  c  k  x  q  !
+    i  n  e  a  -   f  h  t  s  r  w
+    .  "  ,  y  '   v  l  b  g  j
+
+Fitness:       19944598
+Distance:      16031025
+Finger work:   68658
+Inward rolls:  9.93%
+Outward rolls: 2.64%
+Same hand:     34.43%
+Same finger:   1.94%
+Row change:    12.83%
+Home jump:     1.51%
+Ring jump:     2.88%
+To center:     1.53%
+To outside:    0.95%
+
+Time elapsed: 0 hours, 5 minutes, 40 seconds
+Number of rounds in greatToBest() is now 512.
+
