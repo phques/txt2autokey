@@ -167,7 +167,7 @@ To outside:    0.78%
 idea from BEAKL4 Mod Ian AltGr3.txt,
 which has synbols / punctuation on AtlGr,
 ?pick same symbols for main lyaer (need to add 2, I have 1 extra key)
-looks like he picked least used and replaced 2 by ()
+looks like he picked least used and replaced 2 by () 
 
 %@~|`©/!?()#
 
@@ -190,7 +190,7 @@ QWERTYUIOP'#ASDFGHJKL()ZXCVBNM~@`
 14 last from prog
 '#![]\|%^$?~@`
 
-use '#!\|% ^$? ~@` ()
+use '#!\|% ^$? ~@` []
 qwertyuiop!\asdfghjkl|%zxcvbnm^$?
 QWERTYUIOP'#ASDFGHJKL[]ZXCVBNM~@`
 
