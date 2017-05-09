@@ -9,7 +9,7 @@ Also has remapped special / control keys, cf PNG
 
 K Y O % @ f c l p q z
 H I E A U D S T N R V
-J ~ | `   W G M B X    <- missing mid key is `copyright`symbol !
+J ~ | ` © W G M B X
 
 k y o / ! f c l p q z
 h i e a u d s t n r v

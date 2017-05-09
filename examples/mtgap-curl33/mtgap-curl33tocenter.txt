@@ -1,0 +1,72 @@
+mtgap curl / angleZ
+main30 chars + 3chars at right of right hand []'
+
+2017-05-08
+
+(actually 'same-hand' from yesterday)
+setksize curlaz33
+set sameHand -10
+set numThreads 4
+
+Hands: 50% 49%
+Fingers: 7.0% 10% 15% 17% 0.00% 0.00% 18% 11% 12% 9.0%
+
+ ]  P  U  C  J  <   >  D  G  X  Q  Z
+ I  N  E  R  W  [   A  H  T  S  K
+ Y  /  L  M  {  }   O  F  B  V
+
+ "  p  u  c  j  ?   ,  d  g  x  q  z
+ i  n  e  r  w  .   a  h  t  s  k
+ y  '  l  m  :  ;   o  f  b  v
+
+Fitness:       13944854
+Distance:      14690580
+Finger work:   206354
+Inward rolls:  11.23%
+Outward rolls: 5.00%
+Same hand:     46.65%
+Same finger:   1.72%
+Row change:    19.54%
+Home jump:     2.41%
+Ring jump:     1.23%
+To center:     2.20%
+To outside:    0.57%
+
+--------
+
+setksize curlaz33
+set toCenter 5
+set numThreads 4
+
+Prog replace < by '
+setksize curlaz33
+set toCenter 5
+set numThreads 4
+
+Prog replace < by '
+use qwertyuiop./asdfghjkl()zxcvbnm=":QWERTYUIOP*;ASDFGHJKL{}ZXCVBNM'-,
+
+Hands: 51% 48%
+Fingers: 7.0% 10% 15% 19% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ =  P  U  ;  {   }  M  D  C  K  X  Z
+ I  N  E  A  :   F  H  T  S  R  W
+ Y  /  O  *  Q   V  L  B  G  J
+
+ "  p  u  .  (   )  m  d  c  k  x  z
+ i  n  e  a  ,   f  h  t  s  r  w
+ y  '  o  -  q   v  l  b  g  j
+
+Fitness:       17490151
+Distance:      14650621
+Finger work:   0
+Inward rolls:  8.85%
+Outward rolls: 2.45%
+Same hand:     34.36%
+Same finger:   1.41%
+Row change:    13.86%
+Home jump:     2.80%
+Ring jump:     1.98%
+To center:     1.84%
+To outside:    0.78%
+

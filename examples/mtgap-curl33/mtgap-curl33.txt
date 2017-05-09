@@ -1,6 +1,7 @@
-
 mtgap curl / angleZ
 main30 chars + 3chars at right of right hand []'
+
+2017-05-08
 
 setksize curlaz33
 set numThreads 4
@@ -29,32 +30,354 @@ Ring jump:     2.01%
 To center:     1.06%
 To outside:    0.79%
 
+....
+setksize curlaz33
+set numThreads 4
+
+use (w. 14 1st symbols from StdChars)
+qwertyuiop_*asdfghjkl:"zxcvbnm,./
+QWERTYUIOP-=ASDFGHJKL;'ZXCVBNM()!
+
+
+Hands: 51% 48%
+Fingers: 7.0% 10% 15% 19% 0.00% 0.00% 14% 14% 11% 9.0%
+
+ /  P  U  :  *  Q   M  D  C  K  X  Z
+ I  N  E  A  =  F   H  T  S  R  W
+ Y  )  O  ;  !  V   L  B  G  J
+
+ -  p  u  .  _  q   m  d  c  k  x  z
+ i  n  e  a  '  f   h  t  s  r  w
+ y  "  o  ,  (  v   l  b  g  j
+
+Fitness:       18206099
+Distance:      14812864
+Finger work:   0
+Inward rolls:  8.89%
+Outward rolls: 2.46%
+Same hand:     34.35%
+Same finger:   1.43%
+Row change:    13.93%
+Home jump:     2.78%
+Ring jump:     2.00%
+To center:     1.37%
+To outside:    0.77%
+
+....
+setksize curlaz33
+set numThreads 4
+
+Prog
+qwertyuiop./asdfghjkl()zxcvbnm=":
+QWERTYUIOP*;ASDFGHJKL{}ZXCVBNM,<-
+
+Hands: 50% 49%
+Fingers: 7.0% 10% 15% 18% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ <  P  U  =  {   }  M  D  C  K  X  Z
+ I  N  E  A  :   F  H  T  S  R  W
+ Y  /  O  *  Q   V  L  B  G  J
+
+ "  p  u  .  (   )  m  d  c  k  x  z
+ i  n  e  a  ;   f  h  t  s  r  w
+ y  -  o  ,  q   v  l  b  g  j
+
+Fitness:       17376714
+Distance:      14560374
+Finger work:   0
+Inward rolls:  8.91%
+Outward rolls: 2.48%
+Same hand:     34.33%
+Same finger:   1.37%
+Row change:    13.94%
+Home jump:     2.86%
+Ring jump:     1.97%
+To center:     1.24%
+To outside:    0.78%
+
+....
+setksize curlaz33
+set numThreads 4
+
+Src2
+qwertyuiop./asdfghjkl()zxcvbnm=":
+QWERTYUIOP*;ASDFGHJKL{}ZXCVBNM_-,
+
+Hands: 51% 48%
+Fingers: 7.0% 10% 15% 19% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ /  P  U  *  {   }  M  D  C  K  X  Z
+ I  N  E  A  :   F  H  T  S  R  W
+ Y  =  O  ;  Q   V  L  B  G  J
+
+ _  p  u  .  (   )  m  d  c  k  x  z
+ i  n  e  a  -   f  h  t  s  r  w
+ y  "  o  ,  q   v  l  b  g  j
+
+Fitness:       17714110
+Distance:      14684175
+Finger work:   0
+Inward rolls:  8.85%
+Outward rolls: 2.48%
+Same hand:     34.34%
+Same finger:   1.38%
+Row change:    14.01%
+Home jump:     2.86%
+Ring jump:     2.03%
+To center:     1.35%
+To outside:    0.78%
+
+....
+setksize curlaz33
+set numThreads 4
+
+Src2 replace - by '
+or
+Prog replace < by '
+
+qwertyuiop./asdfghjkl()zxcvbnm=":
+QWERTYUIOP*;ASDFGHJKL{}ZXCVBNM'-,
+
+Hands: 51% 48%
+Fingers: 7.0% 10% 15% 19% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ =  P  U  ;  {   }  M  D  C  K  X  Z
+ I  N  E  A  :   F  H  T  S  R  W
+ Y  /  O  *  Q   V  L  B  G  J
+
+ "  p  u  .  (   )  m  d  c  k  x  z
+ i  n  e  a  '   f  h  t  s  r  w
+ y  -  o  ,  q   v  l  b  g  j
+
+Fitness:       17716964
+Distance:      14673499
+Finger work:   0
+Inward rolls:  8.85%
+Outward rolls: 2.46%
+Same hand:     34.36%
+Same finger:   1.42%
+Row change:    13.98%
+Home jump:     2.85%
+Ring jump:     1.96%
+To center:     1.39%
+To outside:    0.78%
+
+==========================================
+
+idea from BEAKL4 Mod Ian AltGr3.txt,
+which has synbols / punctuation on AtlGr,
+?pick same symbols for main lyaer (need to add 2, I have 1 extra key)
+looks like he picked least used and replaced 2 by ()
+
+%@~|`©/!?()#
+
+
+last 14, prog
+'#![]\|%^$?~@`
+
+last 14 std
+}[]\+|&<%@#^`~
+
 ----
+last from prog, replace [] by ()
+'#!()\|%^$?~@`
+
+use '#!\|% ^$? ~@` ()
+qwertyuiop!\asdfghjkl|%zxcvbnm^$?
+QWERTYUIOP'#ASDFGHJKL()ZXCVBNM~@`
+
+----
+14 last from prog
+'#![]\|%^$?~@`
+
+use '#!\|% ^$? ~@` ()
+qwertyuiop!\asdfghjkl|%zxcvbnm^$?
+QWERTYUIOP'#ASDFGHJKL[]ZXCVBNM~@`
 
 setksize curlaz33
-set sameHand -10
+set numThreads 4
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 9.0%
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 9.0%
+
+ %  P  U  |  `   ^  M  D  C  X  Q  Z
+ I  N  E  A  #   F  H  T  S  R  W
+ Y  @  O  K  ~   V  L  B  G  J
+
+ !  p  u  '  [   ]  m  d  c  x  q  z
+ i  n  e  a  ?   f  h  t  s  r  w
+ y  $  o  k  \   v  l  b  g  j
+
+Fitness:       15038425
+Distance:      12882969
+Finger work:   58386
+Inward rolls:  9.27%
+Outward rolls: 2.34%
+Same hand:     34.27%
+Same finger:   1.36%
+Row change:    13.72%
+Home jump:     2.56%
+Ring jump:     2.03%
+To center:     0.76%
+To outside:    0.72%
+
+Time elapsed: 0 hours, 17 minutes, 32 seconds
+
+.....
+14 last from std, replace { by ©
+[] \+ |& <% @#^ `~©
+use 
+qwertyuiop\+asdfghjkl<%zxcvbnm@#^
+QWERTYUIOP[]ASDFGHJKL|&ZXCVBNM`~©
+
+setksize curlaz33
+set numThreads 4
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ <  P  U  Q  ~   ^  M  D  C  X  Z  `
+ I  N  E  A  |   F  H  T  S  R  W
+ Y  %  O  K  ©   V  L  B  G  J
+
+ &  p  u  q  [   ]  m  d  c  x  z  #
+ i  n  e  a  \   f  h  t  s  r  w
+ y  +  o  k  @   v  l  b  g  j
+
+Fitness:       14779429
+Distance:      12685378
+Finger work:   69236
+Inward rolls:  9.33%
+Outward rolls: 2.50%
+Same hand:     34.43%
+Same finger:   1.33%
+Row change:    13.64%
+Home jump:     2.53%
+Ring jump:     2.03%
+To center:     0.72%
+To outside:    0.71%
+
+....
+%@ ~| `© /! ?() #$^  (beakl ian altgr3 + $^) 
+
+use 
+qwertyuiop%@asdfghjkl`©zxcvbnm?()
+QWERTYUIOP~|ASDFGHJKL/!ZXCVBNM#$^
+
+setksize curlaz33
 set numThreads 4
 
 Hands: 50% 49%
-Fingers: 7.0% 10% 15% 17% 0.00% 0.00% 18% 11% 12% 9.0%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 9.0%
 
- ]  P  U  C  J  <   >  D  G  X  Q  Z
- I  N  E  R  W  [   A  H  T  S  K
- Y  /  L  M  {  }   O  F  B  V
+ `  P  U  %  ~   ^  M  D  C  X  Q  Z
+ I  N  E  A  #   F  H  T  S  R  W
+ Y  |  O  K  ©   V  L  B  G  J
 
- "  p  u  c  j  ?   ,  d  g  x  q  z
- i  n  e  r  w  .   a  h  t  s  k
- y  '  l  m  :  ;   o  f  b  v
+ $  p  u  (  )   @  m  d  c  x  q  z
+ i  n  e  a  !   f  h  t  s  r  w
+ y  /  o  k  ?   v  l  b  g  j
 
-Fitness:       13944854
-Distance:      14690580
-Finger work:   206354
-Inward rolls:  11.23%
-Outward rolls: 5.00%
-Same hand:     46.65%
-Same finger:   1.72%
-Row change:    19.54%
-Home jump:     2.41%
-Ring jump:     1.23%
-To center:     2.20%
-To outside:    0.57%
+Fitness:       15191988
+Distance:      12996881
+Finger work:   53832
+Inward rolls:  9.26%
+Outward rolls: 2.34%
+Same hand:     34.33%
+Same finger:   1.42%
+Row change:    13.70%
+Home jump:     2.57%
+Ring jump:     2.02%
+To center:     0.86%
+To outside:    0.72%
+
+Time elapsed: 0 hours, 23 minutes, 37 seconds
+
+--------
+
+AltGr layer beakl ian altgr3
+[ $ = < _ & " ; + ] \
+4 2 , 0 { } 1 . 3 5 ^
+6 8 - '   : * > 9 7
+
+---
+
+on main layer (13 + ©)
+%@~|`©/!?()#$^
+
+all symbols (42)
+`1234567890-=~!@#$%^&*()_+[]\{}|;':",./<>?
+
+
+setksize curlaz30
+set numThreads 4
+set keepShiftPairs 1
+set keepNumbers 1
+use
+create 30keys altgr layer
+(remove main layer syms from all syms = 29, re-add ©)
+1234567890-=&*_+[]\{};':",.<>©
+1234567890-=&*_+[]\{};':",.<>©
+
+Hands: 53% 46%
+Fingers: 7.0% 9.0% 26% 12% 0.00% 0.00% 10% 22% 7.0% 7.0%
+
+ 1  2  3  4  5   6  7  8  9  0
+ ;  '  ,  -  [   ]  "  .  _  :
+ {  <  =  \  ©   +  *  &  >  }
+
+ 1  2  3  4  5   6  7  8  9  0
+ ;  '  ,  -  [   ]  "  .  _  :
+ {  <  =  \  ©   +  *  &  >  }
+
+Fitness:       1879820
+Distance:      606807
+Finger work:   34638
+Inward rolls:  6.26%
+Outward rolls: 2.99%
+Same hand:     53.71%
+Same finger:   3.29%
+Row change:    12.02%
+Home jump:     0.43%
+Ring jump:     4.18%
+To center:     7.42%
+
+--
+
+setksize curlaz30
+set numThreads 4
+set keepShiftPairs 1
+set keepNumbers 1
+use
+create 30keys altgr layer
+(remove main layer syms from all syms = 29, re-add ©()\)
+1234567890-=&*_+[]\{};':",.<>©()\
+1234567890-=&*_+[]\{};':",.<>©()\
+
+
+Hands: 49% 50%
+Fingers: 6.0% 6.0% 23% 14% 0.00% 0.00% 10% 21% 10% 9.0%
+
+ 2  3  4  5  6   7  8  9  0  1  &  ©
+ (  )  ,  -  [   ]  "  .  '  _  +
+ {  \  ;  =  <   >  :  /  *  }
+
+ 2  3  4  5  6   7  8  9  0  1  &  ©
+ (  )  ,  -  [   ]  "  .  '  _  +
+ {  \  ;  =  <   >  :  /  *  }
+
+Fitness:       2383553
+Distance:      763826
+Finger work:   12847
+Inward rolls:  9.10%
+Outward rolls: 3.40%
+Same hand:     56.49%
+Same finger:   2.90%
+Row change:    16.04%
+Home jump:     1.72%
+Ring jump:     3.65%
+To center:     5.63%
+To outside:    0.29%
