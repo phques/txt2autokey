@@ -1,0 +1,34 @@
+mtgap curl / angleZ
+main30 chars + 2chars at right of right hand ['
+
+2017-05-09
+
+standard chars/symbols
+
+setksize curlaz32
+set numThreads 4
+
+Hands: 50% 49%
+Fingers: 7.0% 10% 15% 18% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ Q  P  U  [  ]   Z  M  D  C  K  X
+ I  N  E  A  ?   F  H  T  S  R  W
+ Y  /  O  <  >   V  L  B  G  J
+
+ q  p  u  .  ;   z  m  d  c  k  x
+ i  n  e  a  '   f  h  t  s  r  w
+ y  "  o  ,  :   v  l  b  g  j
+
+Fitness:       16908637
+Distance:      14219882
+Finger work:   0
+Inward rolls:  8.94%
+Outward rolls: 2.50%
+Same hand:     34.27%
+Same finger:   1.33%
+Row change:    13.76%
+Home jump:     2.70%
+Ring jump:     2.15%
+To center:     1.10%
+To outside:    0.77%
+

@@ -1,0 +1,100 @@
+mtgap curl / angleZ
+main30 chars + 2chars at right of right hand ['
+
+2017-05-09
+
+Version where we use an 'alt' layer for symbols/digits/punctuation
+(ala Arensito)
+
+Using layers from
+BEAKL 4 Mod Ian AltGr 3
+(http://www.keyboard-design.com/index.html)
+
+symbols on main layer:
+%@ ~| `© /! ?() #  
+
+--
+setksize curlaz32
+set numThreads 4
+
+use 
+qwertyuiop%asdfghjkl`©zxcvbnm?()
+QWERTYUIOP@ASDFGHJKL/!ZXCVBNM#$^
+
+Hands: 50% 49%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ @  P  U  %  `   Q  M  D  C  X  Z
+ I  N  E  A  #   F  H  T  S  R  W
+ Y  ^  O  K  ©   V  L  B  G  J
+
+ $  p  u  (  )   q  m  d  c  x  z
+ i  n  e  a  !   f  h  t  s  r  w
+ y  /  o  k  ?   v  l  b  g  j
+
+Fitness:       15178809
+Distance:      12986347
+Finger work:   54522
+Inward rolls:  9.27%
+Outward rolls: 2.34%
+Same hand:     34.33%
+Same finger:   1.41%
+Row change:    13.69%
+Home jump:     2.57%
+Ring jump:     2.01%
+To center:     0.88%
+To outside:    0.70%
+
+Time elapsed: 0 hours, 10 minutes, 19 seconds
+Chance to use previous layout is now 0.691987.
+Number of swaps between rounds is now 16.
+
+
+--------
+
+AltGr layer beakl ian altgr3
+[ $ = < _ & " ; + ] \
+4 2 , 0 { } 1 . 3 5 ^
+6 8 - '   : * > 9 7
+
+or
+
+with
+on main layer (12)
+%@~|`©/!?()#
+
+vs
+all symbols (42)
+`1234567890-=~!@#$%^&*()_+[]\{}|;':",./<>?
+
+
+setksize curlaz32
+set numThreads 4
+set keepShiftPairs 1
+set keepNumbers 1
+use 
+create 32keys altgr layer
+(remove main layer syms from all syms = 31, re-add © as placeholder)
+1234567890-=$^&*_+[]\{};':",.<>©
+1234567890-=$^&*_+[]\{};':",.<>©
+
+Hands: 50% 49%
+Fingers: 6.0% 8.0% 25% 11% 0.00% 0.00% 10% 22% 10% 6.0%
+
+ 2  3  4  5  6   7  8  9  0  1  ^
+ ;  -  ,  '  [   ]  "  .  _  :  +
+ {  <  =  \  ©   $  *  &  >  }
+
+
+Fitness:       1893283
+Distance:      606016
+Finger work:   28822
+Inward rolls:  7.84%
+Outward rolls: 2.09%
+Same hand:     54.22%
+Same finger:   2.89%
+Row change:    11.79%
+Home jump:     0.74%
+Ring jump:     3.78%
+To center:     7.12%
+To outside:    0.22%

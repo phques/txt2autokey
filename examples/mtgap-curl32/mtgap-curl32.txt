@@ -66,7 +66,9 @@ To outside:    0.76%
 ==========================================
 
 idea from BEAKL4 Mod Ian AltGr3
-which has symbols / punctuation on AltGr,
+(http://www.keyboard-design.com/index.html)
+
+which has symbols / punctuation on AltGr, (ala Arensito)
 ?pick same symbols for main layer? 
 looks like he picked least used and replaced 2 by () 
 
@@ -270,7 +272,8 @@ set keepShiftPairs 1
 set keepNumbers 1
 use 
 create 32keys altgr layer
-(remove main layer syms from all syms = 31, re-add ©)
+(remove main layer syms from all syms = 31, re-add © as placeholder)
+1234567890-=$^&*_+[]\{};':",.<>©
 1234567890-=$^&*_+[]\{};':",.<>©
 
 Hands: 50% 49%
@@ -280,9 +283,6 @@ Fingers: 6.0% 8.0% 25% 11% 0.00% 0.00% 10% 22% 10% 6.0%
  ;  -  ,  '  [   ]  "  .  _  :  +
  {  <  =  \  ©   $  *  &  >  }
 
- 2  3  4  5  6   7  8  9  0  1  ^
- ;  -  ,  '  [   ]  "  .  _  :  +
- {  <  =  \  ©   $  *  &  >  }
 
 Fitness:       1893283
 Distance:      606016
