@@ -9,13 +9,13 @@ set numThreads 4
 Hands: 50% 49%
 Fingers: 7.0% 10% 15% 18% 0.00% 0.00% 15% 14% 11% 9.0%
 
- <  P  U  [  ]  Q   M  D  C  K  X  Z
- I  N  E  A  /  F   H  T  S  R  W
- Y  >  O  {  }  V   L  B  G  J
-
- ;  p  u  .  :  q   m  d  c  k  x  z
- i  n  e  a  '  f   h  t  s  r  w
- y  "  o  ,  ?  v   l  b  g  j
+ <  P  U  [  ]   Q  M  D  C  K  X  Z
+ I  N  E  A  /   F  H  T  S  R  W
+ Y  >  O  {  }   V  L  B  G  J
+                
+ ;  p  u  .  :   q  m  d  c  k  x  z
+ i  n  e  a  '   f  h  t  s  r  w
+ y  "  o  ,  ?   v  l  b  g  j
 
 Fitness:       16934804
 Distance:      14272454

@@ -1,0 +1,298 @@
+mtgap curl / angleZ
+main30 chars + 2chars at right of right hand ['
+
+2017-05-09
+
+setksize curlaz32
+set numThreads 4
+
+Hands: 50% 49%
+Fingers: 7.0% 10% 15% 18% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ Q  P  U  [  ]   Z  M  D  C  K  X
+ I  N  E  A  ?   F  H  T  S  R  W
+ Y  /  O  <  >   V  L  B  G  J
+
+ q  p  u  .  ;   z  m  d  c  k  x
+ i  n  e  a  '   f  h  t  s  r  w
+ y  "  o  ,  :   v  l  b  g  j
+
+Fitness:       16908637
+Distance:      14219882
+Finger work:   0
+Inward rolls:  8.94%
+Outward rolls: 2.50%
+Same hand:     34.27%
+Same finger:   1.33%
+Row change:    13.76%
+Home jump:     2.70%
+Ring jump:     2.15%
+To center:     1.10%
+To outside:    0.77%
+
+....
+
+setksize curlaz32
+set numThreads 4
+
+use (w. 12 1st symbols from StdChars)
+qwertyuiop_asdfghjkl:"zxcvbnm,./
+QWERTYUIOP-ASDFGHJKL;'ZXCVBNM()=
+
+Hands: 51% 48%
+Fingers: 7.0% 10% 15% 19% 0.00% 0.00% 14% 14% 11% 9.0%
+
+ /  P  U  :  Q   Z  M  D  C  K  X
+ I  N  E  A  (   F  H  T  S  R  W
+ Y  )  O  ;  =   V  L  B  G  J
+
+ -  p  u  _  q   z  m  d  c  k  x
+ i  n  e  a  .   f  h  t  s  r  w
+ y  "  o  ,  '   v  l  b  g  j
+
+Fitness:       18165442
+Distance:      14759297
+Finger work:   0
+Inward rolls:  8.89%
+Outward rolls: 2.47%
+Same hand:     34.47%
+Same finger:   1.43%
+Row change:    13.74%
+Home jump:     2.57%
+Ring jump:     2.00%
+To center:     1.86%
+To outside:    0.76%
+
+==========================================
+
+idea from BEAKL4 Mod Ian AltGr3
+which has symbols / punctuation on AltGr,
+?pick same symbols for main layer? 
+looks like he picked least used and replaced 2 by () 
+
+%@~|`©/!?()#
+
+
+last 12, prog
+![]\|%^$?~@`
+
+last 12 std
+]\+|&<%@#^`~
+
+----
+last from prog, replace [] by ()
+!()\|%^$?~@`
+
+use '#!\|% ^$? ~@` ()
+qwertyuiop!asdfghjkl|%zxcvbnm^$?
+QWERTYUIOP\ASDFGHJKL()ZXCVBNM~@`
+
+----
+last 12, prog
+![]\|%^$?~@`
+
+use !\|% ^$? ~@` []
+qwertyuiop!asdfghjkl|%zxcvbnm^$?
+QWERTYUIOP\ASDFGHJKL[]ZXCVBNM~@`
+
+setksize curlaz32
+set numThreads 4
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ @  P  U  Q  `   ^  M  D  C  X  Z
+ I  N  E  A  |   F  H  T  S  R  W
+ Y  %  O  K  ~   V  L  B  G  J
+
+ $  p  u  q  [   ]  m  d  c  x  z
+ i  n  e  a  ?   f  h  t  s  r  w
+ y  !  o  k  \   v  l  b  g  j
+
+Fitness:       14856448
+Distance:      12741849
+Finger work:   66124
+Inward rolls:  9.32%
+Outward rolls: 2.50%
+Same hand:     34.44%
+Same finger:   1.35%
+Row change:    13.67%
+Home jump:     2.53%
+Ring jump:     2.02%
+To center:     0.75%
+To outside:    0.70%
+
+.....
+12 last from std, 
+replace [ by ©
+©\ +| &< %@# ^`~
+
+use 
+qwertyuiop©asdfghjkl+&zxcvbnm^`~
+QWERTYUIOP\ASDFGHJKL|<ZXCVBNM%@#
+
+setksize curlaz32
+set numThreads 4
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ `  P  U  Q  ~   ^  M  D  C  X  Z
+ I  N  E  A  |   F  H  T  S  R  W
+ Y  %  O  K  ©   V  L  B  G  J
+
+ <  p  u  q  &   #  m  d  c  x  z
+ i  n  e  a  \   f  h  t  s  r  w
+ y  +  o  k  @   v  l  b  g  j
+
+Fitness:       14705216
+Distance:      12629775
+Finger work:   71516
+Inward rolls:  9.34%
+Outward rolls: 2.50%
+Same hand:     34.42%
+Same finger:   1.33%
+Row change:    13.63%
+Home jump:     2.53%
+Ring jump:     2.03%
+To center:     0.70%
+To outside:    0.71%
+
+......
+after looking at Arensito def (I believe Ian's AltGr layer is influenced by Arensito ideas)
+he keeps ,.'"  on main layer (unshifted ) because they are current in normal text
+
+so 12 last from std, 
+replace [\+|& (5 most used) 
+by ,.'"; (I add ; since it is current in programming)
+,.'";<%@#^`~
+
+use 
+qwertyuiop.asdfghjkl"<zxcvbnm%@#
+QWERTYUIOP,ASDFGHJKL';ZXCVBNM^`~
+
+setksize curlaz32
+set numThreads 4
+
+Hands: 50% 49%
+Fingers: 7.0% 10% 15% 18% 0.00% 0.00% 15% 14% 11% 9.0%
+
+ `  P  U  %  Q   Z  M  D  C  K  X
+ I  N  E  A  #   F  H  T  S  R  W
+ Y  ^  O  <  ~   V  L  B  G  J
+
+ ;  p  u  .  q   z  m  d  c  k  x
+ i  n  e  a  '   f  h  t  s  r  w
+ y  "  o  ,  @   v  l  b  g  j
+
+Fitness:       16454260
+Distance:      14008625
+Finger work:   0
+Inward rolls:  8.97%
+Outward rolls: 2.51%
+Same hand:     34.20%
+Same finger:   1.31%
+Row change:    13.69%
+Home jump:     2.69%
+Ring jump:     2.01%
+To center:     1.12%
+To outside:    0.77%
+
+AltGr layer beakl ian altgr3 adapted,
+need to adjust for different symbols on main.
+missing in the 2 layers: /|!() ?
+(kinda makes sense, I added ,.'"; on main)
+so something like :
+
+[ $ = : _ & | / + ] \
+4 2 { 0 ( ) 1 } 3 5 ?
+6 8 - !   < * > 9 7
+
+
+....
+
+%@ ~| `© /! ?() #  (beakl ian altgr3) 
+
+use 
+qwertyuiop%asdfghjkl`©zxcvbnm?()
+QWERTYUIOP@ASDFGHJKL/!ZXCVBNM#$^
+
+setksize curlaz32
+set numThreads 4
+
+Hands: 50% 49%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ @  P  U  %  `   Q  M  D  C  X  Z
+ I  N  E  A  #   F  H  T  S  R  W
+ Y  ^  O  K  ©   V  L  B  G  J
+
+ $  p  u  (  )   q  m  d  c  x  z
+ i  n  e  a  !   f  h  t  s  r  w
+ y  /  o  k  ?   v  l  b  g  j
+
+Fitness:       15178809
+Distance:      12986347
+Finger work:   54522
+Inward rolls:  9.27%
+Outward rolls: 2.34%
+Same hand:     34.33%
+Same finger:   1.41%
+Row change:    13.69%
+Home jump:     2.57%
+Ring jump:     2.01%
+To center:     0.88%
+To outside:    0.70%
+
+Time elapsed: 0 hours, 10 minutes, 19 seconds
+Chance to use previous layout is now 0.691987.
+Number of swaps between rounds is now 16.
+
+
+--------
+
+AltGr layer beakl ian altgr3
+[ $ = < _ & " ; + ] \
+4 2 , 0 { } 1 . 3 5 ^
+6 8 - '   : * > 9 7
+
+with
+on main layer (12)
+%@~|`©/!?()#
+
+all symbols (42)
+`1234567890-=~!@#$%^&*()_+[]\{}|;':",./<>?
+
+
+setksize curlaz32
+set numThreads 4
+set keepShiftPairs 1
+set keepNumbers 1
+use 
+create 32keys altgr layer
+(remove main layer syms from all syms = 31, re-add ©)
+1234567890-=$^&*_+[]\{};':",.<>©
+
+Hands: 50% 49%
+Fingers: 6.0% 8.0% 25% 11% 0.00% 0.00% 10% 22% 10% 6.0%
+
+ 2  3  4  5  6   7  8  9  0  1  ^
+ ;  -  ,  '  [   ]  "  .  _  :  +
+ {  <  =  \  ©   $  *  &  >  }
+
+ 2  3  4  5  6   7  8  9  0  1  ^
+ ;  -  ,  '  [   ]  "  .  _  :  +
+ {  <  =  \  ©   $  *  &  >  }
+
+Fitness:       1893283
+Distance:      606016
+Finger work:   28822
+Inward rolls:  7.84%
+Outward rolls: 2.09%
+Same hand:     54.22%
+Same finger:   2.89%
+Row change:    11.79%
+Home jump:     0.74%
+Ring jump:     3.78%
+To center:     7.12%
+To outside:    0.22%
