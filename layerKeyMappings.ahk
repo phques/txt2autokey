@@ -69,14 +69,14 @@ doLayerKey(keyHit, up)
 	; get destination key for this layer hotkey
     outputKey := layerMappings[keyHit]
 
-    if (outputKey)
+    if (Strlen(outputKey) != 0)
     {
         mods := ""
         
 		;#PQ TODO, do this in pre-processing ?
         ; modifiers need to be *before* the {}, ie ^{v}  not {^v}
 		; split prefix modifiers and key (supports cases like +^ => Shift ^)
-		foundPos := RegExMatch(outputKey, "^([#!+^]+)(.{1,})", match)
+		foundPos := RegExMatch(outputKey, "^([#!+^<>]+)(.{1,})", match)
 		if (foundPos)
 		{
 			mods := match[1]
@@ -93,7 +93,7 @@ doLayerKey(keyHit, up)
     }
 	else
 	{
-		;MsgBox "cannot find key %key%"
+		MsgBox "cannot find key %keyHit%"
 	}
 	
 }

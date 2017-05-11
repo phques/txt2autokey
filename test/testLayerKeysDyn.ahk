@@ -4,13 +4,15 @@
 
 ; manually, old way
 if(0){
-	layerKeys["w"] := "Right"
-	layerKeys["q"] := "^v"
-	layerKeys["e"] := "@"
+	InitLayerMappings("Space")
+
+	layerMappings["w"] := "Right"
+	layerMappings["q"] := "^v"
+	layerMappings["e"] := "0"
 
 	; does not work witg pre="Alt" ? 
-	createLayerHotKey("Space", "w")
-	createLayerHotKey("Space", "q")
+	; createLayerHotKey("Space", "w")
+	; createLayerHotKey("Space", "q")
 	createLayerHotKey("Space", "e")
 }
 
@@ -30,7 +32,7 @@ if(1) {
 InitLayerMappings("Space")
 
 MapLayerHotkeys( " a  b c d"
-				," {  } ! @")
+				," {  } ! 0")
 				
 MapLayerHotkeys( " e  f"
 				," ^v Right")
