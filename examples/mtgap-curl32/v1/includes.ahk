@@ -13,14 +13,18 @@ global HasAltGr := 1
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
+; have to be careful, no init code will run if any include that 
+; declares a hotkey is included before it
 #include ../../../groups.ahk
-         
-#include ../../../altGr.ahk
-#include ../../../extendSpace.ahk
-         
 #include ../../../clipboardToBash.ahk
 #include ../../../fromPkl/pkl_gui.ahk
-         
+
+#include extendLayer.ahk
+
+#include ../../../altGr.ahk
+#include ../../../extend.ahk
+;#include ../../../extendSpace.ahk
+
 #include ../../../commonHotkeys.ahk
 
 return
