@@ -9,35 +9,28 @@
 +^sc003:: GroupActivate, DevStudio
 
 ; +^3 
-+^sc004:: GroupActivate, PLineClient
-
-;-------
++^sc004:: GroupActivate, EnvMgr
 
 ; +^4 
-+^sc005::Send philippe.quesnel
++^sc005:: GroupActivate, PLineClient
 
-; +^5 
-+^sc006::Send @cgi.com
+;---
 
-; +^6 
-+^sc007::Send @gmail.com
-
-; +^8 
-+^sc009:: gosub clipboardToBash
+; Win B
+#sc030::clipboardToBash()
 
 
 ;------- help image & suspend hotkeys
 
-
 ; +^9 qwerty
-+^sc00A:: gosub displayHelpImageToggle
++^sc00A::DisplayHelpImageToggle()
 
 ; +^0 qwerty
 +^sc00B::
     Suspend Toggle
     if (A_IsSuspended)
-        gosub displayHelpImageSuspendOn
+        DisplayHelpImageSuspendOn()
     else 
-        gosub displayHelpImageSuspendOff
+        DisplayHelpImageSuspendOff()
 return
 

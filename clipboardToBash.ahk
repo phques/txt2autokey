@@ -1,8 +1,9 @@
 
 ; change "D:\Users\Philippe\code\toto\tt.ahk" in clipboard 
 ; to "/mnt/d/Users/Philippe/code/toto/tt.ahk"
-clipboardToBash:
 
+clipboardToBash()
+{
 	; ('clipboard' var converts copied file to filename text)
 	clip := clipboard
 	
@@ -17,4 +18,7 @@ clipboardToBash:
 	} else {
 		MsgBox("Clipboard contents does not begin with 'x:'")
 	}
-return
+}
+
+
+

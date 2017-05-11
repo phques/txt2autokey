@@ -11,14 +11,17 @@ global HasAltGr := 1
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
+; code only includes
 #include ../../groups.ahk
-
-#include ../../altGr.ahk
-#include ../../extend.ahk
-
 #include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
-#include ../../commonHotkeys.ahk
-
+DisplayHelpImage()
 return
+
+;------
+
+; hotkey defs
+#include ../../altGr.ahk
+#include ../../extend.ahk
+#include ../../commonHotkeys.ahk

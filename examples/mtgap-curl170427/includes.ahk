@@ -13,12 +13,18 @@ global CenterOnCurrWndMonitor := 1
 
 #include ../../groups.ahk
 
-#include ../../altGr.ahk
-#include ../../extendLAlt.ahk
-
+; code only includes
 #include ../../clipboardToBash.ahk
 #include ../../fromPkl/pkl_gui.ahk
 
+DisplayHelpImage()
+return
+
+;------
+
+; hotkey defs
+#include ../../altGr.ahk
+#include ../../extendLAlt.ahk
 #include ../../commonHotkeys.ahk
 
 return

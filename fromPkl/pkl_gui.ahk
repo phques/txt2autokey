@@ -1,20 +1,32 @@
 
-displayHelpImage:
-	pkl_displayHelpImage()
-return
+; initial call to enable & display
+DisplayHelpImage()
+{
+	pkl_displayHelpImage(1) ; activate
+	pkl_displayHelpImage(0) ; display
+}
 
-displayHelpImageToggle:
+DisplayHelpImageToggle()
+{
 	pkl_displayHelpImage( 2 )
-return
+}
 
-displayHelpImageSuspendOn:
+DisplayHelpImageSuspendOn()
+{
 	pkl_displayHelpImage( 3 )
-return
+}
 
-displayHelpImageSuspendOff:
+DisplayHelpImageSuspendOff()
+{
 	pkl_displayHelpImage( 4 )
-return
+}
 
+;--------
+
+pkl_OnDisplayTimer()
+{
+	pkl_displayHelpImage(0) ; display
+}
 
 
 pkl_displayHelpImage( activate := 0 )
@@ -78,10 +90,10 @@ pkl_displayHelpImage( activate := 0 )
 		Gui, 2:Add, Pic, xm vHelperImage
 		GuiControl,2:, HelperImage, *w%ImgWidth% *h%ImgHeight% %LayoutDir%\state0.png
 		Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
-		setTimer, displayHelpImage, 200
+		setTimer, pkl_OnDisplayTimer, 200
 	} else if ( activate == -1 ) {
 		; Menu, tray, UnCheck, % getPklInfo( "DisplayHelpImageMenuName" )
-		setTimer, displayHelpImage, Off
+		setTimer, pkl_OnDisplayTimer, Off
 		Gui, 2:Destroy
 		return
 	}
@@ -143,19 +155,16 @@ pkl_displayHelpImage( activate := 0 )
 				fileName := deadkey%CurrentDeadKeyNum%
 		}
 	} else if ( ExtendKey && getKeyState( ExtendKey, "P" ) ) {
-		fileName := extend
+		fileName := "extend"
 	} else {
 		state := 0
 		state += 1 * getKeyState( "Shift" )
 		; state += 6 * ( HasAltGr * AltGrIsPressed() )
 		state += 6 * ( HasAltGr * getKeyState( "RAlt" ) )
 		fileName := "state%state%"
-		;; debug
-		; ListVars
-		; Pause
 	}
 	if ( not FileExist( LayoutDir . "\" . fileName . ".png" ) )
-		fileName := state0
+		fileName := "state0"
 	
 	if ( prevFile == fileName )
 		return

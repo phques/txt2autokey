@@ -1,8 +1,6 @@
 
+#include ../clipboardToBash.ahk
 
-s:= "  as     asdd "
-t := Trim(s)
-t := RegExReplace(t, "\s{2,}", " ")
+MsgBox main
 
-MsgBox % "'" s "'"
-MsgBox % "'" t "'"
+^a::clipboardToBash_()

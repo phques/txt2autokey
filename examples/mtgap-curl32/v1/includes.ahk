@@ -3,9 +3,7 @@
 ; Global variables for pkl_gui.ahk / layout image
 ; MUST be declared *before* scripts that use them
 global LayoutDir := "%A_ScriptDir%"
-; global ExtendKey := "CapsLock"
-; global ImgWidth := 296
-; global ImgHeight := 89
+global ExtendKey := "Space"
 global ImgWidth := 284
 global ImgHeight := 46
 global HasAltGr := 1
@@ -13,19 +11,25 @@ global HasAltGr := 1
 ; global CenterOnCurrWindow := 1
 global CenterOnCurrWndMonitor := 1
 
-; have to be careful, no init code will run if any include that 
-; declares a hotkey is included before it
+; code only includes
 #include ../../../groups.ahk
 #include ../../../clipboardToBash.ahk
 #include ../../../fromPkl/pkl_gui.ahk
 
-#include extendLayer.ahk
+#include extendLayerInit.ahk
+
+DisplayHelpImage()
+return
+
+;------
+
+; hotkey defs
 
 #include ../../../altGr.ahk
 #include ../../../extend.ahk
 ;#include ../../../extendSpace.ahk
+#include extendLayerKeys.ahk
 
 #include ../../../commonHotkeys.ahk
 
-return
 
