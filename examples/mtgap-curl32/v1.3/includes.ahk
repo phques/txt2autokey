@@ -5,7 +5,7 @@
 global LayoutDir := "%A_ScriptDir%"
 global ExtendKey := "Space"
 global ImgWidth := 284
-global ImgHeight := 46
+global ImgHeight := 50
 global HasAltGr := 1
 ; Define one of the two or none to use xCenter (on 1st monitor)
 ; global CenterOnCurrWindow := 1
@@ -22,7 +22,7 @@ DisplayHelpImage()
 return
 
 ;------
-
+      
 ; hotkey defs
 
 ;#include ../../../altGr.ahk
