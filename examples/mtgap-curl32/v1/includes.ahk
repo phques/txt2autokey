@@ -28,7 +28,7 @@ return
 #include ../../../altGr.ahk
 #include ../../../extend.ahk
 ;#include ../../../extendSpace.ahk
-#include extendLayerKeys.ahk
+#include extraKeyDefs.ahk
 
 #include ../../../commonHotkeys.ahk
 
