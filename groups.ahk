@@ -1,18 +1,18 @@
 
-; Notepad++ group (+^1)
-GroupAdd, NotepadPP, ahk_class Notepad++
-
-; DevStudio group (+^2)
-GroupAdd, DevStudio, ahk_exe devenv.exe
-
-; Env Mgr  client group (+^3)
-GroupAdd, EnvMgr, ahk_exe EnvironmentManager.exe
-
-; Explorer group (+^4)
+; Explorer group 
 GroupAdd, Explorer, ahk_exe explorer.exe
 GroupAdd, Explorer, ahk_exe 2xExplorer.exe
 
-; PLineClient client group (+^7)
+; Notepad++ group 
+GroupAdd, NotepadPP, ahk_class Notepad++
+
+; DevStudio group 
+GroupAdd, DevStudio, ahk_exe devenv.exe
+
+; Env Mgr  client group 
+GroupAdd, EnvMgr, ahk_exe EnvironmentManager.exe
+
+; PLineClient client group 
 GroupAdd, PLineClient, ahk_exe pragmageo.exe
 GroupAdd, PLineClient, ahk_exe pragmaview.exe
 GroupAdd, PLineClient, ahk_exe pragmaswitch.exe

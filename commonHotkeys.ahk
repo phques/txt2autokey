@@ -3,16 +3,16 @@
 ;------- groups hotkeys
 
 ; +^1 
-+^sc002:: GroupActivate, NotepadPP
++^sc002:: GroupActivate, Explorer
 
 ; +^2 
-+^sc003:: GroupActivate, DevStudio
++^sc003:: GroupActivate, NotepadPP
 
 ; +^3 
-+^sc004:: GroupActivate, EnvMgr
++^sc004:: GroupActivate, DevStudio
 
 ; +^4 
-+^sc005:: GroupActivate, Explorer
++^sc005:: GroupActivate, EnvMgr
 
 ; +^5,6 are used in Windows Explorer
 
