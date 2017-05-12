@@ -45,22 +45,9 @@ pkl_displayHelpImage( activate := 0 )
 	static HelperImage
 	static displayOnTop := 0
 	static yPosition := -1
-	; PQ, set these as global var 
-	; static imgWidth
-	; static imgHeight
-	
-	; static layoutDir = 0
-	; static hasAltGr
-	; static extendKey
+	static extendKeyWasDown := 0
 
-	
-	; if ( LayoutDir == 0 )
-	; {
-		; LayoutDir := getLayoutInfo( "dir" )
-		; HasAltGr  := getLayoutInfo( "HasAltGr" )
-		; ExtendKey := getLayoutInfo( "ExtendKey" )
-	; }
-	
+
 	if ( activate == 2 )
 		activate := 1 - 2 * guiActive
 	if ( activate == 1 ) {
@@ -79,7 +66,6 @@ pkl_displayHelpImage( activate := 0 )
 	}
 		
 	if ( activate == 1 ) {
-		; Menu, tray, Check, % getPklInfo( "DisplayHelpImageMenuName" )
 		if ( yPosition == -1 ) {
 			yPosition :=  A_ScreenHeight - ImgHeight - 60
 			; IniRead, ImgWidth, %LayoutDir%\layout.ini, global, img_width, 300
@@ -92,7 +78,6 @@ pkl_displayHelpImage( activate := 0 )
 		Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
 		setTimer, pkl_OnDisplayTimer, 200
 	} else if ( activate == -1 ) {
-		; Menu, tray, UnCheck, % getPklInfo( "DisplayHelpImageMenuName" )
 		setTimer, pkl_OnDisplayTimer, Off
 		Gui, 2:Destroy
 		return
@@ -155,8 +140,15 @@ pkl_displayHelpImage( activate := 0 )
 				fileName := deadkey%CurrentDeadKeyNum%
 		}
 	} else if ( ExtendKey && getKeyState( ExtendKey, "P" ) ) {
+		if (!extendKeyWasDown && ExtendKey == "Space")
+		{
+			; avoid flicker on space bar, skip 1st timer
+			extendKeyWasDown := 1
+			return
+		}
 		fileName := "extend"
 	} else {
+		extendKeyWasDown := 0
 		state := 0
 		state += 1 * getKeyState( "Shift" )
 		; state += 6 * ( HasAltGr * AltGrIsPressed() )
