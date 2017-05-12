@@ -16,3 +16,30 @@ Alt Layer
 - ( " . <  > , = ) ; `
 8 4 { } 6  9 3 1 5 7
 
+
+MTGAP eval (through 'improve' !)
+(had to replace ¬© by `~)
+
+Hands: 46% 53%
+Fingers: 7.0% 7.0% 12% 20% 0.00% 0.00% 24% 12% 10% 8.0%
+
+ J  Y  U  `  @   M  D  C  P  Q  Z
+ I  H  A  E  O   L  T  S  N  R  V
+ |  K  \  ^  ~   W  G  F  B  X
+
+ j  y  u  '  !   m  d  c  p  q  z
+ i  h  a  e  o   l  t  s  n  r  v
+ $  k  0  2  #   w  g  f  b  x
+
+Fitness:       19666526
+Distance:      15294568
+Finger work:   231758
+Inward rolls:  2.95%
+Outward rolls: 1.99%
+Same hand:     28.79%
+Same finger:   1.96%
+Row change:    12.27%
+Home jump:     0.36%
+Ring jump:     2.01%
+To center:     6.09%
+To outside:    0.21%
