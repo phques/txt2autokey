@@ -12,17 +12,15 @@
 +^sc004:: GroupActivate, EnvMgr
 
 ; +^4 
-+^sc005:: GroupActivate, PLineClient
++^sc005:: GroupActivate, Explorer
 
-;---
+; +^5,6 are used in Windows Explorer
 
 ; +^7 
-+^sc008:: Send philippe.quesnel
++^sc008:: GroupActivate, PLineClient
 
-
-
-; Win B
-#sc030::clipboardToBash()
+; +^8 
++^sc009:: Send philippe.quesnel
 
 
 ;------- help image & suspend hotkeys
@@ -39,3 +37,7 @@
         DisplayHelpImageSuspendOff()
 return
 
+;--------
+
+; Win B
+#sc030::clipboardToBash()
