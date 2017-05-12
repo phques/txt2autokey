@@ -1,0 +1,104 @@
+mtgap curl / angleZ
+main30 chars + 2chars at right of right hand ['
+
+2017-05-11
+
+Version where we use an 'alt' layer for symbols/digits/punctuation
+(ala Arensito)
+
+Using layers from
+Ian X4 (evolution of alt layers from BEAKL4 Mod Ian AltGr3 ?)
+but moving 0 2  to alt layer, swapping with { }
+
+symbols on main layer:
+¬ @ | \ ^ © 
+' ! $ { } #
+ 
+AltGr layer Ian X4 ({ } -> 0 2)
+[ _ : ? &  + / % * ] ~
+- ( " . <  > , = ) ; `
+8 4 0 2 6  9 3 1 5 7
+
+
+--
+setksize curlaz32
+set numThreads 4
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm{}#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'!$
+
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ ©  P  U  {  }   Q  M  D  C  X  Z
+ I  N  E  A  |   F  H  T  S  R  W
+ Y  ^  O  K  ¬   V  L  B  G  J
+
+ \  p  u  '  #   q  m  d  c  x  z
+ i  n  e  a  !   f  h  t  s  r  w
+ y  $  o  k  @   v  l  b  g  j
+
+Fitness:       14959029
+Distance:      12831618
+Finger work:   60376
+Inward rolls:  9.29%
+Outward rolls: 2.35%
+Same hand:     34.26%
+Same finger:   1.35%
+Row change:    13.70%
+Home jump:     2.55%
+Ring jump:     2.02%
+To center:     0.75%
+To outside:    0.70%
+
+--------
+(bit lower cost on pinky on ' too !)
+slightly better than above (?) (higher fitness / distance though)
+
+setksize curlaz32
+set numThreads 4
+sethandbias -10
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm{}#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'!$
+
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 16% 0.00% 0.00% 15% 15% 12% 9.0%
+
+ ©  P  U  {  }   Q  M  D  C  K  Z
+ I  N  E  A  |   F  H  T  S  R  W
+ Y  ^  O  X  ¬   V  L  B  G  J
+
+ $  p  u  '  @   q  m  d  c  k  z
+ i  n  e  a  !   f  h  t  s  r  w
+ y  \  o  x  #   v  l  b  g  j
+
+Fitness:       18231995
+Distance:      16117954
+Finger work:   60376
+Inward rolls:  9.28%
+Outward rolls: 2.55%
+Same hand:     34.11%
+Same finger:   1.23%
+Row change:    13.44%
+Home jump:     2.65%
+Ring jump:     1.96%
+To center:     0.75%
+To outside:    0.71%
+
+maybe adjust to (programming !) :
+({} could be typed with mid-index)
+(move ! to alt layer, so != is easier/all on alt: swap with ?)
+
+ ©  P  U  ?  $   Q  M  D  C  K  Z
+ I  N  E  A  |   F  H  T  S  R  W
+ Y  ^  O  X  ¬   V  L  B  G  J
+
+ '  p  u  {  @   q  m  d  c  k  z
+ i  n  e  a  }   f  h  t  s  r  w
+ y  \  o  x  #   v  l  b  g  j
+
+[ _ : ! &  + / % * ] ~
+- ( " . <  > , = ) ; `
+8 4 0 2 6  9 3 1 5 7
+
