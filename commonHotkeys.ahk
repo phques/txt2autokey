@@ -9,18 +9,18 @@
 +^sc003:: GroupActivate, NotepadPP
 
 ; +^3 
-+^sc004:: GroupActivate, DevStudio
-
-; +^4 
-+^sc005:: GroupActivate, EnvMgr
++^sc004:: GroupActivate, Chrome
+                         
+; +^4                    
++^sc005:: GroupActivate, DevStudio
 
 ; +^5,6 are used in Windows Explorer
 
 ; +^7 
-+^sc008:: GroupActivate, PLineClient
++^sc008:: GroupActivate, EnvMgr
 
 ; +^8 
-+^sc009:: Send philippe.quesnel
++^sc009:: GroupActivate, PLineClient
 
 
 ;------- help image & suspend hotkeys
