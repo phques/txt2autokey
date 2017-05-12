@@ -1,0 +1,59 @@
+mtgap curl / angleZ
+main30 chars + 2chars at right of right hand ['
+
+2017-05-11
+
+Version where we use an 'alt' layer for symbols/digits/punctuation
+(ala Arensito)
+
+Using layers from
+Ian X4 (evolution of alt layers from BEAKL4 Mod Ian AltGr3 ?)
+
+
+symbols on main layer:
+¬ @ | \ ^ © 
+' ! $ 0 2 #
+ 
+
+--
+setksize curlaz32
+set numThreads 4
+
+use 
+qwertyuiop¬asdfghjkl|\zxcvbnm02#
+QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'!$
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 17% 0.00% 0.00% 16% 15% 10% 9.0%
+
+ @  P  U  Q  ¬   X  G  D  #  V  Z
+ I  N  E  A  |   M  H  T  S  R  W
+ Y  ^  O  K  ©   F  L  B  C  J
+
+ 2  p  u  q  $   x  g  d  0  v  z
+ i  n  e  a  '   m  h  t  s  r  w
+ y  !  o  k  \   f  l  b  c  j
+
+Fitness:       15776202
+Distance:      13469979
+Finger work:   57248
+Inward rolls:  9.25%
+Outward rolls: 2.48%
+Same hand:     34.50%
+Same finger:   1.66%
+Row change:    13.38%
+Home jump:     2.29%
+Ring jump:     1.97%
+To center:     1.45%
+To outside:    0.70%
+
+Time elapsed: 0 hours, 6 minutes, 16 seconds
+
+--------
+
+AltGr layer Ian X4
+[ _ : ? &  + / % * ] ~
+- ( " . <  > , = ) ; `
+8 4 { } 6  9 3 1 5 7
+
+

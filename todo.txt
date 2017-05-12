@@ -1,7 +1,6 @@
 
 layerKeyMappings
-+ need to have help image to make it useable !
-+ move regex stuff out of doKey
++ move regex stuff out of doKey(?)
 + need to add extend/edit layer !
   + as layer2 ? (might not be that useable)
   + or on LAlt ? (need to do special doKey func for this to work)
