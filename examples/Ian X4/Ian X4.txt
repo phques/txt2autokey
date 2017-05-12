@@ -1,0 +1,18 @@
+http://kla.keyboard-design.com/#/config
+Ian X4 (evolution of alt layers from BEAKL4 Mod Ian AltGr3 ?)
+
+
+J Y U ¬ @  M D C P Q Z
+I H A E O  L T S N R V
+| K \ ^ ©  W G F B X
+
+j y u ' !  m d c p q z
+i h a e o  l t s n r v
+$ k 0 2 #  w g f b x
+
+
+Alt Layer
+[ _ : ? &  + / % * ] ~
+- ( " . <  > , = ) ; `
+8 4 { } 6  9 3 1 5 7
+
