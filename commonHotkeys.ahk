@@ -16,6 +16,11 @@
 
 ;---
 
+; +^7 
++^sc008:: Send philippe.quesnel
+
+
+
 ; Win B
 #sc030::clipboardToBash()
 
