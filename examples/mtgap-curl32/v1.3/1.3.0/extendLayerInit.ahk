@@ -8,12 +8,11 @@ from := ""
  . " z x c v b  n m , .  / "
 
 to := ""
- . ' [ : { ! &  `% + } * ] ~ '
+ . ' [ _ : ! &  + / `% * ] ~ '
  . ' - ( " . <  > , = ) `; `` '
  . ' 8 4 0 2 6  9 3 1 5 7 '
 
 InitLayerMappings("Space")
-
 
 MapLayerHotkeys(from, to)
 
@@ -24,4 +23,5 @@ MapLayerHotkeys("LShift", "Space")
 ; and Enter too
 MapLayerHotkeys("RShift", "Enter")
 MapLayerHotkeys("Enter", "Enter")
+
 

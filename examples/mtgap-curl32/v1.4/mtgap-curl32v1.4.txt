@@ -1,0 +1,109 @@
+mtgap curl / angleZ
+main30 chars + 2chars at right of right hand ['
+
+2017-05-12
+
+Version where we use an 'alt' layer for symbols/digits/punctuation
+(ala Arensito)
+
+Using layers from
+Ian X4 (evolution of alt layers from BEAKL4 Mod Ian AltGr3 ?)
+but moving 0 2  to alt layer, swapping with { }
+
+...
+also try to move { } to alt layer (swap w. /_)
+symbols on main layer:
+¬ @ | \ ^ © 
+' ? $ / _ #
+
+adjusted (also moved some symbols around a bit)
+[ : { ! &  % + } * ] ~
+- ( " . <  > , = ) ; `
+8 4 0 2 6  9 3 1 5 7
+
+
+....
+v1.4.0
+
+finally vowels on right hand, <homejpmp
+but <rolls, >toCenter, 
+
+setksize curlaz32
+set numThreads 4
+set toCenter 20
+sethandbias -25
+set homeJump 150
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm/_#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'?$
+
+Hands: 43% 56%
+Fingers: 4.0% 10% 11% 18% 0.00% 0.00% 18% 20% 10% 9.0%
+
+ X  M  C  B  J   ©  F  O  U  Q  ¬
+ L  R  S  T  K   P  N  E  I  A  @
+ W  V  D  G  Z   Y  H  ^  |  #
+
+ x  m  c  b  j   $  f  o  u  q  \
+ l  r  s  t  k   p  n  e  i  a  _
+ w  v  d  g  z   y  h  /  '  ?
+
+Fitness:       23874883
+Distance:      20472613
+Finger work:   0
+Inward rolls:  4.65%
+Outward rolls: 3.14%
+Same hand:     36.44%
+Same finger:   1.30%
+Row change:    16.91%
+Home jump:     1.10%
+Ring jump:     1.48%
+To center:     4.01%
+To outside:    0.31%
+
+....
+v1.4.1
+
+(set toCenter 25
+set homeJump 130)
+
+setksize curlaz32
+set numThreads 4
+sethandbias -30
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm/_#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'?$
+
+Hands: 45% 54%
+Fingers: 6.0% 11% 15% 14% 0.00% 0.00% 16% 20% 10% 9.0%
+
+ X  G  D  M  Z   ¬  F  O  U  Q  ©
+ R  S  T  H  V   P  N  E  I  A  |
+ W  B  L  K  J   Y  C  ^  @  #
+
+ x  g  d  m  z   ?  f  o  u  q  \
+ r  s  t  h  v   p  n  e  i  a  '
+ w  b  l  k  j   y  c  /  _  $
+
+Fitness:       25196818
+Distance:      22452223
+Finger work:   0
+Inward rolls:  8.23%
+Outward rolls: 3.23%
+Same hand:     38.57%
+Same finger:   1.35%
+Row change:    15.64%
+Home jump:     2.17%
+Ring jump:     2.20%
+To center:     3.61%
+To outside:    0.23%
+
+....
+v1.4.2
+
+(set toCenter 25)
+
+setksize curlaz32
+set numThreads 4
+sethandbias -30
+set homeJump 130
+
+similar to v1.4.0, not has good

@@ -102,3 +102,88 @@ maybe adjust to (programming !) :
 - ( " . <  > , = ) ; `
 8 4 0 2 6  9 3 1 5 7
 
+------============---------
+
+2017-05-12
+v1.3.2
+
+also try to move { } to alt layer (swap w. /_)
+symbols on main layer:
+¬ @ | \ ^ © 
+' ? $ / _ #
+
+adjusted (also moved some symbols around a bit)
+[ : { ! &  % + } * ] ~
+- ( " . <  > , = ) ; `
+8 4 0 2 6  9 3 1 5 7
+
+
+setksize curlaz32
+set numThreads 4
+sethandbias -10
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm/_#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'?$
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 16% 0.00% 0.00% 15% 15% 12% 9.0%
+
+ ^  P  U  Q  ¬   X  M  D  C  K  Z
+ I  N  E  A  |   F  H  T  S  R  W
+ Y  @  O  #  ©   V  L  B  G  J
+
+ $  p  u  q  \   x  m  d  c  k  z
+ i  n  e  a  '   f  h  t  s  r  w
+ y  /  o  _  ?   v  l  b  g  j
+
+Fitness:       18466787
+Distance:      16305094
+Finger work:   53383
+Inward rolls:  9.19%
+Outward rolls: 2.67%
+Same hand:     33.97%
+Same finger:   1.23%
+Row change:    13.18%
+Home jump:     2.60%
+Ring jump:     1.95%
+To center:     1.01%
+To outside:    0.70%
+
+....
+v1.3.3
+
+reduces homeJump/row change, 
+augments Samefinger, toCenter, ringJump
+(Ou LD goto top row as pairs) 
+
+setksize curlaz32
+set numThreads 4
+set toCenter 20
+sethandbias -10
+set homeJump 200
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm/_#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'?$
+
+Hands: 49% 50%
+Fingers: 7.0% 9.0% 20% 13% 0.00% 0.00% 15% 14% 12% 9.0%
+
+ Q  P  O  U  ¬   X  D  L  C  K  Z
+ I  N  E  A  @   B  H  T  S  R  W
+ |  ^  Y  #  ©   F  M  V  G  J
+
+ q  p  o  u  $   x  d  l  c  k  z
+ i  n  e  a  _   b  h  t  s  r  w
+ /  ?  y  '  \   f  m  v  g  j
+
+Fitness:       19067381
+Distance:      16545468
+Finger work:   53383
+Inward rolls:  10.69%
+Outward rolls: 2.65%
+Same hand:     33.97%
+Same finger:   1.69%
+Row change:    11.86%
+Home jump:     0.83%
+Ring jump:     2.36%
+To center:     1.53%
+To outside:    0.70%
+

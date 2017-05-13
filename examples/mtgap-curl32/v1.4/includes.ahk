@@ -25,7 +25,6 @@ return
       
 ; hotkey defs
 
-;#include ../../../altGr.ahk
 #include ../../../extendLAlt.ahk
 #include ../../../capsLock.ahk
 #include ../../../commonHotkeys.ahk
