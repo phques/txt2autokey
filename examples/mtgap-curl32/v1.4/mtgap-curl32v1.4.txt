@@ -97,7 +97,7 @@ To center:     3.61%
 To outside:    0.23%
 
 ....
-v1.4.2
+__v1.4.2__
 
 (set toCenter 25)
 
@@ -107,3 +107,77 @@ sethandbias -30
 set homeJump 130
 
 similar to v1.4.0, not has good
+
+-------
+
+2017-05-13
+
+v1.4.2
+
+Trying something out : large hand bias towards right
+
+setksize curlaz32
+set numThreads 4
+sethandbias -50
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm/_#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'?$
+
+Hands: 40% 59%
+Fingers: 5.0% 11% 10% 14% 0.00% 0.00% 19% 20% 12% 9.0%
+
+ J  L  M  B  Z   ©  F  O  U  Q  ^
+ H  R  N  S  V   P  T  E  I  A  @
+ K  X  C  W  ¬   G  D  |  Y  #
+
+ j  l  m  b  z   $  f  o  u  q  /
+ h  r  n  s  v   p  t  e  i  a  _
+ k  x  c  w  \   g  d  '  y  ?
+
+Fitness:       30877853
+Distance:      26791360
+Finger work:   102703
+Inward rolls:  3.07%
+Outward rolls: 3.15%
+Same hand:     34.28%
+Same finger:   1.31%
+Row change:    17.05%
+Home jump:     1.86%
+Ring jump:     1.10%
+To center:     4.52%
+To outside:    0.41%
+
+
+v1.4.3
+
+Trying something out : large hand bias towards left
+
+setksize curlaz32
+set numThreads 4
+sethandbias 20
+
+use qwertyuiop¬asdfghjkl|\zxcvbnm/_#QWERTYUIOP@ASDFGHJKL^©ZXCVBNM'?$
+
+Hands: 54% 45%
+Fingers: 8.0% 10% 20% 16% 0.00% 0.00% 13% 14% 10% 8.0%
+
+ #  U  O  F  ¬   ©  M  D  G  Q  Z
+ A  I  E  N  Y   V  H  T  S  R  W
+ \  |  C  P  ^   X  L  K  B  J
+
+ '  u  o  f  ?   @  m  d  g  q  z
+ a  i  e  n  y   v  h  t  s  r  w
+ _  $  c  p  /   x  l  k  b  j
+
+Fitness:       21781783
+Distance:      19240043
+Finger work:   0
+Inward rolls:  7.85%
+Outward rolls: 3.28%
+Same hand:     38.35%
+Same finger:   1.29%
+Row change:    15.64%
+Home jump:     2.61%
+Ring jump:     2.14%
+To center:     1.52%
+To outside:    0.70%
+
