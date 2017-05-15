@@ -10,3 +10,28 @@ K X < > Z W M F V Q
 b l o u : j d c p y [ ] \
 h r e a ; g t s n i "
 k x , . z w m f v q
+
+--- mtgap analysis :
+
+Hands: 50% 49%
+Fingers: 7.0% 10% 20% 12% 0.00% 0.00% 19% 12% 10% 9.0%
+
+ B  L  O  U  ?   J  D  C  P  Y
+ H  R  E  A  /   G  T  S  N  I
+ K  X  <  >  Z   W  M  F  V  Q
+
+ b  l  o  u  :   j  d  c  p  y
+ h  r  e  a  ;   g  t  s  n  i
+ k  x  ,  .  z   w  m  f  v  q
+
+Fitness:       17177870
+Distance:      12095865
+Finger work:   22440
+Inward rolls:  8.34%
+Outward rolls: 2.97%
+Same hand:     45.34%
+Same finger:   1.43%
+Row change:    18.29%
+Home jump:     0.90%
+Ring jump:     7.76%
+To center:     2.69%
