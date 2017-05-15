@@ -1,0 +1,37 @@
+AdNW optimizer
+http://www.adnw.de/index.php?n=Main.HomePage
+
+the traditional version of the layout leans towards alternation vs rolls
+KUÜ.Ä VGCLJF
+HIEAO DTRNSß
+XYÖ,Q BPWMZ
+
+version without german symbols
+https://deskthority.net/wiki/Keyboard_layouts#AdNW_.282010.29
+
+K U ! . @  V G C L J F
+H I E A O  D T R N S :
+X Y / , Q  B P W M Z
+
+my modified version (symbols), shifted and unshifted
+K U " ! @  V G C L J F
+H I E A O  D T R N S :
+X Y ? \ Q  B P W M Z
+
+k u ' . _  v g c l j f
+h i e a o  d t r n s ;
+x y , / q  b p w m z
+
+-----
+
+from AdNw site, alternative,
+sounds a bit more like what I would like (more rolls ?)
+
+K A ,   Y  P D L M J ß
+H O E I U  G T R N S X
+Z Q Ä Ü Ö  B C W V F
+
+but I think about it / look at characters used,
+and this specific optimization probably looses its advantage if 
+I just replace the german characters with symbols !
+(same thing for stsd AdNW !?)

@@ -1,0 +1,30 @@
+Colemak          329.198 total effort   190.407 positional effort    left right
+                   1.348 same finger rp  14.381 shift same finger top  7.7  8.2
+  qwfpg jluy;[    58.170 hand alternat.  39.802 shift hand alter. mid 32.3 37.5
+  arstd hneio'     1.029 inward/outward  37.915 inward or outward bot  7.0  7.2
+  zxcvb km,./     17.424 adjacent         8.943 shift adjacent    sum 47.1 52.9
+                  16.812 no hand altern. 30.756 two hand altern.
+                  10.588 seesaw           5.533 indir same finger
+                  9.4  7.8 11.5 18.5 --.- --.- 18.6 15.3  9.7  9.4 Sh  1.4  1.7
+
+
+mtgap-blourea    334.741 total effort   196.709 positional effort    left right
+                   1.325 same finger rp  17.196 shift same finger top 14.8 10.5
+  blou/ jdcpy[    55.020 hand alternat.  34.842 shift hand alter. mid 30.0 31.0
+  hrea; gtsni'     1.857 inward/outward  41.089 inward or outward bot  5.5  8.2
+  kx,.z wmfvq     17.912 adjacent        10.203 shift adjacent    sum 50.3 49.7
+                  19.225 no hand altern. 25.347 two hand altern.
+                  11.885 seesaw           4.806 indir same finger
+                  9.0  9.9 19.7 11.7 --.- --.- 18.4 11.5  9.6 10.2 Sh  2.2  1.0
+
+
+mtgap-ypouinea   314.489 total effort   192.690 positional effort    left right
+                   1.188 same finger rp   9.452 shift same finger top 13.1 13.0
+  ypou; kdlcw[    65.644 hand alternat.  40.936 shift hand alter. mid 34.1 28.6
+  inea. mhtsr'     1.685 inward/outward  30.602 inward or outward bot  3.6  7.6
+  qj/,z bfgvx     18.719 adjacent         2.476 shift adjacent    sum 50.9 49.1
+                   8.710 no hand altern. 39.032 two hand altern.
+                   5.310 seesaw           5.271 indir same finger
+                 10.7  8.8 18.5 12.8 --.- --.- 15.1 14.2 10.3  9.4 Sh  2.1  1.0
+
+
