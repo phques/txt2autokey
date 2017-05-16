@@ -1,6 +1,7 @@
 
 ; Explorer group 
-GroupAdd, Explorer, ahk_exe explorer.exe
+; GroupAdd, Explorer, ahk_exe explorer.exe
+GroupAdd, Explorer, ahk_class CabinetWClass
 GroupAdd, Explorer, ahk_exe 2xExplorer.exe
 
 ; Notepad++ group 
