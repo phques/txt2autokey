@@ -1,0 +1,34 @@
+from here :
+https://forum.colemak.com/topic/90-dvorak-user-pondering-punctuation-placement/#p406
+
+original: (that's the version found at http://kla.keyboard-design.com/#/config)
+~ 1 2 3 4 5   6 7 8 9 0 { } 
+  K C D M F   V W U > J _ + 
+  O S T N H   L R E A I Y 
+  " G P B Z   X : < Q ?
+  
+new :
+
+` 1 2 3 4 5   6 7 8 9 0 [ ]
+  k c d f b   v w u j x - =
+  o s t n h   l r e a i y
+  ' g m p z   ; . , q / \
+
+~ ! @ # $ %   ^ & * ( ) { }
+  K C D F B   V W U J X _ + 
+  O S T N H   L R E A I Y
+  " G M P Z   : > < Q ? |
+  
+(as one to many keys \| for us kbd, last key of last row)
+so change it, bring back \| at its original pos for now
+
+~ ! @ # $ %   ^ & * ( ) { }
+  K C D F B   V W U J X _ + 
+  O S T N H   L R E A I Y
+  " G M P Z   : > < Q ? |
+
+` 1 2 3 4 5   6 7 8 9 0 [ ]
+  k c d f b   v w u j x - =
+  o s t n h   l r e a i y
+  ' g m p z   ; . , q / \
+

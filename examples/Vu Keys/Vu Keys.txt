@@ -1,0 +1,21 @@
+as found on http://kla.keyboard-design.com/#/config
+submitted by Vu Dang
+
+Q C D M V  J W U K " {
+N S T R H  Y I E O A :
+Z F G L X  B P < > ?
+
+q c d m v  j w u k ' [
+n s t r h  y i e o a ;
+z f g l x  b p , . /
+
+---
+or PQ, apply angleZ
+
+Q C D M V  J W U K " {
+N S T R H  Y I E O A :
+F G L X Z  B P < > ?
+
+q c d m v  j w u k ' [
+n s t r h  y i e o a ;
+f g l x z  b p , . /
