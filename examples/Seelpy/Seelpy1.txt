@@ -1,0 +1,58 @@
+http://www.keyboard-design.com/layouts/ergo/60/seelpy-1-ergolinear.html
+
+"And then I had an idea... a rather radical one. What if we split the cases completely? 
+Most of what we type is lower case, so why not put all those on the home row?....
+
+In truth, the secret of the space/H/h key is this: H is not "shift-space". 
+H has nothing to do with Space. This concept can be extended...
+
+The plan was rapidly taking shape.... a three-row setup, with Caps on top row, 
+lower case on home row, and digits and punctuation on bottom row.
+
+Since we have 10x3 slots on each row (or 11x3), and only 26 letters, 
+we could put the most used puncutation on home row as well, 
+and another four on top row. "
+
+see seelpy-1-ergolinear-kla.jpg
+
+Shifted
+K  W  O  B  L   H  P  R  F  G
+x  y  u  c  j   k  h  r  w  b  &
+[  {  (  <  +   _  >  )  }  ]  ~
+
+Unshifted
+V  E  A  I  M   D  S  T  C  N
+i  o  e  a  .   m  t  Sp n  s  z
+8  4  0  2  6   9  3  1  5  7  `
+
+AltGr
+X  Y  U  :  J   !  "  =  Q  Z
+v  p  g  l  -   '  d  f  ,  q
+\  $  ?  ;  @   %  *  /  #  |  ^
+
+
+Note that I cannot use my txt2autokey to handle the whole kbd since
+it uses 6 keys, bottom right row (need to map RShift on Us Kbd)
+and it maps a home key to Space.
+So will need a bit of manul work ;-)
+...
+or move that key to 1st row !!
+solution for now
+
+so:
+(will use @ as placeholder for Space)
+
+Shifted
+K  W  O  B  L   H  P  R  F  G  ~
+x  y  u  c  j   k  h  r  w  b  &
+[  {  (  <  +   _  >  )  }  ]  
+
+Unshifted
+V  E  A  I  M   D  S  T  C  N  `
+i  o  e  a  .   m  t  Sp n  s  z
+8  4  0  2  6   9  3  1  5  7  
+
+AltGr
+X  Y  U  :  J   !  "  =  Q  Z  ^
+v  p  g  l  -   '  d  f  ,  q
+\  $  ?  ;  @   %  *  /  #  |  
