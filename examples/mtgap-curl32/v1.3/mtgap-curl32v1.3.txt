@@ -187,3 +187,30 @@ Ring jump:     2.36%
 To center:     1.53%
 To outside:    0.70%
 
+--w. allCharsLess.txt (less common chars given fake priority)--
+alternate/adaptive/dynamic layout/laer
+
+Hands: 39% 60%
+Fingers: 5.0% 9.0% 11% 15% 0.00% 0.00% 21% 20% 12% 8.0%
+
+ W  S  T  H  X   c  U  O  P  J  Q
+ N  G  F  M  R   K  A  E  C  I  @
+ V  B  L  D  Z   #  Y  |  ^  ¬
+
+ w  s  t  h  x   $  u  o  p  j  q
+ n  g  f  m  r   k  a  e  c  i  _
+ v  b  l  d  z   '  y  /  ?  \
+
+Fitness:       20188911
+Distance:      16896338
+Finger work:   5443
+Inward rolls:  9.19%
+Outward rolls: 1.52%
+Same hand:     31.64%
+Same finger:   2.44%
+Row change:    12.19%
+Home jump:     1.20%
+Ring jump:     2.58%
+To center:     4.07%
+To outside:    0.49%
+
