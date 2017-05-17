@@ -5,22 +5,17 @@
 ; note that it currently does not work for Alt keys as prefix !!
 ; see extendDoKey.ahk for a solution
 
-; layers[layerIdx] = object
-;   obj.prefixKey = prefixKey
-;   obj.mappings = {fromKey : toKey ...}
-
-global layers := []
+; holds mappings fromKey => toKey
+global layerMappings := {}
+global layerPrefixKey := ""
 
 ; empty mappings and set the layer hotkey prefix
 ; call this once before multiple calls to MapKayerHotkeys
 ; notethat this does/can not delete any hotkeys
-InitLayerMappings(layerIndex, _layerPrefixKey)
+InitLayerMappings(_layerPrefixKey)
 {
-	layerDef := {}
-	layerDef.prefixKey := _layerPrefixKey
-	layerDef.mappings := {}
-	
-	layers[layerIndex] := layerDef
+	layerPrefixKey := _layerPrefixKey
+	layerMappings := {}
 }
 
 
@@ -28,16 +23,8 @@ InitLayerMappings(layerIndex, _layerPrefixKey)
 ; where_from / _to are whitespace separated lists of keys
 ; ie "a b c", "@ # $"
 ; or "1 2 3", "^c ^v ^x"
-MapLayerHotkeys(layerIndex, _from, _to)
+MapLayerHotkeys(_from, _to)
 {
-	; get layer def
-	layerDef := layers[layerIndex]
-	if (!layerDef)
-	{
-		MsgBox MapLayerHotkeys layer %layerDef% does not exist
-		ExitApp
-	}
-	
 	; trim pre/post spaces and compress multi spaces into one
 	from := Trim(_from)
 	from := RegExReplace(from, "\s{2,}", " ")
@@ -53,8 +40,7 @@ MapLayerHotkeys(layerIndex, _from, _to)
 	{
 		MsgBox % Format("createHotkeys, From/to not same length {} {}!`n{} `n{}"
 						, froms.Length, tos.Length
-						, _from, _to, )
-						; , SubStr(_from, 1, 16), SubStr(_to, 1, 16))
+						, SubStr(_from, 1, 16), SubStr(_to, 1, 16))
 		return
 	}
 
@@ -65,10 +51,10 @@ MapLayerHotkeys(layerIndex, _from, _to)
 		t := tos[A_Index]
 		
 		; create the actual layer hotkey e.g Space + q
-		createLayerHotKey(layerIndex, layerDef.prefixKey, f)		
+		createLayerHotKey(layerPrefixKey, f)		
 		
 		; save what this layer hotkey generates, Space + q = Escape
-		layerDef.mappings[f] := t
+		layerMappings[f] := t
 	}
 }
 
@@ -78,16 +64,10 @@ MapLayerHotkeys(layerIndex, _from, _to)
 ; called (by a hotkey) to handle a layer key
 ; e.g Space & q :: Escape
 ; key = "q", up = 0/1 if on key up/down
-doLayerKey(layerIndex, keyHit, up)
+doLayerKey(keyHit, up)
 {
-	; get layer def
-	layerDef := layers[layerIndex]
-	if (!layerDef)
-		return
-
 	; get destination key for this layer hotkey
-    outputKey := layerDef.mappings[keyHit]
-	prefix := layerDef.prefixKey
+    outputKey := layerMappings[keyHit]
 
     if (Strlen(outputKey) != 0)
     {
@@ -109,20 +89,7 @@ doLayerKey(layerIndex, keyHit, up)
             s := "{%outputKey% DownTemp}"
         
         SetKeyDelay -1
-		;;## for now just don't use Send {Blind} if using Alt as prefix
-		if (prefix == "LAlt" || prefix == "RAlt" || prefix == "Alt") {
-			; set prefix: for shift / control
-			; might come into conflict with %mods% from key def though !
-			prefix := ""
-			if (GetKeyState("Shift") || shiftDown)
-				prefix .= "+"
-			if (GetKeyState("Ctrl") || controlDown)
-				prefix .= "^"
-		
-			Send %prefix%%mods%%s%
-		}
-		else
-			Send {Blind}%mods%%s%
+        Send {Blind}%mods%%s%
     }
 	else
 	{
@@ -132,22 +99,18 @@ doLayerKey(layerIndex, keyHit, up)
 }
 
 ; create a hotkey pre & post, calls doLayerKey(post, 1/0)
-createLayerHotkey(layerIndex, pre, post)
+createLayerHotkey(pre, post)
 {
 	; convert pre/post to scancode representation 'scXXX'
-	; sc := GetKeySC(pre)
-	; scPre := Format("sc{:03x}", sc)
-	; PQ 2017-05-16, sc038 will NOT work for LAlt !!
-	;   we'll assume here that the prefix key has not been remapped,
-	;   so use it directly iso its scanCode version
-	scPre := pre
+	sc := GetKeySC(pre)
+	scPre := Format("sc{:03x}", sc)
 
 	sc := GetKeySC(post)
 	scPost := Format("sc{:03x}", sc)
 
 	; create function object with params that hotkey will call : doLayerKey(..)
-	fnDown := Func("doLayerKey").Bind(layerIndex, post, 0)
-	fnUp := Func("doLayerKey").Bind(layerIndex, post, 1)
+	fnDown := Func("doLayerKey").Bind(post, 0)
+	fnUp := Func("doLayerKey").Bind(post, 1)
 
 	; create hotKey
 	HotKey %scPre% & %scPost%, %fnDown%
