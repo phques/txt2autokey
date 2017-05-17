@@ -23,6 +23,6 @@ return
 
 ; hotkey defs
 #include ../../altGrWide.ahk
-#include ../../extend-wide.ahk
+#include ../../extend-wide-space.ahk
 #include ../../commonHotkeys.ahk
 
