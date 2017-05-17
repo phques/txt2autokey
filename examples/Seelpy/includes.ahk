@@ -3,7 +3,7 @@
 ; Global variables for pkl_gui.ahk / layout image
 ; MUST be declared *before* scripts that use them
 global LayoutDir := "%A_ScriptDir%"
-global ExtendKey := "Alt"
+global ExtendKey := "Space" ;; ctually layer 2! = Shifted keys !!
 global ImgWidth := 284
 global ImgHeight := 46
 global HasAltGr := 1
@@ -26,7 +26,8 @@ return
 
 ; hotkey defs
 
-;#include ../../capsLock.ahk
+; #include ../../capsLock.ahk
+#include ../../extend.ahk
 #include ../../commonHotkeys.ahk
 #include extraKeyDefs.ahk
 

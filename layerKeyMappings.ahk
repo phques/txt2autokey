@@ -110,8 +110,17 @@ doLayerKey(layerIndex, keyHit, up)
         
         SetKeyDelay -1
 		;;## for now just don't use Send {Blind} if using Alt as prefix
-		if (prefix == "LAlt" || prefix == "RAlt" || prefix == "Alt")
-			Send %mods%%s%
+		if (prefix == "LAlt" || prefix == "RAlt" || prefix == "Alt") {
+			; set prefix: for shift / control
+			; might come into conflict with %mods% from key def though !
+			prefix := ""
+			if (GetKeyState("Shift") || shiftDown)
+				prefix .= "+"
+			if (GetKeyState("Ctrl") || controlDown)
+				prefix .= "^"
+		
+			Send %prefix%%mods%%s%
+		}
 		else
 			Send {Blind}%mods%%s%
     }

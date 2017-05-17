@@ -100,6 +100,6 @@ CapsLock & sc035::dokey("}^{z", 0)
 CapsLock & sc035 up::dokey("}^{z", 1)
 
 ;; sp => Enter
-CapsLock & sc039::dokey("Enter", 0)
-CapsLock & sc039 up::dokey("Enter", 1)
+;CapsLock & sc039::dokey("Enter", 0)
+;CapsLock & sc039 up::dokey("Enter", 1)
 
