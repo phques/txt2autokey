@@ -23,5 +23,5 @@ return
 
 ; hotkey defs
 #include ../../altGr.ahk
-#include ../../extend.ahk
+#include ../../extendSpace.ahk
 #include ../../commonHotkeys.ahk
