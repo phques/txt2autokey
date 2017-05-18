@@ -1,6 +1,6 @@
 ; extend layer, layer key = Space
 
-#include ../../layerKeyMappings.ahk
+#include ../common/layerKeyMappings.ahk
 
 from := ""
  . " q w e r t  y u i o  p [ "

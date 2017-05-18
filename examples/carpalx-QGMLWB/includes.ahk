@@ -1,6 +1,6 @@
 ; PLace #includes and things to add to ahk script here 
 
-#include ../../extend.ahk
+#include ../common/extend/extend.ahk
 
 ;;+^9:: Reload
 

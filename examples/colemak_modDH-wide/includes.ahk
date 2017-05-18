@@ -12,9 +12,9 @@ global HasAltGr := 1
 global CenterOnCurrWndMonitor := 1
 
 ; code only includes
-#include ../../groups.ahk
-#include ../../clipboardToBash.ahk
-#include ../../fromPkl/pkl_gui.ahk
+#include ../common/groups.ahk
+#include ../common/clipboardToBash.ahk
+#include ../common/fromPkl/pkl_gui.ahk
 
 DisplayHelpImage()
 return
@@ -22,6 +22,6 @@ return
 ;------
 
 ; hotkey defs
-#include ../../altGrWide.ahk
-#include ../../extend-wide.ahk
-#include ../../commonHotkeys.ahk
+#include ../common/altGr/altGrWide.ahk
+#include ../common/extend/extend-wide.ahk
+#include ../common/commonHotkeys.ahk

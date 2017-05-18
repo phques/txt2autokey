@@ -1,7 +1,0 @@
-
-convert Capture.PNG -crop 284x46+50+149 state0.png
-convert Capture.PNG -crop 284x46+50+104 state1.png
-convert Capture.PNG -crop 284x46+50+194 extend.png
-
-convert Capture.PNG -crop 284x50+50+153 state0.png
-convert Capture.PNG -crop 284x50+50+104 state1.png

@@ -1,6 +1,6 @@
 ; extend layer, layer key = Space
 
-#include ../../../layerKeyMappings.ahk
+#include ../../common/layerKeyMappings.ahk
 
 
 ; original 'BEAKL 4 Mod Ian AltGr 3' alt layer

@@ -12,9 +12,9 @@ global HasAltGr := 1
 global CenterOnCurrWndMonitor := 1
 
 ; code only includes
-#include ../../../groups.ahk
-#include ../../../clipboardToBash.ahk
-#include ../../../fromPkl/pkl_gui.ahk
+#include ../../../common/groups.ahk
+#include ../../../common/clipboardToBash.ahk
+#include ../../../common/fromPkl/pkl_gui.ahk
 
 #include extendLayerInit.ahk
 
@@ -25,9 +25,10 @@ return
       
 ; hotkey defs
 
-#include ../../../extendLAlt.ahk
-#include ../../../capsLock.ahk
-#include ../../../commonHotkeys.ahk
+;#include ../../../common/altGr/altGr.ahk
+#include ../../../common/extend/extendLAlt.ahk
+#include ../../../common/capsLock.ahk
+#include ../../../common/commonHotkeys.ahk
 #include extraKeyDefs.ahk
 
 
