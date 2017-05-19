@@ -31,6 +31,8 @@ v  p  g  l  -   '  d  f  ,  q
 \  $  ?  ;  @   %  *  /  #  |  ^
 
 
+-------
+PQ
 Note that I cannot use my txt2autokey to handle the whole kbd since
 it uses 6 keys, bottom right row (need to map RShift on Us Kbd)
 and it maps a home key to Space.

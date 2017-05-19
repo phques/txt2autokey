@@ -1,0 +1,21 @@
+http://www.keyboard-design.com/layouts/ergo/60/seelpy-1-ergolinear.html
+
+
+see seelpy-2-ergolinear-kla.jpg
+
+Shifted
+K  W  O  B  L   H  P  R  F  G
+x  y  u  c  j   k  h  f  w  q  &
+[  {  (  <  +   _  >  )  }  ]  ~
+
+Unshifted
+V  E  A  I  M   D  S  T  C  N
+i  o  e  a  .   b  t  n  r  s
+8  4  0  2  6   9  3  1  5  7  `
+
+AltGr
+X  Y  U  :  J   !  "  =  Q  Z
+v  p  g  l  -   '  d  m  ,  z
+\  $  ?  ;  @   %  *  /  #  |  ^
+
+
