@@ -1,5 +1,5 @@
 /*
-From  (../common/qwertyFull.txt)
+From  (../../qwertyFull.txt)
 ~ ! @ # $ % ^ & * ( ) _ +
 Q W E R T Y U I O P { } |
 A S D F G H J K L : "
@@ -13,13 +13,13 @@ z x c v b n m , . /
 To  (cmk_moddh-WidePQ.txt)
 ~ ! @ # $ % ^ & * ( ) _ +
 Q W F P B [ J L U Y : ' |
-A R S T G ] K N E I O
-X C D V Z ? M H < >
+A R S T G ] M N E I O
+X C D V Z ? K H < >
 
 ` 1 2 3 4 5 6 7 8 9 0 - =
 q w f p b { j l u y ; " \
-a r s t g } k n e i o
-x c d v z / m h , .
+a r s t g } m n e i o
+x c d v z / k h , .
 
 */
 
@@ -42,7 +42,7 @@ x c d v z / m h , .
 *sc021::sc014			; f :: t
 +sc023::Send {sc01b}	; H :: ]
  sc023::+sc01b			; h :: }
-*sc024::sc025			; j :: k
+*sc024::sc032			; j :: m
 *sc025::sc031			; k :: n
 *sc026::sc012			; l :: e
 *sc027::sc017			; ; :: i
@@ -52,6 +52,7 @@ x c d v z / m h , .
 *sc02e::sc020			; c :: d
 *sc030::sc02c			; b :: z
 *sc031::sc035			; n :: /
+*sc032::sc025			; m :: k
 *sc033::sc023			; , :: h
 *sc034::sc033			; . :: ,
 *sc035::sc034			; / :: .
