@@ -1,0 +1,83 @@
+PQ 2017-05-18
+
+trying to adapt Seelpy 2 ergolinear 
+for use on Us kbd
+Since this layout really only makes sense on a kbd with >=2 thumb keys
+
+The 1st idea was to use top 2 rows on 2 layers for lowercase,
+use Shift to get uppercase from those.
+
+I can use Spacebar as thumb key for 2nd layer, w autohotkey
+
+
+**Seelpy 2**
+
+Shifted
+K  W  O  B  L   H  P  R  F  G
+x  y  u  c  j   k  h  f  w  q  &
+[  {  (  <  +   _  >  )  }  ]  ~
+
+Unshifted
+V  E  A  I  M   D  S  T  C  N
+i  o  e  a  .   b  t  n  r  s
+8  4  0  2  6   9  3  1  5  7  `
+
+AltGr
+X  Y  U  :  J   !  "  =  Q  Z
+v  p  g  l  -   '  d  m  ,  z
+\  $  ?  ;  @   %  *  /  #  |  ^
+
+------
+
+**Possible ideas (all w. 2 layers, using Spacebar to access layer w. thumb):
+
+- use 2 top rows: (5 x 2 x 2) x 2 = 40 chars
+
+according to allchars.txt of mtgap opt
+here are top 42 chars (exluding digits, \t \n)
+
+etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z/*!?
+
+I have room for 40, so keep !?, skip /*
+etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z!?
+
+
+- Use 'curl' home pos bottom row index ?
+
+
+--------
+
+- Use most comfortable fingers keys (angle mod)
+(modified mtgap optimizer)
+
+  w e          i o   
+a s d f      j k l ;
+    c        m      
+
+=> 14, 2 layers = 28 pos
+26 letters + 2 punct ,.
+
+qwertyuiopasdfghjklzxcvbnm.,
+
+Hands: 52% 47%
+Fingers: 8.0% 10% 17% 17% 0.00% 0.00% 13% 15% 12% 8.0%
+
+    q  j         k  z
+ .  v  y  ,   f  w  p  g
+       x      b
+
+    m  u         d  c
+ i  n  e  a   h  t  s  r
+       o      l
+
+Fitness:       24795253
+Distance:      8515502
+Finger work:   24836
+Inward rolls:  11.36%
+Outward rolls: 3.67%
+Same hand:     38.98%
+Same finger:   0.80%
+Row change:    13.90%
+Home jump:     2.59%
+Ring jump:     2.21%
+To center:     0.00%
