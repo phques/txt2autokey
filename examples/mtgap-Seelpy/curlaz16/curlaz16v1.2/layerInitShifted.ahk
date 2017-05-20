@@ -1,17 +1,17 @@
 ; shifted layer, layer key = Space
 
-#include ../../common/layerKeyMappings.ahk
+#include ../../../common/layerKeyMappings.ahk
 
 from := ""
- . "   w e      i o    "
+ . "   w e r  u i o    "
  . " a s d f  j k l `; "
  . "     c    m        "
 
 
 to := ""
- . "   z k      j q "
- . " g p w f  , y v . "
- . "     b    x "
+ . "  `" v j   z q '    "
+ . " b f w y   Space , g . "
+ . "      k    x        " 
 
 ; (scan code sc039)
 InitLayerMappings(1, "sc039")

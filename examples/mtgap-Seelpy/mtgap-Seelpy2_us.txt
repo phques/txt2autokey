@@ -45,8 +45,6 @@ etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z!?
 - Use 'curl' home pos bottom row index ?
 
 
---------
-
 - Use most comfortable fingers keys (angle mod)
 (modified mtgap optimizer: curlaz14, 14 keys)
 
@@ -54,62 +52,8 @@ etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z!?
 a s d f      j k l ;
     c        m      
 
-=> 14keys, 2 layers = 28 pos
-26 letters + 2 punct ,.
-
-qwertyuiopasdfghjklzxcvbnm.,
-
-setksize curlaz14
-set keepShiftPairs 0
-
-Hands: 47% 52%
-Fingers: 8.0% 12% 15% 13% 0.00% 0.00% 17% 17% 10% 8.0%
-
-    z  k              j  q
- g  p  w  f        ,  y  v  .
-       b           x
-
-    c  d              u  m
- r  s  t  h        a  e  n  i
-       l           o
-
-Fitness:       24795253
-Distance:      8515502
-Finger work:   24836
-Inward rolls:  11.36%
-Outward rolls: 3.67%
-Same hand:     38.98%
-Same finger:   0.80%
-Row change:    13.90%
-Home jump:     2.59%
-Ring jump:     2.21%
-To center:     0.00%
-
-
-(old, prev ver, same but reversed hands !)
-Hands: 52% 47%
-Fingers: 8.0% 10% 17% 17% 0.00% 0.00% 13% 15% 12% 8.0%
-
-    q  j         k  z
- .  v  y  ,   f  w  p  g
-       x      b
-
-    m  u         d  c
- i  n  e  a   h  t  s  r
-       o      l
-
-Fitness:       24795253
-Distance:      8515502
-Finger work:   24836
-Inward rolls:  11.36%
-Outward rolls: 3.67%
-Same hand:     38.98%
-Same finger:   0.80%
-Row change:    13.90%
-Home jump:     2.59%
-Ring jump:     2.21%
-To center:     0.00%
-
+**See subdirs / version with 14/16 keys**
+	
 -----
 
 mtgap 60 1st most used (exlude Sp \n \t)
@@ -180,105 +124,4 @@ To center:     1.77%
 To outside:    0.49%
 
 Time elapsed: 0 hours, 5 minutes, 5 seconds
-
-------
-
-2017-05-19
-
-added two other keys in mtgap : curlaz16
-(4new chars/syms) so added -_'"
-
-setksize curlaz16
-set keepShiftPairs 0
-
-Hands: 47% 52%
-Fingers: 7.0% 11% 15% 14% 0.00% 0.00% 15% 20% 10% 7.0%
-
-    x  k  z        _  q  j
- b  y  w  f        ,  .  v  '
-       "           -
-
-    c  d  m        u  o  p
- r  s  t  h        a  e  n  i
-       l           g
-
-Fitness:       23517984
-Distance:      9661059
-Finger work:   0
-Inward rolls:  12.55%
-Outward rolls: 3.26%
-Same hand:     38.81%
-Same finger:   1.61%
-Row change:    13.86%
-Home jump:     1.16%
-Ring jump:     2.45%
-To center:     0.00%
-
-------
-with Space, remove _
-
-setksize curlaz16
-set keepShiftPairs 0
-
-use abcdefghijklm nopqrstuvwxyz.,-'"
-
-Hands: 52% 47%
-Fingers: 7.0% 10% 21% 15% 0.00% 0.00% 13% 17% 9.0% 8.0%
-
-    q  x  z        j  -  "
- v  ,  g  w        p  .  b  y
-       k           '
-
-    l  u  m        f  o  c
- i  n SP  t        r  e  s  a
-       d           h
-
-Fitness:       33518891
-Distance:      10637416
-Finger work:   0
-Inward rolls:  12.50%
-Outward rolls: 5.87%
-Same hand:     48.04%
-Same finger:   1.22%
-Row change:    18.07%
-Home jump:     1.13%
-Ring jump:     2.98%
-To center:     0.00%
-
------
-
-with Space x 2 (keep shiftpair), remove _-
-
-setksize curlaz16
-set keepShiftPairs 1
-
-use abc defghijklmnopqr stuvwxyz.,'"
-
-Hands: 43% 56%
-Fingers: 6.0% 11% 13% 14% 0.00% 0.00% 22% 17% 9.0% 7.0%
-
-    "  v  j        z  q  '
- b  f  w  y       SP  ,  g  .
-       k           x
-
-    l  d  m        u  o  p
- r  s  t  h       SP  e  i  a
-       n           c
-
-Fitness:       58149664
-Distance:      11112949
-Finger work:   36245
-Inward rolls:  9.81%
-Outward rolls: 1.59%
-Same hand:     35.05%
-Same finger:   2.17%
-Row change:    13.23%
-Home jump:     1.79%
-Ring jump:     1.53%
-To center:     0.00%
-
-Time elapsed: 0 hours, 2 minutes, 30 seconds
-Time elapsed: 0 hours, 2 minutes, 31 seconds
-Number of rounds in greatToBest() is now 4096.
-Time elapsed: 0 hours, 4 minutes, 50 seconds
 

@@ -1,0 +1,111 @@
+PQ 2017-05-18
+
+
+- Use most comfortable fingers keys (angle+curl mod)
+(modified mtgap optimizer)
+
+  w e          i o   
+a s d f      j k l ;
+    c        m      
+
+=> 14keys, 2 layers = 28 pos
+26 letters + 2 punct ,.
+
+qwertyuiopasdfghjklzxcvbnm.,
+
+mtgap 14 keys mask on 30 keys kbd
+
+01100 00110
+11110 01111
+00100 01000
+
+011000011011110011110010001000
+
+--------
+14v0.1
+
+
+setksize curlaz30
+setmask 011000011011110011110010001000
+use qwertyuiopasdfghjklzxcvbnm.,
+set keepShiftPairs 0
+
+Hands: 47% 52%
+Fingers: 8.0% 12% 15% 13% 0.00% 0.00% 17% 17% 10% 8.0%
+
+    z  k              j  q
+ g  p  w  f        ,  y  v  .
+       b           x
+
+    c  d              u  m
+ r  s  t  h        a  e  n  i
+       l           o
+
+Fitness:       24795253
+Distance:      8515502
+Finger work:   24836
+Inward rolls:  11.36%
+Outward rolls: 3.67%
+Same hand:     38.98%
+Same finger:   0.80%
+Row change:    13.90%
+Home jump:     2.59%
+Ring jump:     2.21%
+To center:     0.00%
+
+
+----
+14v0.0
+(14v0.1 but reversed hands !)
+Hands: 52% 47%
+Fingers: 8.0% 10% 17% 17% 0.00% 0.00% 13% 15% 12% 8.0%
+
+    q  j         k  z
+ .  v  y  ,   f  w  p  g
+       x      b
+
+    m  u         d  c
+ i  n  e  a   h  t  s  r
+       o      l
+
+Fitness:       24795253
+Distance:      8515502
+Finger work:   24836
+Inward rolls:  11.36%
+Outward rolls: 3.67%
+Same hand:     38.98%
+Same finger:   0.80%
+Row change:    13.90%
+Home jump:     2.59%
+Ring jump:     2.21%
+To center:     0.00%
+
+
+----
+
+v0? strange results
+Hands: 51% 48%
+Fingers: 9.0% 9.0% 17% 17% 0.00% 0.00% 15% 15% 11% 7.0%
+
+    k  q              p  x
+ y  .  w  ,        g  f  v  b
+       z           j
+
+    m  u              l  c
+ i  h  e  a        t  n  s  r
+       o           d
+
+Fitness:       25728480
+Distance:      8574954
+Finger work:   216
+Inward rolls:  7.22%
+Outward rolls: 2.32%
+Same hand:     34.28%
+Same finger:   0.92%
+Row change:    14.29%
+Home jump:     2.42%
+Ring jump:     2.52%
+To center:     0.00%
+
+----
+

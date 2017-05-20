@@ -1,0 +1,182 @@
+PQ 2017-05-18
+
+- Use most comfortable fingers keys (angle+curl mod)
+(modified mtgap optimizer)
+
+  w e r      u i o   
+a s d f      j k l ;
+    c        m      
+
+=> 16keys, 2 layers = 32 pos
+26 letters + 6 punct ,.
+
+qwertyuiopasdfghjklzxcvbnm.,'"-_
+
+mtgap 16 keys mask on 30 keys kbd
+
+01110 01110
+11110 01111
+00100 01000
+
+setmask 011100111011110011110010001000
+	
+------
+
+2017-05-19
+16v1.0
+
+setksize curlaz30
+setmask 011100111011110011110010001000
+set keepShiftPairs 0
+use qwertyuiopasdfghjklzxcvbnm.,'"-_
+set numThreads 4
+
+Hands: 47% 52%
+Fingers: 7.0% 11% 15% 14% 0.00% 0.00% 15% 20% 10% 7.0%
+
+    x  k  z        _  q  j
+ b  y  w  f        ,  .  v  '
+       "           -
+
+    c  d  m        u  o  p
+ r  s  t  h        a  e  n  i
+       l           g
+
+Fitness:       23517984
+Distance:      9661059
+Finger work:   0
+Inward rolls:  12.55%
+Outward rolls: 3.26%
+Same hand:     38.81%
+Same finger:   1.61%
+Row change:    13.86%
+Home jump:     1.16%
+Ring jump:     2.45%
+To center:     0.00%
+
+------
+16v1.1
+
+with Space, remove _
+
+setksize curlaz30
+setmask 011100111011110011110010001000
+set keepShiftPairs 0
+use abcdefghijklm nopqrstuvwxyz.,-'"
+set numThreads 4
+
+** space on left hand, not a fan**
+
+Hands: 52% 47%
+Fingers: 7.0% 10% 21% 15% 0.00% 0.00% 13% 17% 9.0% 8.0%
+
+    q  x  z        j  -  "
+ v  ,  g  w        p  .  b  y
+       k           '
+
+    l  u  m        f  o  c
+ i  n SP  t        r  e  s  a
+       d           h
+
+Fitness:       33518891
+Distance:      10637416
+Finger work:   0
+Inward rolls:  12.50%
+Outward rolls: 5.87%
+Same hand:     48.04%
+Same finger:   1.22%
+Row change:    18.07%
+Home jump:     1.13%
+Ring jump:     2.98%
+To center:     0.00%
+
+-----
+2017-05-20 (using setmask ver)
+16v1.1.2 revered hands 16v1.1 (todo)
+
+Hands: 47% 52%
+Fingers: 8.0% 9.0% 17% 13% 0.00% 0.00% 15% 21% 10% 7.0%
+
+    "  -  j        z  x  q
+ y  b  .  p        w  g  ,  v
+       '           k
+
+    c  o  f        m  u  l
+ a  s  e  r        t SP  n  i
+       h           d
+
+Fitness:       33508871
+Distance:      10627396
+Finger work:   0
+Inward rolls:  12.50%
+Outward rolls: 5.87%
+Same hand:     48.04%
+Same finger:   1.22%
+Row change:    18.07%
+Home jump:     1.13%
+Ring jump:     2.98%
+To center:     0.00%
+
+
+-----
+16v1.2
+
+with Space x 2 (keep shiftpair Space), remove _-
+
+setksize curlaz30
+setmask 011100111011110011110010001000
+set keepShiftPairs 1
+use abc defghijklmnopqr stuvwxyz.,'"
+set numThreads 4
+
+Hands: 43% 56%
+Fingers: 6.0% 11% 13% 14% 0.00% 0.00% 22% 17% 9.0% 7.0%
+
+    "  v  j        z  q  '
+ b  f  w  y       SP  ,  g  .
+       k           x
+
+    l  d  m        u  o  p
+ r  s  t  h       SP  e  i  a
+       n           c
+
+Fitness:       58149664
+Distance:      11112949
+Finger work:   36245
+Inward rolls:  9.81%
+Outward rolls: 1.59%
+Same hand:     35.05%
+Same finger:   2.17%
+Row change:    13.23%
+Home jump:     1.79%
+Ring jump:     1.53%
+To center:     0.00%
+
+
+----
+2017-05-20 (using setmask ver)
+16v1.2.2 (todo)
+reversed hands vs 16v1.2 (eventually turns into same !)
+
+Hands: 56% 43%
+Fingers: 7.0% 9.0% 17% 22% 0.00% 0.00% 14% 13% 11% 6.0%
+
+    j  q  z        x  v  "
+ .  g  , SP        y  w  f  b
+       '           k
+
+    p  o  u        m  d  l
+ a  i  e SP        h  t  s  r
+       c           n
+
+Fitness:       58155205
+Distance:      11123539
+Finger work:   41246
+Inward rolls:  9.84%
+Outward rolls: 1.59%
+Same hand:     34.97%
+Same finger:   2.19%
+Row change:    13.10%
+Home jump:     1.74%
+Ring jump:     1.53%
+To center:     0.00%
