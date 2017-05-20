@@ -1,6 +1,6 @@
 ; shifted layer, layer key = Space
 
-#include ../common/layerKeyMappings.ahk
+#include ../../common/layerKeyMappings.ahk
 
 from := ""
  . "   w e      i o    "
