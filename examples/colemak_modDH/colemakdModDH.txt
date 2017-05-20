@@ -1,0 +1,24 @@
+// colemak AngleZ / Curl-DH[DvbgHm]
+
+Hands: 46% 53%
+Fingers: 8.0% 8.0% 12% 19% 0.00% 0.00% 19% 16% 10% 8.0%
+
+ Q  W  F  P  B   J  L  U  Y  :
+ A  R  S  T  G   M  N  E  I  O
+ X  C  D  V  Z   K  H  <  >  ?
+
+ q  w  f  p  b   j  l  u  y  ;
+ a  r  s  t  g   m  n  e  i  o
+ x  c  d  v  z   k  h  ,  .  /
+
+Fitness:       19437513
+Distance:      14161498
+Finger work:   0
+Inward rolls:  4.70%
+Outward rolls: 2.58%
+Same hand:     42.18%
+Same finger:   1.54%
+Row change:    19.59%
+Home jump:     0.76%
+Ring jump:     3.59%
+To center:     5.67%
