@@ -2,9 +2,6 @@
 ; Space & xx : yy
 ; Space & aa : bb
 
-; note that it currently does not work for Alt keys as prefix !!
-; see extendDoKey.ahk for a solution
-
 ; layers[layerIdx] = object
 ;   obj.prefixKey = prefixKey
 ;   obj.mappings = {fromKey : toKey ...}
@@ -34,7 +31,7 @@ MapLayerHotkeys(layerIndex, _from, _to)
 	layerDef := layers[layerIndex]
 	if (!layerDef)
 	{
-		MsgBox MapLayerHotkeys layer %layerDef% does not exist
+		MsgBox MapLayerHotkeys layer %layerIndex% does not exist
 		ExitApp
 	}
 	
@@ -55,7 +52,7 @@ MapLayerHotkeys(layerIndex, _from, _to)
 						, froms.Length, tos.Length
 						, _from, _to, )
 						; , SubStr(_from, 1, 16), SubStr(_to, 1, 16))
-		return
+		ExitApp
 	}
 
 	; loop on froms / tos, create hotkeys and mappings
