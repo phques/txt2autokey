@@ -347,7 +347,7 @@ To center:     7.42%
 
 --
 
-setksize curlaz30
+setksize curlaz33
 set numThreads 4
 set keepShiftPairs 1
 set keepNumbers 1
