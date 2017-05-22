@@ -1,0 +1,206 @@
+mtgap curl / angleZ
+main30 chars + 3chars at right of right hand []'
+
+Applying idea from BEAKL4 Mod Ian AltGr3 / Ian X4 / Arensito,
+
+using 'layers' with autohotkey
+main layer = letters (+ few symbols to fill keys)
+2nd layer, accessed w. Spacebar, all symbols (digits !?)
+
+26 letters x 2 => 52
+32 symbols
+10 digits
+
+letters + syms = 84
+letters + syms + digits = 94
+
+letters + digits = 62
+symbols + digitis = 42
+
+----
+
+Add french syms to main ?
+chars freqs in French:
+https://fr.wikipedia.org/wiki/Fr%C3%A9quence_d%27apparition_des_lettres_en_fran%C3%A7ais
+=>
+84 chars
+
+=>
+14 french accented chars 
+        5     7   |                   7 
+é è à ê ç | ô â   |  î û ù ï  (á) ü ë ö (í)
+
+33x2 66 on main - 52 letters => 14 free locs / 7 keys!!
+
+For uppercase french, I guess we prob need only Ç, É ??
+just manually place those on keys other than 33 main !
+
+----
+qwertyuiop[]
+asdfghjkl;'
+zxcvbnm,./
+
+qwertyuiopéè
+asdfghjklàê
+zxcvbnmçôâ
+QWERTYUIOPîû
+ASDFGHJKLùï
+ZXCVBNMüëö
+
+Dooh, no room for Space !!
+
+
+-----
+1- I use allCharsAddFrench.txt in which I added the french chars at the end, 
+   to set priority for each ..
+
+2017-05-22
+v1.0
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairs 2
+use qwertyuiopéèasdfghjklàêzxcvbnmçôâQWERTYUIOPîûASDFGHJKLùïZXCVBNMüëö
+
+
+Hands: 49% 50%
+Fingers: 7.0% 11% 15% 16% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ ç  P  U  Q  ê   â  M  D  C  X  è  Z
+ I  N  E  A  û   F  H  T  S  R  W
+ Y  ë  O  K  ô   V  L  B  G  J
+
+ ù  p  u  q  î   ï  m  d  c  x  z  ö
+ i  n  e  a  ü   f  h  t  s  r  w
+ y  à  o  k  é   v  l  b  g  j
+
+Fitness:       14401406
+Distance:      12345518
+Finger work:   76163
+Inward rolls:  9.35%
+Outward rolls: 2.50%
+Same hand:     34.41%
+Same finger:   1.33%
+Row change:    13.63%
+Home jump:     2.53%
+Ring jump:     2.03%
+To center:     0.67%
+To outside:    0.71%
+
+-----
+2017-05-22
+v1.1
+
+using allCharsAddFrench.txt for char freqs !
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairs 2
+use qwertyuiopéèasdfghjklàêzxcvbnmçôâQWERTYUIOPîûASDFGHJKLùïZXCVBNMüëö
+
+Hands: 53% 46%
+Fingers: 8.0% 11% 19% 16% 0.00% 0.00% 15% 13% 10% 9.0%
+
+ ö  P  U  Q  ç   û  G  C  H  W  Z  ë
+ I  N  E  A  J   B  T  S  R  L  M
+ Y  ï  O  X  ù   K  D  F  V  ô
+
+ ü  p  u  q  é   z  g  c  h  w  è  â
+ i  n  e  a  j   b  t  s  r  l  m
+ y  ê  o  x  î   k  d  f  v  à
+
+Fitness:       15808297
+Distance:      13114657
+Finger work:   30920
+Inward rolls:  6.11%
+Outward rolls: 2.99%
+Same hand:     34.43%
+Same finger:   1.18%
+Row change:    16.31%
+Home jump:     2.13%
+Ring jump:     1.44%
+To center:     1.33%
+To outside:    0.58%
+
+-----
+2017-05-22 (modified mtgap for separate 'keepShiftedPairs' vars)
+v1.2
+
+using allCharsAddFrench.txt for char freqs !
+
+With 1 Space on main (remove ö), 
+in 'use' below, need Sp to be on same key as no-letter so they can both move freely
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+use qwertyuiopéèasdfghjklàêzxcvbnmçô QWERTYUIOPîûASDFGHJKLùïZXCVBNMüëâ
+
+Hands: 51% 48%
+Fingers: 7.0% 8.0% 16% 21% 0.00% 0.00% 16% 13% 12% 9.0%
+
+ ô  Y  O  U  è   J  P  D  L  B  Q  û
+ A  I  E  ï  ü   M  H  T  S  R  W
+ ç  Z  V  X  ù   F  N  G  C  K
+
+ î  y  o  u  é   j  p  d  l  b  q  z
+ a  i  e SP  ê   m  h  t  s  r  w
+ â  à  v  x  ë   f  n  g  c  k
+
+Fitness:       18021339
+Distance:      15056662
+Finger work:   1952
+Inward rolls:  8.19%
+Outward rolls: 1.97%
+Same hand:     31.98%
+Same finger:   1.56%
+Row change:    12.68%
+Home jump:     1.49%
+Ring jump:     1.59%
+To center:     0.98%
+To outside:    0.56%
+
+
+-----
+2017-05-22 (modified mtgap for separate 'keepShiftedPairs' vars)
+v1.3
+
+using allCharsAddFrench.txt for char freqs !
+
+With 1 Space on main (remove ö), 
+in 'use' below,  need Sp to be on same key as no-letter so they can both move freely
+
+reversed hands
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+sethandbias -15
+
+Hands: 46% 53%
+Fingers: 6.0% 10% 12% 18% 0.00% 0.00% 21% 16% 9.0% 7.0%
+
+ B  C  D  L  J   ç  U  O  P  Q  ü  ô
+ R  S  T  H  M   X  ë  E  I  A  K
+ G  W  N  F  î   û  V  ù  Y  é
+
+ b  c  d  l  j   è  u  o  p  q  ï  â
+ r  s  t  h  m   x SP  e  i  a  k
+ g  w  n  f  z   ê  v  Z  y  à
+
+Fitness:       24516794
+Distance:      20817949
+Finger work:   0
+Inward rolls:  7.87%
+Outward rolls: 1.41%
+Same hand:     33.83%
+Same finger:   1.54%
+Row change:    14.06%
+Home jump:     1.83%
+Ring jump:     1.68%
+To center:     0.77%
+To outside:    0.81%

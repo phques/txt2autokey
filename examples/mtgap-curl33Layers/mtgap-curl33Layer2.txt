@@ -1,0 +1,148 @@
+Secondary layer to go along layouts from mtgap-curl33Layers.txt
+
+32 symbols on kbd
+ ~`!@#$%^&*()_+-=
+ []\{}|;':",./<>?
+
+42 if include digits
+
+------
+2017-05-22
+l2v1.0
+
+curlaz32, all symbols, no digits
+
+setksize curlaz32
+use ~`!@#$%^&*()_+-=[]\{}|;':",./<>?~`!@#$%^&*()_+-=[]\{}|;':",./<>?
+set keepShiftPairLetters 0
+set keepShiftPairSpace 0
+set keepShiftPairOther 1
+
+
+Hands: 48% 51%
+Fingers: 5.0% 8.0% 25% 11% 0.00% 0.00% 12% 22% 9.0% 8.0%
+
+ %  /  {  ?  @   ~  $  }  :  &  ^
+ (  )  ,  -  [   ]  "  .  '  _  *
+ !  #  =  \  `   |  ;  <  >  +
+
+ %  /  {  ?  @   ~  $  }  :  &  ^
+ (  )  ,  -  [   ]  "  .  '  _  *
+ !  #  =  \  `   |  ;  <  >  +
+
+Fitness:       1377882
+Distance:      487962
+Finger work:   29430
+Inward rolls:  10.47%
+Outward rolls: 1.84%
+Same hand:     49.26%
+Same finger:   1.82%
+Row change:    6.07%
+Home jump:     0.64%
+Ring jump:     0.37%
+To center:     1.96%
+To outside:    0.34%
+
+------
+2017-05-22
+l2v1.1
+
+curlaz30, all symbols, with digits (42 to place)
+42 chars : need 21 keys
+
+01111 11110
+11111 11111
+00100 01010
+
+011111111011111111110010001010
+
+setksize curlaz30
+setmask 011111111011111111110010001010
+
+use ~`!@#$%^&*()_+-=[]\{}|;':",./<>?1234567890
+set keepShiftPairLetters 0
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+
+hahaha
+
+Hands: 52% 47%
+Fingers: 6.0% 11% 23% 13% 0.00% 0.00% 11% 22% 11% 4.0%
+
+    |  ^  #  ~   `  @  {  }
+ :  _  ?  1  2   3  4  5  6  7
+       8            9     0
+
+    /  [  ]  %   <  >  =  $
+ (  )  ,  -  \   +  "  .  '  ;
+       !            *     &
+
+Fitness:       1413014
+Distance:      531348
+Finger work:   8196
+Inward rolls:  7.24%
+Outward rolls: 3.19%
+Same hand:     52.23%
+Same finger:   4.62%
+Row change:    13.03%
+Home jump:     0.27%
+Ring jump:     0.76%
+To center:     6.43%
+
+
+------
+2017-05-22
+l2v1.0
+
+curlaz32, all symbols, no digits
+try to remove costs that make no more sense here !
+
+setksize curlaz32
+use ~`!@#$%^&*()_+-=[]\{}|;':",./<>?~`!@#$%^&*()_+-=[]\{}|;':",./<>?
+set keepShiftPairLetters 0
+set keepShiftPairSpace 0
+set keepShiftPairOther 1
+set outRoll 0
+set inRoll 0
+set sameHand 0
+set sameFingerP 0
+set sameFingerR 0
+set sameFingerM 0
+set sameFingerI 0
+set rowChangeUp 0
+set rowChangeDown 0
+set handWarp 0
+set handSmooth 0
+set homeJump 0
+set homeJumpIndex 0
+set doubleJump 0
+set toCenter 0
+set toOutside 0
+
+keep distance ? to assign more common chars to easier keys ?
+(set distance 0)
+
+
+Hands: 49% 50%
+Fingers: 5.0% 8.0% 25% 11% 0.00% 0.00% 13% 22% 9.0% 7.0%
+
+ |  /  {  !  %   ~  *  }  :  &  ^
+ (  )  ,  -  [   ]  "  .  '  _  $
+ ?  #  =  \  `   +  ;  <  >  @
+
+ |  /  {  !  %   ~  *  }  :  &  ^
+ (  )  ,  -  [   ]  "  .  '  _  $
+ ?  #  =  \  `   +  ;  <  >  @
+
+Fitness:       1369967
+Distance:      486712
+Finger work:   29430
+Inward rolls:  0.00%
+Outward rolls: 0.00%
+Same hand:     49.36%
+Same finger:   0.00%
+Row change:    6.48%
+Home jump:     0.00%
+Ring jump:     0.16%
+To center:     0.00%
+To outside:    0.00%

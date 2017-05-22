@@ -125,3 +125,204 @@ To outside:    0.49%
 
 Time elapsed: 0 hours, 5 minutes, 5 seconds
 
+-------
+2017-05-21
+
+If we exclude digits,
+
+26 letters
+abcdefghijklm
+nopqrstuvwxyz
+
+32 symbols on kbd
+~`!@#$%^&*()_+-=
+[]\{}|;':",./<>?
+
+32 syms + 26 letters : 58 to place, 1 extra key on 30 main!
+
+11111 11111
+11111 11111
+11110 11111
+
+111111111111111111111111011111
+
+2017-05-21
+v2.0
+No space on main
+
+setksize curlaz30
+setmask 111111111111111111111111011111
+set keepShiftPairs 0
+use abcdefghijklmnopqrstuvwxyz~`!@#$%^&*()_+-=[]\{}|;':",./<>?
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 50% 49%
+Fingers: 7.0% 11% 15% 18% 0.00% 0.00% 15% 14% 11% 8.0%
+
+ <  >  /  \  ~   ^  &  *  +  #
+ $  (  )  ;  [   ]  "  q  j  =
+ |  %  !  ?      @  z  {  }  `
+
+ -  p  u  .  :   x  m  d  c  k
+ i  n  e  a  _   f  h  t  s  r
+ y  '  o  ,      v  l  b  g  w
+
+Fitness:       18622296
+Distance:      14369736
+Finger work:   0
+Inward rolls:  8.95%
+Outward rolls: 2.52%
+Same hand:     34.26%
+Same finger:   1.37%
+Row change:    14.33%
+Home jump:     2.65%
+Ring jump:     1.91%
+To center:     1.07%
+
+----
+2017-05-21
+v2.2
+2 spaces on main, exactly 60 chars !
+
+setksize curlaz30
+set keepShiftPairs 1
+use abcd efghijklmnopqrstuvwxyz~`!@#$% ^&*()_+-=[]\{}|;':",./<>?
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+NEED TO LET RUN LONGER
+Also, Would like Sp on right hand (as in 16,18 keys ver)
+
+Hands: 52% 47%
+Fingers: 8.0% 9.0% 16% 21% 0.00% 0.00% 16% 12% 11% 8.0%
+
+ +  ?  $  @  `   #  /  *  j  %
+ :  (  ; SP  [   ]  q  "  )  =
+ \  <  >  ^  ~   &  !  |  {  }
+
+ ,  y  o  u  '   v  p  d  l  b
+ a  i  e SP  _   m  h  t  s  r
+ .  -  k  x  z   f  n  g  c  w
+
+Fitness:       52093707
+Distance:      17328522
+Finger work:   0
+Inward rolls:  7.75%
+Outward rolls: 1.86%
+Same hand:     32.42%
+Same finger:   1.87%
+Row change:    14.05%
+Home jump:     1.54%
+Ring jump:     1.70%
+To center:     1.52%
+
+Time elapsed: 0 hours, 3 minutes, 17 seconds
+Chance to use previous layout is now 0.570538.
+Number of swaps between rounds is now 12.
+Time elapsed: 0 hours, 4 minutes, 19 seconds
+Number of rounds in greatToBest() is now 256.
+
+
+----
+2017-05-21
+v2.3
+2 spaces on main, 
+curlaz32, missing chars !! 
+remove 2 keys with highest cost
+11111 011111
+11111 111111
+11110 111110
+
+111110111111111111111111110111110
+
+setksize curlaz32
+setmask 111110111111111111111111110111110
+set keepShiftPairs 1
+use abcd efghijklmnopqrstuvwxyz~`!@#$% ^&*()_+-=[]\{}|;':",./<>?
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+NEED TO LET RUN LONGER
+Also, Would like Sp on right hand (as in 16,18 keys ver)
+
+Hands: 52% 47%
+Fingers: 8.0% 9.0% 16% 21% 0.00% 0.00% 15% 12% 11% 8.0%
+
+ +  /  $  [  `      ]  *  j  &  #
+ :  (  ; SP  ~   z  =  "  )  {  }
+ |  %  !  \      @  ?  <  >  ^
+
+ ,  y  o  u  _      p  d  l  b  q
+ a  i  e SP  -   m  h  t  s  r  w
+ .  '  v  x      f  n  g  c  k
+
+Fitness:       51562464
+Distance:      16783129
+Finger work:   0
+Inward rolls:  7.73%
+Outward rolls: 1.98%
+Same hand:     33.33%
+Same finger:   1.75%
+Row change:    14.46%
+Home jump:     1.56%
+Ring jump:     1.72%
+To center:     1.22%
+To outside:    0.54%
+
+-----
+2017-05-21
+v2.4
+Since we have very little letters on 2nd layer use :
+1 space on main, (hmm, programming, Sp on 2nd layer probably very nice!)
+curlaz32, missing chars, add é or ©
+
+setksize curlaz32
+setmask 111110111111111111111111110111110
+set keepShiftPairs 0
+use abcd efghijklmnopqrstuvwxyz~`!@#$%é^&*()_+-=[]\{}|;':",./<>?
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+NEED TO LET RUN LONGER
+Also, Would like Sp on right hand (as in 16,18 keys ver)
+
+Hands: 52% 47%
+Fingers: 8.0% 9.0% 16% 21% 0.00% 0.00% 15% 12% 11% 8.0%
+
+ @  /  {  }  é      *  $  z  +  #
+ :  (  )  ;  [   ]  =  q  "  !  |
+ %  \  ^  `      &  ?  <  >  ~
+
+ ,  y  o  u  _      p  d  l  b  j
+ a  i  e SP  -   m  h  t  s  r  w
+ .  '  v  x      f  n  g  c  k
+
+Fitness:       23396329
+Distance:      16755394
+Finger work:   0
+Inward rolls:  7.82%
+Outward rolls: 1.96%
+Same hand:     33.43%
+Same finger:   1.74%
+Row change:    14.40%
+Home jump:     1.56%
+Ring jump:     1.72%
+To center:     1.24%
+To outside:    0.54%
+
+Time elapsed: 0 hours, 0 minutes, 25 seconds
+Chance to use previous layout is now 0.309351.
+Number of swaps between rounds is now 5.
+
+========== !!!!!!!!!!!!!!!!!!!!! ==========
+
+ok, full-circle !!
+I am now back to having almost all letters on main layer (only 2 on 2nd)
+and 2nd layer only symbols !!
+
+So might as well go back to previous experiments that were doing just that already !
