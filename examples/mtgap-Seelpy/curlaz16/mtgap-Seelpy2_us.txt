@@ -1,4 +1,5 @@
 PQ 2017-05-18
+mtgap
 
 - Use most comfortable fingers keys (angle+curl mod)
 (modified mtgap optimizer)
@@ -55,6 +56,43 @@ Ring jump:     2.45%
 To center:     0.00%
 
 ------
+
+2017-05-20
+16v1.0.2  ??strange??
+
+sameFinger 1.06%
+but has bad OE and SC
+
+setksize curlaz30
+setmask 011100111011110011110010001000
+set keepShiftPairs 0
+use qwertyuiopasdfghjklzxcvbnm.,'"-_
+set numThreads 4
+
+Hands: 52% 47%
+Fingers: 9.0% 9.0% 21% 14% 0.00% 0.00% 17% 13% 11% 7.0%
+
+    _  '  z        q  x  -
+ .  v  ,  y        g  w  b  k
+       "           j
+
+    u  o  f        m  l  p
+ a  h  e  s        t  n  i  r
+       c           d
+
+Fitness:       23502177
+Distance:      9551477
+Finger work:   0
+Inward rolls:  11.27%
+Outward rolls: 5.86%
+Same hand:     43.10%
+Same finger:   1.06%
+Row change:    14.97%
+Home jump:     1.54%
+Ring jump:     1.63%
+To center:     0.00%
+
+------
 16v1.1
 
 with Space, remove _
@@ -92,7 +130,7 @@ To center:     0.00%
 
 -----
 2017-05-20 (using setmask ver)
-16v1.1.2 revered hands 16v1.1 (todo)
+16v1.1.2 reversed hands 16v1.1 (todo)
 
 Hands: 47% 52%
 Fingers: 8.0% 9.0% 17% 13% 0.00% 0.00% 15% 21% 10% 7.0%
@@ -179,4 +217,41 @@ Same finger:   2.19%
 Row change:    13.10%
 Home jump:     1.74%
 Ring jump:     1.53%
+To center:     0.00%
+
+-----
+2017-05-21 (using setmask ver)
+16v1.2.3 
+
+with Space x 2 (keep shiftpair Space), remove _-
+same-finger is higher because of singleKeySameFinger
+
+setksize curlaz30
+setmask 011100111011110011110010001000
+set keepShiftPairs 1
+use abc defghijklmnopqr stuvwxyz.,'"
+set numThreads 4
+set singleKeySameFinger 50
+
+Hands: 55% 44%
+Fingers: 7.0% 9.0% 17% 22% 0.00% 0.00% 16% 10% 12% 6.0%
+
+    j  q  z        x  b  k
+ .  y  , SP        w  f  g  v
+       '           "
+
+    p  o  u        l  d  m
+ a  i  e SP        n  h  t  s
+       c           r
+
+Fitness:       59524059
+Distance:      11237969
+Finger work:   126670
+Inward rolls:  9.17%
+Outward rolls: 1.99%
+Same hand:     35.01%
+Same finger:   4.93%
+Row change:    12.76%
+Home jump:     1.30%
+Ring jump:     1.15%
 To center:     0.00%

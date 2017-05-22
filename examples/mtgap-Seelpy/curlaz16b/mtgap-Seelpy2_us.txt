@@ -1,0 +1,94 @@
+PQ 2017-05-21
+mtgap
+
+- Use most comfortable fingers keys (angle+curl mod)
+(modified mtgap optimizer)
+
+16b - use mid col index vs top row index
+
+  w e          i o   
+a s d f g  h j k l ;
+    c        m      
+
+=> 16keys, 2 layers = 32 pos
+26 letters + 6 punct ,.
+
+qwertyuiopasdfghjklzxcvbnm.,'"-_
+
+mtgap 16 keys mask on 30 keys kbd
+
+01100 00110
+11111 11111
+00100 01000
+
+011000011011111111110010001000
+
+-----
+
+2017-05-21
+Sp on main keys
+
+setksize curlaz30
+setmask 011000011011111111110010001000
+set keepShiftPairs 1
+use abc defghijklmnopqr stuvwxyz.,'"
+set numThreads 4
+set singleKeySameFinger 0
+
+Hands: 56% 43%
+Fingers: 7.0% 10% 17% 22% 0.00% 0.00% 14% 13% 11% 6.0%
+
+    j  "              v  x
+ .  y  , SP  z   q  f  w  g  b
+       '           k
+
+    u  o              d  l
+ a  i  e SP  p   m  h  t  s  r
+       c           n
+
+Fitness:       59006879
+Distance:      11380754
+Finger work:   0
+Inward rolls:  8.57%
+Outward rolls: 2.14%
+Same hand:     35.01%
+Same finger:   2.15%
+Row change:    12.01%
+Home jump:     1.70%
+Ring jump:     1.56%
+To center:     2.70%
+
+
+2017-05-21
+16bv1.0
+Sp on main keys
+
+setksize curlaz30
+setmask 011000011011111111110010001000
+set keepShiftPairs 1
+use abc defghijklmnopqr stuvwxyz.,'"
+set numThreads 4
+set singleKeySameFinger 50
+
+Hands: 43% 56%
+Fingers: 6.0% 11% 13% 14% 0.00% 0.00% 22% 17% 10% 7.0%
+
+    x  v              "  j
+ b  g  w  f  q   z SP  ,  y  .
+       k           '
+
+    l  d              o  u
+ r  s  t  h  m   p SP  e  i  a
+       n           c
+
+Fitness:       59026259
+Distance:      11400134
+Finger work:   0
+Inward rolls:  8.57%
+Outward rolls: 2.14%
+Same hand:     35.01%
+Same finger:   2.15%
+Row change:    12.01%
+Home jump:     1.70%
+Ring jump:     1.56%
+To center:     2.70%

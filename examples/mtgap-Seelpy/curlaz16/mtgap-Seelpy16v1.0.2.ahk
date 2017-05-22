@@ -13,21 +13,21 @@ fromQwerty := ""
  . "     c    m        "
 
 layer2 := ""
- . "  `" v j   z q '    "
- . " b f w y   Space , g . "
- . "      k    x        " 
+ . "    _  '  z      q  x  - "
+ . " .  v  ,  y      g  w  b  k "
+ . '         "       j ' 
 
 layer1 := ""
- . "   l d m  u o p "
- . " r s t h  Space e i a "
- . "      n   c " 
- 
+ . "    u  o  f      m  l  p " 
+ . " a  h  e  s      t  n  i  r "
+ . "       c         d "
+
+
 ; main layer
 CreateLayer(1)
 
 ; 2nd layer, accessed w. Space, 
-; we have Sp on the layers, so block Space=>space output
-CreateLayer(2, 'Space', 1)
+CreateLayer(2, 'Space')
 
 AddMappings(1, fromQwerty, layer1)
 AddMappings(2, fromQwerty, layer2)
@@ -48,7 +48,7 @@ global CenterOnCurrWndMonitor := 1
 #include ../../common/clipboardToBash.ahk
 #include ../../common/fromPkl/pkl_guiLayers.ahk
 
-DisplayHelpImage()
+;DisplayHelpImage()
 return
 
 ;------

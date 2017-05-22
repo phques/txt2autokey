@@ -8,25 +8,27 @@
 
 ; Qwerty mask
 fromQwerty := ""
- . "   w e r  u i o    "
- . " a s d f  j k l `; "
- . "     c    m        "
+ . "   w e r      u i o    "
+ . " a s d f g  h j k l `; "
+ . "      c       m        "
 
 layer2 := ""
- . "  `" v j   z q '    "
- . " b f w y   Space , g . "
- . "      k    x        " 
+ . "    ' `;  j         z  x  q "
+ . ' (  b  .  y  {   }  w  v  ,  ) '
+ . '       "            k '
 
-layer1 := ""
- . "   l d m  u o p "
- . " r s t h  Space e i a "
- . "      n   c " 
  
+layer1 := ""
+ . '    d  o  f         l  u  p '
+ . ' a  h  e  s  g   m  t Space  n  i '
+ . '       c            r ' 
+ 
+
 ; main layer
 CreateLayer(1)
 
 ; 2nd layer, accessed w. Space, 
-; we have Sp on the layers, so block Space=>space output
+; we have Sp on the layers
 CreateLayer(2, 'Space', 1)
 
 AddMappings(1, fromQwerty, layer1)
@@ -39,7 +41,7 @@ AddMappings(2, fromQwerty, layer2)
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\v1.2"
+global ImgsDir := "%A_ScriptDir%\imgs\v1.2.3"
 global ImgWidth := 248
 global ImgHeight := 46
 global CenterOnCurrWndMonitor := 1

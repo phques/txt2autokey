@@ -23,7 +23,7 @@ global LastKeyWasLayerAccess := 0 ;; true if last key was a layer access key
 
 ; create a new empty layer definition
 ; creates a hotkey for it on layerAccessKey
-CreateLayer(layerIndex, layerAccessKey, blockAccessKey)
+CreateLayer(layerIndex, layerAccessKey := 0, blockAccessKey := 0)
 {
 	; create / save layer def
 	layerDef := {}
