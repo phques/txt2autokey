@@ -43,15 +43,15 @@ CreateLayer(layerIndex, layerAccessKey := 0, blockAccessKey := 0)
 		; create hotkey for layer access key
 		; convert to scandcode format sc000
 		sc := GetKeySC(layerAccessKey)
-		scanCd := Format("sc{:03x}", sc)
+		hotkeyName := Format("sc{:03x}", sc)
 
 		; create function object with params that hotkey will call 
 		fnDn := Func("onLayerAccessKey").Bind(layerIndex, 0)
 		fnUp := Func("onLayerAccessKey").Bind(layerIndex, 1)
 
 		; create hotKey
-		HotKey %scanCd%, %fnDn%
-		HotKey %scanCd% up, %fnUp%
+		HotKey %hotkeyName%, %fnDn%
+		HotKey %hotkeyName% up, %fnUp%
 	}
 }
 
@@ -97,51 +97,76 @@ AddMappings(layerIndex, _from, _to)
 		t := tos[A_Index]
 		
 		; create hotkey for 'from' key if required
-		createHotkey(f)
+		hotkeyName := createHotkey(f)
 		
 		; save this mapping in layer
-		layerDef.mappings[f] := t
+		; use hotkeyname so we can easily find it when called
+		layerDef.mappings[hotkeyName] := t
 	}
 }
 
 ;--------
 
 ; create a hotkey for 'key', to call onLayerKey
-; ignores ifa lready defined
-createHotkey(key)
+; returns hotkeyName '*sc029'
+createHotkey(key_)
 {
-	if (!DefinedHotKeys[key]) 
-	{
-		; convert to scandcode format sc000
-		sc := GetKeySC(key)
-		scanCd := Format("sc{:03x}", sc)
+	; separate out any prefix modifiers (+! etc..)
+	mods := "*"
+	key := key_
+	foundPos := RegExMatch(key_, "^([#!+^<>]+)(.{1,})", match)
+	if (foundPos) {
+		; ound prefix modifiers (shift,ctrl etc) in outputkey
+		; separate them
+		mods .= match[1]
+		key := match[2]
+	}
 
+	; convert to scandcode format sc000, with mods prefixed *+sc029
+	sc := GetKeySC(key)
+	hotkeyName := Format("{}sc{:03x}", mods, sc)
+
+	; we define the hotkey only once, for al layers
+	if (!DefinedHotKeys[hotkeyName]) 
+	{
 		; create function object with params that hotkey will call 
-		fnDn := Func("onLayerKey").Bind(key, 0)
-		fnUp := Func("onLayerKey").Bind(key, 1)
+		fn := Func("onLayerKey")
 
 		; create hotKey
-		HotKey *%scanCd%, %fnDn%
-		HotKey *%scanCd% up, %fnUp%
+		HotKey %hotkeyName%, %fn%
+		HotKey %hotkeyName% up, %fn%
 		
 		; remember we created this
-		DefinedHotKeys[key] := 1
+		DefinedHotKeys[hotkeyName] := 1
 	} 
+	
+	return hotkeyName
 }
 
 ;--------
 
-; called by a hotkey to handle a key press/release for current layer
-; key = "q", up = 0/1 if on key up/down
-onLayerKey(key, up)
+; called by a hotkey to handle a key press/release 
+onLayerKey()
 {
 	if (!CurrentLayer || !CurrentLayer.mappings)
 		return
 
+	; get pressed hotkey 'name', ie 'sc029', '+sc029 up' etc
+	key := A_ThisHotkey
+	up := 0
+
+	; if this is the key release, name will end in " up"
+	; strip " up" from key name & set up flag
+	if (InStr(key, " up")) {
+		key := SubStr(key, 1, -3)
+		up := 1
+	}
+	
+
 	; last key is not a layer access key anymore
 	LastKeyWasLayerAccess := 0
 		
-	; get destination key for this layer key
+	; get destination/ouput/mapped key for this layer key
     outputKey := CurrentLayer.mappings[key]
 	accessKey := CurrentLayer.accessKey
 

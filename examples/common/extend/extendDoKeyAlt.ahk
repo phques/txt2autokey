@@ -4,6 +4,7 @@ doKey(k, up)
 {
 	static shiftDown := 0
 	static controlDown := 0
+	static altDown := 0
 	
 	SetKeyDelay -1
 	
@@ -25,12 +26,23 @@ doKey(k, up)
 		return
 	}
 	
+	; set alt flag on alt key
+	if (k == "Alt") {
+		if (up)
+			altDown := 0
+		else
+			altDown := 1
+		return
+	}
+	
 	; set prefix: shift / control
 	prefix := ""
 	if (GetKeyState("Shift") || shiftDown)
 		prefix .= "+"
 	if (GetKeyState("Ctrl") || controlDown)
 		prefix .= "^"
+	if (altDown)
+		prefix .= "!"
 	
 	; do send
 	if (up)
