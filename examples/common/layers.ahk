@@ -96,6 +96,12 @@ AddMappings(layerIndex, _from, _to)
 		f := froms[A_Index]
 		t := tos[A_Index]
 		
+		if (f == 'SP')
+			f := 'Space'
+		
+		if (t == 'SP')
+			t := 'Space'
+		
 		; create hotkey for 'from' key if required
 		hotkeyName := createHotkey(f)
 		
