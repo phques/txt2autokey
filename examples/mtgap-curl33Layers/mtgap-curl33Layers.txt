@@ -211,3 +211,145 @@ Home jump:     1.49%
 Ring jump:     1.59%
 To center:     0.98%
 To outside:    0.56%
+
+-----
+2017-05-23
+v1.5 (todo)
+
+using allCharsAddFrench.txt for char freqs !
+
+With 2 Spaces on main (missing ö ë), 
+reversed hands
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 1
+set keepShiftPairOther 0
+use qwert yuiopéèasdfghjklàêzxcvbnmçôQWERT YUIOPîûASDFGHJKLùïZXCVBNMüâ
+sethandbias -20
+
+Hands: 43% 56%
+Fingers: 6.0% 11% 10% 16% 0.00% 0.00% 21% 16% 12% 7.0%
+
+ B  L  C  G  J   â  U  O  I  K  è  ç
+ R  N  S  T  F   X SP  E  H  A  Q
+ M  W  D  P  Z   é  V  ê  Y  î
+
+ b  l  c  g  j   ü  u  o  i  k  û  ï
+ r  n  s  t  f   x SP  e  h  a  q
+ m  w  d  p  z   à  v  ù  y  ô
+
+Fitness:       52703275
+Distance:      22401648
+Finger work:   69302
+Inward rolls:  7.53%
+Outward rolls: 1.70%
+Same hand:     33.77%
+Same finger:   1.93%
+Row change:    15.38%
+Home jump:     1.36%
+Ring jump:     1.45%
+To center:     0.73%
+To outside:    0.20%
+
+-----
+2017-05-23
+v1.6 (todo)
+
+using allCharsAddFrench.txt for char freqs !
+
+With 2 Spaces on main (missing ö ë), 
+trying to lower row change / home jump
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 1
+set keepShiftPairOther 0
+use qwert yuiopéèasdfghjklàêzxcvbnmçôQWERT YUIOPîûASDFGHJKLùïZXCVBNMüâ
+set homeJump 150
+set homeJumpIndex -40
+set rowChangeUp 50
+set rowChangeDown 50
+
+def set homeJump 100
+def set homeJumpIndex -90
+def set rowChangeUp 15
+def set rowChangeDown 10
+
+Hands: 51% 48%
+Fingers: 7.0% 8.0% 16% 21% 0.00% 0.00% 17% 12% 11% 9.0%
+
+ û  Y  O  U  ù   J  P  M  C  B  Q  Z
+ A  I  E SP  è   L  H  T  S  R  W
+ â  é  K  X  ü   F  N  G  D  V
+
+ ç  y  o  u  ô   j  p  m  c  b  q  z
+ a  i  e SP  î   l  h  t  s  r  w
+ à  ï  k  x  ê   f  n  g  d  v
+
+Fitness:       44768997
+Distance:      15412507
+Finger work:   0
+Inward rolls:  7.96%
+Outward rolls: 1.82%
+Same hand:     30.81%
+Same finger:   1.65%
+Row change:    11.33%
+Home jump:     0.49%
+Ring jump:     1.56%
+To center:     1.62%
+To outside:    0.56%
+
+-----
+2017-05-23
+v1.7 (todo)
+
+using allCharsAddFrench.txt for char freqs !
+
+With 1 Space on main (missing ö), 
+trying to lower row change / home jump
+
+might want to re-organize french stuff manually
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+use qwertyuiopéèasdfghjklàêzxcvbnmçô QWERTYUIOPîûASDFGHJKLùïZXCVBNMüëâ
+set homeJump 150
+set homeJumpIndex -40
+set rowChangeUp 50
+set rowChangeDown 50
+
+def set homeJump 100
+def set homeJumpIndex -90
+def set rowChangeUp 15
+def set rowChangeDown 10
+
+Hands: 51% 48%
+Fingers: 7.0% 8.0% 16% 21% 0.00% 0.00% 17% 12% 11% 9.0%
+
+ ç  Y  O  U  è   J  P  M  C  B  Q  Z
+ A  I  E  é  ï   L  H  T  S  R  W
+ ë  â  K  X  û   F  N  G  D  V
+
+ ü  y  o  u  ô   j  p  m  c  b  q  z
+ a  i  e SP  à   l  h  t  s  r  w
+ î  ê  k  x  ù   f  n  g  d  v
+
+Fitness:       18505197
+Distance:      15412507
+Finger work:   0
+Inward rolls:  7.96%
+Outward rolls: 1.82%
+Same hand:     30.81%
+Same finger:   1.65%
+Row change:    11.33%
+Home jump:     0.49%
+Ring jump:     1.56%
+To center:     1.62%
+To outside:    0.56%
+
