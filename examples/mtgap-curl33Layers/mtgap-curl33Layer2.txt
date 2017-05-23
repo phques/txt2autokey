@@ -92,7 +92,7 @@ To center:     6.43%
 
 ------
 2017-05-22
-l2v1.0
+v1.0
 
 curlaz32, all symbols, no digits
 try to remove costs that make no more sense here !
@@ -119,7 +119,7 @@ set doubleJump 0
 set toCenter 0
 set toOutside 0
 
-keep distance ? to assign more common chars to easier keys ?
+keep distance default, to assign more common chars to easier keys ?
 (set distance 0)
 
 

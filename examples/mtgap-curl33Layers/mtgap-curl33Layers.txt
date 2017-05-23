@@ -51,28 +51,28 @@ Dooh, no room for Space !!
 
 
 -----
-1- I use allCharsAddFrench.txt in which I added the french chars at the end, 
-   to set priority for each ..
+2017-05-22  (modified mtgap for separate 'keepShiftedPairs' vars)
+v1.1
 
-2017-05-22
-v1.0
+using allCharsAddFrench.txt for char freqs !
 
 setksize curlaz33
 set numThreads 4
-set keepShiftPairs 2
+set keepShiftPairLetters 1
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
 use qwertyuiopéèasdfghjklàêzxcvbnmçôâQWERTYUIOPîûASDFGHJKLùïZXCVBNMüëö
-
 
 Hands: 49% 50%
 Fingers: 7.0% 11% 15% 16% 0.00% 0.00% 15% 15% 12% 8.0%
 
- ç  P  U  Q  ê   â  M  D  C  X  è  Z
- I  N  E  A  û   F  H  T  S  R  W
- Y  ë  O  K  ô   V  L  B  G  J
+ à  P  U  Q  û   ù  M  D  C  X  Z  â
+ I  N  E  A  è   F  H  T  S  R  W
+ Y  î  O  K  ê   V  L  B  G  J
 
- ù  p  u  q  î   ï  m  d  c  x  z  ö
- i  n  e  a  ü   f  h  t  s  r  w
- y  à  o  k  é   v  l  b  g  j
+ ü  p  u  q  é   ë  m  d  c  x  z  ö
+ i  n  e  a  ï   f  h  t  s  r  w
+ y  ç  o  k  ô   v  l  b  g  j
 
 Fitness:       14401406
 Distance:      12345518
@@ -87,40 +87,6 @@ Ring jump:     2.03%
 To center:     0.67%
 To outside:    0.71%
 
------
-2017-05-22
-v1.1
-
-using allCharsAddFrench.txt for char freqs !
-
-setksize curlaz33
-set numThreads 4
-set keepShiftPairs 2
-use qwertyuiopéèasdfghjklàêzxcvbnmçôâQWERTYUIOPîûASDFGHJKLùïZXCVBNMüëö
-
-Hands: 53% 46%
-Fingers: 8.0% 11% 19% 16% 0.00% 0.00% 15% 13% 10% 9.0%
-
- ö  P  U  Q  ç   û  G  C  H  W  Z  ë
- I  N  E  A  J   B  T  S  R  L  M
- Y  ï  O  X  ù   K  D  F  V  ô
-
- ü  p  u  q  é   z  g  c  h  w  è  â
- i  n  e  a  j   b  t  s  r  l  m
- y  ê  o  x  î   k  d  f  v  à
-
-Fitness:       15808297
-Distance:      13114657
-Finger work:   30920
-Inward rolls:  6.11%
-Outward rolls: 2.99%
-Same hand:     34.43%
-Same finger:   1.18%
-Row change:    16.31%
-Home jump:     2.13%
-Ring jump:     1.44%
-To center:     1.33%
-To outside:    0.58%
 
 -----
 2017-05-22 (modified mtgap for separate 'keepShiftedPairs' vars)
@@ -128,8 +94,8 @@ v1.2
 
 using allCharsAddFrench.txt for char freqs !
 
-With 1 Space on main (remove ö), 
-in 'use' below, need Sp to be on same key as no-letter so they can both move freely
+With 1 Space on main (missing ö), 
+in 'use' below, need Sp to be on same key as non-letter so they can both move freely
 
 setksize curlaz33
 set numThreads 4
@@ -141,13 +107,13 @@ use qwertyuiopéèasdfghjklàêzxcvbnmçô QWERTYUIOPîûASDFGHJKLùïZXCVBNMü�
 Hands: 51% 48%
 Fingers: 7.0% 8.0% 16% 21% 0.00% 0.00% 16% 13% 12% 9.0%
 
- ô  Y  O  U  è   J  P  D  L  B  Q  û
- A  I  E  ï  ü   M  H  T  S  R  W
- ç  Z  V  X  ù   F  N  G  C  K
+ ç  Y  O  U  î   J  P  D  L  B  Q  Z
+ A  I  E  ü  ë   M  H  T  S  R  W
+ ê  à  V  X  â   F  N  G  C  K
 
- î  y  o  u  é   j  p  d  l  b  q  z
- a  i  e SP  ê   m  h  t  s  r  w
- â  à  v  x  ë   f  n  g  c  k
+ ï  y  o  u  û   j  p  d  l  b  q  z
+ a  i  e SP  ô   m  h  t  s  r  w
+ è  é  v  x  ù   f  n  g  c  k
 
 Fitness:       18021339
 Distance:      15056662
@@ -169,38 +135,79 @@ v1.3
 
 using allCharsAddFrench.txt for char freqs !
 
-With 1 Space on main (remove ö), 
+With 1 Space on main (missing ö), 
 in 'use' below,  need Sp to be on same key as no-letter so they can both move freely
 
 reversed hands
 
 setksize curlaz33
+use qwertyuiopéèasdfghjklàêzxcvbnmçô QWERTYUIOPîûASDFGHJKLùïZXCVBNMüëâ
 set numThreads 4
 set keepShiftPairLetters 1
 set keepShiftPairSpace 0
 set keepShiftPairOther 0
-sethandbias -15
+sethandbias -20
 
-Hands: 46% 53%
-Fingers: 6.0% 10% 12% 18% 0.00% 0.00% 21% 16% 9.0% 7.0%
+Hands: 43% 56%
+Fingers: 6.0% 11% 10% 16% 0.00% 0.00% 21% 16% 12% 7.0%
 
- B  C  D  L  J   ç  U  O  P  Q  ü  ô
- R  S  T  H  M   X  ë  E  I  A  K
- G  W  N  F  î   û  V  ù  Y  é
+ B  L  C  G  J   ê  U  O  I  K  ü  ï
+ R  N  S  T  F   X  ô  E  H  A  Q
+ M  W  D  P  Z   ë  V  ç  Y  ù
 
- b  c  d  l  j   è  u  o  p  q  ï  â
- r  s  t  h  m   x SP  e  i  a  k
- g  w  n  f  z   ê  v  Z  y  à
+ b  l  c  g  j   è  u  o  i  k  â  é
+ r  n  s  t  f   x SP  e  h  a  q
+ m  w  d  p  z   û  v  î  y  à
 
-Fitness:       24516794
-Distance:      20817949
-Finger work:   0
-Inward rolls:  7.87%
-Outward rolls: 1.41%
-Same hand:     33.83%
-Same finger:   1.54%
-Row change:    14.06%
-Home jump:     1.83%
-Ring jump:     1.68%
-To center:     0.77%
-To outside:    0.81%
+Fitness:       26439475
+Distance:      22401648
+Finger work:   69302
+Inward rolls:  7.53%
+Outward rolls: 1.70%
+Same hand:     33.77%
+Same finger:   1.93%
+Row change:    15.38%
+Home jump:     1.36%
+Ring jump:     1.45%
+To center:     0.73%
+To outside:    0.20%
+
+-----
+2017-05-22 (modified mtgap for separate 'keepShiftedPairs' vars)
+v1.4
+
+using allCharsAddFrench.txt for char freqs !
+
+With 2 Spaces on main (missing ö ë), 
+
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 1
+set keepShiftPairOther 0
+use qwert yuiopéèasdfghjklàêzxcvbnmçôQWERT YUIOPîûASDFGHJKLùïZXCVBNMüâ
+
+Hands: 51% 48%
+Fingers: 7.0% 8.0% 16% 21% 0.00% 0.00% 16% 13% 12% 9.0%
+
+ ü  Y  O  U  ï   J  P  D  L  B  Q  Z
+ A  I  E SP  ù   M  H  T  S  R  W
+ û  â  V  X  ê   F  N  G  C  K
+
+ î  y  o  u  è   j  p  d  l  b  q  z
+ a  i  e SP  ô   m  h  t  s  r  w
+ à  ç  v  x  é   f  n  g  c  k
+
+Fitness:       44285139
+Distance:      15056662
+Finger work:   1952
+Inward rolls:  8.19%
+Outward rolls: 1.97%
+Same hand:     31.98%
+Same finger:   1.56%
+Row change:    12.68%
+Home jump:     1.49%
+Ring jump:     1.59%
+To center:     0.98%
+To outside:    0.56%
