@@ -56,7 +56,7 @@ return
 ; other hotkey defs
 
 #include ../../common/capsLock.ahk
-#include ../../common/extend/extendLAlt.ahk
+#include ../../common/extend/extend.ahk
 #include ../../common/commonHotkeys.ahk
 
 ;#include extraKeyDefs.ahk

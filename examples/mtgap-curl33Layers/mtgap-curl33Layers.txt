@@ -304,7 +304,7 @@ To outside:    0.56%
 
 -----
 2017-05-23
-v1.7 (todo)
+*** v1.7 ****
 
 using allCharsAddFrench.txt for char freqs !
 
@@ -352,4 +352,97 @@ Home jump:     0.49%
 Ring jump:     1.56%
 To center:     1.62%
 To outside:    0.56%
+
+-----
+2017-05-23
+v1.8 
+
+using allCharsAddFrench.txt for char freqs !
+
+no Space on main
+trying to lower row change / home jump
+
+might want to re-organize french stuff manually
+
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+use qwertyuiopéèasdfghjklàêzxcvbnmçôâQWERTYUIOPîûASDFGHJKLùïZXCVBNMüëö
+set homeJump 150
+set homeJumpIndex -40
+set rowChangeUp 50
+set rowChangeDown 50
+
+Hands: 49% 50%
+Fingers: 7.0% 9.0% 20% 14% 0.00% 0.00% 15% 15% 12% 8.0%
+
+ ù  P  O  U  ô   Q  D  L  C  X  Z  ë
+ I  N  E  A  â   B  H  T  S  R  W
+ û  ü  Y  K  ï   F  M  V  G  J
+
+ é  p  o  u  ê   q  d  l  c  x  z  ç
+ i  n  e  a  ö   b  h  t  s  r  w
+ î  è  y  k  à   f  m  v  g  j
+
+Fitness:       15037975
+Distance:      12617627
+Finger work:   76163
+Inward rolls:  10.88%
+Outward rolls: 2.48%
+Same hand:     34.21%
+Same finger:   1.68%
+Row change:    12.37%
+Home jump:     0.92%
+Ring jump:     2.36%
+To center:     1.18%
+To outside:    0.71%
+
+-----
+2017-05-23
+2.0
+
+using allCharsAddFrench.txt for char freqs !
+
+With 1 Space on main (missing ö), 
+trying to lower row change / home jump
+vowels on right
+
+setksize curlaz33
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+use qwertyuiopéèasdfghjklàêzxcvbnmçô QWERTYUIOPîûASDFGHJKLùïZXCVBNMüëâ
+set homeJump 150
+set homeJumpIndex -40
+set rowChangeUp 50
+set rowChangeDown 50
+sethandbias -20
+
+Hands: 42% 57%
+Fingers: 7.0% 9.0% 11% 15% 0.00% 0.00% 21% 16% 12% 9.0%
+
+ W  P  H  C  Z   ç  U  O  L  Q  è  ï
+ R  I  N  S  M   X  é  E  T  A  G
+ Y  B  D  F  J   ü  V  ê  K  ù
+
+ w  p  h  c  z   â  u  o  l  q  ë  à
+ r  i  n  s  m   x SP  e  t  a  g
+ y  b  d  f  j   û  v  î  k  ô
+
+Fitness:       26864194
+Distance:      21795212
+Finger work:   63212
+Inward rolls:  8.19%
+Outward rolls: 2.27%
+Same hand:     41.01%
+Same finger:   1.68%
+Row change:    16.16%
+Home jump:     0.46%
+Ring jump:     1.83%
+To center:     1.39%
+To outside:    1.85%
 
