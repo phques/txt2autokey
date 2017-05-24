@@ -1,0 +1,13 @@
+from discussion http://shenafu.com/smf/index.php?topic=89.650
+
+AdNW opt, done by Den, with less hand alternation
+
+               1566.637 total effort   166.280 positional effort    left right
+                   3.437 same finger rp   0.000 shift same finger top 17.8 10.9
+ zoinx kdcfv      58.603 hand alternat.  42.329 shift hand alter. mid 27.1 22.2
+ "aer, lhtsb       2.155 inward/outward  34.936 inward or outward bot  5.7 10.8
+ q'u.j ympgw      21.014 adjacent         9.285 shift adjacent    sum 54.1 45.9
+                  13.247 no hand altern. 30.932 two hand altern.
+                   6.737 seesaw           6.521 indir same finger
+                  1.6 14.3 18.3 16.6  3.5  2.0 16.7 14.2  9.3  3.7 Sh  3.5  2.0
+
