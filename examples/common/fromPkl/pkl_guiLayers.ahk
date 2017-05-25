@@ -156,14 +156,27 @@ pkl_displayHelpImage( activate := 0 )
 		prevSkippedLayer := 0
 	 
 	blockedKeySkipped := 0
-	
+
 	fileName := "layer%CurrentLayer.index%"
-			
+
+    shiftIsDown := 0
+    if (GetKeyState("Shift")) {
+        fileName .= "sh"
+        shiftIsDown := 1
+    }
+
 	if ( prevFile == fileName )
 		return
 		
-	if ( not FileExist( ImgsDir . "\" . fileName . ".png" ) ) 
-		fileName := ""
+	if ( not FileExist( ImgsDir . "\" . fileName . ".png" ) )  {
+        if (shiftIsDown) {
+            ; try using the unshifted image
+            fileName := "layer%CurrentLayer.index%"
+            if ( not FileExist( ImgsDir . "\" . fileName . ".png" ) )  {
+                fileName := ""
+            }
+        }
+    }
 		
 	prevFile := fileName 
 	GuiControl,2:, HelperImage, *w%ImgWidth% *h%ImgHeight% %ImgsDir%\%fileName%.png
