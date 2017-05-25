@@ -1,0 +1,45 @@
+2017-05-24
+
+== (before adjusted bottom left costs, for AZ) ==
+
+./opt -2 englisch.txt -t 4  -K kwez/stdUsBeakl34.cfg
+
+35               290.483 total effort   142.059 positional effort    left right
+                   1.871 same finger rp   0.250 shift same finger top 14.5 17.0
+ qncdv -oiujz     71.071 hand alternat.  24.719 shift hand alter. mid 24.3 26.1
+ wrstg ,aehkx      2.662 inward/outward  24.409 inward or outward bot 12.8  5.3
+ lmfpb '."y:      12.513 adjacent        28.767 shift adjacent    sum 51.6 48.4
+                 2.9 16.4 11.8 20.5 --.- --.- 17.8 18.7  8.9  3.0 Sh  1.1  1.8
+				 
+./opt -3 englisch.txt -t 4  -K kwez/stdUsBeakl34.cfg
+
+6                468.215 total effort   142.264 positional effort    left right
+                   2.063 same finger rp   0.478 shift same finger top 16.3 17.0
+ qnldg -oiujz     71.071 hand alternat.  24.719 shift hand alter. mid 24.4 26.1
+ prtsw ,aehkx      2.440 inward/outward  24.217 inward or outward bot 10.9  5.3
+ bmfcv '."y:      13.551 adjacent        27.382 shift adjacent    sum 51.6 48.4
+                  4.514 no hand altern. 43.802 two hand altern.
+                   2.469 seesaw           8.764 indir same finger
+                  3.1 14.0 14.8 19.7 --.- --.- 17.8 18.7  8.9  3.0 Sh  1.1  1.8
+				  
+---- adjusted bottom left hand costs AZ --------
+
+./opt -2 englisch.txt -t 4  -K kwez/stdUsBeakl34.cfg
+
+201              296.550 total effort   148.042 positional effort    left right
+                   1.714 same finger rp   0.677 shift same finger top 14.6 17.0
+ xncdv -oiujz     70.287 hand alternat.  27.057 shift hand alter. mid 24.3 27.8
+ wrstg ,aehpk      2.859 inward/outward  25.349 inward or outward bot 11.1  5.2
+ lfmbq '."y:      12.602 adjacent        28.673 shift adjacent    sum 50.0 50.0
+                 3.1 16.4 11.5 19.0 --.- --.- 17.8 18.7  8.9  4.6 Sh  1.2  1.7
+
+./opt -3 englisch.txt -t 4  -K kwez/stdUsBeakl34.cfg
+
+76               472.725 total effort   151.011 positional effort    left right
+                   2.298 same finger rp   0.410 shift same finger top 14.1 17.0
+ bfrdv -oiujz     71.071 hand alternat.  24.719 shift hand alter. mid 25.2 26.1
+ wnstg ,aehkx      2.894 inward/outward  23.982 inward or outward bot 12.4  5.3
+ plcmq '."y:      14.170 adjacent        27.288 shift adjacent    sum 51.6 48.4
+                  4.514 no hand altern. 43.802 two hand altern.
+                   2.951 seesaw           8.978 indir same finger
+                  4.2 10.7 16.1 20.6 --.- --.- 17.8 18.7  8.9  3.0 Sh  1.1  1.8
