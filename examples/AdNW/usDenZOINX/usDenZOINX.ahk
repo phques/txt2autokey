@@ -5,7 +5,7 @@
 
 #include ../../common/layers.ahk
 #include ../../common/qwertyMasks.ahk
-;#include mtgap-curl33symLayerv1.0.ahk
+#include ../../mtgap-curl33Layers/mtgap-curl33symLayerv1.0.ahk
  
 layer1Sh := ""
  . '  Z O I N X  K D C F V '
@@ -27,7 +27,7 @@ AddMappings(1, qwertyMask30Sh, layer1Sh)
 AddMappings(1, qwertyMask30, layer1)
 
 ; symbols layer
-;CreateSymbolsLayer(2, "Space", 0)
+CreateSymbolsLayer(2, "Space", 0)
 
 ;------
 
@@ -35,8 +35,8 @@ AddMappings(1, qwertyMask30, layer1)
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\v1.3"
-global ImgWidth := 248
+global ImgsDir := "%A_ScriptDir%"
+global ImgWidth := 284
 global ImgHeight := 46
 global CenterOnCurrWndMonitor := 1
 
