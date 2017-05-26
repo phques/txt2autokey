@@ -101,35 +101,54 @@ AddMappings(layerIndex, _from, _to)
 		
 		if (t == 'SP')
 			t := 'Space'
+			
+		splitFrom := splitModsAndKey(f)
+		splitTo := splitModsAndKey(t)
+
+		; set flag indicating if the char to output is shifted (ie ! is Shift-1)
+		if (InStr('~!@#$`%^&*()_+{}|:"<>?', splitTo.key))
+			splitTo.isShifted := 1
 		
 		; create hotkey for 'from' key if required
-		hotkeyName := createHotkey(f)
+		hotkeyName := createHotkey(splitFrom)
 		
 		; save this mapping in layer
 		; use hotkeyname so we can easily find it when called
-		layerDef.mappings[hotkeyName] := t
+		layerDef.mappings[hotkeyName] := splitTo
 	}
 }
 
 ;--------
 
+; '^Z' => '^', 'Z'
+; return object, .mods / .key
+splitModsAndKey(key)
+{
+	obj := {}
+	obj.mods := ""
+	obj.key := key
+	foundPos := RegExMatch(key, "^([#!+^<>]+)(.{1,})", match)
+	if (foundPos) {
+		; found prefix modifiers (shift: +,ctrl: ^ etc) in key
+		; separate them
+		obj.mods := match[1]
+		obj.key := match[2]
+	}
+	return obj
+}
+
+
+;--------
+
 ; create a hotkey for 'key', to call onLayerKey
 ; returns hotkeyName '*sc029'
-createHotkey(key_)
+createHotkey(keyAndMods)
 {
-	; separate out any prefix modifiers (+! etc..)
-	mods := "*"
-	key := key_
-	foundPos := RegExMatch(key_, "^([#!+^<>]+)(.{1,})", match)
-	if (foundPos) {
-		; ound prefix modifiers (shift,ctrl etc) in outputkey
-		; separate them
-		mods .= match[1]
-		key := match[2]
-	}
+	; add '*' to hotkeyname (hotkey will work even when other mods are pressed)
+	mods := "*" . keyAndMods.mods
 
 	; convert to scandcode format sc000, with mods prefixed *+sc029
-	sc := GetKeySC(key)
+	sc := GetKeySC(keyAndMods.key)
 	hotkeyName := Format("{}sc{:03x}", mods, sc)
 
 	; we define the hotkey only once, for al layers
@@ -150,6 +169,23 @@ createHotkey(key_)
 }
 
 ;--------
+
+simulateSendBlind(mods, toSend, pressedModToFilterOut)
+{
+	; add modifiers for shift / control if they are currently pressed
+	; might come into conflict with %mods% from key def though !?
+	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
+		mods .= "+"
+		
+	if (pressedModToFilterOut != '^' &&   GetKeyState("Ctrl"))
+		mods .= "^"
+
+	if (pressedModToFilterOut != '!' &&   GetKeyState("Alt"))
+		mods .= "!"
+
+	Send %mods%%toSend%
+}
+
 
 ; called by a hotkey to handle a key press/release 
 onLayerKey()
@@ -173,47 +209,37 @@ onLayerKey()
 	LastKeyWasLayerAccess := 0
 		
 	; get destination/ouput/mapped key for this layer key
-    outputKey := CurrentLayer.mappings[key]
+    keyAndMods := CurrentLayer.mappings[key]
 	accessKey := CurrentLayer.accessKey
 
-    if (Strlen(outputKey) != 0) {
+    if (keyAndMods) {
         
-		;#PQ TODO, do this in pre-processing ?
         ; modifiers need to be *before* the {}, ie ^{v}  not {^v}
-		; split prefix modifiers and actual key from outputkey
-		;  (supports cases like +^ => Shift ^)
-        mods := ""
-		foundPos := RegExMatch(outputKey, "^([#!+^<>]+)(.{1,})", match)
-		if (foundPos) {
-			; ound prefix modifiers (shift,ctrl etc) in outputkey
-			; separate them
-			mods := match[1]
-			outputKey := match[2]
-		}
-
+		mods := keyAndMods.mods
+		
         if (up)
-            toSend := "{%outputKey% Up}"
+            toSend := "{%keyAndMods.key% Up}"
         else
-            toSend := "{%outputKey% DownTemp}"
+            toSend := "{%keyAndMods.key% DownTemp}"
         
         SetKeyDelay -1
 		
 		;; Special handling for Alt, cant use Send Blind
 		; filter out the Alt, but manually pass through Shift / Ctrl
 		if (accessKey == "LAlt" || accessKey == "RAlt" || accessKey == "Alt") {
-			; add modifiers for shift / control if they are currently pressed
-			; might come into conflict with %mods% from key def though !?
-			if (GetKeyState("Shift"))
-				mods .= "+"
-				
-			if (GetKeyState("Ctrl"))
-				mods .= "^"
-		
-			Send %mods%%toSend%
+			; simulate Send Blind, but w/o Alt
+			simulateSendBlind(mods, toSend, '!')
 		}
 		else {
-			; not Alt access key / hotkey prefix, can use Send Blind
-			Send {Blind}%mods%%toSend%
+			; not Alt access key, can use Send Blind
+			
+			; Using Send blind with +a::/ would be like Send +/ which results in ?
+			; since Shift is currently pressed
+			if (InStr(key, '+') && !keyAndMods.isShifted)
+				; simulate Send Blind, but w/o Shift
+				simulateSendBlind(mods, toSend, '+')
+			else
+				Send {Blind}%mods%%toSend%
 		}
     }
 	else {
