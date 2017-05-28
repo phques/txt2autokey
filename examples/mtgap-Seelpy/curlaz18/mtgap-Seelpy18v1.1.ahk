@@ -23,14 +23,26 @@ layer1 := ""
  . "      d       c       "
  
 
+layer2sh := ""
+ . "   ( X J    * `; )  "
+ . "`" , W K {  }  Y . B '  "
+ . "      Z        Q  "
+
+layer1sh := ""
+ . "   U L M      F O P   "
+ . " R I N T V  G S E H A "
+ . "      D       C       "
+
 ; main layer
 CreateLayer(1)
 
 ; 2nd layer, accessed w. Space, 
 CreateLayer(2, 'Space', 0)
 
-AddMappings(1, fromQwerty, layer1)
-AddMappings(2, fromQwerty, layer2)
+AddMappings(1, 1, fromQwerty, layer1sh)
+AddMappings(2, 1, fromQwerty, layer2sh)
+AddMappings(1, 0, fromQwerty, layer1)
+AddMappings(2, 0, fromQwerty, layer2)
 
 
 ;------

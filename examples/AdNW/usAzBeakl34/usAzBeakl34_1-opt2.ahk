@@ -25,8 +25,8 @@ layer1 := ""
 CreateLayer(1)
 
 ; shifted chars 1st !
-AddMappings(1, qwertyMask32Sh, layer1Sh)
-AddMappings(1, qwertyMask32, layer1)
+AddMappings(1, 1, qwertyMask32, layer1Sh)
+AddMappings(1, 0, qwertyMask32, layer1)
 
 ; symbols layer
 CreateSymbolsLayer(2, "Space", 0)

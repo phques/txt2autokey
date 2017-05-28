@@ -70,5 +70,5 @@ CreateSymbolsLayer(layerId, layerAccessKey, blockLayerAccessKey)
 	 . ' ?  #  =  \ ``   + `;  <  >  @ '
 
 	CreateLayer(layerId, layerAccessKey, blockLayerAccessKey)
-	AddMappings(layerId, qwertyMask32, layer)
+	AddMappings(layerId, 0, qwertyMask32, layer)
 }
