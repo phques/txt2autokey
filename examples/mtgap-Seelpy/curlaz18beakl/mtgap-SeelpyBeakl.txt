@@ -1,0 +1,206 @@
+single Sp on main keys (remove *, add both {})
+using BEAKL (adjusted PQ version) 3x3 grid as mask 9 x 2 => 18keys
+
+ooops this is using wrong bottom left row fingers !
+01110 01110
+01110 01110
+01110 01110
+
+011100111001110011100111001110
+
+should be:
+01110 01110
+01110 01110
+11100 01110
+
+011100111001110011101110001110
+
+---------
+2017-05-26
+18bv1.0
+
+(beakl + anglez, closer to original)
+90, 10, 10, 10, 50, 50, 10, 10, 10, 90,
+50,  5,  5,  5, 20, 20,  5,  5,  5, 50,
+20, 30, 10, 50, 90, 50, 10, 30, 20, 90
+
+Sp on main
+
+setksize beakpq
+setmask 011100111001110011101110001110
+use abcdef ghijklmnopqrstuvwxyz.,'"();{}
+set keepShiftPairLetters 0
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 44% 55%
+Fingers: 0.00% 11% 15% 18% 0.00% 0.00% 26% 19% 11% 0.00%
+
+    j  v  ;         q  (  )
+    "  w  b         .  ,  k
+ x  z  p            {  }  '
+
+    d  l  n         u  o  f
+    s  t  h        SP  e  a
+ c  m  r            i  g  y
+
+Fitness:       28754766
+Distance:      7295005
+Finger work:   742326
+Inward rolls:  8.76%
+Outward rolls: 2.43%
+Same hand:     35.58%
+Same finger:   3.79%
+Row change:    16.58%
+Home jump:     2.55%
+
+
+-----
+2017-05-26
+18bv1.1
+
+90, 10, 10, 10, 50, 50, 10, 10, 10, 90,
+50,  5,  5,  5, 20, 20,  5,  5,  5, 50,
+20, 30, 10, 50, 90, 50, 10, 30, 20, 90
+
+w/o Sp on main ?
+
+setksize beakpq
+setmask 011100111001110011101110001110
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 52% 47%
+Fingers: 0.00% 12% 22% 19% 0.00% 0.00% 18% 18% 11% 0.00%
+
+    j  *  (         )  w  "
+    k  .  ,         '  b  v
+ {  }  ;            x  q  z
+
+    f  o  u         h  t  c
+    s  e  a         n  d  l
+ g  y  i            r  p  m
+
+Fitness:       18370783
+Distance:      6421665
+Finger work:   2348
+Inward rolls:  8.94%
+Outward rolls: 3.91%
+Same hand:     34.33%
+Same finger:   2.73%
+Row change:    15.08%
+Home jump:     3.75%
+
+
+---------------------------------
+
+2017-05-26
+18bv1.2 (vs 1.0)
+
+(top row index 15 vs 10)
+90, 10, 10, 15, 50, 50, 15, 10, 10, 90,
+50,  5,  5,  5, 20, 20,  5,  5,  5, 50,
+20, 30, 10, 50, 90, 50, 10, 30, 20, 90
+
+Sp on main
+
+setksize beakpq
+setmask 011100111001110011101110001110
+use abcdef ghijklmnopqrstuvwxyz.,'"();{}
+set keepShiftPairLetters 0
+set keepShiftPairSpace 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 43% 56%
+Fingers: 0.00% 11% 15% 18% 0.00% 0.00% 26% 19% 11% 0.00%
+
+    "  w  ;         q  (  )
+    x  k  p         .  ,  v
+ j  z  b            {  }  '
+
+    s  t  h         u  o  f
+    c  l  r        SP  e  a
+ d  m  n            i  g  y
+
+Fitness:       29098396
+Distance:      7903120
+Finger work:   742326
+Inward rolls:  9.26%
+Outward rolls: 2.50%
+Same hand:     36.66%
+Same finger:   3.80%
+Row change:    17.07%
+Home jump:     2.84%
+
+-----
+2017-05-26
+18bv1.3 (vs 1.1)
+
+(top row index 15 vs 10)
+90, 10, 10, 15, 50, 50, 15, 10, 10, 90,
+50,  5,  5,  5, 20, 20,  5,  5,  5, 50,
+20, 30, 10, 50, 90, 50, 10, 30, 20, 90
+
+w/o Sp on main ?
+
+setksize beakpq
+setmask 011100111001110011101110001110
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+** same as 1.0 
+
+-----
+2017-05-26
+18bv1.4 (vs 1.1)
+
+(full tilt PQ changes)
+70,  20,  15,  35,  80,  93,  35,  15,  20,  70,
+50,   6,   0,   0,  45,  45,   0,   0,   6,  50,
+20,  30,  10,  50,  93,  50,  10,  30,  20,  75,
+
+w/o Sp on main ?
+
+setksize beakpq
+setmask 011100111001110011101110001110
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 46% 53%
+Fingers: 0.00% 12% 17% 18% 0.00% 0.00% 20% 22% 12% 0.00%
+
+    {  x  j         *  q  }
+    '  b  w         y  ,  k
+ z  ;  v            "  (  )
+
+    c  n  g         u  o  p
+    r  s  t         a  e  h
+ m  f  l            i  .  d
+
+Fitness:       19416026
+Distance:      6676915
+Finger work:   69766
+Inward rolls:  8.53%
+Outward rolls: 1.61%
+Same hand:     32.20%
+Same finger:   2.99%
+Row change:    15.30%
+Home jump:     2.30%
