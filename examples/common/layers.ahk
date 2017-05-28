@@ -8,6 +8,7 @@
 ;   layerDef.accessKey = accessKey
 ;   layerDef.blockAccessKey = if true, normal press/release of this access key is not output
 ;   layerDef.mappings = {fromKey : toKey, ...}
+;   layerDef.mappingsSh = {fromKey : toKey, ...}
 
 global Layers := []
 global DefinedHotKeys := {} ; keep track of already defined hotkeys
@@ -18,8 +19,26 @@ global DefinedHotKeys := {} ; keep track of already defined hotkeys
 global CurrentLayer := {}
 global LastKeyWasLayerAccess := 0 ;; true if last key was a layer access key
 
+; If we remap a key to be shift, GetKeyState(Shift) returns false sometimes after 
+; another has been pressed. So we will check for actual fake shift key also
+; use SetShiftKey() to set
+global ShiftKey1 := 0
+global ShiftKey2 := 0
 
 ;---------
+
+SetShiftKey(no, key)
+{
+	; convert to scan code sc999 format
+	sc := GetKeySC(key)
+	sc := Format("sc{:03x}", sc)
+
+	if (no == 1)
+		ShiftKey1 := sc
+		
+	if (no == 2)
+		ShiftKey2 := sc
+}
 
 ; create a new empty layer definition
 ; creates a hotkey for it on layerAccessKey
@@ -31,6 +50,7 @@ CreateLayer(layerIndex, layerAccessKey := 0, blockAccessKey := 0)
 	layerDef.accessKey := layerAccessKey
 	layerDef.blockAccessKey := blockAccessKey
 	layerDef.mappings := {}
+	layerDef.mappingsSh := {} ;; shifted layer
 	
 	Layers[layerIndex] := layerDef
 	
@@ -61,7 +81,7 @@ CreateLayer(layerIndex, layerAccessKey := 0, blockAccessKey := 0)
 ; when 'fromKey' is hit on this layer, will output 'toKey'
 ; _from/_to are space separated
 ; Creates a hotkey foreach _from if not already defined
-AddMappings(layerIndex, _from, _to)
+AddMappings(layerIndex, shiftedLayer, _from, _to)
 {
 	; get layer def
 	layerDef := layers[layerIndex]
@@ -110,11 +130,15 @@ AddMappings(layerIndex, _from, _to)
 			splitTo.isShifted := 1
 		
 		; create hotkey for 'from' key if required
-		hotkeyName := createHotkey(splitFrom)
+		; note we DONT use modifiers, that's what layers are for !
+		createHotkey(splitFrom.key)
 		
 		; save this mapping in layer
 		; use hotkeyname so we can easily find it when called
-		layerDef.mappings[hotkeyName] := splitTo
+		if (shiftedLayer)
+			layerDef.mappingsSh[splitFrom.key] := splitTo
+		else
+			layerDef.mappings[splitFrom.key] := splitTo
 	}
 }
 
@@ -141,37 +165,35 @@ splitModsAndKey(key)
 ;--------
 
 ; create a hotkey for 'key', to call onLayerKey
-; returns hotkeyName '*sc029'
-createHotkey(keyAndMods)
+createHotkey(key)
 {
-	; add '*' to hotkeyname (hotkey will work even when other mods are pressed)
-	mods := "*" . keyAndMods.mods
-
 	; convert to scandcode format sc000, with mods prefixed *+sc029
-	sc := GetKeySC(keyAndMods.key)
-	hotkeyName := Format("{}sc{:03x}", mods, sc)
+	sc := GetKeySC(key)
+	sc := Format("sc{:03x}", sc)
 
 	; we define the hotkey only once, for al layers
-	if (!DefinedHotKeys[hotkeyName]) 
+	if (!DefinedHotKeys[sc]) 
 	{
 		; create function object with params that hotkey will call 
-		fn := Func("onLayerKey")
+		fnDn := Func("onLayerKey").Bind(key, 0)
+		fnUp := Func("onLayerKey").Bind(key, 1)
 
 		; create hotKey
-		HotKey %hotkeyName%, %fn%
-		HotKey %hotkeyName% up, %fn%
+		; add '*' to hotkeyname (hotkey will work even when other mods are pressed)
+		hotkeyName := '*' . sc
+		HotKey %hotkeyName%, %fnDn%
+		HotKey %hotkeyName% up, %fnUp%
 		
 		; remember we created this
-		DefinedHotKeys[hotkeyName] := 1
+		DefinedHotKeys[sc] := 1
 	} 
-	
-	return hotkeyName
 }
 
 ;--------
 
 simulateSendBlind(mods, toSend, pressedModToFilterOut)
 {
+
 	; add modifiers for shift / control if they are currently pressed
 	; might come into conflict with %mods% from key def though !?
 	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
@@ -188,29 +210,29 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 
 
 ; called by a hotkey to handle a key press/release 
-onLayerKey()
+onLayerKey(key, up)
 {
-	if (!CurrentLayer || !CurrentLayer.mappings)
+	if (!CurrentLayer)
 		return
-
-	; get pressed hotkey 'name', ie 'sc029', '+sc029 up' etc
-	key := A_ThisHotkey
-	up := 0
-
-	; if this is the key release, name will end in " up"
-	; strip " up" from key name & set up flag
-	if (InStr(key, " up")) {
-		key := SubStr(key, 1, -3)
-		up := 1
-	}
-	
 
 	; last key is not a layer access key anymore
 	LastKeyWasLayerAccess := 0
 		
 	; get destination/ouput/mapped key for this layer key
-    keyAndMods := CurrentLayer.mappings[key]
 	accessKey := CurrentLayer.accessKey
+	
+	shiftDown := 0
+	if (GetKeyState("Shift")) 
+		shiftDown :=  1
+	else if (ShiftKey1 && GetKeyState(ShiftKey1, 'P'))
+		shiftDown :=  1
+	else if (ShiftKey2 && GetKeyState(ShiftKey2, 'P'))
+		shiftDown :=  1
+	
+	if (shiftDown)
+		keyAndMods := CurrentLayer.mappingsSh[key]
+	else 
+		keyAndMods := CurrentLayer.mappings[key]
 
     if (keyAndMods) {
         
@@ -227,7 +249,7 @@ onLayerKey()
 		;; Special handling for Alt, cant use Send Blind
 		; filter out the Alt, but manually pass through Shift / Ctrl
 		if (accessKey == "LAlt" || accessKey == "RAlt" || accessKey == "Alt") {
-			; simulate Send Blind, but w/o Alt
+			; simulate Send Blind, but w/o Alt 
 			simulateSendBlind(mods, toSend, '!')
 		}
 		else {
@@ -235,7 +257,7 @@ onLayerKey()
 			
 			; Using Send blind with +a::/ would be like Send +/ which results in ?
 			; since Shift is currently pressed
-			if (InStr(key, '+') && !keyAndMods.isShifted)
+			if (shiftDown && !keyAndMods.isShifted)
 				; simulate Send Blind, but w/o Shift
 				simulateSendBlind(mods, toSend, '+')
 			else
