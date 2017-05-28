@@ -7,6 +7,18 @@
 sc039 & sc010::dokey("Escape", 0)
 sc039 & sc010 up::dokey("Escape", 1)
 
+;; w => }^{a
+sc039 & sc011::dokey("}^{a", 0)
+sc039 & sc011 up::dokey("}^{a", 1)
+
+;; e => }^{s
+sc039 & sc012::dokey("}^{s", 0)
+sc039 & sc012 up::dokey("}^{s", 1)
+
+;; r => }^{w
+sc039 & sc013::dokey("}^{w", 0)
+sc039 & sc013 up::dokey("}^{w", 1)
+
 ;; s => Shift
 sc039 & sc01F::dokey("Shift", 0)
 sc039 & sc01F up::dokey("Shift", 1)
@@ -98,10 +110,6 @@ sc039 & sc034 up::dokey("}^{v", 1)
 ;; / => }^{z
 sc039 & sc035::dokey("}^{z", 0)
 sc039 & sc035 up::dokey("}^{z", 1)
-
-;; +sp => Enter
-+sc039::dokey("Enter", 0)
-+sc039 up::dokey("Enter", 1)
 
 ;; sp => Space
 sc039::dokey("Space", 0)
