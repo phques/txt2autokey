@@ -33,6 +33,30 @@
  lfmbq '."y:      12.602 adjacent        28.673 shift adjacent    sum 50.0 50.0
                  3.1 16.4 11.5 19.0 --.- --.- 17.8 18.7  8.9  4.6 Sh  1.2  1.7
 
+Hands: 49% 50%
+Fingers: 2.0% 16% 11% 20% 0.00% 0.00% 19% 19% 9.0% 3.0%
+
+ X  N  C  D  V   ?  O  I  U  J  Z
+ W  R  S  T  G   /  A  E  H  P  K
+ L  F  M  B  Q   !  _  \  Y  ;
+
+ x  n  c  d  v   -  o  i  u  j  z
+ w  r  s  t  g   ,  a  e  h  p  k
+ l  f  m  b  q   '  .  "  y  :
+
+Fitness:       22287818
+Distance:      16624276
+Finger work:   1078722
+Inward rolls:  6.13%
+Outward rolls: 0.65%
+Same hand:     30.23%
+Same finger:   1.92%
+Row change:    13.39%
+Home jump:     1.47%
+Ring jump:     1.62%
+To center:     2.80%
+To outside:    1.08%
+
 ./opt -3 englisch.txt -t 4  -K kwez/stdUsBeakl34.cfg
 
 76               472.725 total effort   151.011 positional effort    left right
