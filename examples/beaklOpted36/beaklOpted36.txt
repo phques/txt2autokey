@@ -56,7 +56,7 @@ BEAKL Opted36
 
 --- PQ curlAZ ---
 
-Tab ~ % & ! `  *  @ # $ ^ +
+Tab ~ % & ! `  * @ # $ ^ +
 Q   J Y O ; |  W D M N _ Z [ ]
 X   H I E A /  G S T R P V 
     \ < U > ?  F C L B K 
