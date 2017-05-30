@@ -5,9 +5,9 @@ w|011::}^{a
 e|012::}^{s
 r|013::}^{w
 
-s|01F::Shift
+s|01F::Control
 d|020::Alt
-f|021::Control
+f|021::Shift
 
 y|015::PgUp
 u|016::Home
