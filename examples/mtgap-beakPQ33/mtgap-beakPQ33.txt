@@ -1,0 +1,32 @@
+mtgap using weights from beakl, adjustedPQ for angleZ
+33 keys
+
+----
+2017-05-29
+v1.0
+
+http://shenafu.com/smf/index.php?topic=89.msg785#msg785
+
+Hands: 49% 50%
+Fingers: 2.0% 7.0% 19% 21% 0.00% 0.00% 21% 15% 12% 3.0%
+
+ [  Y  O  U  <   B  D  N  L  ]  J  Z
+ G  H  E  A  /   M  T  S  R  P  Q
+ K  >  I  {  }   V  C  F  W  X
+
+ '  y  o  u  ;   b  d  n  l  ?  j  z
+ g  h  e  a  ,   m  t  s  r  p  q
+ k  "  i  .  :   v  c  f  w  x
+
+Fitness:       12635719
+Distance:      9458925
+Finger work:   37004
+Inward rolls:  8.17%
+Outward rolls: 0.62%
+Same hand:     29.46%
+Same finger:   2.72%
+Row change:    12.97%
+Home jump:     2.17%
+Ring jump:     1.19%
+To center:     2.14%
+To outside:    0.08%
