@@ -23,7 +23,7 @@ j y o . '  w d m n - z
 h i e a u  g s t r p v
 ) " ( , :  f c l b k 
 
-Using version w/o moved Enter, not using Shift for []{}
+Using version w/o moved Enter, not using Shift key for []{}
 #6
 BEAKL Opted36 pq2
 +21%
@@ -33,10 +33,11 @@ BEAKL Opted36 pq2
 2.61
 26.51
 
-   ~ % & ! `  * @ # $ ^ + 
-Q  J Y O ; |  W D M N _ Z [ ] 
-X  H I E A U  G S T R P V 
-{  > \ < / ?  F C L B K } 
+==PQ==
+    ~ % & ! `  * @ # $ ^ + 
+Q   J Y O ; |  W D M N _ Z [ ] 
+X   H I E A U  G S T R P V 
+    > \ < / ?  F C L B K 
 
 tab 3 1 0 2 4  8 6 5 7 9 = Caps BackSp
 q   j y o . '  w d m n - z { }
@@ -53,3 +54,14 @@ BEAKL Opted36
 1.75
 26.44
 
+--- PQ curlAZ ---
+
+Tab ~ % & ! `  * @ # $ ^ +
+Q   J Y O ; |  W D M N _ Z [ ]
+X   H I E A /  G S T R P V 
+    \ < U > ?  F C L B K 
+  
+Tab 3 1 0 2 4  8 6 5 7 9 = Cap
+q   j y o . '  w d m n - z { }
+x   h i e a ,  g s t r p v 
+    " ( u ) :  f c l b k 

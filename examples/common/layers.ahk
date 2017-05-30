@@ -25,20 +25,8 @@ global LastKeyWasLayerAccess := 0 ;; true if last key was a layer access key
 global ShiftKey1 := 0
 global ShiftKey2 := 0
 
-;---------
 
-SetShiftKey(no, key)
-{
-	; convert to scan code sc999 format
-	sc := GetKeySC(key)
-	sc := Format("sc{:03x}", sc)
-
-	if (no == 1)
-		ShiftKey1 := sc
-		
-	if (no == 2)
-		ShiftKey2 := sc
-}
+;----------
 
 ; create a new empty layer definition
 ; creates a hotkey for it on layerAccessKey
@@ -60,20 +48,10 @@ CreateLayer(layerIndex, layerAccessKey := 0, blockAccessKey := 0)
 		CurrentLayer := layerDef
 	}
 	else {
-		; create hotkey for layer access key
-		; convert to scandcode format sc000
-		sc := GetKeySC(layerAccessKey)
-		hotkeyName := Format("sc{:03x}", sc)
-
-		; create function object with params that hotkey will call 
-		fnDn := Func("onLayerAccessKey").Bind(layerIndex, 0)
-		fnUp := Func("onLayerAccessKey").Bind(layerIndex, 1)
-
-		; create hotKey
-		HotKey %hotkeyName%, %fnDn%
-		HotKey %hotkeyName% up, %fnUp%
+		CreateLayerAccessHotkey(layerIndex, layerAccessKey)
 	}
 }
+
 
 ;----------
 
@@ -126,21 +104,73 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		splitTo := splitModsAndKey(t)
 
 		; set flag indicating if the char to output is shifted (ie ! is Shift-1)
-		if (InStr('~!@#$`%^&*()_+{}|:"<>?', splitTo.key))
+		shiftedChars := 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+		shiftedChars .='~!@#$`%^&*()_+{}|:"<>?'
+		if (InStr(shiftedChars, splitTo.key))
 			splitTo.isShifted := 1
-		
+			
 		; create hotkey for 'from' key if required
 		; note we DONT use modifiers, that's what layers are for !
 		createHotkey(splitFrom.key)
 		
 		; save this mapping in layer
-		; use hotkeyname so we can easily find it when called
 		if (shiftedLayer)
 			layerDef.mappingsSh[splitFrom.key] := splitTo
 		else
 			layerDef.mappings[splitFrom.key] := splitTo
 	}
 }
+
+;---------
+
+; Set the isShifted flag a key mapping that is on the shifted layer of layerIdx
+; (eg was needed with Tab remapped on another key, for Shift-Tab to work)
+MarkMappingAsShifted(layerIndex, fromkey, toKey)
+{
+	layer := Layers[layerIndex]
+	if (layer) {
+		keyAndMods := layer.mappingsSh[fromkey]
+		if (keyAndMods) {
+			; sanity check
+			if (keyAndMods.key == toKey) {
+				keyAndMods.isShifted := 1
+			}
+		}
+	}
+}
+
+; call this so onLayerKey() can detect that a key mapped to 'Shift' is held down 
+; (for some reason we loose the 'shift is down' status after the 1st "shift-XX")
+SetShiftKey(no, key)
+{
+	; convert to scan code sc999 format
+	sc := GetKeySC(key)
+	sc := Format("sc{:03x}", sc)
+
+	if (no == 1)
+		ShiftKey1 := sc
+		
+	if (no == 2)
+		ShiftKey2 := sc
+}
+
+
+; create hotkey for layer access key
+CreateLayerAccessHotkey(layerIndex, layerAccessKey)
+{
+	; convert to scandcode format sc000
+	sc := GetKeySC(layerAccessKey)
+	hotkeyName := Format("sc{:03x}", sc)
+	
+	; create function object with params that hotkey will call 
+	fnDn := Func("onLayerAccessKey").Bind(layerIndex, 0)
+	fnUp := Func("onLayerAccessKey").Bind(layerIndex, 1)
+	
+	; create hotKey
+	HotKey %hotkeyName%, %fnDn%
+	HotKey %hotkeyName% up, %fnUp%
+}
+
 
 ;--------
 
@@ -248,7 +278,7 @@ onLayerKey(key, up)
 		
 		;; Special handling for Alt, cant use Send Blind
 		; filter out the Alt, but manually pass through Shift / Ctrl
-		if (accessKey == "LAlt" || accessKey == "RAlt" || accessKey == "Alt") {
+		if (InStr(accessKey, "Alt")) {
 			; simulate Send Blind, but w/o Alt 
 			simulateSendBlind(mods, toSend, '!')
 		}

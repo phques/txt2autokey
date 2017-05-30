@@ -19,17 +19,17 @@ sc039 & sc012 up::dokey("}^{s", 1)
 sc039 & sc013::dokey("}^{w", 0)
 sc039 & sc013 up::dokey("}^{w", 1)
 
-;; s => Shift
-sc039 & sc01F::dokey("Shift", 0)
-sc039 & sc01F up::dokey("Shift", 1)
+;; s => Control
+sc039 & sc01F::dokey("Control", 0)
+sc039 & sc01F up::dokey("Control", 1)
 
 ;; d => Alt
 sc039 & sc020::dokey("Alt", 0)
 sc039 & sc020 up::dokey("Alt", 1)
 
-;; f => Control
-sc039 & sc021::dokey("Control", 0)
-sc039 & sc021 up::dokey("Control", 1)
+;; f => Shift
+sc039 & sc021::dokey("Shift", 0)
+sc039 & sc021 up::dokey("Shift", 1)
 
 ;; y => PgUp
 sc039 & sc015::dokey("PgUp", 0)
