@@ -12,13 +12,13 @@
 layer1Sh := ""
  . ' X N C D V   ? O I U J Z'
  . ' W R S T G   / A E H P K'
- . ' L F M B Q   ! _ \ Y `;  '
+ . ' L F M B Q   ! _ \ Y :  '
 
  
 layer1 := ""
  . ' x n c d v   - o i u j z'
  . ' w r s t g   , a e h p k'
- . ' l f m b q  `' . " y :  '
+ . ' l f m b q  `' . " y `;  '
  
 
 ; main layer
