@@ -1,0 +1,13 @@
+found on http://shenafu.com/code/keyboard/Keyboard%20Layout%20Analyzer%202.html#/config
+Submitted By: Sasha Viminitz
+
+~ [ ] # $ % ^ & * ^ { } + 
+  P L C D W @ U O Y K Q = |
+  N R S T M ; A E I H V
+  Z J F G B ! : < > X
+
+
+ ` ( ) 0 1 2 3 4 5 6 7 8 9 
+   p l c d w ' u o y k q _ /
+BS n r s t m , a e i h v
+   z j f g b ? . " - x 
