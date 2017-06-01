@@ -3,6 +3,54 @@
 
 #include extendDoKey.ahk
 
+;; 1 => F1
+sc039 & sc002::dokey("F1", 0)
+sc039 & sc002 up::dokey("F1", 1)
+
+;; 2 => F2
+sc039 & sc003::dokey("F2", 0)
+sc039 & sc003 up::dokey("F2", 1)
+
+;; 3 => F3
+sc039 & sc004::dokey("F3", 0)
+sc039 & sc004 up::dokey("F3", 1)
+
+;; 4 => F4
+sc039 & sc005::dokey("F4", 0)
+sc039 & sc005 up::dokey("F4", 1)
+
+;; 5 => F5
+sc039 & sc006::dokey("F5", 0)
+sc039 & sc006 up::dokey("F5", 1)
+
+;; 6 => F6
+sc039 & sc007::dokey("F6", 0)
+sc039 & sc007 up::dokey("F6", 1)
+
+;; 7 => F7
+sc039 & sc008::dokey("F7", 0)
+sc039 & sc008 up::dokey("F7", 1)
+
+;; 8 => F8
+sc039 & sc009::dokey("F8", 0)
+sc039 & sc009 up::dokey("F8", 1)
+
+;; 9 => F9
+sc039 & sc00A::dokey("F9", 0)
+sc039 & sc00A up::dokey("F9", 1)
+
+;; 0 => F10
+sc039 & sc00B::dokey("F10", 0)
+sc039 & sc00B up::dokey("F10", 1)
+
+;; - => F11
+sc039 & sc00C::dokey("F11", 0)
+sc039 & sc00C up::dokey("F11", 1)
+
+;; = => F12
+sc039 & sc00D::dokey("F12", 0)
+sc039 & sc00D up::dokey("F12", 1)
+
 ;; q => Escape
 sc039 & sc010::dokey("Escape", 0)
 sc039 & sc010 up::dokey("Escape", 1)
