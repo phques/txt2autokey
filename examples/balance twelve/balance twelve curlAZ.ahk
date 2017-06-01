@@ -1,7 +1,7 @@
 /*
 found on http://shenafu.com/code/keyboard/Keyboard%20Layout%20Analyzer%202.html#/config
 Submitted By: Sasha Viminitz
-PQ, applied curl+anglez mods
+PQ, applied curl+anglez mods, moved digits back into normal place
 */
 
 ; -- layers --
@@ -12,26 +12,30 @@ PQ, applied curl+anglez mods
 
 ; angleZ 
 layer1azSh := ""
- . ' ~ [ ] # $ `% ^ & * ^ { } + '
+;. ' ~ [ ] # $ `% ^ & * ^ { } + '
+ . ' ~ [ ] # $`% ^ & * ( ) \ + '
  . '   P L C D W @ U O Y K Q = | '
  . '   N R S T M `; A E I H V '
  . '   J F G B Z ! : < > X '
  
 layer1az := ""
- . '`` ( ) 0 1 2 3 4 5 6 7 8 9  '
+;. '`` ( ) 0 1 2 3 4 5 6 7 8 9  '
+ . '`` 1 2 3 4 5 6 7 8 9 0 { } '
  . "   p l c d w ' u o y k q _ / "
  . '   n r s t m , a e i h v '
  . '   j f g b z ? . " - x '
 
  ; angez + curl (swap m - g, swap , .)
 layer1curlAZSh := ""
- . ' ~ [ ] # $ `% ^ & * ^ { } + '
+;. ' ~ [ ] # $ `% ^ & * ^ { } + '
+ . ' ~ [ ] # $ `% ^ & * ( ) \ + '
  . '   P L C D W @ U O Y K Q = | '
  . '   N R S T G : A E I H V '
  . '   J F M B Z ! `; < > X '
  
 layer1curlAZ := ""
- . '`` ( ) 0 1 2 3 4 5 6 7 8 9  '
+;. '`` ( ) 0 1 2 3 4 5 6 7 8 9  '
+ . '`` 1 2 3 4 5 6 7 8 9 0 { } '
  . "   p l c d w ' u o y k q _ / "
  . '   n r s t g . a e i h v '
  . '   j f m b z ? , " - x '
