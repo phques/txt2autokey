@@ -11,3 +11,61 @@ Submitted By: Sasha Viminitz
    p l c d w ' u o y k q _ /
 BS n r s t m , a e i h v
    z j f g b ? . " - x 
+
+---
+Orig
+#4
+Balance Twelve
++17%
+139.96
+75.63
+27.94
+2.74
+33.66
+
+---
+PQ (swap B - Z, change fingering as in angleZ)
+ p l c d w ' u o y k q _ /
+ n r s t m , a e i h v
+ b j f g z ? . " - x 
+
+#4
+Balance Twelve
++16%
+138.59
+74.11
+27.90
+2.93
+33.66
+
+---
+PQ anglez : shift bottom row left, Z goes middle, change fingering
+ p l c d w ' u o y k q _ /
+ n r s t m , a e i h v
+ j f g b z ? . " - x 
+
+#4
+Balance Twelve
++16%
+138.56
+74.23
+27.94
+2.74
+33.66
+
+---
+PQ anglez, then swap  g - m
+(not as good as pure anglez)
+
+ p l c d w ' u o y k q _ /
+ n r s t g , a e i h v
+ j f m b z ? . " - x 
+
+#4
+Balance Twelve
++16%
+138.70
+74.37
+27.94
+2.74
+33.66
