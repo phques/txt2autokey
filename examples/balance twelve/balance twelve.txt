@@ -1,6 +1,69 @@
 found on http://shenafu.com/code/keyboard/Keyboard%20Layout%20Analyzer%202.html#/config
 Submitted By: Sasha Viminitz
 
+actually it seems to come from here:
+June 7, 2014 at 11:54 pm
+https://mathematicalmulticore.wordpress.com/the-keyboard-layout-project/
+
+the version found on KLA seems to be a modified version of the 'mirror' 
+
+this is the version as shown by Sasha
+note: missing < > probably the empty two spots shifted top row @ right 
+  actually, makes more sense that they go before _ + which match unshifted
+  also seems like last char of row 2 should be |
+\ / # $ % ^ & * < > _ + 
+
+\ / # $ % ^ & * _ +
+B Y O U @ K D C L P Q { }
+H I E A ; M T S R N V
+X [ ] : ! W G F J Z
+
+1 2 3 4 5 6 7 8 9 0 - =
+b y o u ' k d c l p q " |
+h i e a , m t s r n v
+x ( ) . ? w g f j z
+
+
+mirror (Sasha types with this one)
+\ / # $ % ^ & * < > _ +
+P L C D W @ U O Y K Q { }
+N R S T M ; A E I H V
+Z J F G B ! : [ ] X
+
+1 2 3 4 5 6 7 8 9 0 - =
+p l c d w ' u o y k q " |
+n r s t m , a e i h v
+z j f g b ? . ( ) x
+
+#4
++17%
+140.50
+75.97
+27.97
+2.98
+33.57
+
+minor improvment version
+\ / # $ % ^ & * < > _ +
+B Y O U @ V C D L P Q { }
+H I E A ; F S T R N K
+X [ ] : ! W G M J Z
+
+1 2 3 4 5 6 7 8 9 0 - =
+b y o u ' v c d l p q " |
+h i e a , f s t r n k
+x ( ) . ? w g m j z
+
+#4
+balance twelve
++17%
+140.15
+80.48
+28.49
+3.40
+27.78
+
+------ kla version
 ~ [ ] # $ % ^ & * ^ { } + 
   P L C D W @ U O Y K Q = |
   N R S T M ; A E I H V
@@ -11,3 +74,59 @@ Submitted By: Sasha Viminitz
    p l c d w ' u o y k q _ /
 BS n r s t m , a e i h v
    z j f g b ? . " - x 
+
+
+#4
+Balance Twelve
++17%
+139.96
+75.63
+27.94
+2.74
+33.66
+
+---
+PQ (swap B - Z, change fingering as in angleZ)
+ p l c d w ' u o y k q _ /
+ n r s t m , a e i h v
+ b j f g z ? . " - x 
+
+#4
+Balance Twelve
++16%
+138.59
+74.11
+27.90
+2.93
+33.66
+
+---
+PQ anglez : shift bottom row left, Z goes middle, change fingering
+ p l c d w ' u o y k q _ /
+ n r s t m , a e i h v
+ j f g b z ? . " - x 
+
+#4
+Balance Twelve
++16%
+138.56
+74.23
+27.94
+2.74
+33.66
+
+---
+PQ anglez, then swap  g - m
+
+ p l c d w ' u o y k q _ /
+ n r s t g , a e i h v
+ j f m b z ? . " - x 
+
+#4
+Balance Twelve
++16%
+138.70
+74.37
+27.94
+2.74
+33.66

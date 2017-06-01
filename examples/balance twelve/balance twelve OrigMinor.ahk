@@ -1,6 +1,10 @@
 /*
 found on http://shenafu.com/code/keyboard/Keyboard%20Layout%20Analyzer%202.html#/config
 Submitted By: Sasha Viminitz
+actually it seems to come from here:
+June 29, 2014 at 10:40 pm
+https://mathematicalmulticore.wordpress.com/the-keyboard-layout-project/
+small adjust PQ, angleZ fingering and curl left hand
 */
 
 ; -- layers --
@@ -10,16 +14,17 @@ Submitted By: Sasha Viminitz
 #include ../mtgap-curl33Layers/mtgap-curl33symLayerv1.0.ahk
  
 layer1Sh := ""
- . ' ~ [ ] # $ `% ^ & * ^ { } + '
- . '   P L C D W @ U O Y K Q = | '
- . '   N R S T M `; A E I H V '
- . '   Z J F G B ! : < > X '
+ . ' ~ \ / # $ `% ^ & * < > _ + '
+ . '   B Y O U @ V C D L P Q { } '
+ . '   H I E A : F S T R N K '
+ . '   X [ `; ] ! W G M J Z '
  
 layer1 := ""
- . '`` ( ) 0 1 2 3 4 5 6 7 8 9  '
- . "   p l c d w ' u o y k q _ / "
- . '   n r s t m , a e i h v '
- . '   z j f g b ? . " - x '
+ . '`` 1 2 3 4 5 6 7 8 9 0 - = '
+ . '   b y o u `' v c d l p q " | '
+ . '   h i e a . f s t r n k '
+ . '   x ( , ) ? w g m j z '
+;. '   x ( ) . ? w g m j z '
 
 ; main layer
 CreateLayer(1)
@@ -39,7 +44,7 @@ CreateLayerAccessHotkey(2, "RAlt")
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\orig"
+global ImgsDir := "%A_ScriptDir%\imgs"
 global ImgWidth := 250
 global ImgHeight := 66
 global CenterOnCurrWndMonitor := 1
