@@ -159,6 +159,10 @@ sc039 & sc034 up::dokey("}^{v", 1)
 sc039 & sc035::dokey("}^{z", 0)
 sc039 & sc035 up::dokey("}^{z", 1)
 
+;; lshift => enter
+sc039 & sc02A::dokey("Enter", 0)
+sc039 & sc02A up::dokey("Enter", 1)
+
 ;; sp => Space
 sc039::dokey("Space", 0)
 sc039 up::dokey("Space", 1)
