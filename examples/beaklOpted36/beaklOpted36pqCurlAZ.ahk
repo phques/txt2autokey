@@ -46,9 +46,7 @@ AddMappings(1, 0, '] \', '{ }')
 AddMappings(1, 1, '] \', '[ ]')
 
 ; symbols layer
-; both LAlt and RAlt are access keys of layer2
-CreateSymbolsLayer(2, "LAlt", 0)
-CreateLayerAccessHotkey(2, "RAlt")
+CreateSymbolsLayer(2, "RAlt", 0)
 
 ;------
 
@@ -75,7 +73,4 @@ return
 #include ../common/extend/extendSpace.ahk
 #include ../common/commonHotkeys.ahk
 
-; we need to map alt-tab to ... AltTab ! 
-; (this refers to the key that has been remapped as Tab, not the physical tab key)
-Alt & Tab::AltTab
 
