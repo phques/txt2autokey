@@ -1,5 +1,10 @@
 ; common hotkeys
 
+; required includes
+#include winlistMenu.ahk
+#include clipboardToBash.ahk
+
+
 ;------- groups hotkeys
 
 ; +^1 
@@ -41,3 +46,6 @@ return
 
 ; Win B
 #sc030::clipboardToBash()
+
+; ctrl-menu
+^sc15D::OpenWinlistMenu()
