@@ -1,0 +1,20 @@
+Hugues Dumez
+http://bvofrak.blogspot.com/
+english version of BvoFRak
+BvoFRakENv0.5
+(as found on http://kla.keyboard-design.com/#/config)
+
+^ 1 2 3 4 5 6 7 8 9 0 & ~   
+  X C D V J _ \ U G ? { } | 
+  N S T R H P A E O I B   
+  F W M L Z ; : Y K Q   
+                
+
+` # = ( ) / * + - % @ [ ] 
+  x c d v j " ' u g ! < > $ 
+  n s t r h p a e o i b 
+  f w m l z , . y k q
+  
+    [ ] $                   
+  { } < > |               
+                        
