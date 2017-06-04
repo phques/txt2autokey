@@ -1,0 +1,49 @@
+vu keys mod Ian, to swap hands
+
+ Q K U Y B  X C D M : 
+ A H E O I  L N T S R    
+ Z P > < J  F W G V ?   
+                
+
+ q k u y b  x c d m ; 
+ a h e o i  l n t s r  
+ z p . , j  f w g v / 
+ 
+#3
+Vu Keys Swapped mod Ian
+115.29
++18%
+ 
+ 
+---pq angle z 
+
+ Q K U Y B  X C D M : 
+ A H E O I  L N T S R    
+ P > < J Z  F W G V ?   
+                
+
+ q k u y b  x c d m ; 
+ a h e o i  l n t s r  
+ p . , j z  f w g v / 
+
+#3
+Vu Keys Swapped mod Ian
+115.18
++18%
+ 
+ 
+---pq curl angle z 
+
+ Q K U Y B  X C D M : 
+ A H E O <  W N T S R    
+ P > I J Z  F L G V ?   
+                
+            
+ q k u y b  x c d m ; 
+ a h e o ,  w n t s r  
+ p . i j z  f l g v / 
+
+#3
+Vu Keys Swapped mod Ian
+115.63
++19%
