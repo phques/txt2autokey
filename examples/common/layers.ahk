@@ -296,6 +296,11 @@ onLayerKey(key, up)
     }
 	else {
 		;MsgBox "cannot find key %key% on layer %CurrentLayer.index%"
+        ; just send the original key
+        if (up)
+            Send {Blind}{%key% up}
+        else
+            Send {Blind}{%key% DownTemp}
 	}
 	
 }
