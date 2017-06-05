@@ -26,7 +26,10 @@ OpenWinlistMenu()
 createWinMenu(submenuName, wintitle)
 {
     winList := WinGetList(wintitle)
-    winids := []
+    if (menuItems[submenuName])
+        winids := menuItems[submenuName]
+    else
+        winids := []
 
     For index, winid in winList {
         title := WinGetTitle('ahk_id %winid%')
