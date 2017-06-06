@@ -3,7 +3,6 @@ nb: -2 runs MUCH faster than -3 !!
 
 --usCurlAngleZ--
 
-
 ** finger costs are different etc, does that explain higher effort? **
 
 ./opt -2 englisch.txt -t 4  -K kwez/usCurlAngleZ.cfg 
@@ -16,7 +15,6 @@ nb: -2 runs MUCH faster than -3 !!
                   8.4  8.6 14.7 17.3 --.- --.- 16.7 11.4 13.7  9.2 Sh  1.8  1.3
 
 ---
-
 ./opt -3 englisch.txt -t 4 -i 5000  -K kwez/usCurlAngleZ.cfg 
 
 520              331.668 total effort   210.966 positional effort    left right
@@ -27,3 +25,18 @@ nb: -2 runs MUCH faster than -3 !!
                    7.497 no hand altern. 36.560 two hand altern.
                    4.814 seesaw           5.683 indir same finger
                   8.0  8.7 14.7 17.2 --.- --.- 16.8 14.8 10.7  9.1 Sh  1.9  1.2
+
+----
+./opt -2 englisch.txt -t 4  -K kwez/usCurlAngleZ.cfg 
+revised symbols
+
+1467             260.888 total effort   214.954 positional effort    left right
+                   0.932 same finger rp   1.926 shift same finger top  5.7 12.2
+  xyu.q zmldpj    68.579 hand alternat.  33.480 shift hand alter. mid 33.9 28.1
+  siea, fnrtcg     1.104 inward/outward  27.927 inward or outward bot  9.4 10.6
+  "}o'{ khwbv      9.467 adjacent        10.888 shift adjacent    sum 49.1 50.9
+                 8.4  8.9 14.1 17.6 --.- --.- 16.8 11.5 13.7  9.0 Sh  1.8  1.0
+                 
+ XYU;Q ZMLDPJ
+ SIEA/ FNRTCG
+ >)O<( KHWBV 

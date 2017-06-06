@@ -1,6 +1,7 @@
 /*
 AdNW optimizer
 ./opt -2 englisch.txt -t 4  -K kwez/usCurlAngleZ.cfg 
+v2b, revised symbols
 
 */
 
@@ -13,14 +14,14 @@ AdNW optimizer
 
  ; angez + curl (swap m - g, swap , .)
 layer1curlAZSh := ""
- . ' X Y U > Q Z M L D P J '
- . ' S I E A < F N R T C G '
- . ' ? " O : { K H W B V '
+ . ' X Y U `; Q  Z M L D P J '
+ . ' S I E A /  F N R T C G '
+ . ' < ( O > )  K H W B V   '
  
 layer1curlAZ := ""
- . ' x y u . q z m l d p j '
- . ' s i e a , f n r t c g '
- . " / ' o `; [ k h w b v "
+ . ' x y u . q  z m l d p j '
+ . ' s i e a ,  f n r t c g '
+ . ' " { o `' }  k h w b v  '
 
 ; main layer
 CreateLayer(1)
@@ -38,7 +39,7 @@ CreateSymbolsLayer(2, "RAlt", 0)
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs-curlaz-2"
+global ImgsDir := "%A_ScriptDir%\imgs-curlaz-2b"
 global ImgWidth := 200
 global ImgHeight := 46
 global CenterOnCurrWndMonitor := 1
