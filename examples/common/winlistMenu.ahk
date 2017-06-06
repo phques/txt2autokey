@@ -42,7 +42,7 @@ createWinMenu(submenuName, wintitle)
     
     menuItems[submenuName] := winids
     
-    if (winList.Length)
+    if (winids.Length)
         Menu mymenu, add, %submenuName%, :%submenuName%
 }
 
