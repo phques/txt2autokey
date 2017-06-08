@@ -19,6 +19,11 @@ OpenWinlistMenu()
     createWinMenu('PLine', 'ahk_exe pragmaswitch.exe')
     createWinMenu('PLine', 'ahk_exe pconfig.exe')
     createWinMenu('PLine', 'ahk_exe incmgr.exe')
+    createWinMenu('ICCP', 'ahk_exe Iccp.ObjectMgr.exe')
+    createWinMenu('ICCP', 'ahk_exe Iccp.Translator.exe')
+    createWinMenu('ICCP', 'ahk_exe Iccp.Filter.exe')
+    createWinMenu('ICCP', 'ahk_exe Iccp.BusinessLogic.exe')
+    createWinMenu('ICCP', 'ahk_exe liveDataSimul.exe')
 
     Menu mymenu, show
 }
