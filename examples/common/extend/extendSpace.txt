@@ -19,6 +19,7 @@ w|011::}^{a
 e|012::}^{s
 r|013::}^{w
 
+a|01E::Tab
 s|01F::Control
 d|020::Alt
 f|021::Shift

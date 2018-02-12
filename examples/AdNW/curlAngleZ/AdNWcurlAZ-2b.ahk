@@ -16,12 +16,12 @@ v2b, revised symbols
 layer1curlAZSh := ""
  . ' X Y U `; Q  Z M L D P J '
  . ' S I E A /  F N R T C G '
- . ' < ( O > )  K H W B V   '
+ . ' < ( O ) >  K H W B V   '
  
 layer1curlAZ := ""
  . ' x y u . q  z m l d p j '
  . ' s i e a ,  f n r t c g '
- . ' " { o `' }  k h w b v  '
+ . ' " { o } `' k h w b v  '
 
 ; main layer
 CreateLayer(1)
