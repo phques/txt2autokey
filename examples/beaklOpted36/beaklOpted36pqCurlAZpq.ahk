@@ -35,10 +35,16 @@ AddMappings(1, 0, qwertyMask32, layer1)
 
 AddMappings(1, 0, '=', 'Capslock')
 AddMappings(1, 1, '=', 'Capslock') ; shifted too
-AddMappings(1, 1, "`` 1 2 3 4 5 6 7 8 9 0 -", "tab ~ `% & ! `` * @ # $ ^ +")
-; pq keep numbers the same ! 
+
+; pq keep numbers and most symbols the same: 
+;  ` ~  are  tab tab
+;  ( )  are  ` ~
+;  - _  are  = + 
+;  = +  are  capslock
+;AddMappings(1, 1, "`` 1 2 3 4 5 6 7 8 9 0 -", "tab ~ `% & ! `` * @ # $ ^ +")
 ;AddMappings(1, 0, "`` 1 2 3 4 5 6 7 8 9 0 -", "tab 3 1 0 2 4  8 6 5 7 9 =")
-AddMappings(1, 0, "`` -", "tab =")
+AddMappings(1, 1, "`` 1 2 3 4 5 6 7 8 9 0 -", "tab ! @ # $ `% ^ & * `` ~ +")
+AddMappings(1, 0, "`` 1 2 3 4 5 6 7 8 9 0 -", "tab 1 2 3 4 5 6 7 8 9 0  =")
 
 ; so shift-mappedTab works
 MarkMappingAsShifted(1, "``", 'tab')
