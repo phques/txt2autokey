@@ -1,0 +1,35 @@
+http://shenafu.com/code/keyboard/beakl/index.php
+
+http://shenafu.com/smf/index.php?topic=89.900
+
+BEAKL 9 (main layer):
+  4 0 1 2 3   7 6 5 9 8
+  j h o u k   g c r f z
+- q i e a y   d s t n b ;
+  / , ' . x   w m l p v
+
+BEAKL 9 (shift layer):
+
+    + = *       ^ % ~
+  J H O U K   G C R F Z 
+- Q I E A Y   D S T N B ;
+  ? ! ` @ X   W M L P V
+
+BEAKL 9 (punctuation layer):
+
+    + = *       ^ % ~ 
+    { _ } &     [ " ] 
+- \ ( 1 ) #   $ < 0 > | ;
+  5 4 3 2 :     9 8 7 6 
+
+BEAKL 9 (numpad layer):
+
+    + = *       ^ % ~ 
+  t 7 2 4 6
+- 8 0 1 3 5
+  / , 9 . :
+
+
+(t in numpad is Tab)
+
+---------------------------
