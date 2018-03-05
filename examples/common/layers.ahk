@@ -226,13 +226,16 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 
 	; add modifiers for shift / control if they are currently pressed
 	; might come into conflict with %mods% from key def though !?
-	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
+;	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
+    if (!InStr('+', pressedModToFilterOut) && GetKeyState("Shift")) 
 		mods .= "+"
 		
-	if (pressedModToFilterOut != '^' &&   GetKeyState("Ctrl"))
+;	if (pressedModToFilterOut != '^' &&   GetKeyState("Ctrl"))
+    if (!InStr('^', pressedModToFilterOut) && GetKeyState("Ctrl")) 
 		mods .= "^"
 
-	if (pressedModToFilterOut != '!' &&   GetKeyState("Alt"))
+;	if (pressedModToFilterOut != '!' &&   GetKeyState("Alt"))
+    if (!InStr('!', pressedModToFilterOut) && GetKeyState("Alt")) 
 		mods .= "!"
 
 	Send %mods%%toSend%
@@ -280,7 +283,13 @@ onLayerKey(key, up)
 		; filter out the Alt, but manually pass through Shift / Ctrl
 		if (InStr(accessKey, "Alt")) {
 			; simulate Send Blind, but w/o Alt 
-			simulateSendBlind(mods, toSend, '!')
+            skip := '!'
+            
+            if (shiftDown && !keyAndMods.isShifted)
+                ; AND w/o shift
+                skip += '+'
+
+			simulateSendBlind(mods, toSend, skip)
 		}
 		else {
 			; not Alt access key, can use Send Blind
@@ -295,7 +304,7 @@ onLayerKey(key, up)
 		}
     }
 	else {
-		;MsgBox "cannot find key %key% on layer %CurrentLayer.index%"
+		; MsgBox "cannot find key %key% on layer %CurrentLayer.index%"
         ; just send the original key
         if (up)
             Send {Blind}{%key% up}
