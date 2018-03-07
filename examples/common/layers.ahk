@@ -18,6 +18,7 @@ global DefinedHotKeys := {} ; keep track of already defined hotkeys
 ; layer[1] is normal/main layer
 global CurrentLayer := {}
 global LastKeyWasLayerAccess := 0 ;; true if last key was a layer access key
+global lastKey := 0
 
 ; If we remap a key to be shift, GetKeyState(Shift) returns false sometimes after 
 ; another has been pressed. So we will check for actual fake shift key also
@@ -72,6 +73,13 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	from := Trim(_from)
 	from := RegExReplace(from, "\s{2,}", " ")
 
+    toto := 0
+    if (SubStr(from,1,1) == '@') {
+        MsgBox(from)
+        from := SubStr(from,2)
+        toto := 1
+    }
+
 	to := Trim(_to)
 	to := RegExReplace(to, "\s{2,}", " ")
 
@@ -108,7 +116,10 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		shiftedChars .='~!@#$`%^&*()_+{}|:"<>?'
 		if (InStr(shiftedChars, splitTo.key))
 			splitTo.isShifted := 1
-			
+            
+        if (toto)
+			splitTo.isDualMode := 1
+            
 		; create hotkey for 'from' key if required
 		; note we DONT use modifiers, that's what layers are for !
 		createHotkey(splitFrom.key)
@@ -138,6 +149,7 @@ MarkMappingAsShifted(layerIndex, fromkey, toKey)
 		}
 	}
 }
+
 
 ; call this so onLayerKey() can detect that a key mapped to 'Shift' is held down 
 ; (for some reason we loose the 'shift is down' status after the 1st "shift-XX")
@@ -245,6 +257,7 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 ; called by a hotkey to handle a key press/release 
 onLayerKey(key, up)
 {
+
 	if (!CurrentLayer)
 		return
 
@@ -268,6 +281,23 @@ onLayerKey(key, up)
 		keyAndMods := CurrentLayer.mappings[key]
 
     if (keyAndMods) {
+        
+        if (lastKey) {
+            MsgBox "lastKey.key: %lastKey.key%  key: %key%"
+            if (lastKey.key == key) {
+                lastKey := 0
+                return
+            } else {
+                Send {Blind}{%key% Up}
+            }
+                lastKey := 0
+        } else {
+            if (keyAndMods.isDualMode) {
+                ;Send {Blind}{%key% DownTemp}
+                lastKey := keyAndMods
+                return
+             }
+        }
         
         ; modifiers need to be *before* the {}, ie ^{v}  not {^v}
 		mods := keyAndMods.mods

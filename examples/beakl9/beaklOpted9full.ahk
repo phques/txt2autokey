@@ -16,6 +16,9 @@ PQ notes:
 ; main layer
 CreateLayer(1)
 
+;AddMappings(1, 0, '@LShift', 'x')
+
+
 ; shifted chars (1st)
 AddMappings(1, 1, '  2 3 4     7 8 9  ',     '  + = *      ^ `% ~ ')
 AddMappings(1, 1, 'q w e r t  y u i o p',    'J H O U K  G C R F Z ')
