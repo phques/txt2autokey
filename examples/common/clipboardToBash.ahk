@@ -11,7 +11,7 @@ clipboardToBash()
 		s2 := StrReplace(clip, "`\", "/")
 		head := SubStr(s2, 1, 1)
 		tail := SubStr(s2, 4)
-		StrLower, head, %head%
+		StrLower head, %head%
 
 		clipboard := "'/mnt/%head%/%tail%'"
 		MsgBox(clipboard)
