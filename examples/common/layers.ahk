@@ -82,9 +82,10 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	
 	if (froms.Length != tos.Length) 
 	{
-		MsgBox % Format("AddMappings, From/to not same length {} {}!`n{} `n{}"
+        msg := Format("AddMappings, From/to not same length {} {}!`n{} `n{}"
 						, froms.Length, tos.Length
 						, _from, _to, )
+		MsgBox(msg)
 						; , SubStr(_from, 1, 16), SubStr(_to, 1, 16))
 		ExitApp
 	}
@@ -269,12 +270,23 @@ onLayerKey(key, up)
 	accessKey := CurrentLayer.accessKey
 	
 	shiftDown := 0
-	if (GetKeyState("Shift")) 
+    nbrShiftDown := 0
+	if (GetKeyState("LShift")) {
 		shiftDown :=  1
-	else if (ShiftKey1 && GetKeyState(ShiftKey1, 'P'))
+        nbrShiftDown += 1
+	} 
+    if (GetKeyState("RShift")) {
 		shiftDown :=  1
-	else if (ShiftKey2 && GetKeyState(ShiftKey2, 'P'))
+        nbrShiftDown += 1
+    }
+    if (ShiftKey1 && GetKeyState(ShiftKey1, 'P')) {
 		shiftDown :=  1
+        nbrShiftDown += 1
+    } 
+    if (ShiftKey2 && GetKeyState(ShiftKey2, 'P')) {
+		shiftDown :=  1
+        nbrShiftDown += 1
+    }
 	
 	if (shiftDown)
 		keyAndMods := CurrentLayer.mappingsSh[key]
@@ -292,10 +304,13 @@ onLayerKey(key, up)
                     OutputDebug("Send2 {Blind}{%key% Up}")
                     Send {Blind}{%key% Up}
                     
-                    if (shiftDown && (keyName == "LShift" || keyName == "RShift")) {
-                        OutputDebug("removing shiftdown")
-                        shiftDown := 0
-                        keyAndMods := CurrentLayer.mappings[key]
+                    if (keyName == "LShift" || keyName == "RShift") {
+                        if (nbrShiftDown == 1) {
+                            OutputDebug("removing shiftdown")
+                            keyAndMods := CurrentLayer.mappings[key]
+                            ;pq leave this so we take care of removing Shift if out key is lowercase key
+                            ;shiftDown := 0
+                        }
                     }
                     
                     OutputDebug("Send3 %keyAndMods.key% DownTemp")
