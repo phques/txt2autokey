@@ -18,7 +18,7 @@ global DefinedHotKeys := {} ; keep track of already defined hotkeys
 ; layer[1] is normal/main layer
 global CurrentLayer := {}
 global LastKeyWasLayerAccess := 0 ;; true if last key was a layer access key
-global lastKey := 0
+global dualModeKeyDown := 0     ;; true when we press a dualMode key
 
 ; If we remap a key to be shift, GetKeyState(Shift) returns false sometimes after 
 ; another has been pressed. So we will check for actual fake shift key also
@@ -73,13 +73,6 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	from := Trim(_from)
 	from := RegExReplace(from, "\s{2,}", " ")
 
-    toto := 0
-    if (SubStr(from,1,1) == '@') {
-        MsgBox(from)
-        from := SubStr(from,2)
-        toto := 1
-    }
-
 	to := Trim(_to)
 	to := RegExReplace(to, "\s{2,}", " ")
 
@@ -108,6 +101,14 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		if (t == 'SP')
 			t := 'Space'
 			
+        ; leading @ indicates dual mode key (in 'from')
+        ; (single click generates 'to' key, held down is modifier)
+        isDualModeKey := 0
+        if (SubStr(f,1,1) == '@') {
+            f := SubStr(f,2) ; strip @
+            isDualModeKey := 1
+        }
+    
 		splitFrom := splitModsAndKey(f)
 		splitTo := splitModsAndKey(t)
 
@@ -116,9 +117,8 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		shiftedChars .='~!@#$`%^&*()_+{}|:"<>?'
 		if (InStr(shiftedChars, splitTo.key))
 			splitTo.isShifted := 1
-            
-        if (toto)
-			splitTo.isDualMode := 1
+
+        splitTo.isDualMode := isDualModeKey
             
 		; create hotkey for 'from' key if required
 		; note we DONT use modifiers, that's what layers are for !
@@ -250,6 +250,7 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
     if (!InStr('!', pressedModToFilterOut) && GetKeyState("Alt")) 
 		mods .= "!"
 
+    OutputDebug("Send1 %mods%%toSend%")
 	Send %mods%%toSend%
 }
 
@@ -281,20 +282,45 @@ onLayerKey(key, up)
 		keyAndMods := CurrentLayer.mappings[key]
 
     if (keyAndMods) {
-        
-        if (lastKey) {
-            MsgBox "lastKey.key: %lastKey.key%  key: %key%"
-            if (lastKey.key == key) {
-                lastKey := 0
-                return
-            } else {
-                Send {Blind}{%key% Up}
+       
+        ; handling of dual mode keys (single click generates key, held down is modifier)
+        generatingDualModeKey := 0
+        if (dualModeKeyDown) {
+            keyName := GetKeyName(key)
+            if (A_PriorKey == keyName) {
+                if (up) {
+                    OutputDebug("Send2 {Blind}{%key% Up}")
+                    Send {Blind}{%key% Up}
+                    
+                    if (shiftDown && (keyName == "LShift" || keyName == "RShift")) {
+                        OutputDebug("removing shiftdown")
+                        shiftDown := 0
+                        keyAndMods := CurrentLayer.mappings[key]
+                    }
+                    
+                    OutputDebug("Send3 %keyAndMods.key% DownTemp")
+                    Send {Blind}{%keyAndMods.key% DownTemp}
+                    generatingDualModeKey := 1
+                }
+                else {
+                    return
+                }
             }
-                lastKey := 0
-        } else {
+            dualModeKeyDown := 0
+        } 
+        
+        if (!generatingDualModeKey) {
             if (keyAndMods.isDualMode) {
-                ;Send {Blind}{%key% DownTemp}
-                lastKey := keyAndMods
+                if (up) {
+                    OutputDebug("Send4.1 %key% Up")
+                    Send {Blind}{%key% Up}
+                    ;keyAndMods.dualModeKeyDown := 0
+                } else {
+                    OutputDebug("Send4.2 %key% DownTemp")
+                    Send {Blind}{%key% DownTemp}
+                    ;keyAndMods.dualModeKeyDown := key
+                    dualModeKeyDown := 1
+                }
                 return
              }
         }
@@ -326,11 +352,13 @@ onLayerKey(key, up)
 			
 			; Using Send blind with +a::/ would be like Send +/ which results in ?
 			; since Shift is currently pressed
-			if (shiftDown && !keyAndMods.isShifted)
+			if (shiftDown && !keyAndMods.isShifted) {
 				; simulate Send Blind, but w/o Shift
 				simulateSendBlind(mods, toSend, '+')
-			else
+            } else {
+                OutputDebug("Send5 {Blind}%mods%%toSend%")
 				Send {Blind}%mods%%toSend%
+            }
 		}
     }
 	else {
