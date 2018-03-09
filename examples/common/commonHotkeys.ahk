@@ -49,4 +49,4 @@ return
 #sc030::clipboardToBash()
 
 ; ctrl-menu
-^sc15D::OpenWinlistMenu()
+;^sc15D::OpenWinlistMenu()

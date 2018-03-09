@@ -110,7 +110,7 @@ pkl_displayHelpImage( activate := 0 )
 
 	; find current active window and its coords
 	id := WinExist("A")
-	WinGetPos x, y, width, height, ahk_id id
+	WinGetPos x, y, width, height, "ahk_id " . id
     currWinCenter := x + (width / 2)
 
 	xpos := 0
