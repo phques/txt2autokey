@@ -1,5 +1,8 @@
 ; this version uses global vars set by layers.ahk
 
+global wnd := 0
+global imgCtrl := 0
+
 ; initial call to enable & display
 DisplayHelpImage()
 {
@@ -71,16 +74,26 @@ pkl_displayHelpImage( activate := 0 )
 		if ( yPosition == -1 ) {
 			yPosition :=  A_ScreenHeight - ImgHeight - 60
 		}
-		Gui, 2:+AlwaysOnTop -Border +ToolWindow
-		Gui, 2:margin, 0, 0
-		Gui, 2:Add, Pic, xm vHelperImage
-		GuiControl,2:, HelperImage, *w%ImgWidth% *h%ImgHeight% %ImgsDir%\layer1.png
-		Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
-		setTimer, pkl_OnDisplayTimer, 200
+		; Gui, 2:+AlwaysOnTop -Border +ToolWindow
+		; Gui, 2:margin, 0, 0
+		; Gui, 2:Add, Pic, xm vHelperImage
+		; GuiControl,2:, HelperImage, *w%ImgWidth% *h%ImgHeight% %ImgsDir%\layer1.png
+		; Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
+		wnd := GuiCreate("+AlwaysOnTop -Border +ToolWindow", "pklHelperImage")
+		wnd.MarginX := 0
+		wnd.MarginY := 0
+		;wnd.Add("Pic", "xm", "*w%ImgWidth% *h%ImgHeight%", "%ImgsDir%\layer1.png")
+		imgCtrl := wnd.Add("Pic", "xm", Format("{1}\layer1.png",ImgsDir))
+		wnd.Show(Format("xCenter y{1} AutoSize NA", yPosition))
+        
+		SetTimer Func("pkl_OnDisplayTimer"), 200
 
 	} else if ( activate == -1 ) {
-		setTimer, pkl_OnDisplayTimer, Off
-		Gui, 2:Destroy
+		SetTimer , Off
+        if (wnd) {
+            wnd.Destroy
+            imgCtrl := 0
+        }
 		return
 	}
 	if ( guiActive == 0 )
@@ -89,9 +102,8 @@ pkl_displayHelpImage( activate := 0 )
 
 	; check if mouse is over the help image
 	; and adjust y position of image (move to top or bottom.. toggle)
-	MouseGetPos, , , id
-	WinGetTitle, title, ahk_id %id%
-	if ( title == "pklHelperImage" ) {
+	MouseGetPos , , id
+	if ( id == wnd.Hwnd ) {
 		displayOnTop := 1 - displayOnTop
 		if ( displayOnTop )
 			yPosition := 5
@@ -102,7 +114,7 @@ pkl_displayHelpImage( activate := 0 )
 
 	; find current active window and its coords
 	id := WinExist("A")
-	WinGetPos, x, y, width, height, ahk_id %id%
+	WinGetPos x, y, width, height, ahk_id id
     currWinCenter := x + (width / 2)
 
 	xpos := 0
@@ -127,9 +139,9 @@ pkl_displayHelpImage( activate := 0 )
 
 	; might want to avoid Show if same coords ..
 	if (xpos) {
-		Gui, 2:Show, x%xpos% y%yPosition% AutoSize NA, pklHelperImage
+		wnd.Show(Format("x{1} y{2} AutoSize NA", xpos, yPosition))
 	} else {
-		Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
+		wnd.Show(Format("xCenter y{1} AutoSize NA", yPosition))
 	}
 	
 	; PQuesnel 2017-05
@@ -157,7 +169,7 @@ pkl_displayHelpImage( activate := 0 )
 	 
 	blockedKeySkipped := 0
 
-	fileName := "layer%CurrentLayer.index%"
+	fileName := Format("layer{1}", CurrentLayer.index)
 
     shiftIsDown := 0
     if (GetKeyState("Shift")) {
@@ -171,14 +183,19 @@ pkl_displayHelpImage( activate := 0 )
 	if ( not FileExist( ImgsDir . "\" . fileName . ".png" ) )  {
         if (shiftIsDown) {
             ; try using the unshifted image
-            fileName := "layer%CurrentLayer.index%"
+            fileName := Format("layer{1}", CurrentLayer.index)
             if ( not FileExist( ImgsDir . "\" . fileName . ".png" ) )  {
                 fileName := ""
             }
         }
     }
-		
+
 	prevFile := fileName 
-	GuiControl,2:, HelperImage, *w%ImgWidth% *h%ImgHeight% %ImgsDir%\%fileName%.png
+    
+	; GuiControl(, "vHelperImage", "*w%ImgWidth% *h%ImgHeight% %ImgsDir%\%fileName%.png")
+    opts := "" ; Format("w{1} h{2}", ImgWidth, ImgHeight)
+    filepath := Format("*w{1} *h{2} {3}\{4}.png", ImgWidth, ImgHeight, ImgsDir, fileName)
+    ; filepath := Format("{1}\{2}.png", ImgsDir, fileName)
+    imgCtrl.Value := filepath
 }
 

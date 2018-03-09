@@ -79,8 +79,8 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	; split from / to into into array (separ = space)
 	froms := StrSplit(from, A_Space)
 	tos := StrSplit(to, A_Space)
-	
-	if (froms.Length != tos.Length) 
+
+	if (froms.Length() != tos.Length()) 
 	{
         msg := Format("AddMappings, From/to not same length {} {}!`n{} `n{}"
 						, froms.Length, tos.Length
@@ -91,7 +91,7 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	}
 
 	; loop on froms / tos, create mappings in layer
-	Loop froms.Length
+	Loop froms.Length()
 	{
 		f := froms[A_Index]
 		t := tos[A_Index]
@@ -180,8 +180,8 @@ CreateLayerAccessHotkey(layerIndex, layerAccessKey)
 	fnUp := Func("onLayerAccessKey").Bind(layerIndex, 1)
 	
 	; create hotKey
-	HotKey %hotkeyName%, %fnDn%
-	HotKey %hotkeyName% up, %fnUp%
+	HotKey hotkeyName, fnDn
+	HotKey hotkeyName up, fnUp
 }
 
 
@@ -224,8 +224,8 @@ createHotkey(key)
 		; create hotKey
 		; add '*' to hotkeyname (hotkey will work even when other mods are pressed)
 		hotkeyName := '*' . sc
-		HotKey %hotkeyName%, %fnDn%
-		HotKey %hotkeyName% up, %fnUp%
+		HotKey hotkeyName, fnDn
+		HotKey hotkeyName up, fnUp
 		
 		; remember we created this
 		DefinedHotKeys[sc] := 1
@@ -251,8 +251,8 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
     if (!InStr('!', pressedModToFilterOut) && GetKeyState("Alt")) 
 		mods .= "!"
 
-    OutputDebug("Send1 %mods%%toSend%")
-	Send %mods%%toSend%
+    OutputDebug("Send1 " . mods . toSend)
+	Send "%mods%%toSend%"
 }
 
 
@@ -302,7 +302,7 @@ onLayerKey(key, up)
             if (A_PriorKey == keyName) {
                 if (up) {
                     OutputDebug("Send2 {Blind}{%key% Up}")
-                    Send {Blind}{%key% Up}
+                    Send "{Blind}{%key% Up}"
                     
                     if (keyName == "LShift" || keyName == "RShift") {
                         if (nbrShiftDown == 1) {
@@ -314,7 +314,7 @@ onLayerKey(key, up)
                     }
                     
                     OutputDebug("Send3 %keyAndMods.key% DownTemp")
-                    Send {Blind}{%keyAndMods.key% DownTemp}
+                    Send "{Blind}{%keyAndMods.key% DownTemp}"
                     generatingDualModeKey := 1
                 }
                 else {
@@ -328,11 +328,11 @@ onLayerKey(key, up)
             if (keyAndMods.isDualMode) {
                 if (up) {
                     OutputDebug("Send4.1 %key% Up")
-                    Send {Blind}{%key% Up}
+                    Send "{Blind}{%key% Up}"
                     ;keyAndMods.dualModeKeyDown := 0
                 } else {
                     OutputDebug("Send4.2 %key% DownTemp")
-                    Send {Blind}{%key% DownTemp}
+                    Send "{Blind}{%key% DownTemp}"
                     ;keyAndMods.dualModeKeyDown := key
                     dualModeKeyDown := 1
                 }
@@ -371,8 +371,8 @@ onLayerKey(key, up)
 				; simulate Send Blind, but w/o Shift
 				simulateSendBlind(mods, toSend, '+')
             } else {
-                OutputDebug("Send5 {Blind}%mods%%toSend%")
-				Send {Blind}%mods%%toSend%
+                OutputDebug("Send5 {Blind}" . mods . toSend)
+				Send "{Blind}" . mods . toSend
             }
 		}
     }
@@ -380,9 +380,9 @@ onLayerKey(key, up)
 		; MsgBox "cannot find key %key% on layer %CurrentLayer.index%"
         ; just send the original key
         if (up)
-            Send {Blind}{%key% up}
+            Send "{Blind}{%key% up}"
         else
-            Send {Blind}{%key% DownTemp}
+            Send "{Blind}{%key% DownTemp}"
 	}
 	
 }
@@ -403,7 +403,7 @@ onLayerAccessKey(layerIndex, up)
 		; no key was hit after this layer access key was released, 
 		; this is just a press/release of it, send it if so configured
 		if (LastKeyWasLayerAccess && !CurrentLayer.blockAccessKey) {
-			Send {Blind}{%CurrentLayer.accessKey%}
+			Send "{Blind}{%CurrentLayer.accessKey%}"
 		}
 		
 		; reset to main layer
