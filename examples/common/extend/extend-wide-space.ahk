@@ -3,17 +3,92 @@
 
 #include extendDoKey.ahk
 
+;; 1 => F1
+sc039 & sc002::dokey("F1", 0)
+sc039 & sc002 up::dokey("F1", 1)
+
+;; 2 => F2
+sc039 & sc003::dokey("F2", 0)
+sc039 & sc003 up::dokey("F2", 1)
+
+;; 3 => F3
+sc039 & sc004::dokey("F3", 0)
+sc039 & sc004 up::dokey("F3", 1)
+
+;; 4 => F4
+sc039 & sc005::dokey("F4", 0)
+sc039 & sc005 up::dokey("F4", 1)
+
+;; 5 => F5
+sc039 & sc006::dokey("F5", 0)
+sc039 & sc006 up::dokey("F5", 1)
+
+;; 6 => F6
+sc039 & sc007::dokey("F6", 0)
+sc039 & sc007 up::dokey("F6", 1)
+
+;; 7 => F7
+sc039 & sc008::dokey("F7", 0)
+sc039 & sc008 up::dokey("F7", 1)
+
+;; 8 => F8
+sc039 & sc009::dokey("F8", 0)
+sc039 & sc009 up::dokey("F8", 1)
+
+;; 9 => F9
+sc039 & sc00A::dokey("F9", 0)
+sc039 & sc00A up::dokey("F9", 1)
+
+;; 0 => F10
+sc039 & sc00B::dokey("F10", 0)
+sc039 & sc00B up::dokey("F10", 1)
+
+;; - => F11
+sc039 & sc00C::dokey("F11", 0)
+sc039 & sc00C up::dokey("F11", 1)
+
+;; = => F12
+sc039 & sc00D::dokey("F12", 0)
+sc039 & sc00D up::dokey("F12", 1)
+
 ;; q => Escape
 sc039 & sc010::dokey("Escape", 0)
 sc039 & sc010 up::dokey("Escape", 1)
 
-;; s => Shift
-sc039 & sc01F::dokey("Shift", 0)
-sc039 & sc01F up::dokey("Shift", 1)
+;; w => }^{a
+sc039 & sc011::dokey("}^{a", 0)
+sc039 & sc011 up::dokey("}^{a", 1)
 
-;; f => Control
-sc039 & sc021::dokey("Control", 0)
-sc039 & sc021 up::dokey("Control", 1)
+;; e => }^{s
+sc039 & sc012::dokey("}^{s", 0)
+sc039 & sc012 up::dokey("}^{s", 1)
+
+;; r => }^{w
+sc039 & sc013::dokey("}^{w", 0)
+sc039 & sc013 up::dokey("}^{w", 1)
+
+;; a => tab
+sc039 & sc01E::dokey("tab", 0)
+sc039 & sc01E up::dokey("tab", 1)
+
+;; s => Control
+;sc039 & sc01F::dokey("Control", 0)
+;sc039 & sc01F up::dokey("Control", 1)
+
+;; d => Alt
+;sc039 & sc020::dokey("Alt", 0)
+;sc039 & sc020 up::dokey("Alt", 1)
+
+;; d => Control
+sc039 & sc020::dokey("Control", 0)
+sc039 & sc020 up::dokey("Control", 1)
+
+
+;; f => Shift
+sc039 & sc021::dokey("Shift", 0)
+sc039 & sc021 up::dokey("Shift", 1)
+
+
 
 ;; u => PgUp
 sc039 & sc016::dokey("PgUp", 0)
@@ -94,6 +169,10 @@ sc039 & sc035 up::dokey("}^{v", 1)
 ;; LShift => Space
 sc039 & sc02A::dokey("Space", 0)
 sc039 & sc02A up::dokey("Space", 1)
+
+;; rshift => enter
+sc039 & sc136::dokey("Enter", 0)
+sc039 & sc136 up::dokey("Enter", 1)
 
 ;;space => space
 sc039::dokey("Space", 0)
