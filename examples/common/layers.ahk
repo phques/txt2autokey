@@ -65,7 +65,7 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	; get layer def
 	layerDef := layers[layerIndex]
 	if (!layerDef) {
-		MsgBox "AddMappings, layer '%layerIndex%' does not exist"
+		MsgBox "AddMappings, layer " . layerIndex . " does not exist"
 		ExitApp
 	}
 
@@ -181,7 +181,7 @@ CreateLayerAccessHotkey(layerIndex, layerAccessKey)
 	
 	; create hotKey
 	HotKey hotkeyName, fnDn
-	HotKey hotkeyName up, fnUp
+	HotKey hotkeyName . " up", fnUp
 }
 
 
@@ -225,7 +225,7 @@ createHotkey(key)
 		; add '*' to hotkeyname (hotkey will work even when other mods are pressed)
 		hotkeyName := '*' . sc
 		HotKey hotkeyName, fnDn
-		HotKey hotkeyName up, fnUp
+		HotKey hotkeyName . " up", fnUp
 		
 		; remember we created this
 		DefinedHotKeys[sc] := 1
@@ -238,7 +238,7 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 {
 
 	; add modifiers for shift / control if they are currently pressed
-	; might come into conflict with %mods% from key def though !?
+	; might come into conflict with mods from key def though !?
 ;	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
     if (!InStr('+', pressedModToFilterOut) && GetKeyState("Shift")) 
 		mods .= "+"
@@ -252,14 +252,15 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 		mods .= "!"
 
     OutputDebug("Send1 " . mods . toSend)
-	Send "%mods%%toSend%"
+	Send mods . toSend
 }
 
 
 ; called by a hotkey to handle a key press/release 
 onLayerKey(key, up)
 {
-
+    OutputDebug("onLayerKey " . key . " up = " . up)
+    
 	if (!CurrentLayer)
 		return
 
@@ -301,8 +302,8 @@ onLayerKey(key, up)
             keyName := GetKeyName(key)
             if (A_PriorKey == keyName) {
                 if (up) {
-                    OutputDebug("Send2 {Blind}{%key% Up}")
-                    Send "{Blind}{%key% Up}"
+                    OutputDebug("Send2 {Blind}{" . key . " Up}")
+                    Send "{Blind}{" . key . " Up}"
                     
                     if (keyName == "LShift" || keyName == "RShift") {
                         if (nbrShiftDown == 1) {
@@ -313,8 +314,8 @@ onLayerKey(key, up)
                         }
                     }
                     
-                    OutputDebug("Send3 %keyAndMods.key% DownTemp")
-                    Send "{Blind}{%keyAndMods.key% DownTemp}"
+                    OutputDebug("Send3 " . keyAndMods.key . " DownTemp")
+                    Send "{Blind}{" . keyAndMods.key . " DownTemp}"
                     generatingDualModeKey := 1
                 }
                 else {
@@ -327,12 +328,12 @@ onLayerKey(key, up)
         if (!generatingDualModeKey) {
             if (keyAndMods.isDualMode) {
                 if (up) {
-                    OutputDebug("Send4.1 %key% Up")
-                    Send "{Blind}{%key% Up}"
+                    OutputDebug("Send4.1 " . key . " Up")
+                    Send "{Blind}{" . key . " Up}"
                     ;keyAndMods.dualModeKeyDown := 0
                 } else {
-                    OutputDebug("Send4.2 %key% DownTemp")
-                    Send "{Blind}{%key% DownTemp}"
+                    OutputDebug("Send4.2 " . key . " DownTemp")
+                    Send "{Blind}{" . key . " DownTemp}"
                     ;keyAndMods.dualModeKeyDown := key
                     dualModeKeyDown := 1
                 }
@@ -344,9 +345,9 @@ onLayerKey(key, up)
 		mods := keyAndMods.mods
 		
         if (up)
-            toSend := "{%keyAndMods.key% Up}"
+            toSend := "{" . keyAndMods.key . " Up}"
         else
-            toSend := "{%keyAndMods.key% DownTemp}"
+            toSend := "{" . keyAndMods.key . " DownTemp}"
         
         SetKeyDelay -1
 		
@@ -377,12 +378,11 @@ onLayerKey(key, up)
 		}
     }
 	else {
-		; MsgBox "cannot find key %key% on layer %CurrentLayer.index%"
         ; just send the original key
         if (up)
-            Send "{Blind}{%key% up}"
+            Send "{Blind}{" . key . " up}"
         else
-            Send "{Blind}{%key% DownTemp}"
+            Send "{Blind}{" . key . " DownTemp}"
 	}
 	
 }
@@ -403,7 +403,7 @@ onLayerAccessKey(layerIndex, up)
 		; no key was hit after this layer access key was released, 
 		; this is just a press/release of it, send it if so configured
 		if (LastKeyWasLayerAccess && !CurrentLayer.blockAccessKey) {
-			Send "{Blind}{%CurrentLayer.accessKey%}"
+			Send "{Blind}{" . CurrentLayer.accessKey . "}"
 		}
 		
 		; reset to main layer

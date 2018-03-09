@@ -1,7 +1,7 @@
 ; common hotkeys
 
 ; required includes
-#include winlistMenu.ahk
+;#include winlistMenu.ahk
 #include clipboardToBash.ahk
 
 
@@ -11,21 +11,21 @@
 +^sc002:: GroupActivate Explorer
 
 ; +^2 
-+^sc003:: GroupActivate NotepadPP
++^sc003:: GroupActivate "NotepadPP"
 
 ; +^3 
-+^sc004:: GroupActivate Chrome
++^sc004:: GroupActivate "Chrome"
                          
 ; +^4                    
-+^sc005:: GroupActivate DevStudio
++^sc005:: GroupActivate "DevStudio"
 
 ; +^5,6 are used in Windows Explorer
 
 ; +^7 
-+^sc008:: GroupActivate EnvMgr
++^sc008:: GroupActivate "EnvMgr"
 
 ; +^8 
-+^sc009:: GroupActivate PLineClient
++^sc009:: GroupActivate "PLineClient"
 
 
 ;------- help image & suspend hotkeys
@@ -34,6 +34,7 @@
 +^sc00A::DisplayHelpImageToggle()
 
 ; +^0 qwerty
+#SuspendExempt
 +^sc00B::
     Suspend Toggle
     if (A_IsSuspended)

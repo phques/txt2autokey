@@ -69,29 +69,25 @@ pkl_displayHelpImage( activate := 0 )
 			guiActive := 1
 		}
 	}
-		
+	
+
 	if ( activate == 1 ) {
 		if ( yPosition == -1 ) {
 			yPosition :=  A_ScreenHeight - ImgHeight - 60
 		}
-		; Gui, 2:+AlwaysOnTop -Border +ToolWindow
-		; Gui, 2:margin, 0, 0
-		; Gui, 2:Add, Pic, xm vHelperImage
-		; GuiControl,2:, HelperImage, *w%ImgWidth% *h%ImgHeight% %ImgsDir%\layer1.png
-		; Gui, 2:Show, xCenter y%yPosition% AutoSize NA, pklHelperImage
 		wnd := GuiCreate("+AlwaysOnTop -Border +ToolWindow", "pklHelperImage")
 		wnd.MarginX := 0
 		wnd.MarginY := 0
-		;wnd.Add("Pic", "xm", "*w%ImgWidth% *h%ImgHeight%", "%ImgsDir%\layer1.png")
 		imgCtrl := wnd.Add("Pic", "xm", Format("{1}\layer1.png",ImgsDir))
 		wnd.Show(Format("xCenter y{1} AutoSize NA", yPosition))
         
-		SetTimer Func("pkl_OnDisplayTimer"), 200
+		SetTimer "pkl_OnDisplayTimer", 200
 
 	} else if ( activate == -1 ) {
-		SetTimer , Off
+		SetTimer "pkl_OnDisplayTimer", "Off"
         if (wnd) {
-            wnd.Destroy
+            wnd.Destroy()
+            wnd := 0
             imgCtrl := 0
         }
 		return

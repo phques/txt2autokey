@@ -3,7 +3,7 @@ doKey(k, up)
 {
 	SetKeyDelay -1
 	if (up)
-		Send "{Blind}{%k% Up}"
+		Send "{Blind}{" . k . " Up}"
 	else
-		Send "{Blind}{%k% DownTemp}"
+		Send "{Blind}{" . k . " DownTemp}"
 }

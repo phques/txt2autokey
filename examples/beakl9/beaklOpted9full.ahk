@@ -24,20 +24,11 @@ AddMappings(1, 1, 'z x c v b  n m , . /',    '? ! `` @ X W M L P V')
 AddMappings(1, 1, 'Capslock', '-')
 
 
-;AddMappings(1, 1, '@LCtrl', 'X')
-;AddMappings(1, 1, '@LShift', 'X')
-;AddMappings(1, 1, '@LShift @LCtrl', 'X Y')
-
-
 AddMappings(1, 0, '1 2 3 4 5  6 7 8 9 0',    '4 0 1 2 3  7 6 5 9 8')
 AddMappings(1, 0, 'q w e r t  y u i o p',    'j h o u k  g c r f z')
 AddMappings(1, 0, "a s d f g  h j k l `; '", 'q i e a y  d s t n b `;')
 AddMappings(1, 0, 'z x c v b  n m , . /',    "/ , ' . x  w m l p v")
 AddMappings(1, 0, 'Capslock', '-')
-
-;AddMappings(1, 0, '@LCtrl', 'x')
-;AddMappings(1, 0, '@LShift', 'x')
-;AddMappings(1, 0, '@LShift @LCtrl', 'x y')
 
 
 ; -- layer 2 --
@@ -70,8 +61,8 @@ global ImgWidth := 240
 global ImgHeight := 74
 global CenterOnCurrWndMonitor := 1
 
-; #include ../common/groups.ahk
-; #include ../common/clipboardToBash.ahk
+#include ../common/groups.ahk
+#include ../common/clipboardToBash.ahk
 #include ../common/fromPkl/pkl_guiLayers.ahk
 
 DisplayHelpImage()
@@ -82,5 +73,5 @@ return
 ; other hotkey defs
 
 #include ../common/extend/extendSpace.ahk
-; #include ../common/commonHotkeys.ahk
+#include ../common/commonHotkeys.ahk
 
