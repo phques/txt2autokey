@@ -1,85 +1,78 @@
 ; builds a menu of active windows 
 ; selecting a menu entry will activate that window
-
-global menuItems := {}
+global itemsWinids := {}
 
 OpenWinlistMenu()
 {
-    menuItems := {}
+    ; create menu
+    menus := []
+    itemsWinids := {}
+    
+    menus.push(createWinMenu('Explorer', 
+        ['ahk_class CabinetWClass', 
+        'ahk_exe 2xExplorer.exe', 
+        'ahk_exe xplorer2_lite.exe']))
+    menus.push(createWinMenu('NotepadPP', ['ahk_class Notepad++']))
+    menus.push(createWinMenu('Chrome', ['ahk_exe chrome.exe']))
+    menus.push(createWinMenu('DevStudio', ['ahk_exe devenv.exe']))
+    menus.push(createWinMenu('PLine', 
+        ['ahk_exe EnvironmentManager.exe',
+        'ahk_exe pragmageo.exe',
+        'ahk_exe pragmaview.exe',
+        'ahk_exe pragmaswitch.exe',
+        'ahk_exe pconfig.exe',
+        'ahk_exe incmgr.exe']))
+    menus.push(createWinMenu('ICCP', 
+        ['ahk_exe Iccp.ObjectMgr.exe',
+        'ahk_exe Iccp.Translator.exe',
+        'ahk_exe Iccp.Filter.exe',
+        'ahk_exe Iccp.BusinessLogic.exe',
+        'ahk_exe liveDataSimul.exe']))
 
-    ; delete any old menu entries
-    Menu mymenu, add, dummy, onMenuItem
-    Menu mymenu, deleteAll
-    
-    createWinMenu('Explorer', 'ahk_class CabinetWClass')
-    createWinMenu('Explorer', 'ahk_exe 2xExplorer.exe')
-    createWinMenu('Explorer', 'ahk_exe xplorer2_lite.exe')
-    createWinMenu('NotepadPP', 'ahk_class Notepad++')
-    createWinMenu('Chrome', 'ahk_exe chrome.exe')
-    createWinMenu('DevStudio', 'ahk_exe devenv.exe')
-    
-    createWinMenu('PLine', 'ahk_exe EnvironmentManager.exe')
-    createWinMenu('PLine', 'ahk_exe pragmageo.exe')
-    createWinMenu('PLine', 'ahk_exe pragmaview.exe')
-    createWinMenu('PLine', 'ahk_exe pragmaswitch.exe')
-    createWinMenu('PLine', 'ahk_exe pconfig.exe')
-    createWinMenu('PLine', 'ahk_exe incmgr.exe')
-    
-    createWinMenu('ICCP', 'ahk_exe Iccp.ObjectMgr.exe')
-    createWinMenu('ICCP', 'ahk_exe Iccp.Translator.exe')
-    createWinMenu('ICCP', 'ahk_exe Iccp.Filter.exe')
-    createWinMenu('ICCP', 'ahk_exe Iccp.BusinessLogic.exe')
-    createWinMenu('ICCP', 'ahk_exe liveDataSimul.exe')
+    myMenu := MenuCreate()
+    for idx, menuItem in menus {
+        myMenu.Add(menuItem.title, menuItem.menu)
+    }
 
-    Menu mymenu, show
+    ; show it
+    mymenu.Show()
+
+    ; destroy menu / submenus
+    for idx, menuItem in menus {
+        menuItem.menu.Delete()
+    }
+    myMenu.Delete()
 }
 
-createWinMenu(submenuName, wintitle)
+createWinMenu(submenuName, wintitles)
 {
-    winList := WinGetList(wintitle)
-    if (menuItems[submenuName]) {
-        winids := menuItems[submenuName]
-    }
-    else {
-        winids := []
-        ; delete any old menu entries
-        Menu %submenuName%, add, dummy, onMenuItem
-        Menu %submenuName%, deleteAll
-    }
-
-    For index, winid in winList {
-        title := WinGetTitle('ahk_id %winid%')
-        if (strlen(title)) {
-            Menu %submenuName%, add, %title%, onMenuItem
-            winids.push(winid)
+    ret := {}
+    ret.title := submenuName
+    ret.menu := MenuCreate()
+    
+    for idx1, wintitle in wintitles {
+        winids := WinGetList(wintitle)
+        For idx2, winid in winids {
+            title := WinGetTitle('ahk_id ' . winid)
+            if (strlen(title)) {
+                if (!itemsWinids[submenuName])
+                    itemsWinids[submenuName] := []
+                itemsWinids[submenuName].Push(winid)
+                
+                ret.menu.Add(title, "onMenuItem")
+            }
         }
-        
     }
     
-    menuItems[submenuName] := winids
-    
-    ; if only 1 menu entry, dont create a submenu
-    if (winids.Length == 1)
-        Menu mymenu, add, %submenuName%, onMenuItem
-    else if (winids.Length)
-        Menu mymenu, add, %submenuName%, :%submenuName%
+    return ret
 }
 
-onMenuItem(ItemName, ItemPos, MenuName)
+onMenuItem(ItemName, ItemPos, Menu)
 {
-    if (MenuName == 'mymenu') {
-        ; this is a single entry placed directly on the main menu
-        ; but its info is saved under the 'submenu' name, at pos1
-        MenuName := ItemName  ; submenu name is = itemname
-        ItemPos := 1
-    }
-        
-    ; get window ids list of this submenu and then the winId for the selected item
-    itemWinList := menuItems[MenuName]
-    winid := itemWinList[ItemPos]
     ; activate the selected window
-    WinActivate 'ahk_id %winid%'
+    winid := itemsWinids[ItemName][ItemPos]
+    WinActivate 'ahk_id ' . winid
 }
 
 
-
+OpenWinlistMenu()

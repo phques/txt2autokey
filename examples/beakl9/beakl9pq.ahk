@@ -67,7 +67,7 @@ AddMappings(2, 0, 'Capslock', '-')
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\beakl9"
+global ImgsDir := A_ScriptDir . "\imgs\beakl9"
 global ImgWidth := 240
 global ImgHeight := 74
 global CenterOnCurrWndMonitor := 1
