@@ -6,85 +6,21 @@
 
 #include extendDoKeyAlt.ahk
 
-;; 1 => F1
-LAlt & sc002::dokey("F1", 0)
-LAlt & sc002 up::dokey("F1", 1)
-
-;; 2 => F2
-LAlt & sc003::dokey("F2", 0)
-LAlt & sc003 up::dokey("F2", 1)
-
-;; 3 => F3
-LAlt & sc004::dokey("F3", 0)
-LAlt & sc004 up::dokey("F3", 1)
-
-;; 4 => F4
-LAlt & sc005::dokey("F4", 0)
-LAlt & sc005 up::dokey("F4", 1)
-
-;; 5 => F5
-LAlt & sc006::dokey("F5", 0)
-LAlt & sc006 up::dokey("F5", 1)
-
-;; 6 => F6
-LAlt & sc007::dokey("F6", 0)
-LAlt & sc007 up::dokey("F6", 1)
-
-;; 7 => F7
-LAlt & sc008::dokey("F7", 0)
-LAlt & sc008 up::dokey("F7", 1)
-
-;; 8 => F8
-LAlt & sc009::dokey("F8", 0)
-LAlt & sc009 up::dokey("F8", 1)
-
-;; 9 => F9
-LAlt & sc00A::dokey("F9", 0)
-LAlt & sc00A up::dokey("F9", 1)
-
-;; 0 => F10
-LAlt & sc00B::dokey("F10", 0)
-LAlt & sc00B up::dokey("F10", 1)
-
-;; - => F11
-LAlt & sc00C::dokey("F11", 0)
-LAlt & sc00C up::dokey("F11", 1)
-
-;; = => F12
-LAlt & sc00D::dokey("F12", 0)
-LAlt & sc00D up::dokey("F12", 1)
-
 ;; q => Escape
 LAlt & sc010::dokey("Escape", 0)
 LAlt & sc010 up::dokey("Escape", 1)
 
-;; w => }^{a
-LAlt & sc011::dokey("}^{a", 0)
-LAlt & sc011 up::dokey("}^{a", 1)
+;; a => Shift
+LAlt & sc01E::dokey("Shift", 0)
+LAlt & sc01E up::dokey("Shift", 1)
 
-;; e => }^{s
-LAlt & sc012::dokey("}^{s", 0)
-LAlt & sc012 up::dokey("}^{s", 1)
+;; s => Alt
+LAlt & sc01F::dokey("Alt", 0)
+LAlt & sc01F up::dokey("Alt", 1)
 
-;; r => }^{w
-LAlt & sc013::dokey("}^{w", 0)
-LAlt & sc013 up::dokey("}^{w", 1)
-
-;; a => Tab
-LAlt & sc01E::dokey("Tab", 0)
-LAlt & sc01E up::dokey("Tab", 1)
-
-;; s => Control
-LAlt & sc01F::dokey("Control", 0)
-LAlt & sc01F up::dokey("Control", 1)
-
-;; d => Alt
-LAlt & sc020::dokey("Alt", 0)
-LAlt & sc020 up::dokey("Alt", 1)
-
-;; f => Shift
-LAlt & sc021::dokey("Shift", 0)
-LAlt & sc021 up::dokey("Shift", 1)
+;; d => Control
+LAlt & sc020::dokey("Control", 0)
+LAlt & sc020 up::dokey("Control", 1)
 
 ;; y => PgUp
 LAlt & sc015::dokey("PgUp", 0)
@@ -165,14 +101,6 @@ LAlt & sc034 up::dokey("}^{v", 1)
 ;; / => }^{z
 LAlt & sc035::dokey("}^{z", 0)
 LAlt & sc035 up::dokey("}^{z", 1)
-
-;;  => Enter
-LAlt & sc02A::dokey("Enter", 0)
-LAlt & sc02A up::dokey("Enter", 1)
-
-;;  => Enter
-LAlt & sc136::dokey("Enter", 0)
-LAlt & sc136 up::dokey("Enter", 1)
 
 ;; sp => Enter
 LAlt & sc039::dokey("Enter", 0)

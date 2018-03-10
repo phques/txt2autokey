@@ -72,16 +72,16 @@ sc039 & sc01E::dokey("tab", 0)
 sc039 & sc01E up::dokey("tab", 1)
 
 ;; s => Control
-sc039 & sc01F::dokey("Control", 0)
-sc039 & sc01F up::dokey("Control", 1)
+;sc039 & sc01F::dokey("Control", 0)
+;sc039 & sc01F up::dokey("Control", 1)
 
 ;; d => Alt
 ;sc039 & sc020::dokey("Alt", 0)
 ;sc039 & sc020 up::dokey("Alt", 1)
 
 ;; d => Control
-;sc039 & sc020::dokey("Control", 0)
-;sc039 & sc020 up::dokey("Control", 1)
+sc039 & sc020::dokey("Control", 0)
+sc039 & sc020 up::dokey("Control", 1)
 
 
 ;; f => Shift
