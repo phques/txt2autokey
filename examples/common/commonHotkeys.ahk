@@ -1,7 +1,7 @@
 ; common hotkeys
 
 ; required includes
-;#include winlistMenu.ahk
+#include winlistMenu.ahk
 #include clipboardToBash.ahk
 
 
@@ -49,4 +49,4 @@ return
 #sc030::clipboardToBash()
 
 ; ctrl-menu
-;^sc15D::OpenWinlistMenu()
+^sc15D::OpenWinlistMenu()

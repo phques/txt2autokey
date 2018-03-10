@@ -251,7 +251,7 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
     if (!InStr('!', pressedModToFilterOut) && GetKeyState("Alt")) 
 		mods .= "!"
 
-    OutputDebug("Send1 " . mods . toSend)
+    ;OutputDebug("Send1 " . mods . toSend)
 	Send mods . toSend
 }
 
@@ -259,7 +259,7 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 ; called by a hotkey to handle a key press/release 
 onLayerKey(key, up)
 {
-    OutputDebug("onLayerKey " . key . " up = " . up)
+    ;OutputDebug("onLayerKey " . key . " up = " . up)
     
 	if (!CurrentLayer)
 		return
@@ -296,29 +296,40 @@ onLayerKey(key, up)
 
     if (keyAndMods) {
        
+        SetKeyDelay -1
+
         ; handling of dual mode keys (single click generates key, held down is modifier)
+        ; only works with modifier key!
         generatingDualModeKey := 0
         if (dualModeKeyDown) {
             keyName := GetKeyName(key)
             if (A_PriorKey == keyName) {
+                ; consecutive dual mode key events
                 if (up) {
-                    OutputDebug("Send2 {Blind}{" . key . " Up}")
+                    ;OutputDebug("Send2 {Blind}{" . key . " Up}")
+                    ; key was held down, send dummy 'up' to release it
                     Send "{Blind}{" . key . " Up}"
                     
+                    ; shift key used as hotkey
                     if (keyName == "LShift" || keyName == "RShift") {
+                        ; if this was the only shift key down,
+                        ; go back to non shifted level of the layer
                         if (nbrShiftDown == 1) {
-                            OutputDebug("removing shiftdown")
+                            ; OutputDebug("removing shiftdown")
                             keyAndMods := CurrentLayer.mappings[key]
                             ;pq leave this so we take care of removing Shift if out key is lowercase key
                             ;shiftDown := 0
                         }
                     }
                     
-                    OutputDebug("Send3 " . keyAndMods.key . " DownTemp")
+                    ;OutputDebug("Send3 " . keyAndMods.key . " DownTemp")
+                    ; send initial Down for the generated output,
+                    ; the Up event is generated normally bellow
                     Send "{Blind}{" . keyAndMods.key . " DownTemp}"
                     generatingDualModeKey := 1
                 }
                 else {
+                    ; key down repeat, skip
                     return
                 }
             }
@@ -327,12 +338,16 @@ onLayerKey(key, up)
         
         if (!generatingDualModeKey) {
             if (keyAndMods.isDualMode) {
+                ; non consecutive dual mode key event
                 if (up) {
-                    OutputDebug("Send4.1 " . key . " Up")
+                    ; OutputDebug("Send4.1 " . key . " Up")
+                    ; key released after being used as modifier
+                    ; key was held down, send dummy 'up' to release it
                     Send "{Blind}{" . key . " Up}"
                     ;keyAndMods.dualModeKeyDown := 0
                 } else {
-                    OutputDebug("Send4.2 " . key . " DownTemp")
+                    ; OutputDebug("Send4.2 " . key . " DownTemp")
+                    ; send initial key down of modifier
                     Send "{Blind}{" . key . " DownTemp}"
                     ;keyAndMods.dualModeKeyDown := key
                     dualModeKeyDown := 1
@@ -349,8 +364,7 @@ onLayerKey(key, up)
         else
             toSend := "{" . keyAndMods.key . " DownTemp}"
         
-        SetKeyDelay -1
-		
+	
 		;; Special handling for Alt, cant use Send Blind
 		; filter out the Alt, but manually pass through Shift / Ctrl
 		if (InStr(accessKey, "Alt")) {
@@ -372,7 +386,7 @@ onLayerKey(key, up)
 				; simulate Send Blind, but w/o Shift
 				simulateSendBlind(mods, toSend, '+')
             } else {
-                OutputDebug("Send5 {Blind}" . mods . toSend)
+                ; OutputDebug("Send5 {Blind}" . mods . toSend)
 				Send "{Blind}" . mods . toSend
             }
 		}
