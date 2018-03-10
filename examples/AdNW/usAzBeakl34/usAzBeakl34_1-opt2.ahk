@@ -37,7 +37,7 @@ CreateSymbolsLayer(2, "Space", 0)
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\v1_opt2"
+global ImgsDir := A_ScriptDir . '\imgs\v1_opt2'
 global ImgWidth := 284
 global ImgHeight := 50
 global CenterOnCurrWndMonitor := 1

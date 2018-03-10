@@ -61,7 +61,7 @@ AddMappings(2, 0, 'sc029', 'AltTab')
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\pqanglez"
+global ImgsDir := A_ScriptDir . "\imgs\pqanglez"
 global ImgWidth := 250
 global ImgHeight := 66
 global CenterOnCurrWndMonitor := 1

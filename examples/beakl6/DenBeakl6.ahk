@@ -59,7 +59,7 @@ AddMappings(1, 0, qwertyMask30, layer1)
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\v1_opt2"
+global ImgsDir := A_ScriptDir . "imgs\v1_opt2"
 global ImgWidth := 202
 global ImgHeight := 56
 global CenterOnCurrWndMonitor := 1
@@ -68,7 +68,7 @@ global CenterOnCurrWndMonitor := 1
 #include ../common/clipboardToBash.ahk
 #include ../common/fromPkl/pkl_guiLayers.ahk
 
-DisplayHelpImage()
+; DisplayHelpImage()
 return
 
 ;------

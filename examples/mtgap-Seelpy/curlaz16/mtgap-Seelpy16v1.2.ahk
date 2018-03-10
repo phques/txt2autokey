@@ -29,8 +29,8 @@ CreateLayer(1)
 ; we have Sp on the layers, so block Space=>space output
 CreateLayer(2, 'Space', 1)
 
-AddMappings(1, fromQwerty, layer1)
-AddMappings(2, fromQwerty, layer2)
+AddMappings(1, 0, fromQwerty, layer1)
+AddMappings(2, 0, fromQwerty, layer2)
 
 
 ;------
@@ -39,7 +39,7 @@ AddMappings(2, fromQwerty, layer2)
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs\v1.2"
+global ImgsDir := A_ScriptDir . "\imgs\v1.2"
 global ImgWidth := 248
 global ImgHeight := 46
 global CenterOnCurrWndMonitor := 1

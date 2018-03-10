@@ -44,7 +44,7 @@ CreateLayerAccessHotkey(2, "RAlt")
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := "%A_ScriptDir%\imgs"
+global ImgsDir :=  A_ScriptDir . "\imgs"
 global ImgWidth := 250
 global ImgHeight := 66
 global CenterOnCurrWndMonitor := 1
@@ -53,7 +53,7 @@ global CenterOnCurrWndMonitor := 1
 #include ../common/clipboardToBash.ahk
 #include ../common/fromPkl/pkl_guiLayers.ahk
 
-DisplayHelpImage()
+;DisplayHelpImage()
 return
 
 ;------
