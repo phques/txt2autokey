@@ -18,7 +18,6 @@ global DefinedHotKeys := {} ; keep track of already defined hotkeys
 ; layer[1] is normal/main layer
 global CurrentLayer := {}
 global LastKeyWasLayerAccess := 0 ;; true if last key was a layer access key
-global dualModeKeyDown := 0     ;; true when we press a dualMode key
 
 ; If we remap a key to be shift, GetKeyState(Shift) returns false sometimes after 
 ; another has been pressed. So we will check for actual fake shift key also
@@ -82,10 +81,9 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	
 	if (froms.Length != tos.Length) 
 	{
-        msg := Format("AddMappings, From/to not same length {} {}!`n{} `n{}"
+		MsgBox % Format("AddMappings, From/to not same length {} {}!`n{} `n{}"
 						, froms.Length, tos.Length
 						, _from, _to, )
-		MsgBox(msg)
 						; , SubStr(_from, 1, 16), SubStr(_to, 1, 16))
 		ExitApp
 	}
@@ -102,14 +100,6 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		if (t == 'SP')
 			t := 'Space'
 			
-        ; leading @ indicates dual mode key (in 'from')
-        ; (single click generates 'to' key, held down is modifier)
-        isDualModeKey := 0
-        if (SubStr(f,1,1) == '@') {
-            f := SubStr(f,2) ; strip @
-            isDualModeKey := 1
-        }
-    
 		splitFrom := splitModsAndKey(f)
 		splitTo := splitModsAndKey(t)
 
@@ -118,9 +108,7 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		shiftedChars .='~!@#$`%^&*()_+{}|:"<>?'
 		if (InStr(shiftedChars, splitTo.key))
 			splitTo.isShifted := 1
-
-        splitTo.isDualMode := isDualModeKey
-            
+			
 		; create hotkey for 'from' key if required
 		; note we DONT use modifiers, that's what layers are for !
 		createHotkey(splitFrom.key)
@@ -150,7 +138,6 @@ MarkMappingAsShifted(layerIndex, fromkey, toKey)
 		}
 	}
 }
-
 
 ; call this so onLayerKey() can detect that a key mapped to 'Shift' is held down 
 ; (for some reason we loose the 'shift is down' status after the 1st "shift-XX")
@@ -239,19 +226,15 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 
 	; add modifiers for shift / control if they are currently pressed
 	; might come into conflict with %mods% from key def though !?
-;	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
-    if (!InStr('+', pressedModToFilterOut) && GetKeyState("Shift")) 
+	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
 		mods .= "+"
 		
-;	if (pressedModToFilterOut != '^' &&   GetKeyState("Ctrl"))
-    if (!InStr('^', pressedModToFilterOut) && GetKeyState("Ctrl")) 
+	if (pressedModToFilterOut != '^' &&   GetKeyState("Ctrl"))
 		mods .= "^"
 
-;	if (pressedModToFilterOut != '!' &&   GetKeyState("Alt"))
-    if (!InStr('!', pressedModToFilterOut) && GetKeyState("Alt")) 
+	if (pressedModToFilterOut != '!' &&   GetKeyState("Alt"))
 		mods .= "!"
 
-    OutputDebug("Send1 %mods%%toSend%")
 	Send %mods%%toSend%
 }
 
@@ -259,7 +242,6 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 ; called by a hotkey to handle a key press/release 
 onLayerKey(key, up)
 {
-
 	if (!CurrentLayer)
 		return
 
@@ -270,23 +252,12 @@ onLayerKey(key, up)
 	accessKey := CurrentLayer.accessKey
 	
 	shiftDown := 0
-    nbrShiftDown := 0
-	if (GetKeyState("LShift")) {
+	if (GetKeyState("Shift")) 
 		shiftDown :=  1
-        nbrShiftDown += 1
-	} 
-    if (GetKeyState("RShift")) {
+	else if (ShiftKey1 && GetKeyState(ShiftKey1, 'P'))
 		shiftDown :=  1
-        nbrShiftDown += 1
-    }
-    if (ShiftKey1 && GetKeyState(ShiftKey1, 'P')) {
+	else if (ShiftKey2 && GetKeyState(ShiftKey2, 'P'))
 		shiftDown :=  1
-        nbrShiftDown += 1
-    } 
-    if (ShiftKey2 && GetKeyState(ShiftKey2, 'P')) {
-		shiftDown :=  1
-        nbrShiftDown += 1
-    }
 	
 	if (shiftDown)
 		keyAndMods := CurrentLayer.mappingsSh[key]
@@ -294,51 +265,6 @@ onLayerKey(key, up)
 		keyAndMods := CurrentLayer.mappings[key]
 
     if (keyAndMods) {
-       
-        ; handling of dual mode keys (single click generates key, held down is modifier)
-        generatingDualModeKey := 0
-        if (dualModeKeyDown) {
-            keyName := GetKeyName(key)
-            if (A_PriorKey == keyName) {
-                if (up) {
-                    OutputDebug("Send2 {Blind}{%key% Up}")
-                    Send {Blind}{%key% Up}
-                    
-                    if (keyName == "LShift" || keyName == "RShift") {
-                        if (nbrShiftDown == 1) {
-                            OutputDebug("removing shiftdown")
-                            keyAndMods := CurrentLayer.mappings[key]
-                            ;pq leave this so we take care of removing Shift if out key is lowercase key
-                            ;shiftDown := 0
-                        }
-                    }
-                    
-                    OutputDebug("Send3 %keyAndMods.key% DownTemp")
-                    Send {Blind}{%keyAndMods.key% DownTemp}
-                    generatingDualModeKey := 1
-                }
-                else {
-                    return
-                }
-            }
-            dualModeKeyDown := 0
-        } 
-        
-        if (!generatingDualModeKey) {
-            if (keyAndMods.isDualMode) {
-                if (up) {
-                    OutputDebug("Send4.1 %key% Up")
-                    Send {Blind}{%key% Up}
-                    ;keyAndMods.dualModeKeyDown := 0
-                } else {
-                    OutputDebug("Send4.2 %key% DownTemp")
-                    Send {Blind}{%key% DownTemp}
-                    ;keyAndMods.dualModeKeyDown := key
-                    dualModeKeyDown := 1
-                }
-                return
-             }
-        }
         
         ; modifiers need to be *before* the {}, ie ^{v}  not {^v}
 		mods := keyAndMods.mods
@@ -354,30 +280,22 @@ onLayerKey(key, up)
 		; filter out the Alt, but manually pass through Shift / Ctrl
 		if (InStr(accessKey, "Alt")) {
 			; simulate Send Blind, but w/o Alt 
-            skip := '!'
-            
-            if (shiftDown && !keyAndMods.isShifted)
-                ; AND w/o shift
-                skip += '+'
-
-			simulateSendBlind(mods, toSend, skip)
+			simulateSendBlind(mods, toSend, '!')
 		}
 		else {
 			; not Alt access key, can use Send Blind
 			
 			; Using Send blind with +a::/ would be like Send +/ which results in ?
 			; since Shift is currently pressed
-			if (shiftDown && !keyAndMods.isShifted) {
+			if (shiftDown && !keyAndMods.isShifted)
 				; simulate Send Blind, but w/o Shift
 				simulateSendBlind(mods, toSend, '+')
-            } else {
-                OutputDebug("Send5 {Blind}%mods%%toSend%")
+			else
 				Send {Blind}%mods%%toSend%
-            }
 		}
     }
 	else {
-		; MsgBox "cannot find key %key% on layer %CurrentLayer.index%"
+		;MsgBox "cannot find key %key% on layer %CurrentLayer.index%"
         ; just send the original key
         if (up)
             Send {Blind}{%key% up}

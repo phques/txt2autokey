@@ -12,7 +12,7 @@ global HasAltGr := 1
 global CenterOnCurrWndMonitor := 1
 
 ; code only includes
-#include ../common/groups.ahk
+;#include ../common/groups.ahk
 #include ../common/clipboardToBash.ahk
 #include ../common/fromPkl/pkl_gui.ahk
 
@@ -28,6 +28,6 @@ return
 
 ; #include ../common/capsLock.ahk
 #include ../common/extend/extend.ahk
-#include ../common/commonHotkeys.ahk
+;#include ../common/commonHotkeys.ahk
 #include extraKeyDefs.ahk
 

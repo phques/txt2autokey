@@ -1,0 +1,9 @@
+ +^1 Explorer
+ +^2 NotepadPP
+ +^3 Chrome
+ +^4 DevStudio
+ +^7 EnvMgr
+ +^8 PLineClient
+ +^9 DisplayHelpImageToggle()
+ +^0 Suspend Toggle
+ ^Menu apps menu
