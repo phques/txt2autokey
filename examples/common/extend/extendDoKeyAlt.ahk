@@ -46,7 +46,7 @@ doKey(k, up)
 	
 	; do send
 	if (up)
-		Send prefix . '{' . k . ' up}'
+		Send prefix '{' k ' up}'
 	else
-		Send prefix . '{' . k . ' DownTemp}'
+		Send prefix '{' k ' DownTemp}'
 }

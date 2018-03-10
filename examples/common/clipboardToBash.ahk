@@ -11,9 +11,9 @@ clipboardToBash()
 		s2 := StrReplace(clip, "`\", "/")
 		head := SubStr(s2, 1, 1)
 		tail := SubStr(s2, 4)
-		StrLower head, %head%
+		head := StrLower(head)
 
-		clipboard := "'/mnt/%head%/%tail%'"
+		clipboard := "'/mnt/" head "/" tail "'"
 		MsgBox(clipboard)
 	} else {
 		MsgBox("Clipboard contents does not begin with 'x:'")

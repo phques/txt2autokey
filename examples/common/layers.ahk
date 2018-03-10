@@ -65,7 +65,7 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	; get layer def
 	layerDef := layers[layerIndex]
 	if (!layerDef) {
-		MsgBox "AddMappings, layer " . layerIndex . " does not exist"
+		MsgBox "AddMappings, layer " layerIndex " does not exist"
 		ExitApp
 	}
 
@@ -181,7 +181,7 @@ CreateLayerAccessHotkey(layerIndex, layerAccessKey)
 	
 	; create hotKey
 	HotKey hotkeyName, fnDn
-	HotKey hotkeyName . " up", fnUp
+	HotKey hotkeyName " up", fnUp
 }
 
 
@@ -223,9 +223,9 @@ createHotkey(key)
 
 		; create hotKey
 		; add '*' to hotkeyname (hotkey will work even when other mods are pressed)
-		hotkeyName := '*' . sc
+		hotkeyName := '*' sc
 		HotKey hotkeyName, fnDn
-		HotKey hotkeyName . " up", fnUp
+		HotKey hotkeyName " up", fnUp
 		
 		; remember we created this
 		DefinedHotKeys[sc] := 1
@@ -239,27 +239,24 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 
 	; add modifiers for shift / control if they are currently pressed
 	; might come into conflict with mods from key def though !?
-;	if (pressedModToFilterOut != '+' &&  GetKeyState("Shift"))
     if (!InStr('+', pressedModToFilterOut) && GetKeyState("Shift")) 
 		mods .= "+"
 		
-;	if (pressedModToFilterOut != '^' &&   GetKeyState("Ctrl"))
     if (!InStr('^', pressedModToFilterOut) && GetKeyState("Ctrl")) 
 		mods .= "^"
 
-;	if (pressedModToFilterOut != '!' &&   GetKeyState("Alt"))
     if (!InStr('!', pressedModToFilterOut) && GetKeyState("Alt")) 
 		mods .= "!"
 
-    ;OutputDebug("Send1 " . mods . toSend)
-	Send mods . toSend
+    ;OutputDebug("Send1 " mods toSend)
+	Send mods toSend
 }
 
 
 ; called by a hotkey to handle a key press/release 
 onLayerKey(key, up)
 {
-    ;OutputDebug("onLayerKey " . key . " up = " . up)
+    ;OutputDebug("onLayerKey " key " up = " up)
     
 	if (!CurrentLayer)
 		return
@@ -306,9 +303,9 @@ onLayerKey(key, up)
             if (A_PriorKey == keyName) {
                 ; consecutive dual mode key events
                 if (up) {
-                    ;OutputDebug("Send2 {Blind}{" . key . " Up}")
+                    ;OutputDebug("Send2 {Blind}{" key " Up}")
                     ; key was held down, send dummy 'up' to release it
-                    Send "{Blind}{" . key . " Up}"
+                    Send "{Blind}{" key " Up}"
                     
                     ; shift key used as hotkey
                     if (keyName == "LShift" || keyName == "RShift") {
@@ -322,10 +319,10 @@ onLayerKey(key, up)
                         }
                     }
                     
-                    ;OutputDebug("Send3 " . keyAndMods.key . " DownTemp")
+                    ;OutputDebug("Send3 " keyAndMods.key " DownTemp")
                     ; send initial Down for the generated output,
                     ; the Up event is generated normally bellow
-                    Send "{Blind}{" . keyAndMods.key . " DownTemp}"
+                    Send "{Blind}{" keyAndMods.key " DownTemp}"
                     generatingDualModeKey := 1
                 }
                 else {
@@ -340,15 +337,16 @@ onLayerKey(key, up)
             if (keyAndMods.isDualMode) {
                 ; non consecutive dual mode key event
                 if (up) {
-                    ; OutputDebug("Send4.1 " . key . " Up")
+                    ; OutputDebug("Send4.1 " key " Up")
                     ; key released after being used as modifier
                     ; key was held down, send dummy 'up' to release it
-                    Send "{Blind}{" . key . " Up}"
+                    Send "{Blind}{" key " Up}"
                     ;keyAndMods.dualModeKeyDown := 0
-                } else {
-                    ; OutputDebug("Send4.2 " . key . " DownTemp")
+                } 
+                else {
+                    ; OutputDebug("Send4.2 " key " DownTemp")
                     ; send initial key down of modifier
-                    Send "{Blind}{" . key . " DownTemp}"
+                    Send "{Blind}{" key " DownTemp}"
                     ;keyAndMods.dualModeKeyDown := key
                     dualModeKeyDown := 1
                 }
@@ -360,9 +358,9 @@ onLayerKey(key, up)
 		mods := keyAndMods.mods
 		
         if (up)
-            toSend := "{" . keyAndMods.key . " Up}"
+            toSend := "{" keyAndMods.key " Up}"
         else
-            toSend := "{" . keyAndMods.key . " DownTemp}"
+            toSend := "{" keyAndMods.key " DownTemp}"
         
 	
 		;; Special handling for Alt, cant use Send Blind
@@ -385,18 +383,19 @@ onLayerKey(key, up)
 			if (shiftDown && !keyAndMods.isShifted) {
 				; simulate Send Blind, but w/o Shift
 				simulateSendBlind(mods, toSend, '+')
-            } else {
-                ; OutputDebug("Send5 {Blind}" . mods . toSend)
-				Send "{Blind}" . mods . toSend
+            } 
+            else {
+                ; OutputDebug("Send5 {Blind}" mods toSend)
+				Send "{Blind}" mods toSend
             }
 		}
     }
 	else {
         ; just send the original key
         if (up)
-            Send "{Blind}{" . key . " up}"
+            Send "{Blind}{" key " up}"
         else
-            Send "{Blind}{" . key . " DownTemp}"
+            Send "{Blind}{" key " DownTemp}"
 	}
 	
 }
@@ -417,7 +416,7 @@ onLayerAccessKey(layerIndex, up)
 		; no key was hit after this layer access key was released, 
 		; this is just a press/release of it, send it if so configured
 		if (LastKeyWasLayerAccess && !CurrentLayer.blockAccessKey) {
-			Send "{Blind}{" . CurrentLayer.accessKey . "}"
+			Send "{Blind}{" CurrentLayer.accessKey "}"
 		}
 		
 		; reset to main layer

@@ -69,7 +69,7 @@ pkl_displayHelpImage( activate := 0 )
 			guiActive := 1
 		}
 	}
-	
+
 
 	if ( activate == 1 ) {
 		if ( yPosition == -1 ) {
@@ -78,9 +78,11 @@ pkl_displayHelpImage( activate := 0 )
 		wnd := GuiCreate("+AlwaysOnTop -Border +ToolWindow", "pklHelperImage")
 		wnd.MarginX := 0
 		wnd.MarginY := 0
-		imgCtrl := wnd.Add("Pic", "xm", Format("{1}\layer1.png",ImgsDir))
-		wnd.Show(Format("xCenter y{1} AutoSize NA", yPosition))
-        
+		; imgCtrl := wnd.Add("Pic", "xm", Format("{1}\layer1.png",ImgsDir))
+		; wnd.Show(Format("xCenter y{1} AutoSize NA", yPosition))
+		imgCtrl := wnd.Add("Pic", "xm", ImgsDir "\layer1.png")
+		wnd.Show("xCenter y" yPosition " AutoSize NA")
+
 		SetTimer "pkl_OnDisplayTimer", 200
 
 	} else if ( activate == -1 ) {
@@ -110,7 +112,7 @@ pkl_displayHelpImage( activate := 0 )
 
 	; find current active window and its coords
 	id := WinExist("A")
-	WinGetPos x, y, width, height, "ahk_id " . id
+	WinGetPos x, y, width, height, "ahk_id " id
     currWinCenter := x + (width / 2)
 
 	xpos := 0
@@ -134,18 +136,21 @@ pkl_displayHelpImage( activate := 0 )
 	}
 
 	; might want to avoid Show if same coords ..
-	if (xpos) {
-		wnd.Show(Format("x{1} y{2} AutoSize NA", xpos, yPosition))
-	} else {
-		wnd.Show(Format("xCenter y{1} AutoSize NA", yPosition))
-	}
-	
+	; if (xpos)
+		; wnd.Show(Format("x{1} y{2} AutoSize NA", xpos, yPosition))
+	; else
+		; wnd.Show(Format("xCenter y{1} AutoSize NA", yPosition))
+	if (xpos)
+		wnd.Show("x" xpos "y" yPosition " AutoSize NA")
+	else
+		wnd.Show("xCenter y" yPosition " AutoSize NA")
+
 	; PQuesnel 2017-05
 	; check for image to display based on current layer
-	if (!CurrentLayer) 
+	if (!CurrentLayer)
 		return
-	
-	; avoid flicker for access keys that can also output themselves, 
+
+	; avoid flicker for access keys that can also output themselves,
 	; skip 1st timer (not perfect, but helps)
 	if (!blockedKeySkipped) {
 		; already skipped once ?
@@ -162,10 +167,10 @@ pkl_displayHelpImage( activate := 0 )
 	; once we change layer, reset  prevSkippedLayer
 	if (prevSkippedLayer != CurrentLayer.index)
 		prevSkippedLayer := 0
-	 
+
 	blockedKeySkipped := 0
 
-	fileName := Format("layer{1}", CurrentLayer.index)
+	fileName := "layer" CurrentLayer.index
 
     shiftIsDown := 0
     if (GetKeyState("Shift")) {
@@ -175,23 +180,24 @@ pkl_displayHelpImage( activate := 0 )
 
 	if ( prevFile == fileName )
 		return
-		
-	if ( not FileExist( ImgsDir . "\" . fileName . ".png" ) )  {
+
+	if ( not FileExist( ImgsDir "\" fileName ".png" ) )  {
         if (shiftIsDown) {
             ; try using the unshifted image
             fileName := Format("layer{1}", CurrentLayer.index)
-            if ( not FileExist( ImgsDir . "\" . fileName . ".png" ) )  {
+            if ( not FileExist( ImgsDir "\" fileName ".png" ) )  {
                 fileName := ""
             }
         }
     }
 
-	prevFile := fileName 
-    
-	; GuiControl(, "vHelperImage", "*w%ImgWidth% *h%ImgHeight% %ImgsDir%\%fileName%.png")
-    opts := "" ; Format("w{1} h{2}", ImgWidth, ImgHeight)
-    filepath := Format("*w{1} *h{2} {3}\{4}.png", ImgWidth, ImgHeight, ImgsDir, fileName)
+	prevFile := fileName
+
     ; filepath := Format("{1}\{2}.png", ImgsDir, fileName)
+    ; filepath := Format("*w{1} *h{2} {3}\{4}.png", ImgWidth, ImgHeight, ImgsDir, fileName)
+    imgSizePrefix := "*w" ImgWidth " *h" ImgHeight
+    filepath := ImgsDir '\' fileName ".png"
+    ; filepath := imgSizePrefix " " filepath
     imgCtrl.Value := filepath
 }
 

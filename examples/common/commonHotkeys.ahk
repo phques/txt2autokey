@@ -45,6 +45,9 @@ return
 
 ;--------
 
+; Win-Ctrl X qwerty
+#^sc02D:: ExitApp
+
 ; Win B
 #sc030::clipboardToBash()
 
