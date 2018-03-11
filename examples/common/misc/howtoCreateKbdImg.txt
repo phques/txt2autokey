@@ -35,6 +35,9 @@ convert Capture.PNG -crop 284x46+50+194 extend.png
 for beaklOpted36 
 convert Capture.PNG -crop 255x64+50+104 layer1.png
 
+for mtgap-Seelpy\curlaz18beakl
+convert Capture.PNG -crop 255x64+50+104 layer1.png
+
 -----------
 
 Otherwise, for a nice graphic image with letters color coded by finger

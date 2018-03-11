@@ -2,9 +2,19 @@
 
 */
 
-; -- layers --
+; code only includes
+
+; Global variables for pkl_guiLayers.ahk / layout image
+; MUST be declared *before* scripts that use them
+global ImgsDir := A_ScriptDir . "\imgs\v1.1"
+global ImgWidth := 110
+global ImgHeight := 110
+global CenterOnCurrWndMonitor := 1
 
 #include ../../common/layers.ahk
+#include ../../common/groups.ahk
+#include ../../common/clipboardToBash.ahk
+#include ../../common/fromPkl/pkl_guiLayers.ahk
 
 ; Qwerty mask
 fromQwerty := ""
@@ -13,25 +23,25 @@ fromQwerty := ""
  . "  z x c   m , . "
 
 layer2 := ""
- . '     j  *  (   )  w  " '
- . "     k  .  ,   '  b  v "
- . '  {  } `;      x  q  z '
+ . '  j  *  (   )  w  " '
+ . "  k  .  ,   '  b  v "
+ . '  {  } `;   x  q  z '
 
 layer1 := ""
- . '      f  o  u   h  t  c '
- . '      s  e  a   n  d  l '
- . '   g  y  i      r  p  m '
+ . '   f  o  u   h  t  c '
+ . '   s  e  a   n  d  l '
+ . '   g  y  i   r  p  m '
  
  
 layer2sh := ""
- . '     J  *  (   )  W  " '
- . "     K  .  ,   '  B  V "
- . '  {  } `;      X  Q  Z '
+ . '  J  *  [   ]  W  " '
+ . "  K  .  ,   '  B  V "
+ . '  <  > `;   X  Q  Z '
 
 layer1sh := ""
- . '      F  O  U   H  T  C '
- . '      S  E  A   N  D  L '
- . '   G  Y  I      R  P  M '
+ . '   F  O  U   H  T  C '
+ . '   S  E  A   N  D  L '
+ . '   G  Y  I   R  P  M '
  
 
 ; main layer
@@ -46,22 +56,7 @@ AddMappings(1, 0, fromQwerty, layer1)
 AddMappings(2, 0, fromQwerty, layer2)
 
 
-;------
-
-; code only includes
-
-; Global variables for pkl_guiLayers.ahk / layout image
-; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\v1.1"
-global ImgWidth := 248
-global ImgHeight := 46
-global CenterOnCurrWndMonitor := 1
-
-#include ../../common/groups.ahk
-#include ../../common/clipboardToBash.ahk
-#include ../../common/fromPkl/pkl_guiLayers.ahk
-
-;DisplayHelpImage()
+DisplayHelpImage()
 return
 
 ;------
