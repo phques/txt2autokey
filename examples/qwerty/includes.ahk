@@ -25,3 +25,4 @@ return
 #include ../common/altGr/altGr.ahk
 #include ../common/extend/extendSpace.ahk
 #include ../common/commonHotkeys.ahk
+#include ../common/capslock.ahk

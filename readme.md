@@ -34,3 +34,9 @@ Many of these ideas were taken from different communities, including PKL,
  
  I am using code from the Pkl project to display an on screen help image of the kbd layout, 
  see license under fromPkl/ directory
+
+The examples/ directory contains example AHK layouts generated with this app.
+These dont work with AutoHotkey_2.0-a089, I was using AutoHotkey_2.0-a078
+
+The examples.layers/ directory contains layouts that define layouts directly in a AHK script, using the layers.ahk script
+They need AutoHotkey_2.0-a089 or later

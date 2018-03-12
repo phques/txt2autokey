@@ -80,7 +80,7 @@ return
 
 ; other hotkey defs
 
-#include ../common/extend/extendSpaceBeakl.ahk
+#include ../common/extend/extendSpace.ahk
 #include ../common/commonHotkeys.ahk
 
 
