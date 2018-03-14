@@ -184,7 +184,7 @@ pkl_displayHelpImage( activate := 0 )
 	if ( not FileExist( ImgsDir "\" fileName ".png" ) )  {
         if (shiftIsDown) {
             ; try using the unshifted image
-            fileName := Format("layer{1}", CurrentLayer.index)
+            fileName := "layer" CurrentLayer.index
             if ( not FileExist( ImgsDir "\" fileName ".png" ) )  {
                 fileName := ""
             }
@@ -192,12 +192,12 @@ pkl_displayHelpImage( activate := 0 )
     }
 
 	prevFile := fileName
-
-    ; filepath := Format("{1}\{2}.png", ImgsDir, fileName)
-    ; filepath := Format("*w{1} *h{2} {3}\{4}.png", ImgWidth, ImgHeight, ImgsDir, fileName)
-    imgSizePrefix := "*w" ImgWidth " *h" ImgHeight
     filepath := ImgsDir '\' fileName ".png"
-    ; filepath := imgSizePrefix " " filepath
-    imgCtrl.Value := filepath
+    
+    if (FileExist(filepath)) {
+        ; imgSizePrefix := "*w" ImgWidth " *h" ImgHeight
+        ; filepath := imgSizePrefix " " filepath
+        imgCtrl.Value := filepath
+    }
 }
 
