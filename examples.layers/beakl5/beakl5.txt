@@ -5,14 +5,14 @@ http://shenafu.com/smf/index.php?topic=89.900
 BEAKL 5 (main layer):
   1 2 3 4 5   6 7 8 9 0   (no top row in den's page !?)
   q y o u x   f g r c v 
-j h i e a y   l s t n w z
+j h i e a .   l s t n w z
   ' " ( , )   b d m p k
 
 BEAKL 5 (shift layer):
 
     + = *       ^ % ~     (kept this from beakl ez, and 9)
   Q Y O U X   F G R C V 
-J H I E A Y   L S T N W Z
+J H I E A @   L S T N W Z
   ` ! \ : ?   B D M P K
 
 BEAKL 5 (punctuation layer):

@@ -33,7 +33,7 @@ CreateLayer(1)
 ; bottom row shifted left (angle mod)
 AddMappings(1, 1, '  2 3 4      7 8 9  ',    '  + = *      ^ `% ~ ')  ;; kept this frm beakl9
 AddMappings(1, 1, 'q w e r t  y u i o p',    'Q Y O U X  F G R C V   ')
-AddMappings(1, 1, "a s d f g  h j k l `; '", 'H I E A Y  L S T N W Z ') 
+AddMappings(1, 1, "a s d f g  h j k l `; '", 'H I E A @  L S T N W Z ') 
 AddMappings(1, 1, 'z x c v    n m , . /',   ' ! \ : ``   B D M P K   ')
 ; bug with '`' on @LShift, outputs Shift-` : '~'
 ; so swap ` and ? for now ... (prefer this anyways ?)
@@ -43,7 +43,7 @@ AddMappings(1, 1, 'Capslock', 'J')
 
 ;AddMappings(1, 0, '1 2 3 4 5  6 7 8 9 0',   '1 2 3 4 5  6 7 8 9 0  ')
 AddMappings(1, 0, 'q w e r t  y u i o p',    'q y o u x  f g r c v   ')
-AddMappings(1, 0, "a s d f g  h j k l `; '", 'h i e a y  l s t n w z ')
+AddMappings(1, 0, "a s d f g  h j k l `; '", 'h i e a .  l s t n w z ')
 AddMappings(1, 0, 'z x c v    n m , . /',    '" ( , )    b d m p k   ')
 AddMappings(1, 0, 'Capslock', 'j')
 AddMappings(1, 0, '@LShift', "'")
