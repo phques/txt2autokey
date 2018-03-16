@@ -7,8 +7,8 @@
 ;------- help image & suspend hotkeys
 
 ; +^9 qwerty
-LAlt & RShift::DisplayHelpImageToggle()
-;LAlt & RShift::reload
+;LAlt & RShift::DisplayHelpImageToggle()
+LAlt & RShift::reload
 
 ; +^0 qwerty
 #SuspendExempt

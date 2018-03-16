@@ -23,6 +23,7 @@ a|01E::Tab
 s|01F::Control
 d|020::Alt
 f|021::Shift
+g|022::}!{Esc
 
 y|015::PgUp
 u|016::Home
