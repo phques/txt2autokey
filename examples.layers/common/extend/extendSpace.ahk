@@ -67,9 +67,9 @@ sc039 & sc012 up::dokey("}^{s", 1)
 sc039 & sc013::dokey("}^{w", 0)
 sc039 & sc013 up::dokey("}^{w", 1)
 
-;; a => tab
-sc039 & sc01E::dokey("tab", 0)
-sc039 & sc01E up::dokey("tab", 1)
+;; a => Tab
+sc039 & sc01E::dokey("Tab", 0)
+sc039 & sc01E up::dokey("Tab", 1)
 
 ;; s => Control
 sc039 & sc01F::dokey("Control", 0)
@@ -87,6 +87,10 @@ sc039 & sc01F up::dokey("Control", 1)
 ;; f => Shift
 sc039 & sc021::dokey("Shift", 0)
 sc039 & sc021 up::dokey("Shift", 1)
+
+;; g => }!{Esc
+sc039 & sc022::dokey("}!{Esc", 0)
+sc039 & sc022 up::dokey("}!{Esc", 1)
 
 ;; y => PgUp
 sc039 & sc015::dokey("PgUp", 0)
@@ -132,9 +136,9 @@ sc039 & sc026 up::dokey("Right", 1)
 sc039 & sc027::dokey("Backspace", 0)
 sc039 & sc027 up::dokey("Backspace", 1)
 
-;; ' => AppsKey
-sc039 & sc028::dokey("AppsKey", 0)
-sc039 & sc028 up::dokey("AppsKey", 1)
+;; ' => Enter
+sc039 & sc028::dokey("Enter", 0)
+sc039 & sc028 up::dokey("Enter", 1)
 
 ;; z => }^{z
 sc039 & sc02C::dokey("}^{z", 0)
@@ -168,15 +172,7 @@ sc039 & sc034 up::dokey("}^{v", 1)
 sc039 & sc035::dokey("}^{z", 0)
 sc039 & sc035 up::dokey("}^{z", 1)
 
-;; lshift => enter
-sc039 & sc02A::dokey("Enter", 0)
-sc039 & sc02A up::dokey("Enter", 1)
-
-;; rshift => enter
-sc039 & sc136::dokey("Enter", 0)
-sc039 & sc136 up::dokey("Enter", 1)
-
 ;; sp => Space
-sc039::dokey("Space", 0)
-sc039 up::dokey("Space", 1)
+*sc039::dokey("Space", 0)
+*sc039 up::dokey("Space", 1)
 
