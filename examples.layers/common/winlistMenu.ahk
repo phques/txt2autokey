@@ -1,5 +1,6 @@
 ; builds a menu of active windows 
 ; selecting a menu entry will activate that window
+; winid := itemsWinids[menu.Handle][ItemPos]
 global itemsWinids := {}
 
 OpenWinlistMenu()
@@ -55,9 +56,10 @@ createWinMenu(submenuName, wintitles)
         For idx2, winid in winids {
             title := WinGetTitle('ahk_id ' . winid)
             if (strlen(title)) {
-                if (!itemsWinids[submenuName])
-                    itemsWinids[submenuName] := []
-                itemsWinids[submenuName].Push(winid)
+                idx := ret.menu.Handle
+                if (!itemsWinids[idx])
+                    itemsWinids[idx] := []
+                itemsWinids[idx].Push(winid)
                 
                 ret.menu.Add(title, "onMenuItem")
             }
@@ -70,9 +72,9 @@ createWinMenu(submenuName, wintitles)
 onMenuItem(ItemName, ItemPos, Menu)
 {
     ; activate the selected window
-    winid := itemsWinids[ItemName][ItemPos]
+    idx := Menu.Handle
+    winid := itemsWinids[idx][ItemPos]
     WinActivate 'ahk_id ' . winid
 }
 
 
-OpenWinlistMenu()
