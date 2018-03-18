@@ -1,0 +1,73 @@
+X7.2H Ergolinear kbd layout by Ian Douglas
+(same alphab as X7.1H, reworked puncs (?))
+
+http://www.keyboard-design.com/
+see also http://shenafu.com/smf/index.php?topic=89.0
+
+One big 'special feature' of this layer is the fact that H is on alt-space (on thumb).
+I have to admit that it really does not work well on my US kbd adaptation.
+Hopefully it will make much more sense when I try it on a matrix kbd.
+
+
+-- Main --
+
+OS   q y o u _              b m r c z Ins
+Tab  ' i e a j              w t n s k #
+Cap  : p < g >              v d l f x Alt
+Ctl          CR Sp    AltGr Sh        Ctl
+
+(OS = Win)
+
+(PQ, For Matrix, add Ctrl to right of Sp and to left of AltGr !)
+ 2x3 thumb keys :  CR Sp Ctl     Ctl AltGr Sh
+
+
+-- Shift --
+
+Mnu  Q Y O U @              B M R C Z 
+     ~ I E A J              W T N S K 
+     | P ^ G \              V D L F X
+                H                          
+
+(Mnu = menu)
+
+
+-- AltGr / punc --
+
+Esc  [ $ ? = ]              & { } + ` 
+     " ( . , !              * ; - ) / %
+     8 4 0 2 6              9 3 1 5 7
+                h                          
+              
+
+================
+
+PQ 2018-03-17
+Adapted for US kbd w. my AHK layers scripts and w. extend layer on space.
+Leave special keys, like Shift, Ctrl Alt etc alone.
+
++ Swap CapsLock - Tab
++ Space= Space / H / h (main, shifted, altGr)
+ (conflict w. extend on space ?)
+
+-- Main --
+
+Cap  q y o u _   b m r c z 
+Tab  ' i e a j   w t n s k #
+     : p < g >   v d l f x 
+             Space 
+
+-- Shift --
+
+     Q Y O U @   B M R C Z 
+     ~ I E A J   W T N S K 
+     | P ^ G \   V D L F X
+               H                          
+
+-- AltGr / punc --
+
+     [ $ ? = ]   & { } + ` 
+     " ( . , !   * ; - ) / %
+     8 4 0 2 6   9 3 1 5 7
+               h                          
+              
