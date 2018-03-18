@@ -6,11 +6,7 @@
 
 ;------- help image & suspend hotkeys
 
-; +^9 qwerty
-;LAlt & RShift::DisplayHelpImageToggle()
-LAlt & RShift::reload
-
-; +^0 qwerty
+; suspend / resume hotkeys (help image toggles at same time)
 #SuspendExempt
 LAlt & RControl::
     Suspend Toggle
@@ -19,6 +15,11 @@ LAlt & RControl::
     else 
         DisplayHelpImageSuspendOff()
 return
+
+
+; toggle help image 
+LAlt & AppsKey::DisplayHelpImageToggle()
+;LAlt & AppsKey::reload
 
 ;--------
 
