@@ -6,6 +6,12 @@
 
 ;------- help image & suspend hotkeys
 
+; toggle help image 
+;LAlt & AppsKey
+;LAlt & sc15D::reload
+LAlt & sc15D::DisplayHelpImageToggle()
+
+
 ; suspend / resume hotkeys (help image toggles at same time)
 #SuspendExempt
 LAlt & RControl::
@@ -16,10 +22,6 @@ LAlt & RControl::
         DisplayHelpImageSuspendOff()
 return
 
-
-; toggle help image 
-LAlt & AppsKey::DisplayHelpImageToggle()
-;LAlt & AppsKey::reload
 
 ;--------
 
