@@ -1,0 +1,18 @@
+ X7.2H Ergolinear (Ian Douglas)
+
+ http://www.keyboard-design.com/
+ see also http://shenafu.com/smf/index.php?topic=89.0
+
+X7.2H-en on SmartYao LY092-SN
+
+This version uses as base a qwerty setup on the SmartYao LY092-SN (Koolertron)
+(right hand is 'qwertyShifted' so that the home row is where we want it)
+with X7.2H-en specific mods for the alt/shift etc keys
+
+**Note: the LY092-SN des NOT output Alt_R, so we use Numpad5 as altGr instead !
+
+the defined LY092-SN base :
+see https://github.com/phques/SmartYaoLayout.git
+in  profile\x7-2h.en\qwertyBased
+
+  
