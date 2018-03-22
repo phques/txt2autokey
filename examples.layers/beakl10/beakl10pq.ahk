@@ -12,8 +12,8 @@ PQ mods:
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
 global ImgsDir := A_ScriptDir . "\imgs\beakl10pq"
-global ImgWidth := 240
-global ImgHeight := 74
+global ImgWidth := 206
+global ImgHeight := 62
 global CenterOnCurrWndMonitor := 1
 
 #include ../common/groups.ahk
@@ -57,12 +57,21 @@ AddMappings(2, 1, 'Capslock', '-')
 
 ; -- punctuation layer (RAlt) --
 ; bottom row shifted left (angle mod)
-AddMappings(2, 0, '  2 3 4      7 8 9      ',   '  + = *      ^ `% ~    ')
-AddMappings(2, 0, '  w e r t    u i o      ',   '  { _ } &    [ " ]     ')
-AddMappings(2, 0, "a s d f g  h j k l `; ' ",   '\ ( 1 ) #  $ < 0 > | `;')
-AddMappings(2, 0, 'z x c v b    m , . /    ',   '4 3 2 : :    9 8 7 6')
+; orig BEAKL9-10
+; AddMappings(2, 0, '  2 3 4      7 8 9      ',   '  + = *      ^ `% ~    ')
+; AddMappings(2, 0, '  w e r t    u i o      ',   '  { _ } &    [ " ]     ')
+; AddMappings(2, 0, "a s d f g  h j k l `; ' ",   '\ ( 1 ) #  $ < 0 > | `;')
+; AddMappings(2, 0, 'z x c v b    m , . /    ',   '4 3 2 : :    9 8 7 6')
+; AddMappings(2, 0, '@LShift', '5')
+; AddMappings(2, 0, 'Capslock', '-')
+
+; pq 2018-03
+AddMappings(2, 0, '    3          8 9 0    ',   '     _        ^ `% ~    ')
+AddMappings(2, 0, 'q w e r t    u i o p    ',   ' : { = } !    [ " ] \   ')
+AddMappings(2, 0, "a s d f g  h j k l `; ' ",   ' & ( 1 ) *  + < 0 > | $ ')
+AddMappings(2, 0, 'z x c v b    m , . /    ',   ' 4 3 2 : :    9 8 7 6   ')
 AddMappings(2, 0, '@LShift', '5')
-AddMappings(2, 0, 'Capslock', '-')
+AddMappings(2, 0, 'Capslock', '#')
 
 ;;;
 

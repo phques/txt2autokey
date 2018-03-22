@@ -58,10 +58,17 @@ AddMappings(2, 1, 'z x c v b ',   '/   , 9 . : ')
 AddMappings(2, 1, '-', '-')
 
 ; -- punctuation layer (RAlt) --
-AddMappings(2, 0, '  2 3 4      7 8 9      ',   '  + = *      ^ `% ~    ')
-AddMappings(2, 0, '  w e r t    u i o      ',   '  { _ } &    [ " ]     ')
-AddMappings(2, 0, "a s d f g  h j k l `; ' ",   '\ ( 1 ) #  $ < 0 > | `;')
-AddMappings(2, 0, 'z x c v b    m , . /    ',   '5 4 3 2 :    9 8 7 6')
+; Orig BEAKL9-10
+; AddMappings(2, 0, '  2 3 4      7 8 9      ',   '  + = *      ^ `% ~    ')
+; AddMappings(2, 0, '  w e r t    u i o      ',   '  { _ } &    [ " ]     ')
+; AddMappings(2, 0, "a s d f g  h j k l `; ' ",   '\ ( 1 ) #  $ < 0 > | `;')
+; AddMappings(2, 0, 'z x c v b    m , . /    ',   '5 4 3 2 :    9 8 7 6')
+; AddMappings(2, 0, 'BackSpace', 'Delete')
+; PQ 2018-03
+AddMappings(2, 0, '      3        7 8 9      ',   '      _         ^ `% ~     ')
+AddMappings(2, 0, '  q w e r t    u i o p    ',   '  : { = } !     [ " ] \    ')
+AddMappings(2, 0, "- a s d f g  h j k l `; ' ",   '# & ( 1 ) *   + < 0 > | $  ')
+AddMappings(2, 0, '  z x c v      m , . /    ',   '  5 4 3 2       9 8 7 6    ')
 AddMappings(2, 0, 'BackSpace', 'Delete')
 
 ;;;
