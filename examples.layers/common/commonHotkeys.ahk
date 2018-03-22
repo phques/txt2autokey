@@ -25,7 +25,7 @@ return
 
 ;--------
 
-; Win-Ctrl X qwerty
+; Ctrl-Win-X qwerty
 #^sc02D:: ExitApp
 
 ; Win B
@@ -33,6 +33,13 @@ return
 
 ; ctrl-menu
 ^sc15D::OpenWinlistMenu()
+
+; Ctrl-Win-p qwerty
+#^sc019::Send 'philippe.quesnel@gmail.com'
+
+; Ctrl-Win-q qwerty
+#^sc010::Send 'philippe.quesnel@cgi.com'
+
 
 ; Win-Delete to close the current window
 #Del::WinClose "A"
