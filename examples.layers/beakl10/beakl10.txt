@@ -35,3 +35,26 @@ modified punc/sym                  => move k to the right on Shift as a dual mod
 # & ( 1 ) *   + < 0 > | $        
   5 4 3 2       9 8 7 6          
       
+-----------------
+
+Wide, for US kbd (right hand moved by to the right)
+k and 6 on dual mode rshift
+';' moved to altgr on pinky
+
+  4 0 1 2 3   7 6 5 9 8     
+  q h o u x   g d n m v     
+- y i e a .   c s r t w    
+  j / ' , z   b p l f k     
+                            
+    + = *       ^ % ~       
+  Q H O U X   G D N M V     
+- Y I E A @   C S R T W    
+  J ? ` ! Z   B P L F K     
+                            
+PQ 2018-03                  
+modified punc/sym           
+      _         ^ % ~       
+  : { = } !     [ " ] \ $    
+# & ( 1 ) *   + < 0 > ;   
+  5 4 3 2     | 9 8 7 6                                 
+
