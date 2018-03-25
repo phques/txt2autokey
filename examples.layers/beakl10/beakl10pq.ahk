@@ -74,6 +74,7 @@ AddMappings(2, 0, '@LShift', '5')
 AddMappings(2, 0, 'Capslock', '#')
 
 ;;;
+#include ../common/extend/extendSpace2.ahk
 
 DisplayHelpImage()
 return
@@ -82,5 +83,5 @@ return
 
 ; other hotkey defs
 
-#include ../common/extend/extendSpace.ahk
+; #include ../common/extend/extendSpace.ahk
 #include ../common/commonHotkeys.ahk

@@ -33,7 +33,7 @@ modified punc/sym                  => move k to the right on Shift as a dual mod
       _         ^ % ~              possibly add a ^ in its normal CAFR place, on [
   : { = } !     [ " ] \          
 # & ( 1 ) *   + < 0 > | $        
-  5 4 3 2       9 8 7 6          
+  5 4 3 2 -     9 8 7 6          
       
 -----------------
 
