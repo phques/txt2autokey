@@ -69,7 +69,7 @@ AddMappings(2, 1, 'Capslock', '-')
 AddMappings(2, 0, '    3          8 9 0    ',   '     _        ^ `% ~    ')
 AddMappings(2, 0, 'q w e r t    u i o p    ',   ' : { = } !    [ " ] \   ')
 AddMappings(2, 0, "a s d f g  h j k l `; ' ",   ' & ( 1 ) *  + < 0 > | $ ')
-AddMappings(2, 0, 'z x c v b    m , . /    ',   ' 4 3 2 : :    9 8 7 6   ')
+AddMappings(2, 0, 'z x c v b    m , . /    ',   ' 4 3 2 - :    9 8 7 6   ')
 AddMappings(2, 0, '@LShift', '5')
 AddMappings(2, 0, 'Capslock', '#')
 

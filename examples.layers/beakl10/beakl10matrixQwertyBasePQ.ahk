@@ -72,6 +72,7 @@ AddMappings(2, 0, '  z x c v      m , . /    ',   '  5 4 3 2       9 8 7 6    ')
 AddMappings(2, 0, 'BackSpace', 'Delete')
 
 ;;;
+#include ../common/extend/extendSpace2.ahk
 
 DisplayHelpImage()
 return
@@ -80,5 +81,6 @@ return
 
 ; other hotkey defs
 
-#include ../common/extend/extendSpace.ahk
+;#include ../common/extend/extendSpace.ahk
+;#include ../common/extend/extendSpace.ahk
 #include ../common/commonHotkeys.ahk

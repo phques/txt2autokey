@@ -11,7 +11,7 @@ PQ mods:
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\beakl10pq"
+global ImgsDir := A_ScriptDir . "\imgs\beakl10widepq"
 global ImgWidth := 206
 global ImgHeight := 62
 global CenterOnCurrWndMonitor := 1
