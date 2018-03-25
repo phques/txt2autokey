@@ -12,8 +12,8 @@ PQ mods:
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\beakl10widepq"
-global ImgWidth := 206
+global ImgsDir := A_ScriptDir . "\imgs\beakl9widepq"
+global ImgWidth := 218
 global ImgHeight := 62
 global CenterOnCurrWndMonitor := 1
 
@@ -28,25 +28,24 @@ global CenterOnCurrWndMonitor := 1
 CreateLayer(1)
 
 ; shifted chars (declare 1st!)
-
-; (angle) j on dual mode lshift
-; (wide)  k on dual mode rshift
+; (angle) / on dual mode lshift
+; (wide)  v on dual mode rshift
 
 AddMappings(1, 1, '  2 3 4      8 9 0    ',   '   + = *       ^ `% ~  ')
-AddMappings(1, 1, 'q w e r t  u i o p [  ',   ' Q H O U X   G D N M V ')
-AddMappings(1, 1, "a s d f g  j k l `; ' ",   ' Y I E A @   C S R T W ') 
-AddMappings(1, 1, 'z x c v    m , . /    ',   '  ? `` ! Z   B P L F   ')
-AddMappings(1, 1, '@LShift', 'J')
-AddMappings(1, 1, '@RShift', 'K')
+AddMappings(1, 1, 'q w e r t  u i o p [  ',   ' J H O U K   G C R F Z ')
+AddMappings(1, 1, "a s d f g  j k l `; ' ",   ' Q I E A Y   D S T N B ') 
+AddMappings(1, 1, 'z x c v    m , . /    ',   '   ! `` @ X  W M L P   ')
+AddMappings(1, 1, '@LShift', '?')
+AddMappings(1, 1, '@RShift', 'V')
 AddMappings(1, 1, 'Capslock', '-')
 
 ; wide mode, right moved 1 pos ->; leaves YHN column free, could use for something else ?
 AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -  ',  ' 4 0 1 2 3  7 6 5 9 8 ')
-AddMappings(1, 0, 'q w e r t  u i o p [  ',  ' q h o u x  g d n m v ')
-AddMappings(1, 0, "a s d f g  j k l `; ' ",  ' y i e a .  c s r t w ')
-AddMappings(1, 0, 'z x c v    m , . /    ',  "   / ' , z  b p l f   ")
-AddMappings(1, 0, '@LShift', 'j')
-AddMappings(1, 0, '@RShift', 'k')
+AddMappings(1, 0, 'q w e r t  u i o p [  ',  ' j h o u k   g c r f z ')
+AddMappings(1, 0, "a s d f g  j k l `; ' ",  ' q i e a y   d s t n b ')
+AddMappings(1, 0, 'z x c v    m , . /    ',  "   , ' . x   w m l p   ")
+AddMappings(1, 0, '@LShift', '/')
+AddMappings(1, 0, '@RShift', 'v')
 AddMappings(1, 0, 'Capslock', '-')
 AddMappings(1, 0, 'b', 'Capslock')
 

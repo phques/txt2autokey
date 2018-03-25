@@ -32,7 +32,6 @@ BEAKL 9 (numpad layer):
 
 (t in numpad is Tab)
 
----------------------------
 
 PQ 2018-03                 
 modified punc/sym          
@@ -40,3 +39,28 @@ modified punc/sym
   : { = } !     [ " ] \    
 # & ( 1 ) *   + < 0 > | $  
   5 4 3 2 -     9 8 7 6    
+  
+===============
+
+Wide, for US kbd (right hand moved by to the right)
+v and 6 on dual mode rshift
+';' moved to altgr on pinky
+
+  4 0 1 2 3   7 6 5 9 8
+  j h o u k   g c r f z
+- q i e a y   d s t n b 
+  / , ' . x   w m l p v
+
+BEAKL 9 (shift layer):
+
+    + = *       ^ % ~
+  J H O U K   G C R F Z 
+- Q I E A Y   D S T N B 
+  ? ! ` @ X   W M L P V
+                            
+PQ 2018-03                  
+modified punc/sym           
+      _         ^ % ~       
+  : { = } !     [ " ] \ $    
+# & ( 1 ) *   + < 0 > ;   
+  5 4 3 2 -   | 9 8 7 6                                 
