@@ -21,8 +21,8 @@ extHK('w', 'Escape')
 extHK('e', 'Tab')
 extHK('r', 'Alt')
            
-extHK('a', 'Shift')
-extHK('f', 'Control')
+extHK('a', 'Control')
+extHK('f', 'Shift')
 extHK('g', '!','Esc') ; or with r-w!
            
 extHK('z', '^','z')
