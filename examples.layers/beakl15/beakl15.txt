@@ -1,0 +1,42 @@
+http://shenafu.com/code/keyboard/beakl/index.php
+http://shenafu.com/smf/index.php?topic=89.msg2221#msg2221
+
+BEAKL15
+    + = *      ^ % ~
+  Q H O U X  G C R F Z     
+- Y I E A @  D S T N B ;
+  J ? ! K `  W M L P V
+
+  4 0 1 2 3  7 6 5 9 8 
+  q h o u x  g c r f z   
+- y i e a .  d s t n b ;
+  j / , k '  w m l p v
+  
+    + = *     ^ % ~
+    [ " ] &   { _ }       
+  \ ( 1 ) # $ < 0 > |     
+  5 4 3 2 :   9 8 7 6
+
+=====
+
+pq 2018-03 wide version for US kbd,
+(right hand moved by to the right)
+v and 6 on dual mode rshift
+';' moved to altgr on pinky
+
+    + = *      ^ % ~
+  Q H O U X  G C R F Z     
+- Y I E A @  D S T N B 
+  J ? ! K `  W M L P V
+
+  4 0 1 2 3  7 6 5 9 8 
+  q h o u x  g c r f z   
+- y i e a .  d s t n b
+  j / , k '  w m l p v
+
+      _        ^ % ~       
+  : { = } !    [ " ] \ $    
+# & ( 1 ) *  + < 0 > ;   
+  5 4 3 2 -  | 9 8 7 6                                 
+
+  
