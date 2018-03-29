@@ -3,7 +3,7 @@
 
 SetExtendKey('Space')
 
-extHK('1', 'F1')
+ extHK('1', 'F1')
 extHK('2', 'F2')
 extHK('3', 'F3')
 extHK('4', 'F4')
@@ -21,6 +21,7 @@ extHK('w', 'Escape')
 extHK('e', 'Tab')
 extHK('r', 'Alt')
            
+extHK('CapsLock', 'LWin')
 extHK('a', 'Control')
 extHK('f', 'Shift')
 extHK('g', '!','Esc') ; or with r-w!

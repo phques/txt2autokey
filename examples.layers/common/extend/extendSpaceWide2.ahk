@@ -21,6 +21,7 @@ extHK('w', 'Escape')
 extHK('e', 'Tab')
 extHK('r', 'Alt')
            
+extHK('CapsLock', 'LWin')
 extHK('a', 'Control')
 extHK('f', 'Shift')
 extHK('g', '!','Esc') ; or with r-w!
