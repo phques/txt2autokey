@@ -17,12 +17,26 @@ BEAKL15
   \ ( 1 ) # $ < 0 > |     
   5 4 3 2 :   9 8 7 6
 
+    + = *       ^ % ~
+  t 7 2 4 6          
+- 8 0 1 3 5          
+  / , 9 . :          
+
+  
+PQ 2018-03               
+modified punc/sym        
+      _         ^ % ~    
+  : { = } !     [ " ] \  
+# & ( 1 ) *   + < 0 > | $
+  5 4 3 2 -     9 8 7 6  
+
 =====
 
 pq 2018-03 wide version for US kbd,
 (right hand moved by to the right)
 v and 6 on dual mode rshift
 ';' moved to altgr on pinky
+and modified punc/sym        
 
     + = *      ^ % ~
   Q H O U X  G C R F Z     

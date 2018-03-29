@@ -1,0 +1,33 @@
+http://shenafu.com/code/keyboard/beakl/index.php
+http://shenafu.com/smf/index.php?topic=89.900
+
+BEAKL15 on SmartYao LY092-SN
+
+This version uses as base a qwerty setup on the SmartYao LY092-SN (Koolertron)
+(right hand is 'qwertyShifted' so that the home row is where we want it)
+with BEAKL15 specific mods for the alt/shift etc keys
+
+**Note: the LY092-SN des NOT output Alt_R, so we use Numpad5 as altGr instead !
+
+the defined LY092-SN base :
+see https://github.com/phques/SmartYaoLayout.git
+in  profile\BEAKL10\qwertyBased
+
+The modifications to the hardware qwerty base layouts are:
+
+--Left--
+CapsLock => -
+
+Thumbs (<> than orig BEAKL15):
+  enter, space control, backspace
+
+moved from BEAKL15 (because of chgs to thumbs)
+  left, right, up, down
+
+--right--
+thumbs
+  tab, Shift_R, Num5 (as AltGr), Alt_R
+  
+moved from BEAKL15 (because of chgs to thumbs)
+  PgUp, PgDn, Home,End
+  
