@@ -26,12 +26,18 @@ global CenterOnCurrWndMonitor := 1
  
 ; -- layers --
 
+; must be included before the layer definitions
+; otherwise the space / H / h does not work
+; actually, h sometimes does not work even now
+; Well, it seems that this is only a problem with my 'two half SmartYaos' setup
+#include ../common/extend/extendSpace2.ahk
+
 ; main layer
 CreateLayer(1)
 
 ; shifted chars (declare 1st!)
 AddMappings(1, 1, 'q w e r t  y u i o p',    ' Q Y O U @  B M R C Z ')
-AddMappings(1, 1, "a s d f g  h j k l `; ",  ' ~ I E A J  W T N S K ') 
+AddMappings(1, 1, "a s d f g  h j k l `; '",  ' ~ I E A J  W T N S K #') 
 AddMappings(1, 1, 'z x c v b  n m , . /',    ' | P ^ G \  V D L F X ')
 
 ; main
@@ -60,6 +66,8 @@ AddMappings(1, 0, 'Space', 'Space')
 
 ;;;
 
+; #include ../common/extend/extendSpace2.ahk
+
 DisplayHelpImage()
 return
 
@@ -67,5 +75,5 @@ return
 
 ; other hotkey defs
 
-; #include ../common/extend/extendSpace.ahk
+#include ../common/extend/extendSpace.ahk
 #include ../common/commonHotkeys.ahk
