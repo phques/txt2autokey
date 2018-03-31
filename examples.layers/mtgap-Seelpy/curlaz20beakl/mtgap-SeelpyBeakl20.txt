@@ -166,4 +166,24 @@ Home jump:     2.54%
 Ring jump:     1.20%
 To center:     0.00%
 
+w. manually added digits, and more symbols 
+need to work on this !
 
+  4 0 1 2 3   7 6 5 9 8   
+    f o u       n d c     
+  g h e a       r t s p   
+    y . i       l m b     
+                          
+    F O U       N D C     
+  G H E A       R T S P   
+    Y ! I       L M B     
+                          
+    ( = :       q k )     
+  { v - ,       ' w " }   
+    / * ;       x j z     
+                          
+    [ % `       Q K ]     
+  < V & +       | W \ >   
+    ? # ^        X J Z     
+                                         
+                                         

@@ -1,5 +1,5 @@
-; does not work correctly with Alt/Shift..
-; ok with for ex CapsLock, Space
+; does not work correctly with Shift..(?)
+; ok with for ex CapsLock, Space, LAlt/RAlt now ok too
 global theExtendKey := '!'
 
 
@@ -28,6 +28,10 @@ extHK(key, p1, p2 := '')
 
     sc1 := Format("sc{:03x}", GetKeySC(theExtendKey))
     sc2 := Format("sc{:03x}", GetKeySC(key))
+    
+    if (theExtendKey = 'lalt' || theExtendKey = 'ralt')
+        sc1 := theExtendKey
+    
     HotKey  sc1 ' & ' sc2      , fnDn
     HotKey  sc1 ' & ' sc2 ' up', fnUp
 
@@ -45,6 +49,8 @@ extHKitself(mods, out)
     fnUp := Func("extendDoSend").Bind('{' out ' Up}'  , mods)
 
     sc1 := Format("*sc{:03x}", GetKeySC(theExtendKey))
+    if (theExtendKey = 'lalt' || theExtendKey = 'ralt')
+        sc1 := theExtendKey
     HotKey  sc1      , fnDn
     HotKey  sc1 ' up', fnUp
 
@@ -54,7 +60,10 @@ extHKitself(mods, out)
 extendDoSend(tosend, mods)
 {   
     SetKeyDelay -1
-    Send '{Blind}' mods tosend
+    if (theExtendKey = 'lalt' || theExtendKey = 'ralt')
+        Send '{Blind!}' mods tosend
+    else
+        Send '{Blind}' mods tosend
 }
 
 
