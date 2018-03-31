@@ -162,7 +162,7 @@ set numThreads 4
 set singleKeySameFinger 0
 run
 
-** same as 1.0 
+** same as 1.0
 
 -----
 2017-05-26
@@ -204,3 +204,58 @@ Same hand:     32.20%
 Same finger:   2.99%
 Row change:    15.30%
 Home jump:     2.30%
+
+
+--------
+2018-03-31
+18bv2.0  (use kinesis form, with beakl 8-9 costs and a mask)
+(similar results to 1.1)
+
+120, 110, 100,  75, 100, 130,     130, 100,  75, 100, 110, 120,
+ 90, 150,  15,  10,  15,  50,      50,  15,  10,  15, 150,  90,
+ 60,  50,   5,   5,   5,  15,      15,   5,   5,   5, 50,  60,
+999,  70,  20,  50,  10,  70,      70,  10,  50,  20,  70, 999,
+999, 140, 140, 999, 999, 999,     999, 999, 999, 140, 140, 999,
+  0,  50, 999, 999, 999, 999,     999, 999, 999, 999,  50,   0,
+
+0 0 0 0 0 0   0 0 0 0 0 0
+0 0 1 1 1 0   0 1 1 1 0 0
+0 0 1 1 1 0   0 1 1 1 0 0
+0 0 1 1 1 0   0 1 1 1 0 0
+0 0 0 0 0 0   0 0 0 0 0 0
+0 0 0 0 0 0   0 0 0 0 0 0
+
+w/o Sp on main ?
+
+setksize kinesis
+setmask 000000000000001110011100001110011100001110011100000000000000000000000000
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 51% 48%
+Fingers: 0.00% 11% 21% 20% 0.00% 0.00% 20% 18% 10% 0.00%
+
+       *  (  )         ;  w  q
+       k  x  y         ,  b  '
+       {  }  "         v  z  j
+
+       f  o  u         h  t  c
+       s  e  a         n  d  l
+       g  .  i         r  p  m
+
+Fitness:       19961160
+Distance:      7291980
+Finger work:   409750
+Inward rolls:  8.78%
+Outward rolls: 3.91%
+Same hand:     34.37%
+Same finger:   2.51%
+Row change:    15.05%
+Home jump:     3.41%
+Ring jump:     0.00%
+To center:     0.00%
+To outside:    0.00%
