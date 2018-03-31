@@ -1,0 +1,169 @@
+
+3x3 grid as mask 9 x 2 + 2pinkies=> 20keys
+using BEAKL 8-9 weights
+
+
+mask, matrix
+01110 01110
+11110 01111
+01110 01110
+
+011100111011110011110111001110
+
+curlaz:
+01110 01110
+11110 01111
+11100 01110
+
+011100111011110011111110001110
+
+
+=======================
+
+-------
+2018-03-30
+20v1.0a
+
+using BEAKL 8-9 weights (?)
+
+150, 15, 10, 15, 50,   50, 15, 10, 15, 150,
+50,  5,  5,  5, 15,   15,  5,  5,  5, 50, 
+70, 20, 50, 10, 70,   70, 10, 50, 20, 70
+
+
+w/o Sp on main 
+(matrix)
+
+setksize beak
+setmask 011100111011110011110111001110
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}=:-/
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 53% 46%
+Fingers: 2.0% 11% 20% 19% 0.00% 0.00% 19% 16% 10% 2.0%
+
+    *  /  ;         q  w  x
+ :  k  (  ,         b  )  "  z
+    =  {  -         '  }  j
+
+    f  o  u         h  t  c
+ y  s  e  a         r  d  l  p
+    g  .  i         n  v  m
+
+Fitness:       18082760
+Distance:      8290735
+Finger work:   0
+Inward rolls:  8.49%
+Outward rolls: 2.65%
+Same hand:     34.33%
+Same finger:   2.11%
+Row change:    15.64%
+Home jump:     3.45%
+Ring jump:     0.87%
+To center:     0.00%
+
+-------
+2018-03-30
+20v1.0b (1.0 new run)
+
+Hands: 46% 53%
+Fingers: 2.0% 10% 16% 19% 0.00% 0.00% 19% 20% 11% 2.0%
+
+    q  w  x         ;  /  *
+ z  (  )  b         ,  '  k  :
+    j  {  "         -  }  =
+
+    c  t  h         u  o  f
+ p  l  d  r         a  e  s  y
+    m  v  n         i  .  g
+
+Fitness:       18101170
+Distance:      8291020
+Finger work:   0
+Inward rolls:  8.45%
+Outward rolls: 2.83%
+Same hand:     34.43%
+Same finger:   2.12%
+Row change:    15.62%
+Home jump:     3.41%
+Ring jump:     0.88%
+To center:     0.00%
+
+
+===================
+
+2018-03-30
+20v1.1a
+
+old beakl costs (ver?)
+90, 10, 10, 10, 50, 50, 10, 10, 10, 90,
+50,  5,  5,  5, 20, 20,  5,  5,  5, 50,
+90, 20, 30, 10, 50, 50, 10, 30, 20, 90 
+
+w/o Sp on main 
+(matrix)
+
+setksize beak
+setmask 011100111011110011110111001110
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}=:-/
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 48% 51%
+Fingers: 2.0% 11% 18% 17% 0.00% 0.00% 19% 21% 10% 2.0%
+
+    =  k  q         ;  (  )
+ {  '  w  "         ,  -  v  }
+    z  j  x         :  *  /
+
+    c  d  n         u  o  f
+ p  s  t  r         a  e  h  g
+    b  m  l         i  .  y
+
+Fitness:       17200255
+Distance:      7404420
+Finger work:   0
+Inward rolls:  8.36%
+Outward rolls: 3.57%
+Same hand:     33.63%
+Same finger:   2.14%
+Row change:    14.34%
+Home jump:     2.57%
+Ring jump:     1.21%
+To center:     0.00%
+
+---
+2018-03-30
+20v1.1b (1.1 new run)
+
+Hands: 51% 48%
+Fingers: 2.0% 10% 20% 19% 0.00% 0.00% 17% 18% 11% 2.0%
+
+    (  =  :         q  k  )
+ {  v  -  ,         "  w  '  }
+    /  *  ;         x  j  z
+
+    f  o  u         n  d  c
+ g  h  e  a         r  t  s  p
+    y  .  i         l  m  b
+
+Fitness:       17185010
+Distance:      7404420
+Finger work:   0
+Inward rolls:  8.36%
+Outward rolls: 3.55%
+Same hand:     33.52%
+Same finger:   2.15%
+Row change:    14.32%
+Home jump:     2.54%
+Ring jump:     1.20%
+To center:     0.00%
+
+
