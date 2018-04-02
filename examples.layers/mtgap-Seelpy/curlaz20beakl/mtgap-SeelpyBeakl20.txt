@@ -140,6 +140,7 @@ Ring jump:     1.21%
 To center:     0.00%
 
 ---
+
 2018-03-30
 20v1.1b (1.1 new run)
 
@@ -187,3 +188,88 @@ need to work on this !
     ? # ^        X J Z     
                                          
                                          
+===================
+
+2018-04-01
+20v1.2
+
+new beakl costs 
+
+with Sp on main 
+allCharsProg.txt
+(matrix)
+
+setksize beak
+setmask 011100111011110011110111001110
+use abcdef ghijklmnopqrstuvwxyz.,'"();{}=:-/
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 44% 55%
+Fingers: 2.0% 12% 14% 17% 0.00% 0.00% 26% 17% 11% 2.0%
+
+    q  ;  "         :  (  )
+ '  k  w  /         z  .  v  -
+    j  {  b         x  }  =
+
+    l  d  n         u  o  f
+ c  s  t  h        SP  e  a  g
+    m  p  r         i  ,  y
+
+Fitness:       26541981
+Distance:      9381865
+Finger work:   614156
+Inward rolls:  9.08%
+Outward rolls: 3.16%
+Same hand:     37.07%
+Same finger:   3.22%
+Row change:    16.61%
+Home jump:     2.05%
+Ring jump:     1.03%
+To center:     0.00%
+
+
+===================
+
+2018-04-01
+20v1.3
+
+new beakl costs 
+w/0 Sp on main 
+allCharsProg.txt
+(matrix)
+
+setksize beak
+setmask 011100111011110011110111001110
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}=:-/
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 51% 48%
+Fingers: 2.0% 11% 20% 19% 0.00% 0.00% 19% 16% 11% 2.0%
+
+    j  *  =         x  w  "
+ '  k  (  .         b  )  /  -
+    {  }  ;         :  z  q
+
+    f  o  u         h  t  c
+ y  s  e  a         r  d  l  p
+    g  ,  i         n  v  m
+
+Fitness:       17799645
+Distance:      7974675
+Finger work:   0
+Inward rolls:  8.57%
+Outward rolls: 2.68%
+Same hand:     34.56%
+Same finger:   2.13%
+Row change:    15.70%
+Home jump:     3.33%
+Ring jump:     1.04%
+To center:     0.00%
