@@ -1,13 +1,3 @@
-notes:
-+ D on altGr on T is not very good after all ;-p (good scores in KLA!)
- -> maybe try it on altGr space (a la x1-h) ?
- -> or   g  instead of  d
-       d w            g w
-   => worst results in KLA !!
-   same thing if I bring D back to its original place on main
-   
- => seems like D on S works ok w. KLA .. have to try myself to see !!
-pq
 
 remove digits!! more space, frees up good spots
 can even move tough chars from main mid columns here ?
@@ -46,3 +36,28 @@ changed altGr inteferes w. numpad: xX => 9
   t 7 2 4 6          
 - 8 0 1 3 5          
   / , 9 . :          
+
+  ==============
+  
++ D on altGr on T is not very good after all ;-p (good scores in KLA!)
+ -> maybe try it on altGr space (a la x1-h) ?
+ -> or   g  instead of  d
+       d w            g w
+   => worst results in KLA !!
+   same thing if I bring D back to its original place on main
+   
+ => seems like D on S works ok w. KLA .. have to try myself to see !!
+
+ ----
+ 
+v7, moved D back to main at M's place, move M to altGr
+
+  q h o u [x]  [g] c r f z   
+  y i e a [.]  [d] s t n b ;
+  j , / k [']  [w] d l p v   
+  
+    % _              ^ ~     
+  : < " >  `       [ = ] @   
+- \ ( . ) #      $ m { } | ;
+  * - x ' !        g w + &   
+  
