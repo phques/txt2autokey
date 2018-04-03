@@ -1,0 +1,48 @@
+notes:
++ D on altGr on T is not very good after all ;-p (good scores in KLA!)
+ -> maybe try it on altGr space (a la x1-h) ?
+ -> or   g  instead of  d
+       d w            g w
+   => worst results in KLA !!
+   same thing if I bring D back to its original place on main
+   
+ => seems like D on S works ok w. KLA .. have to try myself to see !!
+pq
+
+remove digits!! more space, frees up good spots
+can even move tough chars from main mid columns here ?
+
+changed a bunch of syms, bring down from top row etc
+ and tough syms from altgr &
+ 
+also swap /, on main (tested on KLA : better scores)
+
+
+  4 0 1 2  3    7  6 5 9 8 
+  q h o u [x]  [g] c r f z   
+- y i e a [.]  [d] s t n b ;
+  j , / k [']  [w] m l p v
+
+  Q H O U [X] [G] C R F Z     
+- Y I E A [@] [D] S T N B 
+  J ! ? K [`] [W] M L P V
+
+    % _             ^ ~
+  : < " > `       [ = ] @      
+  \ ( . ) #     $ { d } | ;
+  * - x ' !       g w + &
+  
+had to place these:
+_+-*& ! [%]
+gwd x.@'` ;
+
+w. US wide mode : use altGr Enter for ';' ?? (not avail on main, right hand shifted)
+placed on capsLock at 1st, but left is getting pretty heavy !
+
+changed altGr inteferes w. numpad: xX => 9
+(which I dont usually use)
+
+    + = *       ^ % ~
+  t 7 2 4 6          
+- 8 0 1 3 5          
+  / , 9 . :          

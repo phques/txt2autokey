@@ -1,7 +1,7 @@
 /*
 
 2018-03-30
-mcb24v1.1
+mcb24v1.2
 
 */
 
@@ -9,7 +9,7 @@ mcb24v1.1
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\v1.1"
+global ImgsDir := A_ScriptDir . "\imgs\v1.2"
 global ImgWidth := 110
 global ImgHeight := 110
 global CenterOnCurrWndMonitor := 1
@@ -32,30 +32,30 @@ fromQwerty := "
 
 layer1 := "
 (Join`r`n
-    f o u     h t c
- , s e a y  m r d n w
- - g . i      l b p v
+    f  o  u         d  n  c
+ g  h  e  a  ,   m  t  s  r  p
+ k  y  .  i         l  b  w  v
 )"
 
 layer2 := "
 (Join`r`n
-   & * <       > = z
- ' k ( x :  q `; ) / !
- [ { + "       j # } ]
+   / : !      + = x
+ < _ ( - *  q " ) ' >
+ [ ? { ;      j } z ]
 )"
 
 layer1sh := "
 (Join`r`n
-    F O U     H T C
- , S E A Y  M R D N W
- - G . I      L B P V
+    F  O  U         D  N  C
+ G  H  E  A  ,   M  T  S  R  P
+ K  Y  .  I         L  B  W  V
 )"
 
 layer2sh := "
 (Join`r`n
-   . $ .      . ~ Z
- . K ^ X .  Q % | \ .
- . @ . ?      J . `` .
+    .  ~  .         .  .  X
+ .  %  ``  &  .  Q  |  @  #  .
+ .  .  .  $         J  .  Z  .
 )"
 
  

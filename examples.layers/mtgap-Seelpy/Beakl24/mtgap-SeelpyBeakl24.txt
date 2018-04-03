@@ -126,3 +126,65 @@ Home jump:     4.63%
 Ring jump:     5.97%
 To center:     2.49%
 
+-----------
+
+------
+
+2018-04-02
+24v1.2
+
+using BEAKL 8-9 weights (?)
+slightly mod (mid row/col index 15 -> 17)
+
+150, 15, 10, 15, 50,  50, 15, 10, 15, 150,
+50,  5,  5,  5, 15,   15,  5,  5,  5, 50, 
+70, 20, 50, 10, 70,   70, 10, 50, 20, 70
+
+w/o Sp on main 
+allCharsStd, re-did choice of use chars, taken in order from allCharsStd
+etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z/*!?$>{}[]\
++|&<%@#`~
+
+run 6 threads too ;-)
+
+setksize beak
+setmask 011100111011111111111111001111
+use etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z/*!?$>{}[]\
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 6
+set singleKeySameFinger 0
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 9.0% 20% 19% 0.00% 0.00% 20% 15% 11% 3.0%
+
+    *  /  !         >  =  x
+ \  _  (  -  :   q  "  )  '  $
+ [  ?  {  ;         j  }  z  ]
+
+    f  o  u         d  n  c
+ g  h  e  a  ,   m  t  s  r  p
+ k  y  .  i         l  b  w  v
+
+ re arranged syms a little bit <> both n altgr, and added missing syms
+   / : !      + = x
+ < _ ( - *  q " ) ' >
+ [ ? { ;      j } z ]
+
+   .  ~  .         .  .  X
+.  %  `  &  .   Q  |  @  #  .
+.  .  .  $         J  .  Z  .
+
+
+Fitness:       15895594
+Distance:      9276489
+Finger work:   0
+Inward rolls:  8.70%
+Outward rolls: 1.74%
+Same hand:     31.89%
+Same finger:   2.94%
+Row change:    13.84%
+Home jump:     2.63%
+Ring jump:     1.64%
+To center:     1.43%
