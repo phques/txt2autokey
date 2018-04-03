@@ -37,6 +37,7 @@ layer1 := "
     y . i   l m b     
 )"
 
+; missing syms ~@$_
 layer2 := "
 (Join`r`n
     ( = :   q k )     
