@@ -11,12 +11,11 @@ with BEAKL15 specific mods for the alt/shift etc keys
 
 the defined LY092-SN base :
 see https://github.com/phques/SmartYaoLayout.git
-in  profile\BEAKL10\qwertyBased
+in  profile\qwerty\qwertyRef
 
 The modifications to the hardware qwerty base layouts are:
 
 --Left--
-CapsLock => -
 
 Thumbs (<> than orig BEAKL15):
   enter, space control, backspace

@@ -33,12 +33,14 @@ AddMappings(1, 1, '   2 3 4     7 8 9       ',  '   + = *      ^ `% ~     ')
 AddMappings(1, 1, ' q w e r t  y u i o p    ',  ' Q H O U X  G C R F Z    ')
 AddMappings(1, 1, " a s d f g  h j k l `; ' ",  ' Y I E A @  D S T N B `; ') 
 AddMappings(1, 1, ' z x c v b  n m , . /    ',  ' J ? ! K `` W M L P V    ')
+AddMappings(1, 1, 'CapsLock', '-') 
 
 
 AddMappings(1, 0, ' 1 2 3 4 5  6 7 8 9 0    ',  ' 4 0 1 2 3  7 6 5 9 8    ')
 AddMappings(1, 0, ' q w e r t  y u i o p    ',  ' q h o u x  g c r f z    ')
 AddMappings(1, 0, " a s d f g  h j k l `; ' ",  ' y i e a .  d s t n b `; ')
 AddMappings(1, 0, ' z x c v b  n m , . /    ',  " j / , k '  w m l p v    ")
+AddMappings(1, 0, 'CapsLock', '-') 
 
 AddMappings(1, 0, '``', 'CapsLock')
 
@@ -56,8 +58,8 @@ AddMappings(2, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
 AddMappings(2, 1, ' q w e r t ',   ' Tab 7 2 4 6 ')
 AddMappings(2, 1, " a s d f g ",   ' 8   0 1 3 5 ')
 AddMappings(2, 1, ' z x c v b ',   ' /   , 9 . : ')
+AddMappings(2, 1, 'CapsLock', '-') 
 
-AddMappings(2, 1, '-', '-')
 
 ; -- punctuation layer --
 ; orig BEAKL9-10
@@ -71,9 +73,9 @@ AddMappings(2, 0, '      3        7 8 9      ',   '      _         ^ `% ~     ')
 AddMappings(2, 0, '  q w e r t    u i o p    ',   '  : { = } !     [ " ] \    ')
 AddMappings(2, 0, "- a s d f g  h j k l `; ' ",   '# & ( 1 ) *   + < 0 > | $  ')
 AddMappings(2, 0, '  z x c v b    m , . /    ',   '  5 4 3 2 -     9 8 7 6    ')
+AddMappings(2, 0, 'CapsLock', '-') 
 AddMappings(2, 0, 'BackSpace', 'Delete')
 
-AddMappings(2, 0, '-', '-')
 
 ;------
 

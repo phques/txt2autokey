@@ -53,7 +53,7 @@ changed altGr inteferes w. numpad: xX => 9
 v7, moved D back to main at M's place, move M to altGr
 
   q h o u [x]  [g] c r f z   
-  y i e a [.]  [d] s t n b ;
+- y i e a [.]  [d] s t n b ;
   j , / k [']  [w] d l p v   
   
     % _              ^ ~     
