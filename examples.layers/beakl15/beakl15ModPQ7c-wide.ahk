@@ -84,8 +84,8 @@ AddMappings(2, 0, 'Capslock', ';') ; wide: ';' moved here from right side pinky
 
 ; ---------------
 
-;#include ../../common/extend/extendWide2Base.ahk
-#include ../../common/extend/extendWide2BaseShLeft.ahk
+;#include ../common/extend/extendWide2Base.ahk
+#include ../common/extend/extendWide2BaseShLeft.ahk
 ; SetupExtend2('RAlt')
 SetupExtend2('LAlt')
 
