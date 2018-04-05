@@ -52,7 +52,8 @@ AddMappings(1, 0, 'b', 'Capslock')
 
 ; -- layer 2 --
 
-CreateLayer(2, "RAlt", 0)
+; CreateLayer(2, "RAlt", 0)
+CreateLayer(2, "Space", 0)
 
 ; bottom row shifted left (angle mod)
 ; ## Chnages above interferes w. numpad 9, used by 'X'
@@ -81,8 +82,13 @@ AddMappings(2, 0, 'BackSpace', 'Delete') ;; ??
 AddMappings(2, 0, 'Capslock', ';') ; wide: ';' moved here from right side pinky
 
 
-;;;
-#include ../common/extend/extendSpaceWide2.ahk
+; ---------------
+
+;#include ../../common/extend/extendWide2Base.ahk
+#include ../../common/extend/extendWide2BaseShLeft.ahk
+; SetupExtend2('RAlt')
+SetupExtend2('LAlt')
+
 
 DisplayHelpImage()
 return

@@ -18,7 +18,6 @@ global CenterOnCurrWndMonitor := 1
 #include ../../common/groups.ahk
 #include ../../common/clipboardToBash.ahk
 #include ../../common/fromPkl/pkl_guiLayers.ahk
-#include ../../common/extend/extendWide2Base.ahk
 
 ; Qwerty mask
 fromQwerty := "
@@ -65,8 +64,8 @@ layer2sh := "
 CreateLayer(1)
 
 ; 2nd layer, 
-CreateLayer(2, "RAlt", 1)
-; CreateLayer(2, "Space", 0)
+; CreateLayer(2, "RAlt", 1)
+CreateLayer(2, "Space", 0)
 
 AddMappings(1, 1, fromQwerty, layer1sh)
 AddMappings(2, 1, fromQwerty, layer2sh)
@@ -75,15 +74,18 @@ AddMappings(2, 0, fromQwerty, layer2)
 
 AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
 
-; #include ../../common/extend/extendLAltWide2.ahk
-; SetupExtend2('LAlt')
-SetupExtend2('Space')
+; ---------------
+
+#include ../../common/extend/extendWide2BaseShLeft.ahk
+
+SetupExtend2('LAlt')
+; SetupExtend2('Space')
 
 ; this one will autorepeat Space, since space itself will not (dual mode cant)
-extHK('b', 'Space') 
+; extHK('b', 'Space') 
 
 ; space press/release outputs space (dual mode)
-extHKitself('', 'Space')
+; extHKitself('', 'Space')
 
 DisplayHelpImage()
 return
