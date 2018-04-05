@@ -238,3 +238,89 @@ Row change:    13.51%
 Home jump:     2.35%
 Ring jump:     1.49%
 To center:     2.16%
+
+-----------
+
+2018-04-05
+24v2.1
+
+using Modified PQ BEAKL 8-9 weights
+
+150, 15, 10, 20, 50,   50, 20, 10, 15, 150,
+ 50,  5,  5,  5, 18,   18,  5,  5,  5, 50, 
+ 70, 15, 50, 10, 70,   70, 10, 50, 15, 70
+
+try to have all letters on main, 
+use 2 passes
+
+qz,.-"_')(;=:/*!?$>{}[]\
+
+ 
+#1
+setksize beak
+setmask 011100111011111111111111001111
+use etaoinsrhldcumfgpywbvkxjETAOINSRHLDCUMFGPYWBVKXJ
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 2
+set singleKeySameFinger 0
+run
+
+Hands: 47% 52%
+Fingers: 3.0% 11% 15% 18% 0.00% 0.00% 20% 20% 11% 1.0%
+
+    C  N  G         U  O  F
+ P  R  S  T  M   Y  A  E  H  K
+ V  W  B  L         I  J  D  X
+
+    c  n  g         u  o  f
+ p  r  s  t  m   y  a  e  h  k
+ v  w  b  l         i  j  d  x
+
+Fitness:       11378219
+Distance:      8030704
+Finger work:   0
+Inward rolls:  8.54%
+Outward rolls: 1.75%
+Same hand:     32.82%
+Same finger:   2.86%
+Row change:    14.66%
+Home jump:     2.71%
+Ring jump:     1.03%
+To center:     1.93%
+
+#2
+missing +|&<%@#`~
+
+
+setksize beak
+setmask 011100111011111111111111001111
+use qz,.-"_')(;=:/*!?$>{}[]\QZ,.-"_')(;=:/*!?$>{}[]\
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 2
+set singleKeySameFinger 0
+run
+
+Hands: 49% 50%
+Fingers: 2.0% 9.0% 26% 13% 0.00% 0.00% 14% 23% 11% 2.0%
+
+    Q  ?  Z         *  !  $
+ {  (  ,  '  /   :  "  .  )  }
+ [  =  \  ;         _  >  -  ]
+
+    q  ?  z         *  !  $
+ {  (  ,  '  /   :  "  .  )  }
+ [  =  \  ;         _  >  -  ]
+
+Fitness:       1266654
+Distance:      421643
+Finger work:   38666
+Inward rolls:  14.63%
+Outward rolls: 1.51%
+Same hand:     53.68%
+Same finger:   1.08%
+Row change:    7.74%
+Home jump:     0.50%
+Ring jump:     0.68%
+To center:     0.85%
