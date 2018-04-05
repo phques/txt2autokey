@@ -1,0 +1,83 @@
+
+#** not very good results
+
+
+modified beakl kbd in mtgap, with costs adjusted to simulate the 3x3+2 (BEAKL20) mask,
+while still using all the 30 main keys
+
+
+2018-04-04
+v1 
+actually, like a normal mtgap main30 !
+w. keepShiftPairLetters 1 => aA bB etc
+
+setksize beak
+set keepShiftPairLetters 1
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 48% 51%
+Fingers: 3.0% 12% 16% 18% 0.00% 0.00% 19% 21% 9.0% 3.0%
+
+ Z  L  N  D  V   <  U  O  P  Q
+ F  R  S  T  B   /  A  E  H  G
+ X  W  M  C  J   >  I  ;  Y  K
+
+ z  l  n  d  v   ?  u  o  p  q
+ f  r  s  t  b   .  a  e  h  g
+ x  w  m  c  j   :  i  ,  y  k
+
+Fitness:       17353695
+Distance:      13824648
+Finger work:   56932
+Inward rolls:  8.23%
+Outward rolls: 0.76%
+Same hand:     30.41%
+Same finger:   2.96%
+Row change:    14.14%
+Home jump:     2.37%
+Ring jump:     1.47%
+To center:     1.43%
+
+---------
+
+2018-04-04
+v2 
+back to keepShiftPairLetters 0
+chose 26 chars + 32 syms = 58, missing 2 !!
+add é à (algo wont find them in allChars !, should use allChars add french)
+
+setksize beak
+use abcdefghijklmnopqrstuvwxyz,./<>?;':"[]\{}|`~!@#$%^&*()_+-=éà
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 5
+set singleKeySameFinger 0
+run
+
+Hands: 46% 53%
+Fingers: 2.0% 11% 16% 17% 0.00% 0.00% 20% 20% 12% 2.0%
+
+ ~  *  w  "  |   é  :  /  $  à
+ [  (  k  '  +   &  ,  ;  )  ]
+ <  >  {  j  ^   %  -  }  =  #
+
+ `  f  t  h  x   \  u  o  c  @
+ p  n  d  r  v   _  a  e  s  y
+ q  m  b  l  z   ?  i  .  g  !
+
+Fitness:       18721688
+Distance:      10333772
+Finger work:   34506
+Inward rolls:  9.15%
+Outward rolls: 1.96%
+Same hand:     33.99%
+Same finger:   2.22%
+Row change:    15.87%
+Home jump:     2.65%
+Ring jump:     0.86%
+To center:     0.70%
+
+#** not very good results
