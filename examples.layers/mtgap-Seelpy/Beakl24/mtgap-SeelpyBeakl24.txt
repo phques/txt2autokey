@@ -128,16 +128,14 @@ To center:     2.49%
 
 -----------
 
-------
-
 2018-04-02
-24v1.2
+24v1.2 (ran w. error in mtgap weights < 0 in left column)
 
 using BEAKL 8-9 weights (?)
 slightly mod (mid row/col index 15 -> 17)
 
 150, 15, 10, 15, 50,  50, 15, 10, 15, 150,
-50,  5,  5,  5, 15,   15,  5,  5,  5, 50, 
+50,  5,  5,  5, 17,   17,  5,  5,  5, 50, 
 70, 20, 50, 10, 70,   70, 10, 50, 20, 70
 
 w/o Sp on main 
@@ -188,3 +186,55 @@ Row change:    13.84%
 Home jump:     2.63%
 Ring jump:     1.64%
 To center:     1.43%
+
+
+-----------
+
+2018-04-04
+24v2.0
+
+using BEAKL 8-9 weights (?)
+slightly mod (mid row/col index 15 -> 17)
+
+150, 15, 10, 15, 50,  50, 15, 10, 15, 150,
+50,  5,  5,  5, 15,   15,  5,  5,  5, 50, 
+70, 20, 50, 10, 70,   70, 10, 50, 20, 70
+
+** modified allCharsStd to have only letters on main - move syms down in allCharsLetters1st.txt
+!! does not result un all letters on main as I wanted !!
+etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z/*!?$>{}[]\
++|&<%@#`~
+
+run 6 threads too ;-)
+
+setksize beak
+setmask 011100111011111111111111001111
+use etaoinsrhldcumfgpywb,.vk-"_'x)(;jq=:z/*!?$>{}[]\
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 6
+set singleKeySameFinger 0
+run
+
+Hands: 49% 50%
+Fingers: 2.0% 8.0% 19% 20% 0.00% 0.00% 21% 15% 11% 3.0%
+
+    :  /  *         q  z  $
+ \  -  (  _  ;   >  x  )  '  ?
+ [  !  {  "         j  }  =  ]
+
+    f  o  u         d  n  c
+ g  h  e  a  y   m  t  s  r  p
+ ,  k  .  i         l  b  w  v
+
+Fitness:       15645394
+Distance:      8978444
+Finger work:   0
+Inward rolls:  8.68%
+Outward rolls: 1.74%
+Same hand:     31.99%
+Same finger:   3.27%
+Row change:    13.51%
+Home jump:     2.35%
+Ring jump:     1.49%
+To center:     2.16%
