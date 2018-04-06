@@ -13,7 +13,7 @@ mask, matrix
 
 011100111011111111111111001111
 
-order of syms according to llCharsProg:
+order of syms according to allCharsProg:
 /.()*;=":,{}<->&+'#![]\|%^$?~@`
 
 with letters: (room for 48 chars)
@@ -262,7 +262,7 @@ setmask 011100111011111111111111001111
 use etaoinsrhldcumfgpywbvkxjETAOINSRHLDCUMFGPYWBVKXJ
 set keepShiftPairLetters 1
 set keepShiftPairOther 1
-set numThreads 2
+set numThreads 4
 set singleKeySameFinger 0
 run
 
@@ -298,7 +298,7 @@ setmask 011100111011111111111111001111
 use qz,.-"_')(;=:/*!?$>{}[]\QZ,.-"_')(;=:/*!?$>{}[]\
 set keepShiftPairLetters 1
 set keepShiftPairOther 1
-set numThreads 2
+set numThreads 4
 set singleKeySameFinger 0
 run
 
@@ -324,3 +324,106 @@ Row change:    7.74%
 Home jump:     0.50%
 Ring jump:     0.68%
 To center:     0.85%
+
+added digits & missing synms
+
+  4 0 1 2 3            7 6 5 9 8   
+  & c n g                u o f |   
+  p r s t m            y a e h k   
+  v w b l                i j d x   
+
+    ~ +                    % `     
+  < q ? z                * ! $ #   
+  { ( , ' /            : " . ) }   
+  [ = \ ;                _ > - ]   
+                                            
+-----------
+
+2018-04-05
+24v2.2
+
+using Modified PQ BEAKL 8-9 weights
+
+150, 15, 10, 20, 50,   50, 20, 10, 15, 150,
+ 50,  5,  5,  5, 18,   18,  5,  5,  5, 50, 
+ 70, 15, 50, 10, 70,   70, 10, 50, 15, 70
+
+Use handbias 10 to bring back vowels on left side
+ 
+try to have all letters on main, 
+use 2 passes
+
+qz,.-"_')(;=:/*!?$>{}[]\
+
+ 
+#1
+setksize beak
+setmask 011100111011111111111111001111
+use etaoinsrhldcumfgpywbvkxjETAOINSRHLDCUMFGPYWBVKXJ
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 10
+run
+
+Hands: 52% 47%
+Fingers: 1.0% 11% 20% 20% 0.00% 0.00% 18% 15% 11% 3.0%
+
+    F  O  U         G  N  C
+ K  H  E  A  Y   M  T  S  R  P
+ X  D  J  I         L  B  W  V
+
+    f  o  u         g  n  c
+ k  h  e  a  y   m  t  s  r  p
+ x  d  j  i         l  b  w  v
+
+Fitness:       14655609
+Distance:      11308094
+Finger work:   0
+Inward rolls:  8.54%
+Outward rolls: 1.75%
+Same hand:     32.82%
+Same finger:   2.86%
+Row change:    14.66%
+Home jump:     2.71%
+Ring jump:     1.03%
+To center:     1.93%
+
+--
+#2
+missing +|&<%@#`~
+
+
+setksize beak
+setmask 011100111011111111111111001111
+use qz,.-"_')(;=:/*!?$>{}[]\QZ,.-"_')(;=:/*!?$>{}[]\
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 2
+run
+
+hand bias 10, even 5 is too much !!
+Hands: 65% 34%
+Fingers: 2.0% 11% 24% 28% 0.00% 0.00% 13% 11% 9.0% 2.0%
+    _  =  !         >  -  Q
+ [  (  .  ,  ?   *  "  ;  )  ]
+ {  /  \  :         '  $  Z  }
+
+ 
+handbias 0 .. too low ?
+Hands: 49% 50%
+Fingers: 2.0% 9.0% 26% 13% 0.00% 0.00% 14% 23% 11% 2.0%
+    q  ?  z         *  !  $
+ {  (  ,  '  /   :  "  .  )  }
+ [  =  \  ;         _  >  -  ]
+
+handbias 2
+I get same balnce on this layer as main !! ;-)
+Hands: 52% 47%
+Fingers: 2.0% 11% 26% 14% 0.00% 0.00% 11% 23% 11% 2.0%
+    ;  ?  *         z  !  $
+ {  (  ,  '  :   /  "  .  )  }
+ [  =  \  _         q  >  -  ]
