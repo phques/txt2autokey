@@ -446,3 +446,68 @@ Fingers: 1.0% 11% 19% 22% 0.00% 0.00% 19% 16% 12% 1.0%
     z  /  {         }  >  -
  '  (  )  ;  q   *  "  .  ,  !
  [  ]  \  =         _  $  :  ?
+
+++++++
+ 
+Just realized how on US kbd, altgr key on right hand, some keys are very difficult to reach (index)
+so here's an updated mask to cover same nbr of keys, + one key one bottom left
+11110 00110
+11111 01111
+11110 11111
+
+111100011011111011111111011111
+
+also use chars based on order from allCharsSrc2: (swapped extra added key to use | vs \)
+qz
+.;/)(="*-,:}{<>&+[]#!'|
+\$?%~@^`
+
+setksize beak
+setmask 111100011011111011111111111111
+use qz.;/)(="*-,:}{<>&+[]#!'|QZ.;/)(="*-,:}{<>&+[]#!'|
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set singleKeySameFinger 0
+sethandbias 2
+set numThreads 4
+run
+
+handbias 2, too big, considering fact we have more on left hand?
+Hands: 57% 42%
+Fingers: 2.0% 13% 20% 23% 0.00% 0.00% 9.0% 20% 11% 1.0%
+ '  {  /  *            :  }
+ [  (  )  ;  q      "  .  ,  ]
+ #  z  &  =      +  <  >  -  !
+
+handbias -5
+Hands: 48% 51%
+Fingers: 2.0% 13% 13% 21% 0.00% 0.00% 16% 23% 11% 1.0%
+ !  {  <  >            =  }
+ q  (  )  ;  *      "  .  -  +
+ [  ]  z  ,      &  /  #  :  '
+ 
+ 
+**this is the one I want ? even though hand balance is 49-50 **
+OOOPS still had \ vs | .. just keep it ? or change \ to |
+handbias 0
+Hands: 49% 50%
+Fingers: 2.0% 13% 13% 21% 0.00% 0.00% 16% 22% 11% 1.0%
+ \  {  <  >            =  }
+ q  (  )  ;  *      "  .  -  '
+ [  +  z  ,  !   &  /  #  :  ]
+
+swap + : so := is better,
+chg \ to |
+ |  {  <  >            =  }
+ q  (  )  ;  *      "  .  -  '
+ [  :  z  ,  !   &  /  #  +  ]
+
+** other nice one 
+handbias -4
+Hands: 48% 51%
+Fingers: 1.0% 11% 13% 23% 0.00% 0.00% 19% 20% 13% 1.0%
+ |  -  {  }            /  *
+ '  ,  (  .  &      ;  )  "  !
+ [  <  +  :  #   z  =  q  >  ]
+ 
+ 
