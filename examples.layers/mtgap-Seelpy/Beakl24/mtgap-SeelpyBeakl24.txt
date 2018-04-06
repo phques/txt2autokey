@@ -412,7 +412,6 @@ Fingers: 2.0% 11% 24% 28% 0.00% 0.00% 13% 11% 9.0% 2.0%
  [  (  .  ,  ?   *  "  ;  )  ]
  {  /  \  :         '  $  Z  }
 
- 
 handbias 0 .. too low ?
 Hands: 49% 50%
 Fingers: 2.0% 9.0% 26% 13% 0.00% 0.00% 14% 23% 11% 2.0%
@@ -427,3 +426,23 @@ Fingers: 2.0% 11% 26% 14% 0.00% 0.00% 11% 23% 11% 2.0%
     ;  ?  *         z  !  $
  {  (  ,  '  :   /  "  .  )  }
  [  =  \  _         q  >  -  ]
+
+add digits & missing synms
+swap  : / otherwise := is difficult
+
+---
+alternatives, using allcharsSrc2.txt for better representation of pgrming syms use
+
+handbias 2 .. not enough ?
+Hands: 50% 49%
+Fingers: 1.0% 11% 18% 21% 0.00% 0.00% 20% 18% 11% 1.0%
+    [  =  :         >  -  ]
+ \  (  )  ;  {   }  "  .  _  !
+ '  q  z  ,         /  $  *  ?
+ 
+handbias 5
+Hands: 52% 47%
+Fingers: 1.0% 11% 19% 22% 0.00% 0.00% 19% 16% 12% 1.0%
+    z  /  {         }  >  -
+ '  (  )  ;  q   *  "  .  ,  !
+ [  ]  \  =         _  $  :  ?
