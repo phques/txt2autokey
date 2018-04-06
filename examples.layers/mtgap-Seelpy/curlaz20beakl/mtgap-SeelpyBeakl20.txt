@@ -273,3 +273,92 @@ Row change:    15.70%
 Home jump:     3.33%
 Ring jump:     1.04%
 To center:     0.00%
+
+===================
+
+2018-04-05
+20v1.4
+
+modified PQ beakl new costs
+150, 15, 10, 20, 50,   50, 20, 10, 15, 150,
+ 50,  5,  5,  5, 18,   18,  5,  5,  5, 50, 
+ 70, 15, 50, 10, 70,   70, 10, 50, 15, 70
+
+w/o Sp on main 
+(matrix)
+
+allCharsStd
+hand bias 15
+
+/.()*;=":,{}<- >&+'#![]\|%^$?~@`
+/.()*;=":,{}<>
+miss -&+'#![]\|%^$?~@`
+
+setksize beak
+setmask 011100111011110011110111001110
+use abcdefghijklmnopqrstuvwxyz/.()*;=":,{}<>
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 15
+run
+
+Hands: 55% 44%
+Fingers: 2.0% 12% 22% 20% 0.00% 0.00% 15% 17% 11% 1.0%
+
+    {  =  :         x  w  }
+ (  )  ,  y         ;  k  q  z
+    /  *  "         j  <  >
+
+    c  o  u         h  t  f
+ p  s  e  a         r  d  n  v
+    g  .  i         l  b  m
+
+Fitness:       22368831
+Distance:      13035495
+Finger work:   59561
+Inward rolls:  9.56%
+Outward rolls: 2.47%
+Same hand:     35.06%
+Same finger:   2.09%
+Row change:    16.06%
+Home jump:     2.63%
+Ring jump:     1.25%
+To center:     0.00%
+
+2nd run for missing syms, on shift-altGr 
+mask out altgr used spots
+missing 3 spots still, so add 4 pinky corners,
+move those to main after !
+11110 00011
+11100 01000
+11110 00111
+
+setksize beak
+setmask 111100001111100010001111000111
+use -&+'#![]\|%^$?~@`-&+'#![]\|%^$?~@`
+set keepShiftPairLetters 0
+set keepShiftPairOther 1
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 15
+run
+
+Final adjusted res:
+  4 0 1 2 3  7 6 5 9 8   
+  ` c o u      h t f ~   
+  p s e a      r d n v   
+  % g . i      l b m ^   
+                         
+    C O U      H T F     
+  P S E A      R D N V   
+    G ` I      L B M     
+                         
+    { = :      x w }     
+  ( ) , y      ; k q z   
+    / * "      j < >     
+                         
+    [ $ +      X W ]     
+  & ? ' Y      ! K Q Z   
+    | # -      Z @ \   
