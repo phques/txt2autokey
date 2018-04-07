@@ -1,0 +1,402 @@
+-----------
+3x3 grid as mask  plus some surounding keys
+24 keys
+  W E R      U I O
+a S D F g  h J K L ;
+z X C V      M , . /
+
+try to have all letters on main (missing 2 !), 
+use 2 passes
+
+#1 etaoinsrhldcumfgpywbvkxj
+#2 qz,.-"_')(;=:/*!?$>{}[]\
+missing +|&<%@#`~
+
+
+mask, matrix
+01110 01110
+11111 11111
+11110 01111
+
+-------
+
+2018-04-06
+24v3.0
+
+using Modified PQ BEAKL 8-9 weights
+
+150, 15, 10, 20, 50,   50, 20, 10, 15, 150,
+ 50,  5,  5,  5, 18,   18,  5,  5,  5, 50, 
+ 70, 15, 50, 10, 70,   70, 10, 50, 15, 70
+
+Use handbias 10 to bring back vowels on left side
+
+
+#1
+setksize beak
+setmask 011100111011111111111111001111
+use etaoinsrhldcumfgpywbvkxjETAOINSRHLDCUMFGPYWBVKXJ
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 10
+run
+
+Hands: 52% 47%
+Fingers: 1.0% 11% 20% 20% 0.00% 0.00% 18% 15% 11% 3.0%
+
+    F  O  U         G  N  C
+ K  H  E  A  Y   M  T  S  R  P
+ X  D  J  I         L  B  W  V
+
+    f  o  u         g  n  c
+ k  h  e  a  y   m  t  s  r  p
+ x  d  j  i         l  b  w  v
+
+Fitness:       14655609
+Distance:      11308094
+Finger work:   0
+Inward rolls:  8.54%
+Outward rolls: 1.75%
+Same hand:     32.82%
+Same finger:   2.86%
+Row change:    14.66%
+Home jump:     2.71%
+Ring jump:     1.03%
+To center:     1.93%
+
+--
+#2
+missing +|&<%@#`~
+
+
+setksize beak
+setmask 011100111011111111111111001111
+use qz,.-"_')(;=:/*!?$>{}[]\QZ,.-"_')(;=:/*!?$>{}[]\
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 2
+run
+
+hand bias 10, even 5 is too much !!
+Hands: 65% 34%
+Fingers: 2.0% 11% 24% 28% 0.00% 0.00% 13% 11% 9.0% 2.0%
+    _  =  !         >  -  Q
+ [  (  .  ,  ?   *  "  ;  )  ]
+ {  /  \  :         '  $  Z  }
+
+handbias 0 .. too low ?
+Hands: 49% 50%
+Fingers: 2.0% 9.0% 26% 13% 0.00% 0.00% 14% 23% 11% 2.0%
+    q  ?  z         *  !  $
+ {  (  ,  '  /   :  "  .  )  }
+ [  =  \  ;         _  >  -  ]
+
+handbias 2
+I get same balnce on this layer as main !! ;-)
+Hands: 52% 47%
+Fingers: 2.0% 11% 26% 14% 0.00% 0.00% 11% 23% 11% 2.0%
+    ;  ?  *         z  !  $
+ {  (  ,  '  :   /  "  .  )  }
+ [  =  \  _         q  >  -  ]
+
+add digits & missing synms
+swap  : / otherwise := is difficult
+
+-------
+
+alternatives, using allcharsSrc2.txt for better representation of pgrming syms use
+
+handbias 2 .. not enough ?
+Hands: 50% 49%
+Fingers: 1.0% 11% 18% 21% 0.00% 0.00% 20% 18% 11% 1.0%
+    [  =  :         >  -  ]
+ \  (  )  ;  {   }  "  .  _  !
+ '  q  z  ,         /  $  *  ?
+ 
+handbias 5
+Hands: 52% 47%
+Fingers: 1.0% 11% 19% 22% 0.00% 0.00% 19% 16% 12% 1.0%
+    z  /  {         }  >  -
+ '  (  )  ;  q   *  "  .  ,  !
+ [  ]  \  =         _  $  :  ?
+
+++++++
+ 
+Just realized how on US kbd, altgr key on right hand, some keys are very difficult to reach (index)
+so here's an updated mask, added a few keys too ! want as much syms as possb !
+26 spots
+11110 00111
+11111 01111
+11111 11111
+
+111100011111111011111111111111
+
+qz + 24/32 syms 
+
+also use chars based on order from allCharsSrc2: (swapped extra added key to use | vs \)
+qz
+.;/)(="*-,:}{<>&+[]#!'|
+
+miss:
+\$?%~@^`
+DOOOh just realized was missing _ too !!
+
+----
+some previous results, less spots used
+
+handbias 2, too big, considering fact we have more on left hand?
+Hands: 57% 42%
+Fingers: 2.0% 13% 20% 23% 0.00% 0.00% 9.0% 20% 11% 1.0%
+ '  {  /  *            :  }
+ [  (  )  ;  q      "  .  ,  ]
+ #  z  &  =      +  <  >  -  !
+
+handbias -5
+Hands: 48% 51%
+Fingers: 2.0% 13% 13% 21% 0.00% 0.00% 16% 23% 11% 1.0%
+ !  {  <  >            =  }
+ q  (  )  ;  *      "  .  -  +
+ [  ]  z  ,      &  /  #  :  '
+ 
+ 
+ 
+**this is a nice one (hand balance is 49-50!? ok?) **
+OOOPS still had \ vs | .. just keep it ? or change \ to |
+handbias 0
+Hands: 49% 50%
+Fingers: 2.0% 13% 13% 21% 0.00% 0.00% 16% 22% 11% 1.0%
+ \  {  <  >            =  }
+ q  (  )  ;  *      "  .  -  '
+ [  +  z  ,  !   &  /  #  :  ]
+
+and swap + : so := is better,
+chg \ to |
+ |  {  <  >            =  }
+ q  (  )  ;  *      "  .  -  '
+ [  :  z  ,  !   &  /  #  +  ]
+
+ 
+** other nice one 
+handbias -4
+Hands: 48% 51%
+Fingers: 1.0% 11% 13% 23% 0.00% 0.00% 19% 20% 13% 1.0%
+ |  -  {  }            /  *
+ '  ,  (  .  &      ;  )  "  !
+ [  <  +  :  #   z  =  q  >  ]
+
+-----------------
+-----------------
+-----------------
+
+latest mask, more keys, 26 spots
+11110 00111
+11111 01111
+11111 11111
+
+note: 
+Bottom mid col index is ok on US kbd,
+but not good on matrix !
+Also on matrix, the removed upper index keys are "ok"
+
+111100011111111011111111111111
+
+qz + 
+24 syms out of 
+.;/)(="_*-,:}{<>&+[]#!'\ 
+|$?%~@^`
+
+picked | and ? (? for normal text)
+vs #_
+
+selected:
+.;/)(="*-,:}{<>&+[]!'\|?
+_#$%~@^`
+
+
+setksize beak
+setmask 111100011111111011111111111111
+use qz.;/)(="*-,:}{<>&+[]!'\|?QZ.;/)(="*-,:}{<>&+[]!'\|?
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set singleKeySameFinger 0
+sethandbias -4
+set numThreads 4
+run
+
+dont like the := result,
+QZ on left hand ??
+sethandbias 0
+Hands: 53% 46%
+Fingers: 1.0% 13% 18% 21% 0.00% 0.00% 17% 16% 12% 2.0%
+ |  {  =  &            ,  }  ?
+ '  (  )  ;  :      .  /  *  +
+ [  ]  q  "  z   \  <  >  -  !
+
+sethandbias -2
+Hands: 47% 52% (not completed, went 53-46 after !!)
+Fingers: 1.0% 11% 13% 23% 0.00% 0.00% 19% 20% 13% 1.0%
+ ?  -  {  }            /  *  |
+ [  ,  (  .  +      ;  )  "  ]
+ \  <  z  :  !   q  =  &  >  '
+
+
+!!!!!!!!
+sethandbias -4
+Hands: 48% 51% (not completed, went 53-46 after !!)
+Fingers: 2.0% 13% 13% 21% 0.00% 0.00% 15% 23% 11% 1.0%
+ ?  {  <  >            =  }  |
+ q  (  )  ;  *      "  .  -  +
+ [  ]  z  ,  !   '  /  &  :  \
+
+could swap z : to make := nicer (and bring z to consonants side ;-)
+Q is same key as K on main !! kinda neat
+
+
+
+try to avoid shift-altGr (except for QZ)
+so potential spots: 12!
+
+  @  f  o  u         g  n  c  @
+@ k  h  e  a  y   m  t  s  r  p
+  x  d  j  i  @   @  l  b  w  v
+  
+  @  F  O  U         G  N  C  @
+@ K  H  E  A  Y   M  T  S  R  P
+  X  D  J  I  @   @  L  B  W  V
+    
+        @
+  ?  {  <  >            =  }  |
+@ q  (  )  ;  *      "  .  -  +
+  [  ]  :  ,  !   '  /  &  z  \
+
+==============
+  
+I think mid col index on right hand (altGR key) is too much !
+remove it
+miss 9
+\_#$%~@^`
+
+
+setmask 111100011111111011111111101111
+use qz.;/)(="*-,:}{<>&+[]!'|?QZ.;/)(="*-,:}{<>&+[]!'|?
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set singleKeySameFinger 0
+sethandbias -4
+set numThreads 4
+run
+
+sethandbias -4
+Hands: 52% 47%
+Fingers: 9.0% 11% 14% 18% 0.00% 0.00% 9.0% 18% 12% 9.0%
+
+ [  ]  :  &            <  >  -
+ =  (  )  ;  ,      "  .  /  *
+ |  q  z  {  ?      }  +  '  ! 
+ 
+ 
+Hands: 52% 47%
+Fingers: 10% 11% 18% 14% 0.00% 0.00% 14% 13% 12% 9.0%
+
+ z  q  {  }            <  >  -
+ =  (  .  "  :      /  ;  )  *
+ [  ]  +  &  |      ,  !  '  ?
+
+swap : /  
+^^^ !!!!!!!!!! ^^^
+
+====  ====
+
+miss 9 syms
+\_#$%~@^`
+
+## note ## => the 3 x @ on CapsLock need to be added manually in KLA JSON !!
+
+5 x @ common for US or Matrix
+and
+4 x # <---
+ or
+4 x $ (not nice on matrix)
+
+  #  f  o  u         g  n  c  #
+@ k  h  e  a  y   m  t  s  r  p
+  x  d  j  i  $   $  l  b  w  v
+  
+  #  F  O  U         G  N  C  #
+@ K  H  E  A  Y   M  T  S  R  P
+  X  D  J  I  $   $  L  B  W  V
+    
+     @  @
+  z  q  {  }            <  >  -
+@ =  (  .  "  /      :  ;  )  *
+  [  ]  +  &  |      ,  !  '  ?
+
+  --------
+  
+ 
+setksize beak
+setmask 011100111011111111111111001111
+use etaoinsrhldcumfgpywbvkxjETAOINSRHLDCUMFGPYWBVKXJ
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 10
+set sameHand 40
+run
+
+Hands: 50% 49%
+Fingers: 2.0% 8.0% 20% 20% 0.00% 0.00% 20% 15% 11% 3.0%
+
+    P  O  U         D  N  C
+ G  H  E  A  Y   M  T  S  R  F
+ X  K  J  I         L  B  W  V
+
+    p  o  u         d  n  c
+ g  h  e  a  y   m  t  s  r  f
+ x  k  j  i         l  b  w  v
+
+Fitness:       20611279
+Distance:      11863819
+Finger work:   0
+Inward rolls:  8.68%
+Outward rolls: 1.06%
+Same hand:     30.49%
+Same finger:   3.18%
+Row change:    13.34%
+Home jump:     2.20%
+Ring jump:     1.26%
+To center:     1.74%
+
+---no handbias---
+same but reversed 
+
+Hands: 49% 50%
+Fingers: 3.0% 11% 15% 20% 0.00% 0.00% 20% 20% 8.0% 2.0%
+
+    C  N  D         U  O  P
+ F  R  S  T  M   Y  A  E  H  G
+ V  W  B  L         I  J  K  X
+
+    c  n  d         u  o  p
+ f  r  s  t  m   y  a  e  h  g
+ v  w  b  l         i  j  k  x
+
+Fitness:       17199679
+Distance:      8452219
+Finger work:   0
+Inward rolls:  8.68%
+Outward rolls: 1.06%
+Same hand:     30.49%
+Same finger:   3.18%
+Row change:    13.34%
+Home jump:     2.20%
+Ring jump:     1.26%
+To center:     1.74%
+
+-----
+

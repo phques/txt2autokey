@@ -1,0 +1,5 @@
+.
+ 4  0  1  2  3   7  6  5  9  8
+ ^  p  o  u  .   .  d  n  c  \
+ g  h  e  a  y   m  t  s  r  f
+ x  k  j  i  .   .  l  b  w  v

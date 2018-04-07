@@ -1,0 +1,44 @@
+symbols layer, common to all versions .. (?)
+
+miss 9 syms:  
+ \_#$%~@^`
+
+ so
+5 x @ spots 
++
+ 
+4 x #   <---
+ or
+4 x $   (not nice on matrix)
+
+possible
+  #  x  x  x         x  x  x  #
+@ x  x  x  x  x   x  x  x  x  x
+  x  x  x  x  $   $  x  x  x  x
+  
+  #  x  x  x         x  x  x  #
+@ x  x  x  x  x   x  x  x  x  x
+  x  x  x  x  $   $  x  x  x  x
+    
+     @  @
+  z  q  {  }            <  >  -
+@ =  (  .  "  /      :  ;  )  *
+  [  ]  +  &  |      ,  !  '  ?
+
+=== chosen ===
+ \_#$%~@^`
+ `
+
+  ^  x  x  x         x  x  x  \
+# x  x  x  x  x   x  x  x  x  x
+  x  x  x  x         x  x  x  x
+  
+  $  x  x  x         x  x  x  ~
+% x  x  x  x  x   x  x  x  x  x
+  x  x  x  x         x  x  x  x
+    
+     _  `
+  z  q  {  }            <  >  -
+@ =  (  .  "  /      :  ;  )  *
+  [  ]  +  &  |      ,  !  '  ?
+

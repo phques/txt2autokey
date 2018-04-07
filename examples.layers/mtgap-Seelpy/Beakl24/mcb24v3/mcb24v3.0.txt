@@ -1,0 +1,40 @@
+2018-04-06
+24v3.0 
+
+Use handbias 10 to bring back vowels on left side
+
+setksize beak
+setmask 011100111011111111111111001111
+use etaoinsrhldcumfgpywbvkxjETAOINSRHLDCUMFGPYWBVKXJ
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 10
+run
+
+Hands: 52% 47%
+Fingers: 1.0% 11% 20% 20% 0.00% 0.00% 18% 15% 11% 3.0%
+
+    F  O  U         G  N  C
+ K  H  E  A  Y   M  T  S  R  P
+ X  D  J  I         L  B  W  V
+
+    f  o  u         g  n  c
+ k  h  e  a  y   m  t  s  r  p
+ x  d  j  i         l  b  w  v
+
+Fitness:       14655609
+Distance:      11308094
+Finger work:   0
+Inward rolls:  8.54%
+Outward rolls: 1.75%
+Same hand:     32.82%
+Same finger:   2.86%
+Row change:    14.66%
+Home jump:     2.71%
+Ring jump:     1.03%
+To center:     1.93%
+
+--------
+

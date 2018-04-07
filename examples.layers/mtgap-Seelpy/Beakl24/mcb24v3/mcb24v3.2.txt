@@ -1,0 +1,28 @@
+2018-04-06
+24v3.2
+
+---no handbias---
+same as 3.1 but reversed  left - right
+
+Hands: 49% 50%
+Fingers: 3.0% 11% 15% 20% 0.00% 0.00% 20% 20% 8.0% 2.0%
+
+    C  N  D         U  O  P
+ F  R  S  T  M   Y  A  E  H  G
+ V  W  B  L         I  J  K  X
+
+    c  n  d         u  o  p
+ f  r  s  t  m   y  a  e  h  g
+ v  w  b  l         i  j  k  x
+
+Fitness:       17199679
+Distance:      8452219
+Finger work:   0
+Inward rolls:  8.68%
+Outward rolls: 1.06%
+Same hand:     30.49%
+Same finger:   3.18%
+Row change:    13.34%
+Home jump:     2.20%
+Ring jump:     1.26%
+To center:     1.74%
