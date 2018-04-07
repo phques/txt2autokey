@@ -337,7 +337,8 @@ and
 
   --------
   
- 
+24v3.1
+
 setksize beak
 setmask 011100111011111111111111001111
 use etaoinsrhldcumfgpywbvkxjETAOINSRHLDCUMFGPYWBVKXJ
@@ -371,6 +372,9 @@ Row change:    13.34%
 Home jump:     2.20%
 Ring jump:     1.26%
 To center:     1.74%
+
+
+24v3.2
 
 ---no handbias---
 same but reversed 
