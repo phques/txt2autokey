@@ -1,0 +1,97 @@
+2018-04-07
+22v1.3
+
+handbias and >samehand, to bring vowels to left and more alternation
+also reduced inroll going for alternation (?)
+>>> get inRoll
+    inRoll = -40
+
+setksize beak
+setmask 011100111011110011111111001111
+use abcdefghijklmnopqrstuvwxyz,.-"')(;=:/*!?>{}<
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set singleKeySameFinger 0
+set numThreads 6
+sethandbias 25
+set sameHand 100
+set inRoll -20
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 9.0% 20% 19% 0.00% 0.00% 17% 17% 12% 3.0%
+
+    =  /  :         j  q  z
+ !  (  -  ,         "  w  )  *
+ ?  '  {  ;         x  }  <  >
+
+    p  o  u         l  d  c
+ g  h  e  a         n  t  s  b
+ k  y  .  i         r  m  f  v
+
+Fitness:       43666755
+Distance:      18027170
+Finger work:   60035
+Inward rolls:  6.78%
+Outward rolls: 2.10%
+Same hand:     30.46%
+Same finger:   2.18%
+Row change:    14.92%
+Home jump:     2.51%
+Ring jump:     1.49%
+To center:     0.00%
+
+
+### other run to place missing syms
+
+$[]\+|&%@#^`~
+
+use these keys on shift-altGr:
+01110 00000
+01110 01010
+01110 00110
+
+011100000001110010100111000110
+
+setksize beak
+setmask 011100000001110010100111000110
+use $[]\+|&%@#^`~$[]\+|&%@#^`~
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set singleKeySameFinger 0
+set numThreads 6
+sethandbias 25
+set sameHand 100
+set inRoll -20
+run
+    #  |  %
+    &  $  [         ]     +
+    @  `  \            ~  ^
+    
+with uppers re-added:
+    #  |  %         J  Q  Z
+    &  $  [         ]  W     +
+    @  `  \         X  ~  ^   
+
+---- ===== with manual adjustments ====== -----
+optimize syms
+move from shift-altgr to better spots, use mid index col
+(dont like the + on altgr mid col index, bit tough on US kbd)
+
+  4 0 1 2 3            7 6 5 9 8   
+    p o u                l d c     
+  g h e a [            ] n t s b   
+  k y . i                r m f v   
+                                   
+    P O U                L D C     
+  G H E A |            # N T S B   
+  K Y \ I                R M F V   
+                                   
+    = / :                j q z     
+  ? ( - , &            + " w ) !   
+  * ' { ;                x } < >   
+                                   
+      @                  J Q Z     
+    ^ $ %                  W       
+        ~                X         
+    

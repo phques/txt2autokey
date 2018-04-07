@@ -1,0 +1,40 @@
+2018-04-07
+22v1.2
+
+handbias and >samehand, to bring vowels to left and more alternation
+same letters placement as 1.1, but I think I prefer the syms on this one
+
+setksize beak
+setmask 011100111011110011111111001111
+use abcdefghijklmnopqrstuvwxyz,.-"')(;=:/*!?>{}<
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set singleKeySameFinger 0
+set numThreads 4
+sethandbias 10
+set sameHand 100
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 9.0% 20% 19% 0.00% 0.00% 19% 15% 12% 3.0%
+
+    /  =  :         q  x  z
+ !  (  -  ,         w  "  )  *
+ ?  '  {  ;         j  }  <  >
+
+    p  o  u         d  n  c
+ g  h  e  a         t  s  r  f
+ k  y  .  i         l  b  m  v
+
+Fitness:       37555660
+Distance:      12674395
+Finger work:   13415
+Inward rolls:  8.70%
+Outward rolls: 1.19%
+Same hand:     30.46%
+Same finger:   3.09%
+Row change:    13.89%
+Home jump:     2.35%
+Ring jump:     1.51%
+To center:     0.00%
+
