@@ -1,0 +1,76 @@
+=============
+2018-04-08
+
+v1.0
+
+just mtgap beak!
+trying to get more alternation
+
+setksize beak
+set keepShiftPairLetters 1
+set keepShiftPairOther 0
+set singleKeySameFinger 0
+set numThreads 6
+sethandbias 25
+set sameHand 100
+set inRoll -20
+run
+
+
+ Q  F  D  M  W   <  >  I  Y  Z
+ P  S  T  R  L   ?  A  E  H  K
+ B  C  G  N  V   X  O  /  U  J
+
+ q  f  d  m  w   ;  ,  i  y  z
+ p  s  t  r  l   .  a  e  h  k
+ b  c  g  n  v   x  o  :  u  j
+
+Fitness:       38098977
+Distance:      18460959
+Finger work:   28043
+Inward rolls:  5.31%
+Outward rolls: 1.96%
+Same hand:     29.26%
+Same finger:   2.17%
+Row change:    13.87%
+Home jump:     2.91%
+Ring jump:     0.86%
+To center:     3.27%
+
+same params for syms, 30keys, 32 syms !
+skip `~
+
+setksize beak
+use !@#$%^&*()_+-=[]\{}|;':",./<>?!@#$%^&*()_+-=[]\{}|;':",./<>?
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set singleKeySameFinger 0
+set numThreads 6
+sethandbias 25
+set sameHand 100
+set inRoll -20
+run
+
+
+Hands: 69% 30%
+Fingers: 2.0% 11% 26% 30% 0.00% 0.00% 11% 10% 8.0% 1.0%
+
+ #  !  (  {  [   ]  }  )  *  ^
+ ?  -  .  ,  /   $  "  _  '  +
+ \  ;  |  =  @   &  :  <  >  %
+
+ #  !  (  {  [   ]  }  )  *  ^
+ ?  -  .  ,  /   $  "  _  '  +
+ \  ;  |  =  @   &  :  <  >  %
+
+Fitness:       1906542
+Distance:      727261
+Finger work:   98076
+Inward rolls:  1.26%
+Outward rolls: 1.17%
+Same hand:     38.72%
+Same finger:   0.89%
+Row change:    6.15%
+Home jump:     1.22%
+Ring jump:     0.76%
+To center:     2.77%
