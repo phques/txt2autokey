@@ -36,6 +36,8 @@ Home jump:     2.91%
 Ring jump:     0.86%
 To center:     3.27%
 
+### swap : and ; ###
+
 same params for syms, 30keys, 32 syms !
 skip `~
 
