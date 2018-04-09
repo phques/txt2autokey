@@ -81,6 +81,34 @@ To center:     0.00%
 
 ------
 
+ls18v1.0b
+
+Hands: 52% 47%
+Fingers: 9.0% 11% 20% 13% 0.00% 0.00% 14% 15% 11% 7.0%
+
+    '  ,  x         z  w  "
+ (  )  ;  y         k  v  j  b
+ {        *         q        }
+
+    a  e  p         h  t  s
+ o  u  i  n         r  d  l  c
+ .        f         m        g
+
+Fitness:       18402765
+Distance:      6943370
+Finger work:   0
+Inward rolls:  9.68%
+Outward rolls: 2.46%
+Same hand:     36.54%
+Same finger:   1.54%
+Row change:    15.89%
+Home jump:     1.52%
+Ring jump:     1.61%
+To center:     0.00%
+
+
+------
+
 2018-04-09
 ls18v1.1
 
