@@ -26,6 +26,7 @@ global dualModeKeyDown := 0     ;; true when we press a dualMode key
 global ShiftKey1 := 0
 global ShiftKey2 := 0
 
+global NoKeyChar := 0
 
 ;----------
 
@@ -56,6 +57,11 @@ CreateLayer(layerIndex, layerAccessKey := 0, blockAccessKey := 0)
 
 ;----------
 
+SetNoKeyChar(char)
+{
+    NoKeyChar := char
+}
+
 ; add new key mappings for a layer
 ; when 'fromKey' is hit on this layer, will output 'toKey'
 ; _from/_to are space separated
@@ -83,7 +89,7 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	if (froms.Length() != tos.Length()) 
 	{
         msg := Format("AddMappings, From/to not same length {} {}!`n{} `n{}"
-						, froms.Length, tos.Length
+						, froms.Length(), tos.Length()
 						, _from, _to, )
 		MsgBox(msg)
 						; , SubStr(_from, 1, 16), SubStr(_to, 1, 16))
@@ -96,6 +102,10 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		f := froms[A_Index]
 		t := tos[A_Index]
 		
+        ; nothing to see here, move along
+        if (t == NoKeyChar)
+            continue
+            
 		if (f == 'SP')
 			f := 'Space'
 		
