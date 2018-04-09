@@ -1,0 +1,120 @@
+2018-04-09
+
+- Use most comfortable fingers keys, based on LaSalle fingering AWEF home row: 
+
+q W E r 
+A s d F 
+z x c v 
+
+(modified mtgap optimizer)
+include Z and / or not, only 16 keys if not included
+
+16
+  w e r   u i o
+a s d f   j k l ;
+      v   m     
+
+18
+  w e r   u i o
+a s d f   j k l ;
+z     v   m     /
+
+
+\,.-"_')(;\=:/*!?$>{}[]\\+|&<%@#^`~
+
+=> 16keys, 2 layers = 32 pos
+26 letters + 6 punct ,.
+
+qwertyuiopasdfghjklzxcvbnm.,'"-_
+
+=> 18keys x 2 = 36
+26 letters + 10 puncs
+qwertyuiopasdfghjklzxcvbnm
+\,.-"_')(;
+
+
+from mcb20 .. -2 ;-)
+.,'"();*{}
+
+01110 01110
+11110 01111
+10010 01001
+
+011100111011110011111001001001
+	
+------
+
+2018-04-09
+ls18v1.0
+
+setksize beaklasalle
+setmask 011100111011110011111001001001
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 47% 52%
+Fingers: 9.0% 8.0% 15% 16% 0.00% 0.00% 13% 19% 11% 9.0%
+
+    k  w  z         j  (  )
+ ;  "  b  ,         y  '  v  *
+ {        q         x        }
+
+    c  t  h         f  o  u
+ n  d  m  r         s  e  i  a
+ p        l         g        .
+
+Fitness:       18426326
+Distance:      7422180
+Finger work:   21591
+Inward rolls:  9.47%
+Outward rolls: 3.85%
+Same hand:     36.11%
+Same finger:   0.86%
+Row change:    13.25%
+Home jump:     1.33%
+Ring jump:     2.50%
+To center:     0.00%
+
+------
+
+2018-04-09
+ls18v1.1
+
+setksize beaklasalle
+setmask 011100111011110011111001001001
+use abcdefghijklmnopqrstuvwxyz.,'"();*{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+sethandbias 15
+run
+
+***Found from greatToBest()***
+
+Hands: 54% 45%
+Fingers: 9.0% 11% 21% 14% 0.00% 0.00% 15% 14% 11% 4.0%
+
+    k  ,  x         z  w  f
+ (  ;  '  y         "  b  q  )
+ {        *         j        }
+
+    i  e  d         h  t  n
+ o  u  a  s         r  p  m  c
+ .        g         l        v
+
+Fitness:       23385801
+Distance:      11478461
+Finger work:   0
+Inward rolls:  9.69%
+Outward rolls: 1.87%
+Same hand:     34.59%
+Same finger:   1.74%
+Row change:    16.20%
+Home jump:     1.92%
+Ring jump:     1.02%
+To center:     0.00%
