@@ -1,0 +1,127 @@
+2018-04-09
+
+
+- Use most comfortable fingers keys, based on LaSalle fingering AWEF home row: 
+
+q W E r 
+A s d F 
+z x c v 
+
+20
+  w e r     u i o
+a s d f g h j k l ;
+z     v     m     /
+
+
+40 pos,
+26 letters
+14 punx
+
+
+punx from allCharsStd (balanced text + pgm)
+,.-"_')(;=:/*!  ?$>{}[]\+|&<%@#^`~
+
+punc from text only
+,.'"-)(:!?;/[]  %$|*=_+>\<&^#@`~{}
+
+take punc from text only
+,.'"-)(:!?;/{}
+
+swap []: for {}
+missing
+%$|*=_+>\<&^#@`~[]
+
+
+01110 01110
+11111 11111
+10010 01001
+
+011100111011111111111001001001
+	
+Also new costs
+150,  5,  5, 15, 50,   50, 15,  5,  5, 150,
+ 25, 10, 10,  5, 18,   18,  5, 10, 10, 25, 
+ 70, 50, 50, 15, 70,   70, 15, 50, 50, 70
+
+------
+
+2018-04-09
+ls20v1.0
+
+setksize beaklasalle
+setmask 011100111011111111111001001001
+use abcdefghijklmnopqrstuvwxyz,.'"-)(:!?;/{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 6
+set singleKeySameFinger 0
+run
+
+
+Hands: 53% 46%
+Fingers: 9.0% 11% 20% 13% 0.00% 0.00% 18% 15% 11% 3.0%
+
+    -  ,  x         :  w  b
+ (  )  ;  '  ?   j  "  k  z  !
+ {        /         q        }
+
+    a  e  p         h  t  s
+ o  u  i  n  y   m  r  d  c  g
+ .        f         l        v
+
+Fitness:       17669563
+Distance:      8097448
+Finger work:   0
+Inward rolls:  9.06%
+Outward rolls: 2.38%
+Same hand:     36.68%
+Same finger:   1.81%
+Row change:    16.46%
+Home jump:     1.69%
+Ring jump:     1.19%
+To center:     2.01%
+
+
+------
+
+2018-04-09
+ls20v1.0
+
+   150,  5,  5, 15, 50,   50, 15,  5,  5, 150,
+	30, 10, 10,  5, 20,   20,  5, 10, 10, 30, 
+	70, 50, 50, 15, 70,   70, 15, 50, 50, 70
+
+setksize beaklasalle
+setmask 011100111011111111111001001001
+use abcdefghijklmnopqrstuvwxyz,.'"-)(:!?;/{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 6
+set singleKeySameFinger 0
+set sameHand 10
+set handBias 15
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 8.0% 19% 21% 0.00% 0.00% 20% 15% 10% 3.0%
+
+    (  )  ;         j  b  "
+ /  .  -  ,  ?   z  w  x  '  !
+ {        :         q        }
+
+    p  o  u         d  n  l
+ g  h  e  a  y   m  t  s  r  f
+ k        i         c        v
+
+Fitness:       18844920
+Distance:      8088995
+Finger work:   0
+Inward rolls:  8.62%
+Outward rolls: 1.28%
+Same hand:     30.78%
+Same finger:   2.83%
+Row change:    12.64%
+Home jump:     1.78%
+Ring jump:     1.40%
+To center:     1.96%
+

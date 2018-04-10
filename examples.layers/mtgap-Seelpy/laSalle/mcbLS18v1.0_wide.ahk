@@ -18,12 +18,6 @@ global CenterOnCurrWndMonitor := 1
 #include ../../common/clipboardToBash.ahk
 #include ../../common/fromPkl/pkl_guiLayers.ahk
 
-qwertyMask30 := "
-(Join`r`n
-        q w e r t    u i o p [
-         a s d f g    j k l ; '
-  @LShift z x c v      m , . / @RShift
-)"
 
 qwertyMask18 := "
 (Join`r`n
@@ -39,30 +33,30 @@ qwertyMask18 := "
 
 layer1 := "
 (Join`r`n
-   c o u    h t r
- p s e a    n d l f
- g     i    m    v
+    c  t  h         f  o  u
+ n  d  m  r         s  e  i  a
+ p        l         g        .
 )"
 
 layer1sh := "
 (Join`r`n
-   C O U    H T R
- P S E A    N D L F
- G     I    M    V
+    C  T  H         F  O  U
+ N  D  M  R         S  E  I  A
+ P        L         G        .
 )"
 
 layer2 := "
 (Join`r`n
-   - ( )     ; w x
- ' b , y     . k " q
- \     _     j    z
+    k  w  z         j  (  )
+ ;  "  b  ,         y  '  v  *
+ {        q         x        }
 )"
 
 layer2sh := "
 (Join`r`n
-   - ( )     ; W X
- ' B , Y     . K " Q
- \     _     J    Z
+    K  W  Z         J  (  )
+ ;  "  B  ,         Y  '  V  *
+ {        Q         X        }
 )"
 
  
