@@ -1,0 +1,55 @@
+PQ 2018-04-10
+
+AdNW
+LaSalle fingering on 18 keys, with modified beakl 8-9 weights (PQuesnel)
+
+- Use most comfortable fingers keys, based on LaSalle fingering AWEF home row: 
+
+q W E r 
+A s d F 
+z x c v 
+
+20keys
+  w e r      u i o
+a s d f g  h j k l ;
+z     v      m     /
+
+
+place manually on shift altGr
+>{}[]+
+
+which leaves (12 !) 
+_$\|&<%@#^`~
+
+
+150,  5,  5, 15, 50,   50, 15,  5,  5, 150,
+ q    w   e  r   t     y   u   i   o   p
+ 
+ 30, 10, 10,  5, 20,   20,  5, 10, 10, 30, 
+ a   s   d   f   g     h    j   k   l   ;
+ 
+ 70, 50, 50, 15, 70,   70, 15, 50, 50, 70
+ z    x   c   v   b    n    m   ,   .   /
+
+
+./opt21.exe  -2 englisch.txt -K kwez/stdUSLasalle20-main.cfg
+
+
+29               306.819 total effort   137.047 positional effort    left right
+                   2.761 same finger rp   1.388 shift same finger top 15.2 24.6
+  nld   ieh       68.587 hand alternat.  29.279 shift hand alter. mid 27.4 22.4
+ frstc uaopg       3.226 inward/outward  25.858 inward or outward bot  5.6  4.8
+ w  m   y  b      13.778 adjacent        24.989 shift adjacent    sum 48.2 51.8
+                  5.2 13.4 10.9 18.8 --.- --.- 20.0 19.6  7.1  5.0 Sh  1.3  1.5
+
+
+./opt21.exe  -2 englisch.txt -K kwez/stdUSLasalle20-altgr.cfg
+
+20728             89.533 total effort    78.285 positional effort    left right
+                   0.577 same finger rp   0.000 shift same finger top 47.0 31.0
+  .,-   jvk       62.112 hand alternat.   7.792 shift hand alter. mid  7.1  9.9
+ (?!': )"zx/      10.146 inward/outward  11.439 inward or outward bot  3.1  1.9
+ =  ;   q  *       7.205 adjacent        71.429 shift adjacent    sum 57.2 42.8
+                  2.6 21.2 20.9 12.6 --.- --.-  9.7 17.6 15.5  0.1 Sh  2.3  0.0
+       
+       
