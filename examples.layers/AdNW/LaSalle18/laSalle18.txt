@@ -1,0 +1,58 @@
+PQ 2018-04-10
+
+AdNW
+LaSalle fingering on 18 keys, with modified beakl 8-9 weights (PQuesnel)
+
+- Use most comfortable fingers keys, based on LaSalle fingering AWEF home row: 
+
+q W E r 
+A s d F 
+z x c v 
+
+18keys
+  w e r   u i o
+a s d f   j k l ;
+z     v   m     /
+
+
+place manually on shift altGr
+=:*/>{}[]+
+
+which leaves (12 !) 
+_$\|&<%@#^`~
+
+
+150,  5,  5, 15, 50,   50, 15,  5,  5, 150,
+ q    w   e  r   t     y   u   i   o   p
+ 
+ 30, 10, 10,  5, 20,   20,  5, 10, 10, 30, 
+ a   s   d   f   g     h    j   k   l   ;
+ 
+ 70, 50, 50, 15, 70,   70, 15, 50, 50, 70
+ z    x   c   v   b    n    m   ,   .   /
+
+
+# Aufwand für einen Handwechsel/Effort of a hand alternation
+# default val
+Handwechsel        0
+
+./opt19.exe  -2 englisch.txt -K kwez/stdUSLasalle18-main.cfg
+ 
+36855            305.212 total effort   136.801 positional effort    left right
+                   2.479 same finger rp   3.015 shift same finger top 18.0 25.5
+  nrd   ieh       69.338 hand alternat.  26.784 shift hand alter. mid 23.3 20.0
+ mlst   aoyg       2.820 inward/outward  25.240 inward or outward bot  6.7  6.4
+ f  c   u  p      13.551 adjacent        25.006 shift adjacent    sum 48.0 52.0
+                  6.1 11.6 13.5 16.8 --.- --.- 19.0 20.4  7.0  5.7 Sh  1.1  1.4
+
+       
+./opt19.exe  -2 englisch.txt -K kwez/stdUSLasalle18-altgr.cfg
+ 
+15802            101.233 total effort    91.409 positional effort    left right
+                   0.833 same finger rp   1.471 shift same finger top 24.8 37.4
+  v.j   "bw       65.139 hand alternat.  44.118 shift hand alter. mid 19.1 12.2
+ !x-,   k'z;       1.418 inward/outward  11.481 inward or outward bot  4.2  2.2
+ (  ?   q  )       8.749 adjacent         0.735 shift adjacent    sum 48.1 51.9
+                  4.0 12.4 16.8 14.9 --.- --.- 12.1 19.0 19.3  1.6 Sh  3.5  0.9
+       
+
