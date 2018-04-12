@@ -1,0 +1,37 @@
+PQ 2018-04-11
+
+AdNW
+
+3x3 grid as mask 9 x 2 + 2pinkies=> 20keys
+using PQ modified BEAKL 8-9 weights
+
+=======
+2018-04-11
+v1.0
+
+./opt21.exe  -2 englisch.txt -K kwez/stdUsBeakl20-main.cfg
+
+184              302.685 total effort   136.739 positional effort    left right
+                   2.238 same finger rp   0.089 shift same finger top 12.0 12.1
+  rcm   uop       68.587 hand alternat.  29.279 shift hand alter. mid 24.7 27.5
+ wnst   eahg       2.795 inward/outward  26.382 inward or outward bot 11.5 12.1
+  lfd   iyb       13.398 adjacent        27.166 shift adjacent    sum 48.2 51.8
+                  3.0 17.4 12.2 15.6 --.- --.- 22.3 17.3  8.6  3.5 Sh  1.3  1.5
+
+./opt21.exe  -2 englisch.txt -K kwez/stdUsBeakl20-altgr.cfg
+
+12232             88.991 total effort    76.560 positional effort    left right
+                   0.492 same finger rp   0.000 shift same finger top  1.5  4.3
+  (!;   :zj       62.091 hand alternat.   9.091 shift hand alter. mid 46.1 33.8
+ /.,'   kv")       8.153 inward/outward  11.546 inward or outward bot  9.1  5.1
+  ?=-   x*q        7.205 adjacent        71.429 shift adjacent    sum 56.7 43.3
+                  2.3 21.5 20.9 12.0 --.- --.- 16.0 17.6  9.4  0.3 Sh  2.3  0.0
+
+=======
+place manually on shift altGr
+>{}[]+_$\|&<%@#^`~
+left `~
+
+    { + ^       $ Z J   
+  # \ | &       K V % } 
+    [ _ ]       X @ Q   
