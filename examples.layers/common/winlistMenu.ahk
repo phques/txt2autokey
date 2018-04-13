@@ -9,21 +9,21 @@ OpenWinlistMenu()
     menus := []
     itemsWinids := {}
     
-    menus.push(createWinMenu('Explorer', 
+    menus.push(createWinMenu('&1 Explorer', 
         ['ahk_class CabinetWClass', 
         'ahk_exe 2xExplorer.exe', 
         'ahk_exe xplorer2_lite.exe']))
-    menus.push(createWinMenu('NotepadPP', ['ahk_class Notepad++']))
-    menus.push(createWinMenu('Chrome', ['ahk_exe chrome.exe']))
-    menus.push(createWinMenu('DevStudio', ['ahk_exe devenv.exe']))
-    menus.push(createWinMenu('PLine', 
+    menus.push(createWinMenu('&2 NotepadPP', ['ahk_class Notepad++']))
+    menus.push(createWinMenu('&3 Chrome', ['ahk_exe chrome.exe']))
+    menus.push(createWinMenu('&4 DevStudio', ['ahk_exe devenv.exe']))
+    menus.push(createWinMenu('&5 PLine', 
         ['ahk_exe EnvironmentManager.exe',
         'ahk_exe pragmageo.exe',
         'ahk_exe pragmaview.exe',
         'ahk_exe pragmaswitch.exe',
         'ahk_exe pconfig.exe',
         'ahk_exe incmgr.exe']))
-    menus.push(createWinMenu('ICCP', 
+    menus.push(createWinMenu('&6 ICCP', 
         ['ahk_exe Iccp.ObjectMgr.exe',
         'ahk_exe Iccp.Translator.exe',
         'ahk_exe Iccp.Filter.exe',
@@ -50,7 +50,8 @@ createWinMenu(submenuName, wintitles)
     ret := {}
     ret.title := submenuName
     ret.menu := MenuCreate()
-    
+
+    cpt := 1
     for idx1, wintitle in wintitles {
         winids := WinGetList(wintitle)
         For idx2, winid in winids {
@@ -61,7 +62,9 @@ createWinMenu(submenuName, wintitles)
                     itemsWinids[idx] := []
                 itemsWinids[idx].Push(winid)
                 
+                title := '&' cpt ' ' title
                 ret.menu.Add(title, "onMenuItem")
+                cpt++
             }
         }
     }
