@@ -1,7 +1,7 @@
 PQ 2018-04-10
 
 AdNW
-LaSalle fingering on 18 keys, with modified beakl 8-9 weights (PQuesnel)
+LaSalle fingering on 20 keys, with modified beakl 8-9 weights (PQuesnel)
 
 - Use most comfortable fingers keys, based on LaSalle fingering AWEF home row: 
 

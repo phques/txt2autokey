@@ -1,0 +1,94 @@
+PQ 2018-04-12
+
+AdNW
+LaSalle fingering on 21 keys, with modified beakl 8-9 weights (PQuesnel)
+
+- Use most comfortable fingers keys, based on LaSalle fingering AWEF home row: 
+
+q W E r 
+A s d F 
+z x c v 
+
+21keys
+q w e r      u i o p
+a s d f      j k l ;
+z     v    n m     /
+
+Using (taken from mtgap allChars)
+etaoinsrhldcumfgpywb,
+.vk-"_'x)(;jq=:z/*!?$
+
+>{}[]\+|&<%@#^`~
+
+
+orig beakl 8-9 (?) costs (better suited for Matrix style)
+150, 15, 10, 20, 50,   50, 20, 10, 15, 150,
+ 50,  5,  5,  5, 18,   18,  5,  5,  5, 50, 
+ 70, 15, 50, 10, 70,   70, 10, 50, 15, 70
+
+
+Pq LaSalle, (US kbd with angleZ left hand)
+
+ 90  5   5   15  50    50  15  5   5   90
+ 15  10  10  5   40    40  5   10  10  15
+ 70 100 100  17  30    25  17 100 100  70
+
+I find that the right hand can do a quick/easy/small inside turn to hit the N key 
+(,< with alternative home pos below)
+
+actually on my Microsoft Sculpt Ergonomic, 
+I found this to be an interesting LaSalle home pos 
+(left hand is not as well supported though, a bit too much to the left)
+This also gives us an 'extra wide' mod:
+Left hand shifted <-, right hand shifted -->
+
+    Q W      P [
+Caps    D  L     Enter
+
+Right thumb is directly over Alt,
+Pinkies on Caps - Enter 
+          Shift - Shift
+          
+--- v1.0 ---
+
+./opt21.exe  -2 englisch.txt -K kwez/stdUSLasalle21-main.cfg
+
+
+19995            338.284 total effort   157.603 positional effort    left right
+                   1.732 same finger rp   2.580 shift same finger top 27.2 19.2
+ ghea   dsnb      70.040 hand alternat.  24.925 shift hand alter. mid 19.2 21.3
+ puio   tlrf       2.915 inward/outward  25.477 inward or outward bot  4.6  8.5
+ y  ,  mc  w      12.549 adjacent        29.065 shift adjacent    sum 51.0 49.0
+                  7.4  7.6 19.4 16.7 --.- --.- 18.5 10.7 13.2  6.5 Sh  1.7  1.1
+
+       
+
+./opt21.exe  -2 englisch.txt -K kwez/stdUSLasalle21-altgr.cfg
+
+31438             91.570 total effort    64.261 positional effort    left right
+                   0.227 same finger rp   0.000 shift same finger top 49.0 23.8
+ =v.;   jk"*      53.654 hand alternat.   0.000 shift hand alter. mid  9.9 14.8
+ ?!(-   'qxz       5.562 inward/outward   6.820 inward or outward bot  0.8  1.6
+ /  :  )$  _       4.677 adjacent         0.000 shift adjacent    sum 59.8 40.2
+                  1.1 21.5 27.4  9.8 --.- --.- 10.1 17.5 10.8  1.8 Sh  0.0  0.0
+
+--------
+
+v1.1
+
+Pq LaSalle, (US kbd with angleZ left hand)
+modified costs
+
+ 90 5   5   15  50    50  15  5   5   90
+ 7  13  13  5   40    40  5   13  13  7
+ 70 100 100 17  30    25  17 100 100  70
+
+ didn't change anything in the results !!
+ ecxcept slightly diff on altgr
+ 
+13934             90.508 total effort    63.315 positional effort    left right
+                   0.520 same finger rp   0.000 shift same finger top 49.0 23.3
+ =v.;   z"k*      53.621 hand alternat.   0.000 shift hand alter. mid 11.0 14.3
+ j!(-   'x$q       3.122 inward/outward   6.561 inward or outward bot  1.0  1.3
+ /  ?  ):  _       3.670 adjacent         0.000 shift adjacent    sum 61.1 38.9
+                  2.1 21.5 27.4 10.0 --.- --.-  9.4 10.8 16.2  2.5 Sh  0.0  0.0
