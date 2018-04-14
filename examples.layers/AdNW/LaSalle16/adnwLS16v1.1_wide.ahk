@@ -18,7 +18,7 @@ _()jq=z/*$>{}[]\+|&<%@#^`~
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\v1"
+global ImgsDir := A_ScriptDir . "\imgs"
 global ImgWidth := 170
 global ImgHeight := 98
 global CenterOnCurrWndMonitor := 1
@@ -29,7 +29,7 @@ global CenterOnCurrWndMonitor := 1
 #include ../../common/fromPkl/pkl_guiLayers.ahk
 
 ; Turns ON hoem pos on Caps/Q/W/D -- L/P/{/Enter
-crazyFingering := 0
+crazyFingering := 1
 
 if (crazyFingering)
 {
