@@ -99,9 +99,10 @@ AddMappings(2, 0, '2 3', '~ $')
 AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
 if (crazyFingering)
 {
-    ; enter on right thumb
+    ; thumb
     AddMappings(1, 0, 'm', 'Enter')
     AddMappings(1, 0, 'appskey', 'Enter')
+    AddMappings(1, 0, 'n', 'Control')
     
     AddMappings(1, 1, ']', 'Delete')
     AddMappings(1, 0, ']', 'BackSpace')
@@ -110,15 +111,24 @@ if (crazyFingering)
 ; ---------------
 
 #include ../../common/extend/extendWide2BaseShLeft.ahk
+#include ../../common/extend/extendCapsEnterBase.ahk
 
-SetupExtend2('LAlt')
-; SetupExtend2('Space')
+if (crazyFingering) 
+{
+    SetupExtendCapsEnter('Space')
+    extHK('b', 'Space') 
+    extHKitself('', 'Space')
+}
+else
+{    SetupExtend2('LAlt')
+    ; SetupExtend2('Space')
 
-; this one will autorepeat Space, since space itself will not (dual mode cant)
-; extHK('b', 'Space') 
+    ; this one will autorepeat Space, since space itself will not (dual mode cant)
+    ; extHK('b', 'Space') 
 
-; space press/release outputs space (dual mode)
-; extHKitself('', 'Space')
+    ; space press/release outputs space (dual mode)
+    ; extHKitself('', 'Space')
+}
 
 DisplayHelpImage()
 return
