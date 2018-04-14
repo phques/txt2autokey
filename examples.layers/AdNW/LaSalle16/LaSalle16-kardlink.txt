@@ -1,0 +1,84 @@
+PQ 2018-04-12
+
+AdNW
+LaSalle fingering on 16 keys, with modified beakl 8-9 weights (PQuesnel)
+(18 - 2 bottom pinkies)
+
+- Use most comfortable fingers keys, based on LaSalle fingering AWEF home row: 
+
+q W E r 
+A s d F 
+z x c v 
+
+
+16keys
+  w e r   u i o
+a s d f   j k l ;
+      v   m     
+
+
+Using (taken from mtgap allChars)
+etaoinsrhldcumfg
+pywb,.vk-"_'x)(;
+jq=:z/*!?$>{}[]\+|&<%@#^`~
+
+Even missing letters !!
+jJ
+qQ
+zZ
+so place j,q,z manually on bottom pinkies + ????
+
+
+orig beakl 8-9 (?) costs (better suited for Matrix style)
+150, 15, 10, 20, 50,   50, 20, 10, 15, 150,
+ 50,  5,  5,  5, 18,   18,  5,  5,  5, 50, 
+ 70, 15, 50, 10, 70,   70, 10, 50, 15, 70
+
+
+Pq LaSalle, (US kbd with angleZ left hand)
+
+ 90  5   5   15  50    50  15  5   5   90
+ 15  10  10  5   40    40  5   10  10  15
+ 70 100 100  17  30    25  17 100 100  70
+
+--- v1.0 ----
+
+./opt16.exe -2 englisch.txt -K kwez/stdUSLasalle16-main.cfg
+
+67               258.263 total effort   104.168 positional effort    left right
+                   2.045 same finger rp   0.605 shift same finger top 19.4 26.6
+  nsd   ieh       68.713 hand alternat.  25.033 shift hand alter. mid 24.4 21.4
+ crlt   aofg       2.879 inward/outward  26.245 inward or outward bot  3.9  4.3
+    m   u         15.630 adjacent        27.941 shift adjacent    sum 47.6 52.4
+                  4.5 14.5 11.8 16.9 --.- --.- 19.8 21.2  7.8  3.6 Sh  1.1  1.4
+
+
+./opt16.exe -2 englisch.txt -K kwez/stdUSLasalle16-altgr.cfg
+
+
+16853            101.207 total effort    90.201 positional effort    left right
+                   0.860 same finger rp   0.448 shift same finger top 25.5 25.3
+  y.-   )wb       52.903 hand alternat.  18.834 shift hand alter. mid 18.7 26.1
+ (xv,   p'k"       9.233 inward/outward  26.636 inward or outward bot  3.9  0.5
+    ;   _         12.566 adjacent        44.843 shift adjacent    sum 48.1 51.9
+                  3.7 14.6 17.1 12.7 --.- --.- 15.9 16.0 17.3  2.8 Sh  3.5  0.5
+
+--- v1.1 ----
+
+select diff chars for alt-gr:
+
+swap _() for :!?
+
+etaoinsrhldcumfg
+
+pywb,.vk-"'x;:!?
+
+_()jq=z/*$>{}[]\+|&<%@#^`~
+
+
+16079            101.955 total effort    92.167 positional effort    left right
+                   1.157 same finger rp   0.450 shift same finger top 27.9 26.6
+  p.-   xwb       55.600 hand alternat.  59.459 shift hand alter. mid 17.5 23.4
+ !?v,   y'k"       4.143 inward/outward  24.102 inward or outward bot  3.2  1.4
+    ;   :          7.933 adjacent         0.450 shift adjacent    sum 48.6 51.4
+                  3.0 16.0 17.0 12.6 --.- --.- 14.8 15.9 17.2  3.5 Sh  2.8  1.2

@@ -1,0 +1,6 @@
+.
+4 0 1 2 3  7 6 5 9 8
+. n s d      i e h . 
+c r l t      a o f g 
+q . . m      u . . j  
+
