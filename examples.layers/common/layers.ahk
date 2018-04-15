@@ -26,7 +26,7 @@ global dualModeKeyDown := 0     ;; true when we press a dualMode key
 global ShiftKey1 := 0
 global ShiftKey2 := 0
 
-global NoKeyChar := 0
+global NoKeyChar := ''
 
 ;----------
 
