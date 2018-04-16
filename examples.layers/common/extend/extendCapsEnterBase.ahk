@@ -37,31 +37,46 @@ SetupExtendCapsEnter(extendKey)
     extHK('x', '^','x')
     extHK('c', '^','c')
     extHK('v', '^','v')
-if (0) {               
-    extHK('l', 'Left')
-    extHK('[', 'Right')
-    extHK('p', 'Up')
-    extHK("'", 'Down')
-    extHK('o', 'Home')
-    extHK(';', 'End')
-} 
-else {
-    extHK('p', 'Left')
-    extHK('[', 'Right')
-    extHK(';', 'Up')
-    extHK("'", 'Down')
-    extHK('l', 'Home')
-    extHK('Enter', 'End')
+    
+if (1)
+{
+    extHK("l", "Left")
+    extHK("[", "Right")
+    extHK("p", "Up")
+    extHK("'", "Down")
+    extHK(";", "Home")
+    extHK("Enter", "End")
+    extHK("0", "PgUp")
+    extHK("-", "PgDn")
+    
+    extHK('k', '^','c') ; copy
+    extHK('o', '^','v') ; paste
 }
+else if (0) 
+{
+    extHK("l", "Left")
+    extHK("[", "Right")
+    extHK("p", "Up")
+    extHK("'", "Down")
+    extHK("o", "Home")
+    extHK(";", "End")
+} 
+else if (0) 
+{
+    extHK("p", "Left")
+    extHK("[", "Right")
+    extHK(";", "^","c")  ; copy
+    extHK("'", "^","v")  ; paste
+    extHK("o", "Up")
+    extHK("k", "Down")
+    extHK("l", "Home")
+    extHK("Enter", "End")
+} 
+
     extHK(']', 'BackSpace')
-               
-    extHK('k', '^','c')
-    extHK('o', '^','v')
                
     ; extHK('m', '^','z')
     ; extHK('.', '^','x')
-    extHK('.', '^','c')
-    extHK('/', '^','v')
 }
 
 
