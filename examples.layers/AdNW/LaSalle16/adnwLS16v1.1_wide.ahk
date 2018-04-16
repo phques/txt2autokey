@@ -91,7 +91,8 @@ CreateLayer(1)
 
 ; 2nd layer, 
 if (crazyFingering)
-    CreateLayer(2, "RAlt", 1)
+    ; CreateLayer(2, "RAlt", 1) ;; on Mircosoft
+    CreateLayer(2, "Space", 0) ;; on Dell kbd @ work
 else
     CreateLayer(2, "Space", 0)
 
@@ -101,16 +102,32 @@ AddMappings(1, 0, qwertyMask18, layer1)
 AddMappings(2, 0, qwertyMask18, layer2)
 SetNoKeyChar('')
 
-AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
 if (crazyFingering)
 {
-    ; thumb
-    AddMappings(1, 0, 'm', 'Enter')
-    AddMappings(1, 0, 'appskey', 'Enter')
-    AddMappings(1, 0, 'n', 'Control')
+    AddMappings(1, 0, '`` 1 2 3 4   8 9 0 - =', '4 0 1 2 3   7 6 5 9 8')
     
+    AddMappings(2, 0, '``', 'CapsLock')
     AddMappings(1, 1, ']', 'Delete')
     AddMappings(1, 0, ']', 'BackSpace')
+    
+    ; thumbs
+    AddMappings(1, 0, 'appskey', 'Enter')
+    
+    ; on Microsoft Sculpt Ergo
+    ; AddMappings(1, 0, 'n', 'Control')
+    ; AddMappings(1, 0, 'm', 'Enter')
+    
+    AddMappings(1, 0, 'm', 'Control')
+    AddMappings(1, 0, ',', 'Enter')
+    
+    AddMappings(2, 1, 'c', 'LShift')
+    AddMappings(2, 0, 'c', 'LShift')
+    AddMappings(1, 1, 'c', 'LShift')
+    AddMappings(1, 0, 'c', 'LShift')
+}
+else
+{
+    AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
 }
     
 ; ---------------
@@ -120,9 +137,12 @@ if (crazyFingering)
 
 if (crazyFingering) 
 {
-    SetupExtendCapsEnter('Space')
-    extHK('b', 'Space') 
-    extHKitself('', 'Space')
+    ; on Microsoft Sculpt Ergo
+    ; SetupExtendCapsEnter('Space')
+    ; extHK('b', 'Space') 
+    ; extHKitself('', 'Space')
+    
+    SetupExtendCapsEnter('LAlt')
 }
 else
 {
