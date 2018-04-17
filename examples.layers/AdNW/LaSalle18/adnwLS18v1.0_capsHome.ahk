@@ -24,12 +24,13 @@ global CenterOnCurrWndMonitor := 1
 #include ../../common/clipboardToBash.ahk
 #include ../../common/fromPkl/pkl_guiLayers.ahk
 
+; home pos on Caps/Q/W/D -- L/P/{/Enter
 qwertyMask18 := "
-(Join`r`n
-          w e r   i o p
-        a s d f   k l ; '
-  @LShift    c    ,     @RShift
-)"
+ (Join`r`n
+              q w e   o p [
+     CapsLock a s d   l ; ' Enter
+     @LShift      x   .     @RShift
+ )"
 
 ; ----
 
@@ -69,7 +70,8 @@ layer2sh := "
 CreateLayer(1)
 
 ; 2nd layer, 
-CreateLayer(2, "Space", 0)
+; CreateLayer(2, "RAlt", 1) ;; on Mircosoft
+CreateLayer(2, "Space", 0) ;; on Dell kbd @ work
 
 AddMappings(1, 1, qwertyMask18, layer1sh)
 AddMappings(2, 1, qwertyMask18, layer2sh)
@@ -77,23 +79,42 @@ AddMappings(1, 0, qwertyMask18, layer1)
 AddMappings(2, 0, qwertyMask18, layer2)
 SetNoKeyChar('')
 AddMappings(2, 0, '2 3', '~ $')
-AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
 
+AddMappings(1, 0, '`` 1 2 3 4   8 9 0 - =', '4 0 1 2 3   7 6 5 9 8')
+
+AddMappings(2, 0, '``', 'CapsLock')
+AddMappings(1, 1, ']', 'Delete')
+AddMappings(1, 0, ']', 'BackSpace')
+
+; thumbs
+AddMappings(1, 0, 'appskey', 'Enter')
+
+; on Microsoft Sculpt Ergo
+; AddMappings(1, 0, 'n', 'Control')
+; AddMappings(1, 0, 'm', 'Enter')
+
+AddMappings(1, 0, 'm', 'Control')
+AddMappings(1, 0, ',', 'Enter')
+
+AddMappings(2, 1, 'c', 'LShift')
+AddMappings(2, 0, 'c', 'LShift')
+AddMappings(1, 1, 'c', 'LShift')
+AddMappings(1, 0, 'c', 'LShift')
     
 ; ---------------
 
 #include ../../common/extend/extendWide2BaseShLeft.ahk
+#include ../../common/extend/extendCapsEnterBase.ahk
 
-SetupExtend2('LAlt')
-; SetupExtend2('Space')
-
-; this one will autorepeat Space, since space itself will not (dual mode cant)
+; on Microsoft Sculpt Ergo
+; SetupExtendCapsEnter('Space')
 ; extHK('b', 'Space') 
-
-; space press/release outputs space (dual mode)
 ; extHKitself('', 'Space')
 
+SetupExtendCapsEnter('LAlt')
+
 DisplayHelpImage()
+
 return
 
 ;------

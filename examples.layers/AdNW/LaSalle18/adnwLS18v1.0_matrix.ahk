@@ -26,10 +26,11 @@ global CenterOnCurrWndMonitor := 1
 
 qwertyMask18 := "
 (Join`r`n
-          w e r   i o p
-        a s d f   k l ; '
-  @LShift    c    ,     @RShift
+   w e r   u i o 
+ a s d f   j k l ;
+ z     v   m     /
 )"
+
 
 ; ----
 
@@ -69,7 +70,9 @@ layer2sh := "
 CreateLayer(1)
 
 ; 2nd layer, 
-CreateLayer(2, "Space", 0)
+; since SmartYao LY092-SN doesnt output RAlt,
+; we use num5 as AltGr key (physically placed under thumb)
+CreateLayer(2, "Numpad5", 1)
 
 AddMappings(1, 1, qwertyMask18, layer1sh)
 AddMappings(2, 1, qwertyMask18, layer2sh)
@@ -77,21 +80,12 @@ AddMappings(1, 0, qwertyMask18, layer1)
 AddMappings(2, 0, qwertyMask18, layer2)
 SetNoKeyChar('')
 AddMappings(2, 0, '2 3', '~ $')
-AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
-
+AddMappings(1, 0, '1 2 3 4 5  6 7 8 9 0', '4 0 1 2 3   7 6 5 9 8')
     
 ; ---------------
 
-#include ../../common/extend/extendWide2BaseShLeft.ahk
+#include ../../common/extend/extendSpace2.ahk
 
-SetupExtend2('LAlt')
-; SetupExtend2('Space')
-
-; this one will autorepeat Space, since space itself will not (dual mode cant)
-; extHK('b', 'Space') 
-
-; space press/release outputs space (dual mode)
-; extHKitself('', 'Space')
 
 DisplayHelpImage()
 return
