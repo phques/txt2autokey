@@ -1,0 +1,87 @@
+Figuring out extra syms layer for LaSalle16 (other than altGr!)
+2018-04-16
+
+den suggested syms/altgr layer (BEAKL)
+http://shenafu.com/smf/index.php?topic=89.msg2256#msg2256
+    4 0 1 2 3   7 6 5 9 8 
+      < $ >       [ _ ] 
+  - \ ( " ) #   % { = } | ; 
+      : * +       & ^ ~ 
+      
+<$>[_]-\(")#%{=}|;:*+&^~
+24
+
+
+MTGAP syms from allChars std 
+,.-"_')(;=:/*!?$>{}[]\+|&<%@#^`~
+32 (all)
+
+minus
+
+LS16 'text' syms on altgr
+    p . -       x w b   
+  ! ? v ,       y ' k " 
+        ;       :       
+
+.-!?,'";:
+9
+
+Need
+_)(=/*$>{}[]\+|&<%@#^`~
+23
+
+LaSalle form
+    n s d       i e h   
+  c r l t       a o f g 
+  q     m     z u     j  
+
+missing from dens vs needed
+/@`
+
+remove
+dup -; "
+keep dup :
+re add !
+
+  * < / >       [ _ ] ~
+  \ ( : ) #   % { = } | 
+  $     + !   @ & `   ^
+
+adjust for LaSalle home pos
+(oops either ! or @ is going to be very difficult if layer is accessed w. lalt or ralt)
+  * ( ) :       _ { } ~
+  \ < > / #   % = [ ] | 
+  $     + !   @ & `   ^
+
+so, move $@ to altgr, as 'text' syms
+and move ! to bottom left pinky
+
+ls16 altgr
+    p . -       x w b   
+  ! ? v ,       y ' k " 
+  $     ;       :     @
+
+  * ( ) :       _ { } ~
+  \ < > / #   % = [ ] | 
+  !     +       & `   ^
+
+` is still in a tough spot .. maybe move it to top digits row ?
+move it to altgr
+
+swap * \ since * is more frequent
+might as well keep symmetry and just swap \/ *:
+also makes for a nice := (golang, autohotkey)
+    p . -       x w b   
+  ! ? v ,     ` y ' k " 
+  $     ;       :     @
+
+  \ ( ) /       _ { } ~
+  * < > : #   % = [ ] | 
+  !     +       &     ^
+
+considering swapping (to lighten left hand)
+() <=> {}
+<>     []
+but <= >= are nicer the way they are..
+so only swap () {} ?
+
