@@ -33,57 +33,64 @@ crazyFingering := 1
 
 if (crazyFingering)
 {
-    qwertyMask18 := "
+    qwertyMask := "
     (Join`r`n
-                 q w e    o p [
-        CapsLock a s d    l ; ' Enter
-        @LShift      x  , .     @RShift
+            Tab  q w e      o p [ ]
+        CapsLock a s d f  k l ; ' Enter
+        @LShift      x    , .     @RShift
     )"
 }
 else
 {
-    qwertyMask18 := "
+    qwertyMask := "
     (Join`r`n
-              w e r    i o p
-            a s d f    k l ; '
-      @LShift    c   m ,     @RShift
+            q w e r      i o p [
+            a s d f g  j k l ; '
+      @LShift    c     m ,     @RShift
     )"
 }
 
 ; ----
 
-SetNoKeyChar('~')
+; SetNoKeyChar('~')
 
 ; add in missing jqz
 layer1 := "
 (Join`r`n
-    n s d       i e h   
-  c r l t       a o f g 
+  ~ n s d       i e h ~ 
+  c r l t ~   ~ a o f g 
   q     m     z u     j  
 )"
 
 layer1sh := "
 (Join`r`n
-    N S D       I E H   
-  C R L T       A O F G 
+  ~ N S D       I E H ~
+  C R L T ~   ~ A O F G 
   Q     M     Z U     J  
 )"
 
 layer2 := "
 (Join`r`n
-    p . -       x w b   
-  ! ? v ,       y ' k " 
-  ~     ;     ~ :     ~ 
+  ~ p . -         x w b ~
+  ! ? v , ~    `` y ' k " 
+  $     ;       ~ :     @
 )"
 
-; todo : place other syms
 layer2sh := "
 (Join`r`n
-    P ~ ~       X W B   
-  ~ ~ V ~       Y ~ K ~ 
+  ~ P ~ ~       X W B ~
+  ~ ~ V ~ ~   ~ Y ~ K ~ 
   ~     ~     ~ ~     ~ 
 )"
 
+; SetNoKeyChar("'")
+
+layer3 := "
+(Join`r`n
+  \ ( ) /       _ { } ~
+  * < > : #   % = [ ] | 
+  !     +     '  &     ^
+)"
  
 
 ; main layer
@@ -91,16 +98,22 @@ CreateLayer(1)
 
 ; 2nd layer, 
 if (crazyFingering)
-    ; CreateLayer(2, "RAlt", 1) ;; on Mircosoft
     CreateLayer(2, "Space", 0) ;; on Dell kbd @ work
 else
     CreateLayer(2, "Space", 0)
 
-AddMappings(1, 1, qwertyMask18, layer1sh)
-AddMappings(2, 1, qwertyMask18, layer2sh)
-AddMappings(1, 0, qwertyMask18, layer1)
-AddMappings(2, 0, qwertyMask18, layer2)
+SetNoKeyChar('~')
+AddMappings(1, 1, qwertyMask, layer1sh)
+AddMappings(2, 1, qwertyMask, layer2sh)
+AddMappings(1, 0, qwertyMask, layer1)
+AddMappings(2, 0, qwertyMask, layer2)
+
+CreateLayer(3, "RAlt", 1) 
+SetNoKeyChar("'")
+AddMappings(3, 0, qwertyMask, layer3)
+
 SetNoKeyChar('')
+
 
 if (crazyFingering)
 {
@@ -147,12 +160,9 @@ if (crazyFingering)
 else
 {
     SetupExtend2('LAlt')
+    
     ; SetupExtend2('Space')
-
-    ; this one will autorepeat Space, since space itself will not (dual mode cant)
     ; extHK('b', 'Space') 
-
-    ; space press/release outputs space (dual mode)
     ; extHKitself('', 'Space')
 }
 
@@ -163,9 +173,5 @@ return
 
 ; other hotkey defs
 
-; #include ../../common/capsLock.ahk
-; #include ../../common/extend/extendLAlt.ahk
 #include ../../common/commonHotkeys.ahk
-
-;#include extraKeyDefs.ahk
 
