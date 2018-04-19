@@ -28,11 +28,12 @@ global CenterOnCurrWndMonitor := 1
 #include ../../common/clipboardToBash.ahk
 #include ../../common/fromPkl/pkl_guiLayers.ahk
 
+; Turns ON hoem pos on Caps/Q/W/D -- L/P/{/Enter
 qwertyMask := "
 (Join`r`n
-        q w e r      i o p [
-        a s d f g  j k l ; '
-  @LShift    c     m ,     @RShift
+        Tab  q w e      o p [ ]
+    CapsLock a s d f  k l ; ' Enter
+    @LShift      x    , .     @RShift
 )"
 
 ; ----
@@ -82,7 +83,7 @@ layer3 := "
 CreateLayer(1)
 
 ; 2nd layer, 
-CreateLayer(2, "Space", 0)
+CreateLayer(2, "Space", 0) ;; on Dell kbd @ work
 
 SetNoKeyChar('~')
 AddMappings(1, 1, qwertyMask, layer1sh)
@@ -96,19 +97,39 @@ AddMappings(3, 0, qwertyMask, layer3)
 
 SetNoKeyChar('')
 
-AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
+
+AddMappings(1, 0, '`` 1 2 3 4   8 9 0 - =', '4 0 1 2 3   7 6 5 9 8')
+
+AddMappings(2, 0, '``', 'CapsLock')
+AddMappings(1, 1, ']', 'Delete')
+AddMappings(1, 0, ']', 'BackSpace')
+
+; thumbs
+AddMappings(1, 0, 'appskey', 'Enter')
+
+; on Microsoft Sculpt Ergo
+; AddMappings(1, 0, 'n', 'Control')
+; AddMappings(1, 0, 'm', 'Enter')
+
+AddMappings(1, 0, 'm', 'Control')
+AddMappings(1, 0, ',', 'Enter')
+
+AddMappings(2, 1, 'c', 'LShift')
+AddMappings(2, 0, 'c', 'LShift')
+AddMappings(1, 1, 'c', 'LShift')
+AddMappings(1, 0, 'c', 'LShift')
     
 ; ---------------
 
 #include ../../common/extend/extendWide2BaseShLeft.ahk
 #include ../../common/extend/extendCapsEnterBase.ahk
 
-SetupExtend2('LAlt')
-    
-; SetupExtend2('Space')
+; on Microsoft Sculpt Ergo
+; SetupExtendCapsEnter('Space')
 ; extHK('b', 'Space') 
 ; extHKitself('', 'Space')
 
+SetupExtendCapsEnter('LAlt')
 
 DisplayHelpImage()
 return
