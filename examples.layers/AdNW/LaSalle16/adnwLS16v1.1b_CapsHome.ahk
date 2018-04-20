@@ -1,15 +1,11 @@
 /*
 
-2018-04-13
-
-swapped _() for :!? on altgr
-
-etaoinsrhldcumfg
-
-pywb,.vk-"'x;:!?
-
-_()jq=z/*$>{}[]\+|&<%@#^`~
-
+2018-04-13 adnw lasalle16, w. manually added keys
+mod 04-19
+index bottom row M U where not nice, moved to mid col index, better
+keep a copy of U at original places for OU
+moved z to now empty bottom index left hand
+(was actually overriten by Enter !)
 
 
 */
@@ -18,7 +14,7 @@ _()jq=z/*$>{}[]\+|&<%@#^`~
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\v1.1"
+global ImgsDir := A_ScriptDir . "\imgs\v1.1b"
 global ImgWidth := 170
 global ImgHeight := 98
 global CenterOnCurrWndMonitor := 1
@@ -33,49 +29,49 @@ qwertyMask := "
 (Join`r`n
         Tab  q w e      o p [ ]
     CapsLock a s d f  k l ; ' Enter
-    @LShift      x    , .     @RShift
+    @LShift      x      .    @RShift
 )"
 
 ; ----
 
-; SetNoKeyChar('~')
+SetNoKeyChar('~')
 
 ; add in missing jqz
 layer1 := "
 (Join`r`n
   ~ n s d       i e h ~ 
-  c r l t ~   ~ a o f g 
-  q     m     z u     j  
+  c r l t m   u a o f g 
+  q     z       u     j  
 )"
 
 layer1sh := "
 (Join`r`n
   ~ N S D       I E H ~
-  C R L T ~   ~ A O F G 
-  Q     M     Z U     J  
+  C R L T M   U A O F G 
+  Q     Z       U     J  
 )"
 
 layer2 := "
 (Join`r`n
   ~ p . -         x w b ~
-  ! ? v , ~    `` y ' k " 
-  $     ;       ~ :     @
+  ! ? v , ;     : y ' k " 
+  $     ~         ``    @
 )"
 
 layer2sh := "
 (Join`r`n
   ~ P ~ ~       X W B ~
   ~ ~ V ~ ~   ~ Y ~ K ~ 
-  ~     ~     ~ ~     ~ 
+  ~     ~       ~     ~ 
 )"
 
-; SetNoKeyChar("'")
+; SetNoKeyChar('')
 
 layer3 := "
 (Join`r`n
   \ ( ) /       _ { } ~
   * < > : #   % = [ ] | 
-  !     +     '  &     ^
+  !     +       &     ^
 )"
  
 
@@ -92,10 +88,8 @@ AddMappings(1, 0, qwertyMask, layer1)
 AddMappings(2, 0, qwertyMask, layer2)
 
 CreateLayer(3, "RAlt", 1) 
-SetNoKeyChar("'")
-AddMappings(3, 0, qwertyMask, layer3)
-
 SetNoKeyChar('')
+AddMappings(3, 0, qwertyMask, layer3)
 
 
 AddMappings(1, 0, '`` 1 2 3 4   8 9 0 - =', '4 0 1 2 3   7 6 5 9 8')

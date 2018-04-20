@@ -18,7 +18,7 @@ _()jq=z/*$>{}[]\+|&<%@#^`~
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs"
+global ImgsDir := A_ScriptDir . "\imgs\v1.1"
 global ImgWidth := 170
 global ImgHeight := 98
 global CenterOnCurrWndMonitor := 1
