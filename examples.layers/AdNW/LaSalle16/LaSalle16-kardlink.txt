@@ -82,3 +82,40 @@ _()jq=z/*$>{}[]\+|&<%@#^`~
  !?v,   y'k"       4.143 inward/outward  24.102 inward or outward bot  3.2  1.4
     ;   :          7.933 adjacent         0.450 shift adjacent    sum 48.6 51.4
                   3.0 16.0 17.0 12.6 --.- --.- 14.8 15.9 17.2  3.5 Sh  2.8  1.2
+
+--- v2 ----
+
+PQ 2018-04-19
+
+use mid column index vs bottom row index
+
+16keys
+  w e r      u i o
+a s d f g  h j k l ;
+
+etaoinsrhldcumfg
+pywb,.vk-"'x;:!?
+
+_()jq=z/*$>{}[]\+|&<%@#^`~
+
+Note that left hand ends up the same as manually modified 1.1b AHK implementation
+except some syms on alt-gr
+
+./opt16.exe  -2 englisch.txt -K kwezAdNW/stdUSLasalle16v2-main.cfg
+
+35               266.873 total effort   116.335 positional effort    left right
+                   2.161 same finger rp   0.577 shift same finger top 19.4 27.6
+  nsd   aeh       68.713 hand alternat.  25.033 shift hand alter. mid 27.1 23.4
+ crltm goiuf       2.512 inward/outward  26.129 inward or outward bot  1.1  1.4
+                  14.115 adjacent        31.142 shift adjacent    sum 47.6 52.4
+                  4.5 14.5 11.8 16.9 --.- --.- 19.0 21.2  8.4  3.8 Sh  1.1  1.4
+
+
+./opt16.exe  -2 englisch.txt -K kwezAdNW/stdUSLasalle16v2-altgr.cfg
+
+41131            103.075 total effort    93.118 positional effort    left right
+                   1.157 same finger rp   0.901 shift same finger top 27.9 26.6
+  p.-   xwb       55.600 hand alternat.  59.459 shift hand alter. mid 17.9 23.6
+ ?;v,! :y'k"       4.074 inward/outward  24.102 inward or outward bot  2.8  1.2
+                   7.982 adjacent         0.450 shift adjacent    sum 48.6 51.4
+                  3.1 16.0 17.0 12.5 --.- --.- 14.8 15.9 17.2  3.5 Sh  2.8  1.2
