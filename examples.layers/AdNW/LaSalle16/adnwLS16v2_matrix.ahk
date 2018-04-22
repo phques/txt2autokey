@@ -8,7 +8,7 @@
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\v3"
+global ImgsDir := A_ScriptDir . "\imgs\v2"
 global ImgWidth := 170
 global ImgHeight := 94
 global CenterOnCurrWndMonitor := 1
@@ -30,33 +30,32 @@ qwertyMask := "
 
 SetNoKeyChar('~')
 
-; add in missing jqz
 layer1 := "
 (Join`r`n
-  ~ o a u       d s n ~
-  g h i e f   m t l r c 
-  j     ~       z     q
+  ~ n s d       a e h ~
+  c r l t m   g o i u f 
+  q     z       g     j
 )"
 
 layer1sh := "
 (Join`r`n
-  ~ O A U       D S N ~
-  G H I E F   M T L R C 
-  J     ~       Z     Q
+  ~ N S D       A E H ~
+  C R L T M   G O I U F 
+  Q     Z       G     J
 )"
 
 layer2 := "
 (Join`r`n
-  ~ y . -       ' b p ~ 
-  ! x v , ?   : w k ; " 
+  ~ p . -       x w b ~ 
+  ? ; v , !   : y ' k " 
   $     ~       ``    @
 )"
 
 layer2sh := "
 (Join`r`n
-  ~ Y ~ ~       ~ B P ~ 
-  ~ X V ~ ~   ~ W K ~ ~ 
-  ~     ~       ~     ~
+  ~ P ~ ~       X W B ~
+  ~ ~ V ~ ~   ~ Y ~ K ~ 
+  ~     ~       ~     ~ 
 )"
 
 ; SetNoKeyChar('')
