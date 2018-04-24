@@ -1,0 +1,50 @@
+partial alphanumeric_keys
+xkb_symbols "??" {
+  name[Group1]= "BEAKL15ModPq7d";
+  key <AE01> { [ 4, U0021, NoSymbol, NoSymbol ] };  // DIGIT FOUR, EXCLAMATION MARK, <none>, <none>, <none>
+  key <AE02> { [ 0, U0040, U0025, NoSymbol ] };  // DIGIT ZERO, COMMERCIAL AT, <none>, PERCENT SIGN, <none>
+  key <AE03> { [ 1, U0023, U005f, NoSymbol ] };  // DIGIT ONE, NUMBER SIGN, <none>, LOW LINE, <none>
+  key <AE04> { [ 2, U0024, NoSymbol, NoSymbol ] };  // DIGIT TWO, DOLLAR SIGN, <none>, <none>, <none>
+  key <AE05> { [ 3, U0025, NoSymbol, NoSymbol ] };  // DIGIT THREE, PERCENT SIGN, <none>, <none>, <none>
+  key <AE06> { [ 7, U005e, NoSymbol, NoSymbol ] };  // DIGIT SEVEN, CIRCUMFLEX ACCENT, <none>, <none>, <none>
+  key <AE07> { [ 6, U0026, NoSymbol, NoSymbol ] };  // DIGIT SIX, AMPERSAND, <none>, <none>, <none>
+  key <AE08> { [ 5, U002a, U005e, NoSymbol ] };  // DIGIT FIVE, ASTERISK, <none>, CIRCUMFLEX ACCENT, <none>
+  key <AE09> { [ 9, U0028, U007e, NoSymbol ] };  // DIGIT NINE, LEFT PARENTHESIS, <none>, TILDE, <none>
+  key <AE10> { [ 8, U0029, NoSymbol, NoSymbol ] };  // DIGIT EIGHT, RIGHT PARENTHESIS, <none>, <none>, <none>
+  key <AE11> { [ U002d, U005f, NoSymbol, NoSymbol ] };  // HYPHEN-MINUS, LOW LINE, <none>, <none>, <none>
+  key <AE12> { [ U003d, U002b, NoSymbol, NoSymbol ] };  // EQUALS SIGN, PLUS SIGN, <none>, <none>, <none>
+  key <AD01> { [ q, Q, U003a, NoSymbol ] };  // LATIN SMALL LETTER Q, LATIN CAPITAL LETTER Q, <none>, COLON, <none>
+  key <AD02> { [ h, H, U003c, NoSymbol ] };  // LATIN SMALL LETTER H, LATIN CAPITAL LETTER H, <none>, LESS-THAN SIGN, <none>
+  key <AD03> { [ o, O, U0022, NoSymbol ] };  // LATIN SMALL LETTER O, LATIN CAPITAL LETTER O, <none>, QUOTATION MARK, <none>
+  key <AD04> { [ u, U, U003e, NoSymbol ] };  // LATIN SMALL LETTER U, LATIN CAPITAL LETTER U, <none>, GREATER-THAN SIGN, <none>
+  key <AD05> { [ NoSymbol, NoSymbol, U0060, NoSymbol ] };  // <none>, <none>, <none>, GRAVE ACCENT, <none>
+  key <AD07> { [ c, C, U005b, NoSymbol ] };  // LATIN SMALL LETTER C, LATIN CAPITAL LETTER C, <none>, LEFT SQUARE BRACKET, <none>
+  key <AD08> { [ r, R, U003d, NoSymbol ] };  // LATIN SMALL LETTER R, LATIN CAPITAL LETTER R, <none>, EQUALS SIGN, <none>
+  key <AD09> { [ f, F, U005d, NoSymbol ] };  // LATIN SMALL LETTER F, LATIN CAPITAL LETTER F, <none>, RIGHT SQUARE BRACKET, <none>
+  key <AD10> { [ z, Z, U0040, NoSymbol ] };  // LATIN SMALL LETTER Z, LATIN CAPITAL LETTER Z, <none>, COMMERCIAL AT, <none>
+  key <AD11> { [ U005b, U007b, NoSymbol, NoSymbol ] };  // LEFT SQUARE BRACKET, LEFT CURLY BRACKET, ESCAPE, <none>, <none>
+  key <AD12> { [ U005d, U007d, NoSymbol, NoSymbol ] };  // RIGHT SQUARE BRACKET, RIGHT CURLY BRACKET, INFORMATION SEPARATOR THREE, <none>, <none>
+  key <AC01> { [ y, Y, U005c, NoSymbol ] };  // LATIN SMALL LETTER Y, LATIN CAPITAL LETTER Y, <none>, REVERSE SOLIDUS, <none>
+  key <AC02> { [ i, I, U0028, NoSymbol ] };  // LATIN SMALL LETTER I, LATIN CAPITAL LETTER I, <none>, LEFT PARENTHESIS, <none>
+  key <AC03> { [ e, E, U002e, NoSymbol ] };  // LATIN SMALL LETTER E, LATIN CAPITAL LETTER E, <none>, FULL STOP, <none>
+  key <AC04> { [ a, A, U0029, NoSymbol ] };  // LATIN SMALL LETTER A, LATIN CAPITAL LETTER A, <none>, RIGHT PARENTHESIS, <none>
+  key <AC05> { [ NoSymbol, NoSymbol, U0023, NoSymbol ] };  // <none>, <none>, <none>, NUMBER SIGN, <none>
+  key <AC06> { [ m, M, U0024, NoSymbol ] };  // LATIN SMALL LETTER M, LATIN CAPITAL LETTER M, <none>, DOLLAR SIGN, <none>
+  key <AC07> { [ s, S, g, G ] };  // LATIN SMALL LETTER S, LATIN CAPITAL LETTER S, <none>, LATIN SMALL LETTER G, LATIN CAPITAL LETTER G
+  key <AC08> { [ t, T, U007b, NoSymbol ] };  // LATIN SMALL LETTER T, LATIN CAPITAL LETTER T, <none>, LEFT CURLY BRACKET, <none>
+  key <AC09> { [ n, N, U007d, NoSymbol ] };  // LATIN SMALL LETTER N, LATIN CAPITAL LETTER N, <none>, RIGHT CURLY BRACKET, <none>
+  key <AC10> { [ b, B, U007c, NoSymbol ] };  // LATIN SMALL LETTER B, LATIN CAPITAL LETTER B, <none>, VERTICAL LINE, <none>
+  key <AC11> { [ U003b, U003a, U003b, NoSymbol ] };  // SEMICOLON, COLON, <none>, SEMICOLON, <none>
+  key <TLDE> { [ U0060, U007e, NoSymbol, NoSymbol ] };  // GRAVE ACCENT, TILDE, <none>, <none>, <none>
+  key <BKSL> { [ U005c, U007c, NoSymbol, NoSymbol ] };  // REVERSE SOLIDUS, VERTICAL LINE, INFORMATION SEPARATOR FOUR, <none>, <none>
+  key <AB01> { [ j, J, U002a, NoSymbol ] };  // LATIN SMALL LETTER J, LATIN CAPITAL LETTER J, <none>, ASTERISK, <none>
+  key <AB02> { [ U002c, U0021, U002d, NoSymbol ] };  // COMMA, EXCLAMATION MARK, <none>, HYPHEN-MINUS, <none>
+  key <AB03> { [ U002f, U003f, x, X ] };  // SOLIDUS, QUESTION MARK, <none>, LATIN SMALL LETTER X, LATIN CAPITAL LETTER X
+  key <AB04> { [ k, K, U0027, NoSymbol ] };  // LATIN SMALL LETTER K, LATIN CAPITAL LETTER K, <none>, APOSTROPHE, <none>
+  key <AB05> { [ NoSymbol, NoSymbol, U0021, NoSymbol ] };  // <none>, <none>, <none>, EXCLAMATION MARK, <none>
+  key <AB07> { [ d, D, w, W ] };  // LATIN SMALL LETTER D, LATIN CAPITAL LETTER D, <none>, LATIN SMALL LETTER W, LATIN CAPITAL LETTER W
+  key <AB08> { [ l, L, NoSymbol, NoSymbol ] };  // LATIN SMALL LETTER L, LATIN CAPITAL LETTER L, <none>, <none>, <none>
+  key <AB09> { [ p, P, U002b, NoSymbol ] };  // LATIN SMALL LETTER P, LATIN CAPITAL LETTER P, <none>, PLUS SIGN, <none>
+  key <AB10> { [ v, V, U0026, NoSymbol ] };  // LATIN SMALL LETTER V, LATIN CAPITAL LETTER V, <none>, AMPERSAND, <none>
+  include "level3(ralt_switch)"
+};
