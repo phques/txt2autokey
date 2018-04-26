@@ -1,0 +1,95 @@
+mtgap beakl 21keys
+mask, matrix
+01110 01110
+11110 11111
+01110 01110
+
+011100111011110111110111001110
+
+from allCharsStd
+,.-"')(;=:/*!?$>
+{}[]\+|&<%@#^`~
+
+----
+2018-04-26
+v1.0
+
+setksize beak
+setmask 011100111011110111110111001110
+use abcdefghijklmnopqrstuvwxyz,.-"')(;=:/*!?$>
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 51% 48%
+Fingers: 2.0% 10% 20% 19% 0.00% 0.00% 19% 16% 12% 2.0%
+
+    /  (  :         ;  )  !
+ $  k  '  ,      j  "  b  x  ?
+    =  >  -         q  z  *
+
+    f  o  u         d  n  l
+ g  h  e  a      m  t  s  r  p
+    y  .  i         c  v  w
+
+Fitness:       17055731
+Distance:      8318317
+Finger work:   104324
+Inward rolls:  8.95%
+Outward rolls: 1.65%
+Same hand:     31.79%
+Same finger:   2.69%
+Row change:    13.56%
+Home jump:     2.58%
+Ring jump:     1.18%
+To center:     0.80%
+
+-----
+
+2018-04-26
+v1.1
+
+from allCharsStd
+,.-"')(;=:/*!?$>
+{}[]\+|&<%@#^`~
+
+change $> for {}
+
+,.-"')(;=:/*!?{}
+$>
+[]\+|&<%@#^`~
+
+setksize beak
+setmask 011100111011110111110111001110
+use abcdefghijklmnopqrstuvwxyz,.-"')(;=:/*!?{}
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set singleKeySameFinger 0
+run
+
+Hands: 51% 48%
+Fingers: 2.0% 10% 21% 19% 0.00% 0.00% 19% 16% 12% 2.0%
+
+    /  (  :         j  )  z
+ ?  k  -  ,      =  "  b  x  !
+    '  {  ;         q  }  *
+
+    f  o  u         d  n  l
+ g  h  e  a      m  t  s  r  p
+    y  .  i         c  v  w
+
+Fitness:       16931214
+Distance:      8303337
+Finger work:   109667
+Inward rolls:  8.87%
+Outward rolls: 1.62%
+Same hand:     31.60%
+Same finger:   2.65%
+Row change:    13.47%
+Home jump:     2.54%
+Ring jump:     1.19%
+To center:     0.77%
+
