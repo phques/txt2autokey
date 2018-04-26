@@ -66,6 +66,16 @@ layer2sh := "
   ~ ~ ~ ~ ~   ~ Q ~ ~ ~
 )"
 
+; $>
+; []\+|&<%@#^`~
+; temp, copied from lasalle !
+
+layer3 := "
+(Join`r`n
+  \ ( ) / .   . _ { } ~
+  * < > : #   % = [ ] | 
+  ! . . + .   . & . . ^
+)"
  
 
 ; main layer
@@ -82,6 +92,20 @@ AddMappings(2, 0, qwertyMask, layer2)
 SetNoKeyChar('')
 
 AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
+
+CreateLayer(3, "RAlt", 1) 
+; SetNoKeyChar('.')
+; AddMappings(3, 0, qwertyMask, layer3)
+
+AddMappings(3, 0, ' q w e r t    u i o p    ',  '  $ < " > ``       [ _ ] @     ')
+AddMappings(3, 0, " a s d f g  h j k l `; ' ",  '  \ ( . ) #      % { = } | `;  ')
+AddMappings(3, 0, ' z x c v      m , .      ',  "  ! : * +          & ^ ~       ") 
+/*
+  40123 76598
+    < $ >       [ _ ] 
+- \ ( " ) #   % { = } | ; 
+    : * +       & ^ ~ 
+*/
 
 ; ---------------
 
