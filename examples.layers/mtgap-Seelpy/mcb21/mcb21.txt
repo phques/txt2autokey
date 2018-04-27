@@ -93,3 +93,29 @@ Home jump:     2.54%
 Ring jump:     1.19%
 To center:     0.77%
 
+== working on integrating french support
+
+from
+    /  (  :         j  )  z
+ ?  k  -  ,      =  "  b  x  !
+    '  {  ;         q  }  *
+
+==> é  `^¨  and some syms adjustments (syms for prog avail on layer3)
+    -  é  :         j  `  z
+ ?  k  '  ,      /  "  b  x  !
+    @  $  ;         q  ¨  ^
+
+    
+http://mtgap.bilfo.com/theory-of-letter-frequency.html
+Prose = 6, Casual = 8, Programming = 4, Formal = 2, News = 7 (weighted)
+etaionsrhldcumpfgywb,.vk"-0'xj1z2q953847:6)($;|?/!&[]%_@>=*<+#`^{}~\
+etaionsrhldcumpfgywb,.vk"- 'xj z q      : )($;|?/!&[]%_@>=*<+#`^{}~\
+
+mtgap all chars std
+(?? Prose = 18, Casual = 25, C = 4, Java = 2, Perl = 1, Ruby = 1, Formal = 15, News = 20 ??)
+etaoinsrhldcumfgpywb,.vk-"_'x)(;0j1q=2:z/*!?$35>{}49[]867\+|&<%@#^`~
+etaoinsrhldcumfgpywb,.vk-"_'x)(; j q= :z/*!?$  >{}  []   \+|&<%@#^`~
+
+
+
+

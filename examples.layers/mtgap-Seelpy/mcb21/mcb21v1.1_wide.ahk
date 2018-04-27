@@ -66,17 +66,6 @@ layer2sh := "
   ~ ~ ~ ~ ~   ~ Q ~ ~ ~
 )"
 
-; $>
-; []\+|&<%@#^`~
-; temp, copied from lasalle !
-
-layer3 := "
-(Join`r`n
-  \ ( ) / .   . _ { } ~
-  * < > : #   % = [ ] | 
-  ! . . + .   . & . . ^
-)"
- 
 
 ; main layer
 CreateLayer(1)
@@ -97,15 +86,13 @@ CreateLayer(3, "RAlt", 1)
 ; SetNoKeyChar('.')
 ; AddMappings(3, 0, qwertyMask, layer3)
 
-AddMappings(3, 0, ' q w e r t    u i o p    ',  '  $ < " > ``       [ _ ] @     ')
-AddMappings(3, 0, " a s d f g  h j k l `; ' ",  '  \ ( . ) #      % { = } | `;  ')
-AddMappings(3, 0, ' z x c v      m , .      ',  "  ! : * +          & ^ ~       ") 
-/*
-  40123 76598
-    < $ >       [ _ ] 
-- \ ( " ) #   % { = } | ; 
-    : * +       & ^ ~ 
-*/
+AddMappings(3, 0, '  q w e r t     i o p [  ',  '  $ < - > ``       _ [ ] @  ')
+AddMappings(3, 0, "  a s d f g   j k l `; ' ",  '  \ ( ! ) #      % { = } |  ')
+AddMappings(3, 0, '  z x c         , . /    ',  "   : * +           & ^ ~    ") 
+
+; add alt keys !
+AddMappings(1,0, "b n", "LAlt RAlt")
+
 
 ; ---------------
 
