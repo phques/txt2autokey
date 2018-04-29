@@ -1,0 +1,37 @@
+AdNW opt, beakl 8-9 adjusted weights, w. 25keys
+
+qwer  uiop
+asdf hjkl;
+zxcv  m,./
+
+# mtgap all chars std
+# Main etaoinsrhldcumfgpywb,.vk-
+# Alt  "_'x)(;jq=:z/*!?$>{}[]\+|
+# missing &<%@#^`~
+
+# From mcb25, keep Z._ on main
+# etaoinsrhldcumfgpywb.vk_z
+# ,"-'x)(;jq=:/*!?$>{}[]\+|
+
+
+--- 2018-04-29
+v1
+
+./opt25.exe -2 englisch.txt -K /c/Users/Philippe/Google\ Drive/Typing/AdNW/kwez/stdUsBeakl25-main.cfg
+
+10000            304.598 total effort   144.977 positional effort    left right
+                   1.769 same finger rp   0.504 shift same finger top 11.8 11.7
+ _pou   mcrz      69.238 hand alternat.  28.633 shift hand alter. mid 26.2 25.9
+ bhae  gtsnw       2.662 inward/outward  26.345 inward or outward bot 12.3 12.1
+ ky.i   dflv      12.396 adjacent        25.806 shift adjacent    sum 50.3 49.7
+                  3.8  8.6 16.3 21.6 --.- --.- 17.0 11.8 16.9  4.0 Sh  1.6  1.2
+
+./opt25.exe -2 englisch.txt -K /c/Users/Philippe/Google\ Drive/Typing/AdNW/kwez/stdUsBeakl25-altgr.cfg
+
+
+10161            174.160 total effort    58.507 positional effort    left right
+                   0.189 same finger rp   0.000 shift same finger top  3.4  2.7
+ \{j/   (:!}      21.515 hand alternat.   0.000 shift hand alter. mid 57.7 31.2
+ +,q"  )-'x[      60.600 inward/outward  35.000 inward or outward bot  1.6  3.2
+ ]|=$   ;*?>       2.500 adjacent         0.000 shift adjacent    sum 62.8 37.2
+                  0.0 43.4  7.0 12.4 --.- --.- 15.9 12.0  9.3  0.0 Sh  0.0  0.0
