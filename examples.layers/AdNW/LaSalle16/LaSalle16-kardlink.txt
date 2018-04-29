@@ -119,3 +119,33 @@ except some syms on alt-gr
  ?;v,! :y'k"       4.074 inward/outward  24.102 inward or outward bot  2.8  1.2
                    7.982 adjacent         0.450 shift adjacent    sum 48.6 51.4
                   3.1 16.0 17.0 12.5 --.- --.- 14.8 15.9 17.2  3.5 Sh  2.8  1.2
+       
+
+--- v3 ----
+
+PQ 2018-04-20
+
+Running AdNW -3
+Right hand (consonants) is reversed left hand from v2 !!
+
+./opt16.exe -3 englisch.txt -K kwezAdNW/stdUSLasalle16v2-main.cfg
+
+3555             390.459 total effort   112.348 positional effort    left right
+                   2.861 same finger rp   0.605 shift same finger top 19.8 19.4
+  oau   dsn       68.713 hand alternat.  25.033 shift hand alter. mid 31.2 27.1
+ ghief mtlrc       2.616 inward/outward  25.429 inward or outward bot  1.4  1.1
+                  11.716 adjacent        40.021 shift adjacent    sum 52.4 47.6
+       á           6.025 no hand altern. 40.386 two hand altern.
+                   3.564 seesaw           6.457 indir same finger
+                  3.6 13.4 16.9 18.5 --.- --.- 16.9 11.8 14.5  4.5 Sh  1.4  1.1
+                  
+./opt16.exe -3 englisch.txt -K kwezAdNW/stdUSLasalle16v2-altgr.cfg
+
+7                111.379 total effort    92.281 positional effort    left right
+                   0.910 same finger rp   0.450 shift same finger top 25.3 29.5
+  y.-   'bp       53.645 hand alternat.  18.468 shift hand alter. mid 19.0 22.1
+ !xv,? :wk;"       9.994 inward/outward  26.304 inward or outward bot  3.5  0.5
+                  12.386 adjacent        45.496 shift adjacent    sum 47.9 52.1
+       á          31.519 no hand altern. 20.821 two hand altern.
+                   1.815 seesaw           1.815 indir same finger
+                  3.7 14.5 17.0 12.6 --.- --.- 16.1 17.2 16.0  2.8 Sh  3.5  0.5
