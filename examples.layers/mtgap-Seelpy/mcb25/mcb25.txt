@@ -1,0 +1,60 @@
+instead of using as few keys as possible,
+try to use the max, comfortable ones + extra, let the optimizer place stuff !
+
+25keys
+4x3 x 2 + 1
+
+qwer  uiop
+asdf hjkl;
+zxcv  m,./
+
+using  modified BEAKL 8-9 weights
+
+mask, matrix
+11110 01111
+11110 11111
+11110 01111
+
+111100111111110111111111001111
+
+allcharsstd
+,.-"_')(;=:/*!?$>{}[]\+|
+&<%@#^`~
+
+
+=================
+2018-04-29
+25v1
+
+setksize beak
+setmask 111100111111110111111111001111
+use abcdefghijklmnopqrstuvwxyz,.-"_')(;=:/*!?$>{}[]\+|
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set singleKeySameFinger 0
+set numThreads 4
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 9.0% 20% 19% 0.00% 0.00% 18% 14% 12% 4.0%
+
+ |  *  /  :         =  x  \  +
+ ?  "  (  ,      q  ;  )  $  !
+ [  '  >  -         j  {  }  ]
+
+ _  f  o  u         d  n  w  z
+ g  h  e  a      m  t  s  r  p
+ k  y  .  i         c  v  l  b
+
+Fitness:       16703031
+Distance:      9882602
+Finger work:   31279
+Inward rolls:  8.99%
+Outward rolls: 1.41%
+Same hand:     31.96%
+Same finger:   2.62%
+Row change:    14.11%
+Home jump:     2.87%
+Ring jump:     1.82%
+To center:     0.78%
+
