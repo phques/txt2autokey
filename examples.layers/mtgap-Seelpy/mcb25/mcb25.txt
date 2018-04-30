@@ -208,6 +208,7 @@ To center:     1.62%
 25v5
 
 try to get similar res as v4, but w/o having to stop it before it finds 'best'
+optimized home jump too much, at expense ofrow change
 
 setksize beak
 setmask 111100111111110111111111001111
@@ -221,3 +222,27 @@ set outRoll 0
 set homeJump 175
 set rowChangeDown 35
 run
+
+Hands: 46% 53%
+Fingers: 3.0% 11% 16% 17% 0.00% 0.00% 22% 15% 11% 6.0%
+
+ +  :  ;  /         $  q  z  |
+ ?  -  (  '      *  x  )  "  >
+ \  !  {  =         j  }  [  ]
+
+ _  p  o  u         n  d  f  v
+ g  i  a  e      l  r  t  s  c
+ k  ,  .  y         h  w  m  b
+
+Fitness:       21389764
+Distance:      11620129
+Finger work:   0
+Inward rolls:  3.84%
+Outward rolls: 0.00%
+Same hand:     29.75%
+Same finger:   1.75%
+Row change:    15.18%
+Home jump:     0.94%
+Ring jump:     1.54%
+To center:     1.60%
+

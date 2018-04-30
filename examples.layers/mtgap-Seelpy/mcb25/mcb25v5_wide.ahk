@@ -15,8 +15,8 @@ allcharsstd
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
 global ImgsDir := A_ScriptDir . "\imgs\v5"
-global ImgWidth := 156
-global ImgHeight := 109
+global ImgWidth := 150
+global ImgHeight := 50
 global CenterOnCurrWndMonitor := 1
 
 #include ../../common/layers.ahk
