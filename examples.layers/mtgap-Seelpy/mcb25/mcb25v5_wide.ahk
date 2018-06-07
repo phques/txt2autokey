@@ -77,6 +77,8 @@ AddMappings(2, 0, qwertyMask, layer2)
 SetNoKeyChar('')
 
 AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
+AddMappings(1, 0, 'Capslock', ';') 
+
 
 CreateLayer(3, "RAlt", 1) 
 ; SetNoKeyChar('.')
