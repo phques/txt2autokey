@@ -6,7 +6,6 @@ v5
 2019-01-26
 adj for non-wide and no 2nd layer (move xjqz to normal layer)
 left hand shifted right to allow use of zxcv in more natural direction
-with angleZ left hand
 
 */
 

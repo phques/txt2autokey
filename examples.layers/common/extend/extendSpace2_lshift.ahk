@@ -20,11 +20,13 @@ extHK('=', 'F12')
 extHK('w', 'insert')
 extHK('e', 'Escape')
 extHK('r', 'Tab')
-extHK('t', 'Alt')
+extHK('t', '^', 's') ; ctrl-s for save
+;extHK('t', 'Alt')
            
 ; kind of limited here shift+ctrl f+g does not work on my kbd @home
 ; (use real shift key !)
 ;extHK('CapsLock', 'LWin')
+extHK('a', '^', 'a') ; ctrl-a for select all
 extHK('s', 'Control')
 extHK('g', 'Shift')
 ;extHK('g', '!','Esc') ; or with r-w!
@@ -49,7 +51,8 @@ extHK('k', 'Down')
 extHK('l', 'Right')
 extHK(';', 'Backspace')
 extHK("'", 'Enter')
-           
+
+extHK('n', 'Alt')           
 extHK('m', '^','c')
 extHK(',', '^','x')
 extHK('.', '^','v')
