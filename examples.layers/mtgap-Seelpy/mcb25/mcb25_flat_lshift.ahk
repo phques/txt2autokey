@@ -43,7 +43,7 @@ layer1 := "
 layer1sh := "
 (Join`r`n
  Q  -  P  O  U      Z  N  D  F  V
- ?  G  I  A  E      L  R  T  S  C '
+ :  G  I  A  E      L  R  T  S  C '
    K  /  %  Y X     J  H  W  M  B
 )"
 
@@ -64,8 +64,8 @@ CreateLayer(3, "RAlt", 1)
 ; AddMappings(3, 0, qwertyMask, layer3)
 
 AddMappings(3, 0, '  q w e r t     u i o p   ',  ' `` $ < - >       _ [ ] @  ')
-AddMappings(3, 0, "  a s d f g   h j k l `;  ",  '  # \ ( ! )     % { = } |  ')
-AddMappings(3, 0, '   x c v        m , .     ',  "     : * +        & ^ ~    ") 
+AddMappings(3, 0, "  a s d f g   h j k l `;  ",  '  ? \ ( ! )     % { = } |  ')
+AddMappings(3, 0, '   x c v        m , .     ',  "     # * +        & ^ ~    ") 
 
 ; add alt keys !
 ;AddMappings(1,0, "b n", "LAlt RAlt")
