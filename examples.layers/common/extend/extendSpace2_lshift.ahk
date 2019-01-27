@@ -40,7 +40,8 @@ extHK('u', 'Home')
 extHK('i', 'Up')
 extHK('o', 'End')
 extHK('p', 'Delete')
-extHK('[', 'Escape')
+;extHK('[', 'Escape')
+extHK('[', 'sc15D') ; menu key
            
 extHK('h', 'PgDn')
 extHK('j', 'Left')
