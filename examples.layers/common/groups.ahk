@@ -8,7 +8,8 @@ GroupAdd "Explorer", ahk_exe "2xExplorer.exe"
 GroupAdd "NotepadPP", ahk_class "Notepad++"
 
 ; Chrome group 
-GroupAdd "Chrome", ahk_exe "chrome.exe"
+GroupAdd "Browser", ahk_exe "chrome.exe"
+GroupAdd "Browser", ahk_exe "firefox.exe"
 
 ; DevStudio group 
 GroupAdd "DevStudio", ahk_exe "devenv.exe"

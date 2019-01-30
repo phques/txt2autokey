@@ -14,7 +14,7 @@ OpenWinlistMenu()
         'ahk_exe 2xExplorer.exe', 
         'ahk_exe xplorer2_lite.exe']))
     menus.push(createWinMenu('&2 NotepadPP', ['ahk_class Notepad++']))
-    menus.push(createWinMenu('&3 Chrome', ['ahk_exe chrome.exe']))
+    menus.push(createWinMenu('&3 Browser', ['ahk_exe chrome.exe', 'ahk_exe firefox.exe']))
     menus.push(createWinMenu('&4 DevStudio', ['ahk_exe devenv.exe']))
     menus.push(createWinMenu('&5 PLine', 
         ['ahk_exe EnvironmentManager.exe',
