@@ -41,7 +41,7 @@ AddMappings(1, 0, 'Capslock', '-')
 
 ; -- layer 2 --
 
-CreateLayer(2, "RAlt", 0)
+CreateLayer(2, "RAlt", 1)
 
 ; -- numpad layer (Shift RAlt) --
 ; shifted chars (1st)
