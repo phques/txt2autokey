@@ -20,9 +20,13 @@ http://shenafu.com/smf/index.php?topic=89.msg2221#msg2221
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\beakl15modPQ"
-global ImgWidth := 240
-global ImgHeight := 74
+global ImgsDir := A_ScriptDir . "\imgs\beakl15modPQ\small"
+global ImgWidth := 174
+global ImgHeight := 50
+;global ImgsDir := A_ScriptDir . "\imgs\beakl15modPQ"
+;global ImgWidth := 224
+;global ImgHeight := 56
+
 global CenterOnCurrWndMonitor := 1
 
 #include ../common/groups.ahk
