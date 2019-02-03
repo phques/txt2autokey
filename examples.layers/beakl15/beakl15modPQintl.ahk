@@ -1,6 +1,6 @@
 /* BEAKL15 mod PQ (based on latest BEAKL15)
 
-2019-01-30
+2019-02-03
 
 http://shenafu.com/code/keyboard/beakl/index.php
 http://shenafu.com/smf/index.php?topic=89.msg2221#msg2221
@@ -11,6 +11,10 @@ http://shenafu.com/smf/index.php?topic=89.msg2221#msg2221
 - added a _ above ; on shift layer
 - left bottom row shifted left to ShiftKey, with swapped / ,
 - adjusted symbols layer 
+
+"intl", use with "deadKeys.klc" to enter accented chars (ie french, works pretty well!)
+ - capsLock = ` deadkey (vs -)
+ - added " deadkey on punc layer, for chars like ä, ï etc
 
 */
 
@@ -45,7 +49,7 @@ leftShift := 1
 if (leftShift) {
     AddMappings(1, 1, ' @LShift z x c v  n m , . /    ',  ' J ! ? K `` W M L P V   ')
 } else {
-    AddMappings(1, 1, '       z x c v b  n m , . /    ',  ' J  ! ? K `` W M L P V   ')
+    AddMappings(1, 1, '       z x c v b  n m , . /    ',  ' J  ! ? K `` W M L P V  ')
 }
 
 ; shift capslock = CapsLock !
@@ -61,7 +65,8 @@ if (leftShift) {
     AddMappings(1, 0, '       z x c v b  n m , . /    ',  " j , / k '  w m l p v    ")
 }
 
-AddMappings(1, 0, 'Capslock', '-')
+; deadkey for accented chars
+AddMappings(1, 0, 'Capslock', '``')
 
 
 ; -- layer 2 --
@@ -85,9 +90,10 @@ AddMappings(2, 1, 'Capslock', '-')
 ;    :*+   &^~
 
 ; nb: already using zxc vs xcv, so no need for shiftLeft version
+; " is deadkey for accented chars
 AddMappings(2, 0, '   w e r      i o p    ',   '   < $ >      [ ] _   ')
 AddMappings(2, 0, " a s d f g  j k l `; ' ",   ' \ ( " ) #  { = } ! | ')
-AddMappings(2, 0, '  z x c     m , . /    ',   '   : * +    & ^ ~ %   ')
+AddMappings(2, 0, '  z x c v   m , . /    ',   '   : * + "  & ^ ~ %   ')
 
 AddMappings(2, 0, 'Capslock', '-')
 
