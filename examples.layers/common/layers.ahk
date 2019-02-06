@@ -112,6 +112,12 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 		if (t == 'SP')
 			t := 'Space'
 			
+		if (f == 'CL')
+			f := 'Capslock'
+		
+		if (t == 'CL')
+			t := 'Capslock'
+			
         ; leading @ indicates dual mode key (in 'from')
         ; (single click generates 'to' key, held down is modifier)
         isDualModeKey := 0

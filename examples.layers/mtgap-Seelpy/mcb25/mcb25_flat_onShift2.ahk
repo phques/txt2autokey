@@ -51,30 +51,25 @@ layer1sh := "
 
 ; main layer
 CreateLayer(1)
-
 AddMappings(1, 1, qwertyMask, layer1sh)
 AddMappings(1, 0, qwertyMask, layer1)
-SetNoKeyChar('')
-
-;AddMappings(1, 0, '1 2 3 4 5  7 8 9 0 -', '4 0 1 2 3   7 6 5 9 8')
 AddMappings(1, 0, 'Capslock', ';') 
 
 
-CreateLayer(3, "RAlt", 1) 
-; SetNoKeyChar('.')
-; AddMappings(3, 0, qwertyMask, layer3)
+; punc layer
 
-; use `wid` mode`right hand
-AddMappings(3, 0, '  q w e r t   i o p [  ',  '  $ < - > ``   _ [ ] @  ')
-AddMappings(3, 0, "  a s d f g   k l `; ' ",  '  \ ( ! ) #    { = } |  ')
-AddMappings(3, 0, '  z x c       , . /    ',  "   : * +       & ^ ~    ") 
+#include puncLayer.ahk
 
-AddMappings(3,0, "Capslock", "`%")
+layerAccessKey := "RAlt"
+blockAccessKey := 1
+wideRight := 1  ; when true, right hand is shifted to the right for easier access to alt key
+layerNo := 3
+CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight) 
 
 
 ; ---------------
 
-#include ../../common/extend/extendSpace2_lshift-wrk.ahk
+#include ../../common/extend/extendSpace2.ahk
 
 DisplayHelpImage()
 return
