@@ -1,5 +1,7 @@
 
 ; punc layer
+; does not contain:
+;  /?'".,; which are expected to be on main layer 
 
 CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
 {
