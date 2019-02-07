@@ -14,14 +14,14 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
     ; right hand 
     if (wideRight) {
         ; use wid-mode 
-        AddMappings(layerNo, 0, '  i o p [  ',   '  % [ ] @ ')
-        AddMappings(layerNo, 0, "  k l `; ' ",   '  { = } | ')
-        AddMappings(layerNo, 0, '  , . /    ',   '  & ^ ~   ') 
+        AddMappings(layerNo, 0, '     o p [  ',   '     [ ] @ ')
+        AddMappings(layerNo, 0, "   k l `; ' ",   '   { = } | ')
+        AddMappings(layerNo, 0, ' m , . /    ',   ' % & ^ ~   ') 
     }
     else {
         ; home row (good w. my Microsoft ergo kbd)
         AddMappings(layerNo, 0, '   i o p    ',   '   [ ] @   ')
         AddMappings(layerNo, 0, " j k l `; ' ",   ' { = } | % ')
-        AddMappings(layerNo, 0, ' m , .      ',   ' & ^ ~     ') 
+        AddMappings(layerNo, 0, ' m , . /    ',   ' & ^ ~ %   ') 
     }
 }
