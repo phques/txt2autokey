@@ -1,0 +1,19 @@
+http://shenafu.com/code/keyboard/beakl/index.php
+
+as seen on http://shenafu.com/code/keyboard/klatest/
+
+BEAKL 16
+
+  4 0 1 2 3  7 6 5 9 8   
+  q . o u j  w c s h v   
+- x a i e y  d t r n p ;
+  z ' / , k  g m l f b   
+
+  Q @ O U J  W C S H V   
+  X A I E Y  D T R N P ;
+  Z ` ? ! K  G M L F B   
+
+alt
+    < $ >      [ _ ] 
+  \ ( " ) #  % { = } | ;
+    : * +      & ^ ~ 
