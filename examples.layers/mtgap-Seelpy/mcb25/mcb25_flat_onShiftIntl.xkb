@@ -1,6 +1,6 @@
 partial alphanumeric_keys
-xkb_symbols "??" {
-  name[Group1]= "mcb25 flat intl";
+xkb_symbols "mcb25_flat_intl" {
+  name[Group1]= "mcb25_flat_intl";
   key <AE01> { [ 1, U0021, NoSymbol ] };  // DIGIT ONE, EXCLAMATION MARK, <none>, <none>
   key <AE02> { [ 2, U0040, NoSymbol ] };  // DIGIT TWO, COMMERCIAL AT, <none>, <none>
   key <AE03> { [ 3, U0023, NoSymbol ] };  // DIGIT THREE, NUMBER SIGN, <none>, <none>
@@ -17,11 +17,14 @@ xkb_symbols "??" {
   key <AD02> { [ p, P, U003c ] };  // LATIN SMALL LETTER P, LATIN CAPITAL LETTER P, <none>, LESS-THAN SIGN
   key <AD03> { [ o, O, U002d ] };  // LATIN SMALL LETTER O, LATIN CAPITAL LETTER O, <none>, HYPHEN-MINUS
   key <AD04> { [ u, U, U003e ] };  // LATIN SMALL LETTER U, LATIN CAPITAL LETTER U, <none>, GREATER-THAN SIGN
-  key <AD05> { [ U0060, U005e, NoSymbol ] };  // GRAVE ACCENT, CIRCUMFLEX ACCENT, <none>, <none>
+  key <AD05> { [ U0022, U0022, NoSymbol ] };  // QUOTATION MARK, QUOTATION MARK, <none>, <none>
+  key <AD06> { [ U0027, U0027, NoSymbol ] };  // APOSTROPHE, APOSTROPHE, <none>, <none>
   key <AD07> { [ n, N, NoSymbol ] };  // LATIN SMALL LETTER N, LATIN CAPITAL LETTER N, <none>, <none>
   key <AD08> { [ d, D, U005b ] };  // LATIN SMALL LETTER D, LATIN CAPITAL LETTER D, <none>, LEFT SQUARE BRACKET
   key <AD09> { [ f, F, U005d ] };  // LATIN SMALL LETTER F, LATIN CAPITAL LETTER F, <none>, RIGHT SQUARE BRACKET
   key <AD10> { [ v, V, U0040 ] };  // LATIN SMALL LETTER V, LATIN CAPITAL LETTER V, <none>, COMMERCIAL AT
+  // added ; _ on [, since we cannot use CapsLock for ;
+  key <AD11> { [ U003b, U005f, NoSymbol ] };  // SEMICOLON, LOW LINE, <none>, <none>
   key <AC01> { [ g, G, U005c ] };  // LATIN SMALL LETTER G, LATIN CAPITAL LETTER G, <none>, REVERSE SOLIDUS
   key <AC02> { [ i, I, U0028 ] };  // LATIN SMALL LETTER I, LATIN CAPITAL LETTER I, <none>, LEFT PARENTHESIS
   key <AC03> { [ a, A, U0021 ] };  // LATIN SMALL LETTER A, LATIN CAPITAL LETTER A, <none>, EXCLAMATION MARK
@@ -32,22 +35,28 @@ xkb_symbols "??" {
   key <AC08> { [ t, T, U003d ] };  // LATIN SMALL LETTER T, LATIN CAPITAL LETTER T, <none>, EQUALS SIGN
   key <AC09> { [ s, S, U007d ] };  // LATIN SMALL LETTER S, LATIN CAPITAL LETTER S, <none>, RIGHT CURLY BRACKET
   key <AC10> { [ c, C, U007c ] };  // LATIN SMALL LETTER C, LATIN CAPITAL LETTER C, <none>, VERTICAL LINE
-  key <AC11> { [ U0027, U0022, U00b4 ] };  // APOSTROPHE, QUOTATION MARK, <none>, ACUTE ACCENT, DIAERESIS
-  key <TLDE> { [ U0060, U007e, NoSymbol ] };  // GRAVE ACCENT, TILDE, <none>, <none>, <none>
-  key <AB01> { [ k, K, U003a ] };  // LATIN SMALL LETTER K, LATIN CAPITAL LETTER K, <none>, COLON
-  key <AB02> { [ U002c, U002f, U002a ] };  // COMMA, SOLIDUS, <none>, ASTERISK
-  key <AB03> { [ U002e, U003f, U002b ] };  // FULL STOP, QUESTION MARK, <none>, PLUS SIGN
-  key <AB04> { [ y, Y, U0023 ] };  // LATIN SMALL LETTER Y, LATIN CAPITAL LETTER Y, <none>, NUMBER SIGN
-  key <AB05> { [ z, Z, NoSymbol ] };  // LATIN SMALL LETTER Z, LATIN CAPITAL LETTER Z, <none>, <none>
+  key <AC11> { [ U0060, U005e, U00b4 ] };  // GRAVE ACCENT, CIRCUMFLEX ACCENT, <none>, ACUTE ACCENT
+  key <TLDE> { [ U0060, U007e, NoSymbol ] };  // GRAVE ACCENT, TILDE, <none>, <none>
+  key <AB01> { [ U002c, U002f, U003a ] };  // COMMA, SOLIDUS, <none>, COLON
+  key <AB02> { [ U002e, U003f, U002a ] };  // FULL STOP, QUESTION MARK, <none>, ASTERISK
+  key <AB03> { [ y, Y, U002b ] };  // LATIN SMALL LETTER Y, LATIN CAPITAL LETTER Y, <none>, PLUS SIGN
+  key <AB04> { [ z, Z, U0023 ] };  // LATIN SMALL LETTER Z, LATIN CAPITAL LETTER Z, <none>, NUMBER SIGN
   key <AB06> { [ j, J, NoSymbol ] };  // LATIN SMALL LETTER J, LATIN CAPITAL LETTER J, <none>, <none>
   key <AB07> { [ h, H, U0026 ] };  // LATIN SMALL LETTER H, LATIN CAPITAL LETTER H, <none>, AMPERSAND
   key <AB08> { [ w, W, U005e ] };  // LATIN SMALL LETTER W, LATIN CAPITAL LETTER W, <none>, CIRCUMFLEX ACCENT
   key <AB09> { [ m, M, U007e ] };  // LATIN SMALL LETTER M, LATIN CAPITAL LETTER M, <none>, TILDE
   key <AB10> { [ b, B, U0025 ] };  // LATIN SMALL LETTER B, LATIN CAPITAL LETTER B, <none>, PERCENT SIGN
-  key <CAPS> {
-    type= "ALPHABETIC",
-    symbols[Group1]= [ U003b, NoSymbol, U005f ] // semicolon, <none>, lowline (underscore)
-  };
-
+  
+  //I think this is the extra key between shiftL and zxcv on pc105 .. (scancode 56 / OEM_102 in microsoft KLC files)
+  // lets use it so we have an actual / existing key mapping to output K, used with xcape so that shift => k
+  // in keycodes/evdev: <LSGT> = 94;
+  // so xcape -e "Shift_L=#94" will do the trick
+  key <LSGT> { [ k, K, NoSymbol ] };  // LATIN SMALL LETTER K, LATIN CAPITAL LETTER K, <none>, <none>
+  
+// seems to cause capslock to misbehave even on other layouts !!???
+//  key <CAPS> {
+//    type= "ALPHABETIC",
+//    symbols[Group1]= [ U003b, Caps_Lock, U005f ] // semicolon, Caps_Lock, lowline (underscore)
+//  };
   include "level3(ralt_switch)"
 };

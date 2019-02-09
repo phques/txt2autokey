@@ -36,8 +36,8 @@ global CenterOnCurrWndMonitor := 1
 
 qwertyMask := "
 (Join`r`n
-       q  w  e  r  t      u  i  o  p 
-       a  s  d  f  g   h  j  k  l  ;  
+       q  w  e  r  t   y  u  i  o  p 
+       a  s  d  f  g   h  j  k  l  ; ' 
  @LShift  z  x  c  v   n  m  ,  .  / 
 )"
 
@@ -46,15 +46,15 @@ qwertyMask := "
 
 layer1 := "
 (Join`r`n
-       q  p  o  u  ``     n  d  f  v
-       g  i  a  e  x   l  r  t  s  c 
+       q  p  o  u  "   '  n  d  f  v
+       g  i  a  e  x   l  r  t  s  c ``
        k  ,  .  y  z   j  h  w  m  b
 )"
 
 layer1sh := "
 (Join`r`n
-       Q  P  O  U  ^      N  D  F  V
-       G  I  A  E  X   L  R  T  S  C 
+       Q  P  O  U  "   '  N  D  F  V
+       G  I  A  E  X   L  R  T  S  C  ^
        K  /  ?  Y  Z   J  H  W  M  B
 )"
 
