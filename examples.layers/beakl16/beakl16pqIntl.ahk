@@ -10,7 +10,7 @@ as seen on http://shenafu.com/code/keyboard/klatest/
 - adjusted symbols layer 
 
 "intl", use with "deadKeys.klc" to enter accented chars (ie french, works pretty well!)
- - capsLock = ` deadkey (vs -) (swapped with ` on shift main!)
+ - capsLock = ; deadkey (vs -) (swapped with ` on shift main!)
  - added " deadkey on punc layer, for chars like ä, ï etc
 
 */
@@ -47,13 +47,13 @@ AddMappings(1, 1, ' @LShift z x c v  n m , . /    ',  ' Z - ? ! K  G M L F B   '
 
 ;AddMappings(1, 0, ' 1 2 3 4 5  6 7 8 9 0    ',  ' 4 0 1 2 3  7 6 5 9 8    ')
 AddMappings(1, 0, '       q w e r t  y u i o p    ',  ' q . o u j  w c s h v    ')
-AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  ' x a i e y  d t r n p `; ')
+AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  ' x a i e y  d t r n p `` ')
 AddMappings(1, 0, ' @LShift z x c v  n m , . /    ',  " z ' / , k  g m l f b    ")
 
 ;AddMappings(1, 0, '      z x c v b  n m , . /    ',  " z ' / , k  g m l f b    ")
 
 ; deadkey for accented chars
-AddMappings(1, 0, 'Capslock', '``')
+AddMappings(1, 0, 'Capslock', ';')
 
 
 ; -- layer 2 --
