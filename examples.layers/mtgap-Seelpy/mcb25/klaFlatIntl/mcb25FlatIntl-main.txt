@@ -1,0 +1,5 @@
+~
+ 4  0  1  2  3   7  6  5  9  8
+ q  p  o  u  `   ~  n  d  f  v
+ g  i  a  e  x   l  r  t  s  c
+ k  ,  .  y  z   j  h  w  m  b
