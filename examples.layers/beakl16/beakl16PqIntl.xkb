@@ -1,0 +1,53 @@
+partial alphanumeric_keys
+xkb_symbols "BEAKL16_PqIntl" {
+  name[Group1]= "BEAKL16_PqIntl";
+  key <TLDE> { [ U0060, U007e, NoSymbol ] };  // GRAVE ACCENT, TILDE, <none>
+  key <AE01> { [ 1, U0021, NoSymbol ] };  // DIGIT ONE, EXCLAMATION MARK, <none>
+  key <AE02> { [ 2, U0040, NoSymbol ] };  // DIGIT TWO, COMMERCIAL AT, <none>
+  key <AE03> { [ 3, U0023, NoSymbol ] };  // DIGIT THREE, NUMBER SIGN, <none>
+  key <AE04> { [ 4, U0024, NoSymbol ] };  // DIGIT FOUR, DOLLAR SIGN, <none>
+  key <AE05> { [ 5, U0025, NoSymbol ] };  // DIGIT FIVE, PERCENT SIGN, <none>
+  key <AE06> { [ 6, U005e, NoSymbol ] };  // DIGIT SIX, CIRCUMFLEX ACCENT, <none>
+  key <AE07> { [ 7, U0026, NoSymbol ] };  // DIGIT SEVEN, AMPERSAND, <none>
+  key <AE08> { [ 8, U002a, NoSymbol ] };  // DIGIT EIGHT, ASTERISK, <none>
+  key <AE09> { [ 9, U0028, NoSymbol ] };  // DIGIT NINE, LEFT PARENTHESIS, <none>
+  key <AE10> { [ 0, U0029, NoSymbol ] };  // DIGIT ZERO, RIGHT PARENTHESIS, <none>
+  key <AE11> { [ U002d, U005f, NoSymbol ] };  // HYPHEN-MINUS, LOW LINE, <none>
+  key <AE12> { [ U003d, U002b, NoSymbol ] };  // EQUALS SIGN, PLUS SIGN, <none>
+  key <AD01> { [ q, Q, U0024 ] };  // q Q
+  key <AD02> { [ U002e, U0040, U003c ] };  // . @
+  key <AD03> { [ o, O, U002d ] };  // o O
+  key <AD04> { [ u, U, U003e ] };  // u U
+  key <AD05> { [ j, J, NoSymbol ] };  // j J
+  key <AD06> { [ w, W, NoSymbol ] };  // w W
+  key <AD07> { [ c, C, NoSymbol ] };  // c C
+  key <AD08> { [ s, S, U005b ] };  // s S
+  key <AD09> { [ h, H, U005d ] };  // h H
+  key <AD10> { [ v, V, U0040 ] };  // v V
+  key <AC01> { [ x, X, U005c ] };  // x X
+  key <AC02> { [ a, A, U0028 ] };  // a A
+  key <AC03> { [ i, I, U0021 ] };  // i I
+  key <AC04> { [ e, E, U0029 ] };  // e E
+  key <AC05> { [ y, Y, U003b ] };  // y Y ;
+  key <AC06> { [ d, D, NoSymbol ] };  // d D
+  key <AC07> { [ t, T, U007b ] };  // t T
+  key <AC08> { [ r, R, U003d ] };  // r R
+  key <AC09> { [ n, N, U007d ] };  // n N
+  key <AC10> { [ p, P, U007c ] };  // p P
+  key <AC11> { [ U0060, U005f, NoSymbol ] };  // grave accent, low line, <none>
+  key <LSGT> { [ z, Z, NoSymbol ] };  // z Z
+  key <AB01> { [ U0027, U002d, U003a ] };  // ' -
+  key <AB02> { [ U002f, U003f, U002a ] };  // / ?
+  key <AB03> { [ U002c, U0021, U002b ] };  // , !
+  key <AB04> { [ k, K, U0023 ] };  // k K
+  key <AB05> { [ NoSymbol, NoSymbol, NoSymbol ] };  // nothing on B
+  key <AB06> { [ g, G, NoSymbol ] };  // g G
+  key <AB07> { [ m, M, U0026 ] };  // m M
+  key <AB08> { [ l, L, U005e ] };  // l L
+  key <AB09> { [ f, F, U007e ] };  // f F
+  key <AB10> { [ b, B, U0025 ] };  // b B
+  key <AD11> { [ U005b, U007b, NoSymbol ] };  // LEFT SQUARE BRACKET, LEFT CURLY BRACKET, ESCAPE
+  key <AD12> { [ U005d, U007d, NoSymbol ] };  // RIGHT SQUARE BRACKET, RIGHT CURLY BRACKET, INFORMATION SEPARATOR THREE
+  key <BKSL> { [ U005c, U007c, NoSymbol ] };  // REVERSE SOLIDUS, VERTICAL LINE, INFORMATION SEPARATOR FOUR
+  include "level3(ralt_switch)"
+};

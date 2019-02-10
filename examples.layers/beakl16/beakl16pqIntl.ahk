@@ -5,12 +5,11 @@ as seen on http://shenafu.com/code/keyboard/klatest/
 2019-02-08
 - dont remap digits on top row
 - shift capslock => CapsLock 
-- added a _ above ; on shift layer
 - left bottom row shifted left to ShiftKey
 - adjusted symbols layer 
 
 "intl", use with "deadKeys.klc" to enter accented chars (ie french, works pretty well!)
- - capsLock = ; deadkey (vs -) (swapped with ` on shift main!)
+ - capsLock = ';' and '`' deadkey on "'" 
  - added " deadkey on punc layer, for chars like ä, ï etc
 
 */
@@ -39,8 +38,6 @@ AddMappings(1, 1, '       q w e r t  y u i o p    ',  ' Q @ O U J  W C S H V   '
 AddMappings(1, 1, "       a s d f g  h j k l `; ' ",  ' X A I E Y  D T R N P _ ') 
 AddMappings(1, 1, ' @LShift z x c v  n m , . /    ',  ' Z - ? ! K  G M L F B   ')
 
-;AddMappings(1, 1, '      z x c v b  n m , . /    ',  ' Z `` ? ! K  G M L F B   ')
-
 ; shift capslock = CapsLock !
 ;AddMappings(1, 1, 'Capslock', '-')
 
@@ -49,8 +46,6 @@ AddMappings(1, 1, ' @LShift z x c v  n m , . /    ',  ' Z - ? ! K  G M L F B   '
 AddMappings(1, 0, '       q w e r t  y u i o p    ',  ' q . o u j  w c s h v    ')
 AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  ' x a i e y  d t r n p `` ')
 AddMappings(1, 0, ' @LShift z x c v  n m , . /    ',  " z ' / , k  g m l f b    ")
-
-;AddMappings(1, 0, '      z x c v b  n m , . /    ',  " z ' / , k  g m l f b    ")
 
 ; deadkey for accented chars
 AddMappings(1, 0, 'Capslock', ';')
