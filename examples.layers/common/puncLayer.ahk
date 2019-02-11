@@ -10,7 +10,7 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
 
     ; left hand
     AddMappings(layerNo, 0, '    q w e r   ',  '   $ < - >    ')
-    AddMappings(layerNo, 0, ' CL a s d f g ',  ' _ \ ( ! ) `` ')
+    AddMappings(layerNo, 0, ' CL a s d f g ',  ' _ \ ( " ) !  ')
     AddMappings(layerNo, 0, '   z x c v    ',  '    : * + #   ') 
 
     ; right hand 
