@@ -68,7 +68,7 @@ AddMappings(1, 0, 'Capslock', ';')
 
 ; punc layer
 
-#include puncLayer.ahk
+#include ../../common/puncLayer.ahk
 
 layerAccessKey := "RAlt"
 blockAccessKey := 1

@@ -26,6 +26,8 @@ global ImgHeight := 50
 
 global CenterOnCurrWndMonitor := 1
 
+wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right for easier access to alt key
+
 #include ../common/groups.ahk
 #include ../common/clipboardToBash.ahk
 #include ../common/fromPkl/pkl_guiLayers.ahk
@@ -69,18 +71,15 @@ AddMappings(2, 1, 'Capslock', '-')
 
 ; -- punctuation layer (RAlt) --
 
-; original:
-;    <$>   [_]
-; - \(")# %{=}| ;
-;    :*+   &^~
+; punc layer
 
-; nb: already using zxc vs xcv, so no need for shiftLeft version
-; " is deadkey for accented chars
-AddMappings(2, 0, '   w e r      i o p    ',   '   < $ >      [ ] _   ')
-AddMappings(2, 0, " a s d f g  j k l `; ' ",   ' \ ( " ) #  { = } ! | ')
-AddMappings(2, 0, '  z x c v   m , . /    ',   '   : * + "  & ^ ~ %   ')
+#include ../common/puncLayer.ahk
 
-AddMappings(2, 0, 'Capslock', '-')
+layerAccessKey := "RAlt"
+blockAccessKey := 1
+layerNo := 3
+CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
+
 
 ;------
 
