@@ -1,6 +1,6 @@
 partial alphanumeric_keys
-xkb_symbols "BEAKL15_PqIntl3" {
-  name[Group1]= "BEAKL15_PqIntl3";
+xkb_symbols "BEAKL15PqIntl3" {
+  name[Group1]= "BEAKL15PqIntl3";
   key <AE01> { [ 1, U0021, NoSymbol ] };  // DIGIT ONE, EXCLAMATION MARK, <none>, <none>
   key <AE02> { [ 2, U0040, NoSymbol ] };  // DIGIT TWO, COMMERCIAL AT, <none>, <none>
   key <AE03> { [ 3, U0023, NoSymbol ] };  // DIGIT THREE, NUMBER SIGN, <none>, <none>
