@@ -1,18 +1,18 @@
 # BEAKL15 Pq Intl 3
 # angleZ lower row left hand, 
+#  '^' in qwerty represents CapsLock
 #  '!' in qwerty represents 'LSGT' extra key of pc105 kbd,
 #   we will actually use Shift_L
 
-  q w e r t  y u i o p      q h o u x   w c r f z  
-  a s d f g  h j k l ; '    y i e a .   d s t n b `
- ! z x c v   n m , . /      j , / k '   g m l p v  
-                          
-  q w e r t  y u i o p      Q H O U X  W C R F Z   
-  a s d f g  h j k l ; '    Y I E A @  D S T N B _ 
- ! z x c v   n m , . /      J ! ? K ^  G M L P V   
-                          
-  q w e r        i o p      $ < - >      _ [ ] @   
-  a s d f g    j k l ; '    \ ( " ) !    { = } | ;
-   z x c v     m , . /        : * + #    & ^ ~ %  
+   q w e r t  y u i o p       q h o u x   w c r f z  
+ ^ a s d f g  h j k l ; '   ; y i e a .   d s t n b `
+  ! z x c v   n m , . /       j , / k '   g m l p v  
+                            
+   q w e r t  y u i o p       Q H O U X  W C R F Z   
+   a s d f g  h j k l ; '     Y I E A @  D S T N B _ 
+  ! z x c v   n m , . /       J ! ? K ^  G M L P V   
+                            
+   q w e r        i o p       $ < - >      _ [ ] @   
+ ^ a s d f g    j k l ; '   _ \ ( " ) !    { = } | ;
+    z x c v     m , . /         : * + #    & ^ ~ %  
  
-
