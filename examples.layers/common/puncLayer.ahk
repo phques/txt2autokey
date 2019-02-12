@@ -9,7 +9,7 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
     CreateLayer(layerNo, layerAccessKey, blockAccessKey) 
 
     ; left hand
-    AddMappings(layerNo, 0, '    q w e r   ',  '   $ < - >    ')
+    AddMappings(layerNo, 0, '    q w e r t ',  '   $ < - > %  ')
     AddMappings(layerNo, 0, ' CL a s d f g ',  ' _ \ ( " ) !  ')
     AddMappings(layerNo, 0, '   z x c v    ',  '    : * + #   ') 
 
@@ -17,15 +17,15 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
     ;   add _; since we cannot use CapsLock on Linux 
     if (wideRight) {
         ; use wid-mode 
-        AddMappings(layerNo, 0, '     o p [  ',   '   _ [ ] @ ')
-        AddMappings(layerNo, 0, "   k l `; ' ",   ' ; { = } | ')
-        AddMappings(layerNo, 0, ' m , . /    ',   ' % & ^ ~   ') 
+        AddMappings(layerNo, 0, '   i o p [  ',   '   ~ [ ] @  ')
+        AddMappings(layerNo, 0, "   k l `; ' ",   '   { = } `; ')
+        AddMappings(layerNo, 0, ' m , . /    ',   ' | & ^ _    ') 
     }
     else {
         ; home row (good w. my Microsoft ergo kbd)
         ; (expecting to use shis version on Linux)
-        AddMappings(layerNo, 0, '   i o p    ',   ' _ [ ] @   ')
-        AddMappings(layerNo, 0, " j k l `; ' ",   ' { = } | ; ')
-        AddMappings(layerNo, 0, ' m , . /    ',   ' & ^ ~ %   ') 
+        AddMappings(layerNo, 0, ' u i o p   ',   ' ~ [ ] @  ')
+        AddMappings(layerNo, 0, " j k l `;  ",   ' { = } `; ')
+        AddMappings(layerNo, 0, ' m , . /   ',   ' & ^ _ |  ') 
     }
 }
