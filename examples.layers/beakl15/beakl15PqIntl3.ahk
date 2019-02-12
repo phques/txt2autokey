@@ -62,12 +62,12 @@ CreateLayer(2, "RAlt", 1)
 
 ; -- numpad layer (Shift RAlt) --
 ; (no left shift applied here)
-AddMappings(2, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
-AddMappings(2, 1, ' q w e r t ',   ' Tab 5 2 3 : ')
-AddMappings(2, 1, " a s d f g ",   ' 7   . 1 0 4 ')
-AddMappings(2, 1, ' z x c v b ',   ' /   6 9 8 , ')
+;AddMappings(2, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
+;AddMappings(2, 1, ' q w e r t ',   ' Tab 5 2 3 : ')
+;AddMappings(2, 1, " a s d f g ",   ' 7   . 1 0 4 ')
+;AddMappings(2, 1, ' z x c v b ',   ' /   6 9 8 , ')
 
-AddMappings(2, 1, 'Capslock', '-')
+;AddMappings(2, 1, 'Capslock', '-')
 
 ; -- punctuation layer (RAlt) --
 

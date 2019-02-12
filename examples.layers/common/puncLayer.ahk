@@ -1,7 +1,7 @@
 
 ; punc layer
 ; does not contain:
-;  /?'".,; which are expected to be on main layer 
+;  /?'., which are expected to be on main layer 
 
 CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
 {
@@ -14,16 +14,18 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
     AddMappings(layerNo, 0, '   z x c v    ',  '    : * + #   ') 
 
     ; right hand 
+    ;   add _; since we cannot use CapsLock on Linux 
     if (wideRight) {
         ; use wid-mode 
-        AddMappings(layerNo, 0, '     o p [  ',   '     [ ] @ ')
-        AddMappings(layerNo, 0, "   k l `; ' ",   '   { = } | ')
+        AddMappings(layerNo, 0, '     o p [  ',   '   _ [ ] @ ')
+        AddMappings(layerNo, 0, "   k l `; ' ",   ' ; { = } | ')
         AddMappings(layerNo, 0, ' m , . /    ',   ' % & ^ ~   ') 
     }
     else {
         ; home row (good w. my Microsoft ergo kbd)
-        AddMappings(layerNo, 0, '   i o p    ',   '   [ ] @   ')
-        AddMappings(layerNo, 0, " j k l `; ' ",   ' { = } | % ')
+        ; (expecting to use shis version on Linux)
+        AddMappings(layerNo, 0, '   i o p    ',   ' _ [ ] @   ')
+        AddMappings(layerNo, 0, " j k l `; ' ",   ' { = } | ; ')
         AddMappings(layerNo, 0, ' m , . /    ',   ' & ^ ~ %   ') 
     }
 }
