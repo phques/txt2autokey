@@ -1,0 +1,7 @@
+# punctuation / symbols layer, on level3
+partial alphanumeric_keys
+xkb_symbols "puncLayer" {
+  name[Group1]= "puncLayer";
+  key <AC01> { [ NoSymbol, NoSymbol, 1] };
+  key <AC02> { [ i, I, 2] };  
+};
