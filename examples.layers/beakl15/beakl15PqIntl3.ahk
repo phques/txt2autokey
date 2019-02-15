@@ -6,7 +6,7 @@ http://shenafu.com/code/keyboard/beakl/index.php
 http://shenafu.com/smf/index.php?topic=89.msg2221#msg2221
 
 (US ansi kbd !)
-
+swapped: ,/ then swap /g
 "intl", use with "deadKeys.klc" to enter accented chars (ie french, works pretty well!)
 
 */
@@ -37,20 +37,20 @@ wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right f
 CreateLayer(1)
 
 ; shifted chars (declare 1st!)
-AddMappings(1, 1, '       q w e r t  y u i o p    ',  ' Q H O U X  ^ C R F Z   ')
+AddMappings(1, 1, '       q w e r t  y u i o p    ',  ' Q H O U X  ? C R F Z   ')
 AddMappings(1, 1, "       a s d f g  h j k l `; ' ",  ' Y I E A @  D S T N B _ ') 
-AddMappings(1, 1, ' @LShift z x c v  n m , . /    ',  ' J ! ? K W  G M L P V   ')
-;AddMappings(1, 1, '       z x c v b  n m , . /    ',  ' J ! ? K W  G M L P V  ')
+AddMappings(1, 1, ' @LShift z x c v  n m , . /    ',  ' J ! G K ^  W M L P V   ')
+;AddMappings(1, 1, '       z x c v b  n m , . /    ',  ' J ! G K ^  W M L P V  ')
 
 ; shift capslock = CapsLock !
 ;AddMappings(1, 1, 'Capslock', '-')
 
 
 ;AddMappings(1, 0, '       1 2 3 4 5  6 7 8 9 0    ',  ' 4 0 1 2 3  7 6 5 9 8   ')
-AddMappings(1, 0, '       q w e r t  y u i o p    ',  " q h o u x  `` c r f z   ")
-AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  " y i e a .   d s t n b ' ")
-AddMappings(1, 0, ' @LShift z x c v  n m , . /    ',  " j , / k w   g m l p v   ")
-;AddMappings(1, 0, '       z x c v b  n m , . /    ',  " j , / k w   g m l p v   ")
+AddMappings(1, 0, '       q w e r t  y u i o p    ',  " q h o u x   / c r f z   ")
+AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  " y i e a .   d s t n b `` ")
+AddMappings(1, 0, ' @LShift z x c v  n m , . /    ',  " j , g k '  w m l p v   ")
+;AddMappings(1, 0, '       z x c v b  n m , . /    ',  " j , g k '  w m l p v   ")
 
 ; deadkey for accented chars
 AddMappings(1, 0, 'Capslock', ';')
