@@ -8,7 +8,6 @@ BEAKL PLLT x1
 PQ
 2019-02-08
 
-
 */
 
 ; code only includes
@@ -36,16 +35,16 @@ qwertyMask := "
 
 layer1 := "
 (Join`r`n
-   i u  o    w m d n 
+   i u  o    w m d n
  y e SP a g  h r t s p
-   ,    .      l c f 
+   ,    .      l c f
 )"
 
 layer1sh := "
 (Join`r`n
-   I U O    W M D N 
+   I U O    W M D N
  Y E " A G  H R T S P
-   ;   :      L C F 
+   ;   :      L C F
 )"
 
 layer2 := "
@@ -67,7 +66,7 @@ layer2sh := "
 ; main layer
 CreateLayer(1)
 
-; 2nd layer, 
+; 2nd layer,
 ;CreateLayer(2, "RAlt", 1)
 ;CreateLayer(2, "Space", 0)
 CreateLayer(2, "Space", 1) ; block actual SPm force using the one on D)
@@ -80,13 +79,10 @@ SetNoKeyChar('')
 
 ; ---------------
 
-#include ../common/extend/extendWide2BaseShLeft.ahk
+#include ../common/extend/extend2Base.ahk
 
-;SetupExtend2('LAlt')
-
-; SetupExtend2('Space')
-; extHK('b', 'Space') 
-; extHKitself('', 'Space')
+SetupExtend2('LAlt')
+; SetupExtend2('CapsLock')
 
 DisplayHelpImage()
 return
@@ -96,4 +92,3 @@ return
 ; other hotkey defs
 
 #include ../common/commonHotkeys.ahk
-
