@@ -1,5 +1,5 @@
 {
-    "label": "mcb25FlatIntl",
+    "label": "QWERTY Ref Matrix 31",
     "fingerStart": {
         "1": 25,
         "2": 26,
@@ -15,7 +15,7 @@
         "false": -1
     },
     "keyboardType": "matrix",
-    "author": "phil quesnel",
+    "author": "Scholes",
     "authorUrl": "",
     "moreInfoUrl": "",
     "moreInfoText": "",
@@ -23,765 +23,835 @@
         {
             "primary": -1,
             "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
             "finger": 1,
-            "id": 0
-        },
-        {
-            "primary": 52,
-            "shift": -1,
+            "id": 0,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 1
-        },
-        {
-            "primary": 48,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 2,
-            "id": 2
+            "numpad": -1
         },
         {
             "primary": 49,
             "shift": -1,
+            "finger": 1,
+            "id": 1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 3,
-            "id": 3
+            "numpad": -1
         },
         {
             "primary": 50,
             "shift": -1,
+            "finger": 2,
+            "id": 2,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 4,
-            "id": 4
+            "numpad": -1
         },
         {
             "primary": 51,
             "shift": -1,
+            "finger": 3,
+            "id": 3,
             "altGr": -1,
             "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 52,
+            "shift": -1,
             "finger": 4,
-            "id": 5
-        },
-        {
-            "primary": 55,
-            "shift": -1,
+            "id": 4,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 7,
-            "id": 6
-        },
-        {
-            "primary": 54,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 7,
-            "id": 7
+            "numpad": -1
         },
         {
             "primary": 53,
             "shift": -1,
+            "finger": 4,
+            "id": 5,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 8,
-            "id": 8
+            "numpad": -1
         },
         {
-            "primary": 57,
+            "primary": 54,
             "shift": -1,
+            "finger": 7,
+            "id": 6,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 9,
-            "id": 9
+            "numpad": -1
+        },
+        {
+            "primary": 55,
+            "shift": -1,
+            "finger": 7,
+            "id": 7,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
         },
         {
             "primary": 56,
             "shift": -1,
+            "finger": 8,
+            "id": 8,
             "altGr": -1,
             "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 57,
+            "shift": -1,
+            "finger": 9,
+            "id": 9,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 48,
+            "shift": -1,
             "finger": 10,
-            "id": 10
+            "id": 10,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
         },
         {
             "primary": -1,
             "shift": -1,
+            "finger": 10,
+            "id": 11,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 10,
-            "id": 11
+            "numpad": -1
         },
         {
             "primary": 9,
             "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
             "finger": 1,
-            "id": 12
+            "id": 12,
+            "altGr": -1,
+            "shiftAltGr": -1
         },
         {
             "primary": 113,
             "shift": 81,
-            "altGr": 36,
-            "shiftAltGr": -1,
             "finger": 1,
-            "id": 13
-        },
-        {
-            "primary": 112,
-            "shift": 80,
-            "altGr": 60,
-            "shiftAltGr": -1,
-            "finger": 2,
-            "id": 14
-        },
-        {
-            "primary": 111,
-            "shift": 79,
-            "altGr": 45,
-            "shiftAltGr": -1,
-            "finger": 3,
-            "id": 15
-        },
-        {
-            "primary": 117,
-            "shift": 85,
-            "altGr": 62,
-            "shiftAltGr": -1,
-            "finger": 4,
-            "id": 16
-        },
-        {
-            "primary": 96,
-            "shift": 94,
+            "id": 13,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 4,
-            "id": 17
-        },
-        {
-            "primary": -1,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 7,
-            "id": 18
-        },
-        {
-            "primary": 110,
-            "shift": 78,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 7,
-            "id": 19
-        },
-        {
-            "primary": 100,
-            "shift": 68,
-            "altGr": 91,
-            "shiftAltGr": -1,
-            "finger": 8,
-            "id": 20
-        },
-        {
-            "primary": 102,
-            "shift": 70,
-            "altGr": 93,
-            "shiftAltGr": -1,
-            "finger": 9,
-            "id": 21
-        },
-        {
-            "primary": 118,
-            "shift": 86,
-            "altGr": 64,
-            "shiftAltGr": -1,
-            "finger": 10,
-            "id": 22
-        },
-        {
-            "primary": -1,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 10,
-            "id": 23
-        },
-        {
-            "primary": 59,
-            "shift": 20,
-            "altGr": 95,
-            "shiftAltGr": -1,
-            "finger": 1,
-            "id": 24,
             "numpad": -1
-        },
-        {
-            "primary": 103,
-            "shift": 71,
-            "altGr": 92,
-            "shiftAltGr": -1,
-            "finger": 1,
-            "id": 25
-        },
-        {
-            "primary": 105,
-            "shift": 73,
-            "altGr": 40,
-            "shiftAltGr": -1,
-            "finger": 2,
-            "id": 26
-        },
-        {
-            "primary": 97,
-            "shift": 65,
-            "altGr": 33,
-            "shiftAltGr": -1,
-            "finger": 3,
-            "id": 27
-        },
-        {
-            "primary": 101,
-            "shift": 69,
-            "altGr": 41,
-            "shiftAltGr": -1,
-            "finger": 4,
-            "id": 28
-        },
-        {
-            "primary": 120,
-            "shift": 88,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 4,
-            "id": 29,
-            "numpad": -1
-        },
-        {
-            "primary": 108,
-            "shift": 76,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 7,
-            "id": 30
-        },
-        {
-            "primary": 114,
-            "shift": 82,
-            "altGr": 123,
-            "shiftAltGr": -1,
-            "finger": 7,
-            "id": 31
-        },
-        {
-            "primary": 116,
-            "shift": 84,
-            "altGr": 61,
-            "shiftAltGr": -1,
-            "finger": 8,
-            "id": 32
-        },
-        {
-            "primary": 115,
-            "shift": 83,
-            "altGr": 125,
-            "shiftAltGr": -1,
-            "finger": 9,
-            "id": 33
-        },
-        {
-            "primary": 99,
-            "shift": 67,
-            "altGr": 124,
-            "shiftAltGr": -1,
-            "finger": 10,
-            "id": 34
-        },
-        {
-            "primary": 39,
-            "shift": 34,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 10,
-            "id": 35,
-            "numpad": -1
-        },
-        {
-            "primary": -1,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 1,
-            "id": 36
-        },
-        {
-            "primary": 107,
-            "shift": 75,
-            "altGr": 58,
-            "shiftAltGr": -1,
-            "finger": 1,
-            "id": 37
-        },
-        {
-            "primary": 44,
-            "shift": 47,
-            "altGr": 42,
-            "shiftAltGr": -1,
-            "finger": 2,
-            "id": 38
-        },
-        {
-            "primary": 46,
-            "shift": 63,
-            "altGr": 43,
-            "shiftAltGr": -1,
-            "finger": 3,
-            "id": 39
-        },
-        {
-            "primary": 121,
-            "shift": 89,
-            "altGr": 35,
-            "shiftAltGr": -1,
-            "finger": 4,
-            "id": 40
-        },
-        {
-            "primary": 122,
-            "shift": 90,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 4,
-            "id": 41
-        },
-        {
-            "primary": -1,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 5,
-            "id": 42
-        },
-        {
-            "primary": -1,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 6,
-            "id": 43
-        },
-        {
-            "primary": 106,
-            "shift": 74,
-            "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 7,
-            "id": 44
-        },
-        {
-            "primary": 104,
-            "shift": 72,
-            "altGr": 38,
-            "shiftAltGr": -1,
-            "finger": 7,
-            "id": 45
         },
         {
             "primary": 119,
             "shift": 87,
-            "altGr": 94,
-            "shiftAltGr": -1,
-            "finger": 8,
-            "id": 46
+            "finger": 2,
+            "id": 14,
+            "altGr": -1,
+            "shiftAltGr": -1
         },
         {
-            "primary": 109,
-            "shift": 77,
-            "altGr": 126,
+            "primary": 101,
+            "shift": 69,
+            "finger": 3,
+            "id": 15,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 114,
+            "shift": 82,
+            "finger": 4,
+            "id": 16,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 116,
+            "shift": 84,
+            "finger": 4,
+            "id": 17,
+            "altGr": -1,
             "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 121,
+            "shift": 89,
+            "finger": 7,
+            "id": 18,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 117,
+            "shift": 85,
+            "finger": 7,
+            "id": 19,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 105,
+            "shift": 73,
+            "finger": 8,
+            "id": 20,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 111,
+            "shift": 79,
             "finger": 9,
-            "id": 47
+            "id": 21,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 112,
+            "shift": 80,
+            "finger": 10,
+            "id": 22,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": -1,
+            "shift": -1,
+            "finger": 10,
+            "id": 23,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 20,
+            "shift": -1,
+            "finger": 1,
+            "id": 24,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 97,
+            "shift": 65,
+            "finger": 1,
+            "id": 25,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 115,
+            "shift": 83,
+            "finger": 2,
+            "id": 26,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 100,
+            "shift": 68,
+            "finger": 3,
+            "id": 27,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 102,
+            "shift": 70,
+            "finger": 4,
+            "id": 28,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 103,
+            "shift": 71,
+            "finger": 4,
+            "id": 29,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 104,
+            "shift": 72,
+            "finger": 7,
+            "id": 30,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 106,
+            "shift": 74,
+            "finger": 7,
+            "id": 31,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 107,
+            "shift": 75,
+            "finger": 8,
+            "id": 32,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 108,
+            "shift": 76,
+            "finger": 9,
+            "id": 33,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 59,
+            "shift": 58,
+            "finger": 10,
+            "id": 34,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 39,
+            "shift": 34,
+            "finger": 10,
+            "id": 35,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": -1,
+            "finger": 1,
+            "id": 36,
+            "shift": -1,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 122,
+            "finger": 1,
+            "id": 37,
+            "shift": 90,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 120,
+            "finger": 2,
+            "id": 38,
+            "shift": 88,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 99,
+            "finger": 3,
+            "id": 39,
+            "shift": 67,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 118,
+            "finger": 4,
+            "id": 40,
+            "shift": 86,
+            "altGr": -1,
+            "shiftAltGr": -1
         },
         {
             "primary": 98,
+            "finger": 4,
+            "id": 41,
             "shift": 66,
-            "altGr": 37,
+            "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 10,
-            "id": 48
+            "numpad": -1
         },
         {
             "primary": -1,
             "shift": -1,
+            "finger": 5,
+            "id": 42,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 10,
-            "id": 49
+            "numpad": -1
         },
         {
             "primary": -1,
+            "finger": 6,
+            "id": 43,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 110,
+            "finger": 7,
+            "id": 44,
+            "shift": 78,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": 109,
+            "finger": 7,
+            "id": 45,
+            "shift": 77,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 44,
+            "shift": 60,
+            "finger": 8,
+            "id": 46,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 46,
+            "finger": 9,
+            "id": 47,
+            "shift": 62,
+            "altGr": -1,
+            "shiftAltGr": -1
+        },
+        {
+            "primary": 47,
+            "finger": 10,
+            "id": 48,
+            "shift": 63,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": -1,
+            "finger": 10,
+            "id": 49,
+            "shift": -1,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": -1,
             "finger": 1,
-            "id": 50
+            "id": 50,
+            "shift": -1,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
         },
         {
             "primary": -91,
+            "finger": 1,
+            "id": 51,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 51
+            "numpad": -1
         },
         {
             "primary": 18,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
             "finger": 2,
-            "id": 52
-        },
-        {
-            "primary": -1,
+            "id": 52,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": -1,
             "finger": 3,
-            "id": 53
-        },
-        {
-            "primary": -1,
+            "id": 53,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": -1,
             "finger": 4,
-            "id": 54
+            "id": 54,
+            "shift": -1,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
         },
         {
             "primary": 16,
+            "finger": 5,
+            "id": 55,
             "shift": -16,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 5,
-            "id": 55
+            "numpad": -1
         },
         {
             "primary": 32,
+            "finger": 5,
+            "id": 56,
             "shift": -1,
             "altGr": -1,
-            "shiftAltGr": -1,
-            "finger": 5,
-            "id": 56
+            "shiftAltGr": -1
         },
         {
             "primary": 17,
+            "finger": 5,
+            "id": 57,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 5,
-            "id": 57
+            "numpad": -1
         },
         {
             "primary": 18,
+            "finger": 6,
+            "id": 58,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 6,
-            "id": 58
+            "numpad": -1
         },
         {
             "primary": -18,
+            "finger": 6,
+            "id": 59,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 6,
-            "id": 59
+            "numpad": -1
         },
         {
             "primary": 13,
+            "finger": 7,
+            "id": 60,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 7,
-            "id": 60
+            "numpad": -1
         },
         {
             "primary": -93,
+            "finger": 7,
+            "id": 61,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 7,
-            "id": 61
+            "numpad": -1
         },
         {
             "primary": -1,
+            "finger": 8,
+            "id": 62,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 8,
-            "id": 62
+            "numpad": -1
         },
         {
             "primary": -91,
+            "finger": 9,
+            "id": 63,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 9,
-            "id": 63
+            "numpad": -1
         },
         {
             "primary": -93,
-            "shift": -1,
-            "altGr": -1,
-            "shiftAltGr": -1,
             "finger": 10,
-            "id": 64
-        },
-        {
-            "primary": -1,
+            "id": 64,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
+            "numpad": -1
+        },
+        {
+            "primary": -1,
             "finger": 10,
-            "id": 65
+            "id": 65,
+            "shift": -1,
+            "altGr": -1,
+            "shiftAltGr": -1,
+            "numpad": -1
         },
         {
+            "id": 66,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 66
+            "numpad": -1
         },
         {
+            "id": 67,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 67
+            "numpad": -1
         },
         {
+            "id": 68,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 68
+            "numpad": -1
         },
         {
+            "id": 69,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 69
+            "numpad": -1
         },
         {
+            "id": 70,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 70
+            "numpad": -1
         },
         {
+            "id": 71,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 71
+            "numpad": -1
         },
         {
+            "id": 72,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 72
+            "numpad": -1
         },
         {
+            "id": 73,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 73
+            "numpad": -1
         },
         {
+            "id": 74,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 74
+            "numpad": -1
         },
         {
+            "id": 75,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 75
+            "numpad": -1
         },
         {
+            "id": 76,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 76
+            "numpad": -1
         },
         {
+            "id": 77,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 77
+            "numpad": -1
         },
         {
+            "id": 78,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 78
+            "numpad": -1
         },
         {
+            "id": 79,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 79
+            "numpad": -1
         },
         {
+            "id": 80,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 80
+            "numpad": -1
         },
         {
+            "id": 81,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 81
+            "numpad": -1
         },
         {
+            "id": 82,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 82
+            "numpad": -1
         },
         {
+            "id": 83,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 83
+            "numpad": -1
         },
         {
+            "id": 84,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 84
+            "numpad": -1
         },
         {
+            "id": 85,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 85
+            "numpad": -1
         },
         {
+            "id": 86,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 86
+            "numpad": -1
         },
         {
+            "id": 87,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 87
+            "numpad": -1
         },
         {
+            "id": 88,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 88
+            "numpad": -1
         },
         {
+            "id": 89,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 89
+            "numpad": -1
         },
         {
+            "id": 90,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 90
+            "numpad": -1
         },
         {
+            "id": 91,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 91
+            "numpad": -1
         },
         {
+            "id": 92,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 92
+            "numpad": -1
         },
         {
+            "id": 93,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 93
+            "numpad": -1
         },
         {
+            "id": 94,
+            "finger": 1,
             "primary": -1,
             "shift": -1,
             "altGr": -1,
             "shiftAltGr": -1,
-            "finger": 1,
-            "id": 94
+            "numpad": -1
         }
     ]
 }

@@ -5,7 +5,6 @@ v5
 
 2019-02-05
 adj for non-wide and no 2nd layer (move xjqz to normal layer)
-left hand shifted let with k on Shift key 
 possible "wid mode" right hand for punc layer
 
 "intl", use with "deadKeys.klc" to enter accented chars (ie french, works pretty well!)
@@ -22,9 +21,9 @@ if (wideRightPunc)
     subdir := "\imgs\v5flatIntl\widRightPunc"
 else
     subdir := "\imgs\v5flatIntl"
-    
+
 global ImgsDir := A_ScriptDir . subdir
-    
+
 global ImgWidth := 150
 global ImgHeight := 50
 global CenterOnCurrWndMonitor := 1
@@ -36,9 +35,9 @@ global CenterOnCurrWndMonitor := 1
 
 qwertyMask := "
 (Join`r`n
-       q  w  e  r  t   y  u  i  o  p 
-       a  s  d  f  g   h  j  k  l  ; ' 
- @LShift  z  x  c  v   n  m  ,  .  / 
+       q  w  e  r  t   y  u  i  o  p
+       a  s  d  f  g   h  j  k  l  ; '
+ @LShift  z  x  c  v   n  m  ,  .  /
 )"
 
 
@@ -46,16 +45,16 @@ qwertyMask := "
 
 layer1 := "
 (Join`r`n
-       q  p  o  u  "   '  n  d  f  v
+       q  p  o  u  "   z  n  d  f  v
        g  i  a  e  x   l  r  t  s  c ``
-       k  ,  .  y  z   j  h  w  m  b
+       k  ,  .  y  '   j  h  w  m  b
 )"
 
 layer1sh := "
 (Join`r`n
-       Q  P  O  U  "   '  N  D  F  V
+       Q  P  O  U  "   Z  N  D  F  V
        G  I  A  E  X   L  R  T  S  C  ^
-       K  /  ?  Y  Z   J  H  W  M  B
+       K  ?  !  Y  /   J  H  W  M  B
 )"
 
 
@@ -63,7 +62,7 @@ layer1sh := "
 CreateLayer(1)
 AddMappings(1, 1, qwertyMask, layer1sh)
 AddMappings(1, 0, qwertyMask, layer1)
-AddMappings(1, 0, 'Capslock', ';') 
+AddMappings(1, 0, 'Capslock', ';')
 
 
 ; punc layer
@@ -73,7 +72,7 @@ AddMappings(1, 0, 'Capslock', ';')
 layerAccessKey := "RAlt"
 blockAccessKey := 1
 layerNo := 3
-CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
+CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc)
 
 
 ; ---------------
@@ -88,4 +87,3 @@ return
 ; other hotkey defs
 
 #include ../../common/commonHotkeys.ahk
-
