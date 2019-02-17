@@ -36,8 +36,10 @@ DumpXkb(layoutName, layerIdx)
 		{
 			; format values for xkb output
 			fromKeyCode := codesMap[fromKeySC]
-			toKeyUni := Format("U{:04X}", GetKeySC(toKey))
-			toKeyShUni := Format("U{:04X}", GetKeySC(toKeySh))
+			; if (!InStr('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', toKey))
+				toKeyUni := Format("U{:04X}", Ord(toKey))
+			; if (!InStr('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', toKeySh))
+				toKeyShUni := Format("U{:04X}", Ord(toKeySh))
 
 			s := Format("  key <{}> { [ {}, {} ] };  // {}  {} {}",
 				fromKeyCode, toKeyUni, toKeyShUni,
