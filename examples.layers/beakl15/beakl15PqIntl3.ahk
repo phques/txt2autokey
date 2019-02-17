@@ -86,6 +86,12 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc)
 #include ../common/extend/extendSpace2.ahk
 
 DisplayHelpImage()
+
+; creates a file for this layout in Linux XKB format 
+; output layer 1 to file ahkXkbOut.txt
+;#include ../common/dumpXkb.ahk
+;DumpXkb("BEAKL15PqIntl3", 1)
+
 return
 
 ;------
