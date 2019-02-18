@@ -1,3 +1,6 @@
+Modified MTGAP, to use BEAKL weights
+v2.1 and v2.3/v2.5 seem to be best for now
+
 =============
 2018-04-08
 
@@ -77,12 +80,12 @@ To center:     2.77%
 
 
 =================
+=================
 2019-02-17
 v2.0
 
 // http://shenafu.com/code/keyboard/beakl/beakl.php
 // from beakl-effort_grid_20180712.png
-static int64_t costsCopy[KSIZE_MAX] = {
    150, 40, 20, 40, 120,  120, 40, 20, 40, 150,
 	60,  5,  5,  5,  60,   60,  5,  5,  5,  60,
 	90, 40, 60, 20,  90,   90, 20, 60, 40,  90
@@ -180,7 +183,6 @@ v2.2
 
 // http://shenafu.com/code/keyboard/beakl/beakl.php
 // from beakl-effort_grid_20180712.png
-static int64_t costsCopy[KSIZE_MAX] = {
    150, 40, 20, 40, 120,  120, 40, 20, 40, 150,
 	60,  5,  5,  5,  60,   60,  5,  5,  5,  60,
 	90, 40, 60, 20,  90,   90, 20, 60, 40,  90
@@ -227,7 +229,6 @@ v2.3
 
 // http://shenafu.com/code/keyboard/beakl/beakl.php
 // from beakl-effort_grid_20180712.png
-static int64_t costsCopy[KSIZE_MAX] = {
    150, 40, 20, 40, 120,  120, 40, 20, 40, 150,
 	60,  5,  5,  5,  60,   60,  5,  5,  5,  60,
 	90, 40, 60, 20,  90,   90, 20, 60, 40,  90
@@ -270,3 +271,106 @@ Row change:    14.72%
 Home jump:     2.23%
 Ring jump:     1.52%
 To center:     2.01%
+
+
+=================
+2019-02-17
+v2.4
+
+// http://shenafu.com/code/keyboard/beakl/beakl.php
+// from beakl-effort_grid_20180712.png
+   150, 40, 20, 40, 120,  120, 40, 20, 40, 150,
+	60,  5,  5,  5,  60,   60,  5,  5,  5,  60,
+	90, 40, 60, 20,  90,   90, 20, 60, 40,  90
+
+# try lower same hand yet vs 2.3
+# try to reverse hands vs v2.2!
+#default set handWarp = 25
+
+setksize beak
+use abcdefghijklmnopqrstuvwxyz,'./ABCDEFGHIJKLMNOPQRSTUVWXYZ!^@?
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set sameHand 35
+set inRoll -15
+set outRoll 0
+set homeJump 175
+set rowChangeDown 35
+set handWarp = 0
+run
+
+Hands: 53% 46%
+Fingers: 2.0% 12% 20% 20% 0.00% 0.00% 17% 14% 12% 4.0% 
+
+ Q  G  O  U  J   X  C  H  W  Z
+ Y  T  E  A  !   F  S  N  R  P
+ ^  K  @  I  ?   V  D  M  L  B
+
+ q  g  o  u  j   x  c  h  w  z
+ y  t  e  a  ,   f  s  n  r  p
+ '  k  .  i  /   v  d  m  l  b
+
+Fitness:       26633702
+Distance:      16372570
+Finger work:   119262
+Inward rolls:  4.75%
+Outward rolls: 0.00%
+Same hand:     29.87%
+Same finger:   2.18%
+Row change:    15.60%
+Home jump:     1.80%
+Ring jump:     1.21%
+To center:     1.79%
+
+
+=================
+2019-02-17
+v2.5
+
+// http://shenafu.com/code/keyboard/beakl/beakl.php
+// from beakl-effort_grid_20180712.png
+   150, 40, 20, 40, 120,  120, 40, 20, 40, 150,
+	60,  5,  5,  5,  60,   60,  5,  5,  5,  60,
+	90, 40, 60, 20,  90,   90, 20, 60, 40,  90
+
+# 2.4 seemed to have lower same hand, but actually worst KLA scores, including same hand
+set sameHand 5 # default
+set homeJump 175
+
+setksize beak
+use abcdefghijklmnopqrstuvwxyz,'./ABCDEFGHIJKLMNOPQRSTUVWXYZ!^@?
+set numThreads 4
+set keepShiftPairLetters 1
+set keepShiftPairOther 1
+set inRoll -15
+set outRoll 0
+set rowChangeDown 35
+set sameHand 30
+set handWarp 0
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 9.0% 20% 20% 0.00% 0.00% 19% 15% 12% 3.0% 
+
+ Q  P  O  U  ?   J  L  D  C  Z
+ G  H  E  A  !   W  N  T  S  B
+ K  Y  @  I  ^   X  R  M  F  V
+
+ q  p  o  u  /   j  l  d  c  z
+ g  h  e  a  ,   w  n  t  s  b
+ k  y  .  i  '   x  r  m  f  v
+
+Fitness:       24815901
+Distance:      16098470
+Finger work:   26001
+Inward rolls:  6.50%
+Outward rolls: 0.00%
+Same hand:     30.41%
+Same finger:   2.42%
+Row change:    14.92%
+Home jump:     2.56%
+Ring jump:     1.52%
+To center:     1.32%
+
+

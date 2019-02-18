@@ -26,8 +26,6 @@ global ImgHeight := 50
 
 global CenterOnCurrWndMonitor := 1
 
-wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right for easier access to alt key
-
 #include ../common/groups.ahk
 #include ../common/clipboardToBash.ahk
 #include ../common/fromPkl/pkl_guiLayers.ahk
@@ -78,6 +76,7 @@ CreateLayer(2, "RAlt", 1)
 layerAccessKey := "RAlt"
 blockAccessKey := 1
 layerNo := 3
+wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right for easier access to alt key
 CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
 
 
