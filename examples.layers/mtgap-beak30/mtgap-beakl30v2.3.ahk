@@ -50,6 +50,8 @@ CreateLayer(1)
 AddMappings(1, 1, qwertyMask, layer1sh)
 AddMappings(1, 0, qwertyMask, layer1)
 
+AddMappings(1, 0, 'Capslock', ';')
+
 ; -- punctuation layer (RAlt) --
 
 #include ../common/puncLayer.ahk
