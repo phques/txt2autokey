@@ -3,6 +3,11 @@
 ; does not contain:
 ;  /?'., which are expected to be on main layer 
 
+;  $ < - > %     ~ [ ] @ 
+;  \ ( " ) !     { = } ;
+;    : * + #     & ^ _ | 
+
+
 CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
 {
     ; SetNoKeyChar('.')
