@@ -4,8 +4,8 @@
 
 having fun with adNW,
 std US / ANSI kbd with fixed QUEST keys :-)
-Q
-UEST
+ Q
+  UE  ST
 
 */
 
@@ -31,7 +31,7 @@ global CenterOnCurrWndMonitor := 1
 qwertyMask := "
 (Join`r`n
        q  w  e  r  t   y  u  i  o  p
-       a  s  d  f  g   h  j  k  l  ;
+       a  s  d  f  g   h  j  k  l  ; '
  @LShift  z  x  c  v   n  m  ,  .  /
 )"
 
@@ -40,16 +40,16 @@ qwertyMask := "
 
 layer1 := "
 (Join`r`n
-  q ' c p b  z h w o j
-  u e s t d  l n r a i
-  y / f g k  m x v . ,
+  q , h z j   v f d l k
+  i a u e o   c s t n r ``
+  x . y ' /   g b p m w
 )"
 
 layer1sh := "
 (Join`r`n
-  Q ^ C P B  Z H W O J
-  U E S T D  L N R A I
-  Y ? F G K  M X V @ !
+  Q ! H Z J   V F D L K
+  I A U E O   C S T N R ^
+  X @ Y _ ?   G B P M W
 )"
 
 
