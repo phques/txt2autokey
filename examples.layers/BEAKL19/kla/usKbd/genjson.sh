@@ -1,6 +1,7 @@
 #!/bin/sh
 
 cat ./ref/qwertyMain30.json \
+  | ./txtkbd2kla altGr    ./ref/qwertyMain30.txt  beakl19-altGr.txt \
   | ./txtkbd2kla shift    ./ref/qwertyMain30.txt  beakl19-shift.txt \
   | ./txtkbd2kla primary  ./ref/qwertyMain30.txt  beakl19-main.txt \
   | ./txtkbd2kla 'author:' "Den" \
