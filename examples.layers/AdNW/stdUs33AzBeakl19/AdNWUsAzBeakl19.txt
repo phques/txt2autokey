@@ -1,0 +1,8 @@
+ ./opt33 -2 englisch.txt -K kwezNew/stdUs33azBEAKL19.cfg
+
+133              142.376 total effort   323.063 positional effort    left right
+                   1.833 same finger rp   1.008 shift same finger top 16.8 16.0
+  juioq vdrlb     70.977 hand alternat.  26.053 shift hand alter. mid 27.3 26.8
+  ghea, ptsnc      2.333 inward/outward  24.628 inward or outward bot  5.0  8.1
+ zy'./  kfwmx     14.026 adjacent        27.121 shift adjacent    sum 49.1 50.9
+                  3.9  9.0 18.9 17.3 --.- --.- 18.1 14.1 13.1  5.6 Sh  1.8  1.0
