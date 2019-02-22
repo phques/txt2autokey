@@ -15,10 +15,10 @@ global ImgWidth := 150
 global ImgHeight := 50
 global CenterOnCurrWndMonitor := 1
 
-#include ../../common/layers.ahk
-#include ../../common/groups.ahk
-#include ../../common/clipboardToBash.ahk
-#include ../../common/fromPkl/pkl_guiLayers.ahk
+#include ../common/layers.ahk
+#include ../common/groups.ahk
+#include ../common/clipboardToBash.ahk
+#include ../common/fromPkl/pkl_guiLayers.ahk
 
 qwertyMask := "
 (Join`r`n
@@ -54,7 +54,7 @@ AddMappings(1, 0, 'Capslock', ';')
 
 ; punc layer
 
-#include ../../common/puncLayer.ahk
+#include ../common/puncLayer.ahk
 
 layerAccessKey := "RAlt"
 blockAccessKey := 1
@@ -66,7 +66,7 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc)
 
 ; ---------------
 
-#include ../../common/extend/extendSpace2.ahk
+#include ../common/extend/extendSpace2.ahk
 
 DisplayHelpImage()
 return
@@ -75,4 +75,4 @@ return
 
 ; other hotkey defs
 
-#include ../../common/commonHotkeys.ahk
+#include ../common/commonHotkeys.ahk
