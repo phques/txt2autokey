@@ -1,7 +1,7 @@
 /*
 2018-04-29
 beakl19
-
+on SmartYao LY092-SN w. qwertyRef
 */
 
 ; code only includes
@@ -13,7 +13,6 @@ global ImgsDir := A_ScriptDir . "\imgs"
 
 global ImgWidth := 176
 global ImgHeight := 54
-
 global CenterOnCurrWndMonitor := 1
 
 #include ../common/layers.ahk
@@ -23,9 +22,9 @@ global CenterOnCurrWndMonitor := 1
 
 qwertyMask := "
 (Join`r`n
-       q  w  e  r  t   y  u  i  o  p
-       a  s  d  f  g   h  j  k  l  ; '
- @LShift  z  x  c  v   n  m  ,  .  /
+ q  w  e  r  t   y  u  i  o  p
+ a  s  d  f  g   h  j  k  l  ; '
+ z  x  c  v  b   n  m  ,  .  /
 )"
 
 
@@ -57,7 +56,7 @@ AddMappings(1, 0, 'Capslock', ';')
 
 #include ../common/puncLayer.ahk
 
-layerAccessKey := "RAlt"
+layerAccessKey := "Numpad5"
 blockAccessKey := 1
 layerNo := 3
 wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right for easier access to alt key
