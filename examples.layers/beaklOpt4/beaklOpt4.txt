@@ -1,0 +1,15 @@
+BEAKL 4
+standard
+
+` 1 2 3 4 5 6 7 8 9 0 - =   
+  j y o . k g c m n z [ ] \ 
+  h i e a u d s t r p ;   
+  q " ' , x w f l b v   
+                
+
+~ ! @ # $ % ^ & * ( ) _ +   
+  J Y O > K G C M N Z { } | 
+  H I E A U D S T R P :   
+  Q ? / < X W F L B V  
+
+   
