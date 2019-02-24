@@ -1,0 +1,8 @@
+ ./opt33 -2 englisch.txt -K kwezNew/stdUs33azBEAKL8.cfg
+
+20               700.853 total effort   147.134 positional effort    left right
+                   2.846 same finger rp   0.372 shift same finger top 12.4 12.4
+  zfrmg ,uoy/     71.192 hand alternat.  25.695 shift hand alter. mid 27.3 31.4
+  wnstd iaehj      3.270 inward/outward  23.399 inward or outward bot 12.2  4.3
+ bplcv  x.'kq     15.047 adjacent        21.312 shift adjacent    sum 51.9 48.1
+                  4.2 10.8 16.3 20.7 --.- --.- 19.9 18.9  7.1  2.1 Sh  1.0  1.8
