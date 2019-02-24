@@ -1,0 +1,41 @@
+AdNW Beakl19
+  j u i o q   v d r l b 
+  g h e a ,   p t s n c 
+  z y ' . /   k f w m x
+
+beakl15 swap GW
+  q h o u x   w c r f z
+  y i e a .   d s t n b
+  j / , k '   b m l p v
+
+beakl15
+  q h o u x   g c r f z
+  y i e a .   d s t n b
+  j / , k '   w m l p v
+
+mcb25v5FlatIntl
+  q p o u "   z n d f v
+  g i a e x   l r t s c
+  k , . y '   j h w m b
+
+mtgapBeakl30v2.1
+  j p o u .   v w d f q
+  k h e a y   l n t s g
+  z , ' i /   x r m c b
+
+beakl19
+  q . o u j   w d n m ,
+  h a e i k   g s r t p
+  z ' / y x   b c l f v
+
+beaklOpt4
+  j y o . k   g c m n z  
+  h i e a u   d s t r p 
+  q " ' , x   w f l b v 
+
+beaklOpt4 swap GW
+  j y o . k   w c m n z  
+  h i e a u   d s t r p 
+  q " ' , x   g f l b v 
+
+
