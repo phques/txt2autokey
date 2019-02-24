@@ -6,3 +6,27 @@
   ghea, ptsnc      2.333 inward/outward  24.628 inward or outward bot  5.0  8.1
  zy'./  kfwmx     14.026 adjacent        27.121 shift adjacent    sum 49.1 50.9
                   3.9  9.0 18.9 17.3 --.- --.- 18.1 14.1 13.1  5.6 Sh  1.8  1.0
+       
+----
+
+./opt33 -2 englisch.txt -K kwezNew/stdUs33azBEAKL19pq.cfg 
+
+851              154.804 total effort   329.074 positional effort    left right
+                   2.146 same finger rp   1.694 shift same finger top 11.5 14.4
+  kui./ qcrlb     70.898 hand alternat.  26.722 shift hand alter. mid 27.3 25.9
+  ghea, ptsnf      2.525 inward/outward  24.394 inward or outward bot 10.9 10.1
+ jy'oz  vdwmx     13.667 adjacent        27.228 shift adjacent    sum 49.7 50.3
+                  4.5  9.0 18.9 17.3 --.- --.- 18.4 14.1 13.1  4.7 Sh  1.8  1.0
+
+-----
+
+./opt33 -3 englisch.txt -K kwezNew/stdUs33azBEAKL19.cfg -t 4
+
+14               449.182 total effort   331.297 positional effort    left right
+                   1.645 same finger rp   0.880 shift same finger top 14.4 16.8
+  vcrdk zoiuj     70.955 hand alternat.  26.091 shift hand alter. mid 25.5 27.3
+  psntw ,aehg      2.237 inward/outward  24.838 inward or outward bot 10.9  5.1
+ bflmq  /.'yx     14.919 adjacent        22.216 shift adjacent    sum 50.8 49.2
+                   5.093 no hand altern. 43.778 two hand altern.
+                   3.551 seesaw           7.574 indir same finger
+                  5.3 11.6 16.6 17.3 --.- --.- 17.3 18.9  9.0  4.0 Sh  1.0  1.8
