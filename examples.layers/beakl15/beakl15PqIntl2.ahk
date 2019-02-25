@@ -61,7 +61,7 @@ if (leftShift) {
 
 ;   AddMappings(1, 0, '       1 2 3 4 5  6 7 8 9 0    ',  ' 4 0 1 2 3  7 6 5 9 8    ')
     AddMappings(1, 0, '       q w e r t  y u i o p    ',  ' q h o u x  w c r f z    ')
-    AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  ' y i e a .  d s t n b `; ')
+    AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  ' y i e a .  d s t n b `` ')
 if (leftShift) {
     AddMappings(1, 0, ' @LShift z x c v  n m , . /    ',  " j , / k '  g m l p v    ")
 } else {
@@ -69,7 +69,7 @@ if (leftShift) {
 }
 
 ; deadkey for accented chars
-AddMappings(1, 0, 'Capslock', '``')
+AddMappings(1, 0, 'Capslock', ';')
 
 
 ; -- layer 2 --
@@ -78,31 +78,32 @@ CreateLayer(2, "RAlt", 1)
 
 ; -- numpad layer (Shift RAlt) --
 ; (no left shift applied here)
-AddMappings(2, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
-AddMappings(2, 1, ' q w e r t ',   ' Tab 5 2 3 : ')
-AddMappings(2, 1, " a s d f g ",   ' 7   . 1 0 4 ')
-AddMappings(2, 1, ' z x c v b ',   ' /   6 9 8 , ')
+; AddMappings(2, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
+; AddMappings(2, 1, ' q w e r t ',   ' Tab 5 2 3 : ')
+; AddMappings(2, 1, " a s d f g ",   ' 7   . 1 0 4 ')
+; AddMappings(2, 1, ' z x c v b ',   ' /   6 9 8 , ')
 
-AddMappings(2, 1, 'Capslock', '-')
+; AddMappings(2, 1, 'Capslock', '-')
 
 ; -- punctuation layer (RAlt) --
 
-; original:
-;    <$>   [_]
-; - \(")# %{=}| ;
-;    :*+   &^~
+#include ../common/puncLayer.ahk
 
-; nb: already using zxc vs xcv, so no need for shiftLeft version
-; " is deadkey for accented chars
-AddMappings(2, 0, '   w e r      i o p    ',   '   < $ >      [ ] _   ')
-AddMappings(2, 0, " a s d f g  j k l `; ' ",   ' \ ( " ) #  { = } ! | ')
-AddMappings(2, 0, '  z x c v   m , . /    ',   '   : * + "  & ^ ~ %   ')
+layerAccessKey := "RAlt"
+blockAccessKey := 1
+layerNo := 3
+wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right for easier access to alt key
+CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
 
-AddMappings(2, 0, 'Capslock', '-')
+; AddMappings(2, 0, 'Capslock', '-')
 
 ;------
 
 #include ../common/extend/extendSpace2.ahk
+
+; lets try this: W on extend layer !
+; on same spot as G (qwerty N)
+extHK('n', 'w')
 
 DisplayHelpImage()
 return
