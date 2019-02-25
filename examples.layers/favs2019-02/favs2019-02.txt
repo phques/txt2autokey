@@ -1,17 +1,12 @@
-AdNW Beakl19
-  j u i o q   v d r l b 
-  g h e a ,   p t s n c 
-  z y ' . /   k f w m x
+AdNW beakl19              AdNW Beakl19 swap vx qz
+  j u i o q   v d r l b    j u i o z   x d r l b 
+  g h e a ,   p t s n c    g h e a ,   p t s n c 
+  z y ' . /   k f w m x    q y ' . /   k f w m x v
 
-beakl15 swap GW
-  q h o u x   w c r f z
-  y i e a .   d s t n b
-  j / , k '   b m l p v
-
-beakl15
-  q h o u x   g c r f z
-  y i e a .   d s t n b
-  j / , k '   w m l p v
+beakl15 swap GW           beakl15 
+  q h o u x   w c r f z    q h o u x   g c r f z
+  y i e a .   d s t n b    y i e a .   d s t n b
+  j / , k '   g m l p v    j / , k '   w m l p v
 
 mcb25v5FlatIntl
   q p o u "   z n d f v
@@ -28,14 +23,12 @@ beakl19
   h a e i k   g s r t p
   z ' / y x   b c l f v
 
-beaklOpt4
-  j y o . k   g c m n z  
-  h i e a u   d s t r p 
-  q " ' , x   w f l b v 
+beaklOpt4                beaklOpt4 swap GW
+  j y o . k   g c m n z   j y o . k   w c m n z  
+  h i e a u   d s t r p   h i e a u   d s t r p 
+  q " ' , x   w f l b v   q " ' , x   g f l b v 
 
-beaklOpt4 swap GW
-  j y o . k   w c m n z  
-  h i e a u   d s t r p 
-  q " ' , x   g f l b v 
-
-
+X8.3
+  q y o u }   b m r c z   
+  h i e a j   w t n s p # 
+  { x : k _   v d l f g   
