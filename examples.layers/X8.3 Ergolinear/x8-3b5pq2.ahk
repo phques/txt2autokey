@@ -6,8 +6,9 @@ Layout by IanDoug
 
 X8.3 b5
 adapted by PQuesnel
-us anglez 
+US anglez, B as extra jey
 
+- swap ; <-> / then  B <-> /  (B
 - moved few syms around, ` on main for french
   had to place more chars since x8.3b5 uses two thumb keys for chars
   `~{}
@@ -41,14 +42,14 @@ qwertyMask := "
 
 layer1 := "
 (Join`r`n
-  q y o u [            b d r c k   
+  q y o u [            \ d r c k   
   h i e a Enter        g t n s p = 
   j x : z _ ``         w m l f v   
 )"
 
 layer1sh := "
 (Join`r`n
-  Q Y O U @            B D R C K   
+  Q Y O U @            @ D R C K   
   H I E A }            G T N S P | 
   J X ^ Z / ~          W M L F V   
 )"
@@ -56,7 +57,7 @@ layer1sh := "
 layer2 := "
 (Join`r`n
   ? < # % ]            $ & * > +   
-  ( ) . , {            ; " - ' / ! 
+  ( ) . , {            b " - ' ; ! 
   8 4 0 2 6 SP         9 3 1 5 7   
 )"
 
@@ -69,6 +70,11 @@ AddMappings(1, 0, 'Enter','BackSpace')
 
 ; punc layer accessed through space
 CreateLayer(2, 'Space', 0)
+
+; only guy on shift-space, so just add it manually
+; ## space+shift+H ..
+; ## have to press *Shift 1st* otherwise space+shift will give us 8 !
+AddMappings(2, 1, 'h', 'B') 
 
 AddMappings(2, 0, qwertyMask, layer2)
 ; need to redo this manually too for it to work !?
