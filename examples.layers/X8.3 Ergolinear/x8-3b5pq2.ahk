@@ -20,7 +20,7 @@ US anglez, B as extra jey
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
 
-global ImgsDir := A_ScriptDir . "\imgs"
+global ImgsDir := A_ScriptDir . "\imgs\x8-3b5pq2"
 
 global ImgWidth := 176
 global ImgHeight := 54
