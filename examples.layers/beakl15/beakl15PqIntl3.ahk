@@ -40,32 +40,19 @@ AddMappings(1, 1, "       a s d f g  h j k l `; ' ",  ' Y I E A @  D S T N B _ '
 AddMappings(1, 1, ' @LShift z x c v  n m , . /    ',  ' J ! G K ^  W M L P V   ')
 ;AddMappings(1, 1, '       z x c v b  n m , . /    ',  ' J ! G K ^  W M L P V  ')
 
-; shift capslock = CapsLock !
-;AddMappings(1, 1, 'Capslock', '-')
-
 
 ;AddMappings(1, 0, '       1 2 3 4 5  6 7 8 9 0    ',  ' 4 0 1 2 3  7 6 5 9 8   ')
 AddMappings(1, 0, '       q w e r t  y u i o p    ',  " q h o u x   / c r f z   ")
 AddMappings(1, 0, "       a s d f g  h j k l `; ' ",  " y i e a .   d s t n b `` ")
-AddMappings(1, 0, ' @LShift z x c v  n m , . /    ',  " j , g k '  w m l p v   ")
-;AddMappings(1, 0, '       z x c v b  n m , . /    ',  " j , g k '  w m l p v   ")
+AddMappings(1, 0, ' @LShift z x c v  n m , . /    ',  " j , g k '   w m l p v   ")
+;AddMappings(1, 0, '       z x c v b  n m , . /   ',  " j , g k '   w m l p v   ")
 
-; deadkey for accented chars
+; nb: screws up in Windows virtual machine under Linux !
 AddMappings(1, 0, 'Capslock', ';')
 
+; add BackSpace on [
+AddMappings(1, 0, '[','BackSpace')
 
-; -- layer 2 --
-
-CreateLayer(2, "RAlt", 1)
-
-; -- numpad layer (Shift RAlt) --
-; (no left shift applied here)
-;AddMappings(2, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
-;AddMappings(2, 1, ' q w e r t ',   ' Tab 5 2 3 : ')
-;AddMappings(2, 1, " a s d f g ",   ' 7   . 1 0 4 ')
-;AddMappings(2, 1, ' z x c v b ',   ' /   6 9 8 , ')
-
-;AddMappings(2, 1, 'Capslock', '-')
 
 ; -- punctuation layer (RAlt) --
 
@@ -73,16 +60,40 @@ CreateLayer(2, "RAlt", 1)
 
 #include ../common/puncLayer.ahk
 
-layerAccessKey := "RAlt"
-blockAccessKey := 1
+; layerAccessKey := "RAlt"
+; blockAccessKey := 1
+layerAccessKey := "Space"
+blockAccessKey := 0
 layerNo := 3
 wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right for easier access to alt key
-CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
+;CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
 
+; will this work, defined AFTER main layer (normally need t define BEFORE !)
+; seems to work
+
+; ## bug: space + shift .. hold shift, outputs spacessssssss
+
+CreateLayer(layerNo, layerAccessKey, blockAccessKey) 
+
+AddMappings(layerNo, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
+AddMappings(layerNo, 1, ' q w e r t ',   ' Tab 5 2 3 : ')
+AddMappings(layerNo, 1, " a s d f g ",   ' 7   . 1 0 4 ')
+AddMappings(layerNo, 1, ' z x c v b ',   ' /   6 9 8 , ')
+AddMappings(layerNo, 1, 'Capslock', '-')
+AddMappings(layerNo, 1, 'LShift', 'LShift')
+AddMappings(layerNo, 1, 'RShift', 'RShift')
+
+SetupPuncLayerMappings(layerNo)
 
 ;------
 
-#include ../common/extend/extendSpace2.ahk
+#include ../common/extend/extend2Base.ahk
+
+; use physical left shift / ctrl keys with left Alt !
+SetupExtend2('LAlt')
+
+; SetupExtend2('Space')
+; extHKitself('', 'Space')
 
 DisplayHelpImage()
 

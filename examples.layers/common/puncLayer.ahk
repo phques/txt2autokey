@@ -13,6 +13,11 @@ CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRight)
     ; SetNoKeyChar('.')
     CreateLayer(layerNo, layerAccessKey, blockAccessKey) 
 
+    SetupPuncLayerMappings(layerNo)
+}
+
+SetupPuncLayerMappings(layerNo)
+{
     ; left hand
     AddMappings(layerNo, 0, '    q w e r t ',  '   $ < - > %  ')
     AddMappings(layerNo, 0, ' CL a s d f g ',  ' _ \ ( " ) !  ')
