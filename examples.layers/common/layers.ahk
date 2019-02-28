@@ -17,7 +17,7 @@ global DefinedHotKeys := {} ; keep track of already defined hotkeys
 ; a layer becomes current on keydown of its layer access key
 ; layer[1] is normal/main layer
 global CurrentLayer := {}
-global LastKeyWasLayerAccess := 0 ;; true if last key was a layer access key
+global LastKeyDownWasLayerAccess := 0 ;; true if last key was a layer access key
 global dualModeKeyDown := 0     ;; true when we press a dualMode key
 
 ; If we remap a key to be shift, GetKeyState(Shift) returns false sometimes after 
@@ -278,7 +278,11 @@ onLayerKey(key, up)
 		return
 
 	; last key is not a layer access key anymore
-	LastKeyWasLayerAccess := 0
+	; we only care about DOWN keystrokes, 
+	; this fixes problems with layerAccessKeys that can also output soethin on press/release
+	; we otherwise can have cases where typing quickly makes the key NOT output something
+	if (!up)
+		LastKeyDownWasLayerAccess := 0
 		
 	; get destination/ouput/mapped key for this layer key
 	accessKey := CurrentLayer.accessKey
@@ -423,26 +427,26 @@ onLayerAccessKey(layerIndex, up)
 {
 	; already accessing a layer, skip if different
 	;; (might use key combos for layer access in the future?)
-	if (LastKeyWasLayerAccess && CurrentLayer && CurrentLayer.index != layerIndex)
+	if (LastKeyDownWasLayerAccess && CurrentLayer && CurrentLayer.index != layerIndex)
 		return
 		
 	; On access key up, reset current layer to main &
-	; reset LastKeyWasLayerAccess
+	; reset LastKeyDownWasLayerAccess
 	if (up) {
 		; no key was hit after this layer access key was released, 
 		; this is just a press/release of it, send it if so configured
-		if (LastKeyWasLayerAccess && !CurrentLayer.blockAccessKey) {
+		if (LastKeyDownWasLayerAccess && !CurrentLayer.blockAccessKey) {
 			Send "{Blind}{" CurrentLayer.accessKey "}"
 		}
 		
 		; reset to main layer
 		CurrentLayer := Layers[1]
-		LastKeyWasLayerAccess := 0
+		LastKeyDownWasLayerAccess := 0
 	}
 	else {
 		; layer access key down
 		; select layer
 		CurrentLayer := Layers[layerIndex]
-		LastKeyWasLayerAccess := 1
+		LastKeyDownWasLayerAccess := 1
 	}
 }
