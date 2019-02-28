@@ -43,7 +43,7 @@ qwertyMask := "
 
 layer1 := "
 (Join`r`n
-  q y o u [            b d r c k   
+  q y o u [            b d r c k
   h i e a {            g t n s p = 
   j x : z _ SP         w m l f v   
 )"
@@ -58,7 +58,7 @@ layer1sh := "
 layer2 := "
 (Join`r`n
   ? < # % ]            $ & * > +   
-  ( ) . , }            ; " - ' / ! 
+  ( ) . , ;            b " - ' / ! 
   8 4 0 2 6 ``         9 3 1 5 7   
 )"
 
@@ -71,6 +71,11 @@ AddMappings(1, 0, '[','BackSpace')
 
 ; punc layer accessed through space
 CreateLayer(2, 'Space', 0)
+
+; only guy on shift-space, so just add it manually
+; ## space+shift+H ..
+; ## have to press *Shift 1st* otherwise space+shift will give us 8 !
+AddMappings(2, 1, 'h', 'B') 
 
 AddMappings(2, 0, qwertyMask, layer2)
 ; need to redo this manually too for it to work !?
@@ -101,12 +106,20 @@ toggledToFrench := 0
   if (toggledToFrench) {
     AddMappings(1, 1, 'g', '}')
     AddMappings(1, 0, 'g', '{')
+    ; AddMappings(1, 0, 'c', 'k')
+    ; AddMappings(1, 1, 'c', 'K')
+    ; AddMappings(1, 0, 'y', 'z')
+    ; AddMappings(1, 1, 'y', 'Z')
     AddMappings(1, 0, "'", "=")
     toggledToFrench := 0
   } else {
-    AddMappings(1, 1, 'g', 'É')
     AddMappings(1, 0, 'g', 'é')
+    AddMappings(1, 1, 'g', 'É')
     AddMappings(1, 0, "'", "``")
+    ; AddMappings(1, 0, 'c', 'z')
+    ; AddMappings(1, 1, 'c', 'Z')
+    ; AddMappings(1, 0, 'y', 'k')
+    ; AddMappings(1, 1, 'y', 'K')
     toggledToFrench := 1
   }
 
