@@ -31,7 +31,7 @@ global CenterOnCurrWndMonitor := 1
 #include ../common/fromPkl/pkl_guiLayers.ahk
 #include ../common/layers.ahk
  
-; main layer
+; -- main layer --
 CreateLayer(1)
 
 ; shifted chars (declare 1st!)
@@ -54,9 +54,7 @@ AddMappings(1, 0, 'Capslock', ';')
 AddMappings(1, 0, '[','BackSpace')
 
 
-; -- punctuation layer (RAlt) --
-
-; punc layer
+; -- punctuation layer --
 
 #include ../common/puncLayer.ahk
 
@@ -66,26 +64,22 @@ layerAccessKey := "Space"
 blockAccessKey := 0
 layerNo := 3
 wideRightPunc := 0  ; when true, punc layer right hand is shifted to the right for easier access to alt key
-;CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
+CreatePuncLayer(layerNo, layerAccessKey, blockAccessKey, wideRightPunc) 
 
-; will this work, defined AFTER main layer (normally need t define BEFORE !)
-; seems to work
 
-; ## bug: space + shift .. hold shift, outputs spacessssssss
+; -- numpad layer --
 
-CreateLayer(layerNo, layerAccessKey, blockAccessKey) 
+numpadLayer := 2
+CreateLayer(numpadLayer, 'b', 1) 
 
-AddMappings(layerNo, 1, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
-AddMappings(layerNo, 1, ' q w e r t ',   ' Tab 5 2 3 : ')
-AddMappings(layerNo, 1, " a s d f g ",   ' 7   . 1 0 4 ')
-AddMappings(layerNo, 1, ' z x c v b ',   ' /   6 9 8 , ')
-AddMappings(layerNo, 1, 'Capslock', '-')
-AddMappings(layerNo, 1, 'LShift', 'LShift')
-AddMappings(layerNo, 1, 'RShift', 'RShift')
+AddMappings(numpadLayer, 0, '   2 3 4   7 8 9 ',   '  + = *      ^ `% ~ ')
+AddMappings(numpadLayer, 0, ' q w e r t ',   ' Tab 5 2 3 : ')
+AddMappings(numpadLayer, 0, " a s d f g ",   ' 7   . 1 0 4 ')
+AddMappings(numpadLayer, 0, ' z x c v b ',   ' /   6 9 8 , ')
+AddMappings(numpadLayer, 0, 'Capslock', '-')
 
-SetupPuncLayerMappings(layerNo)
 
-;------
+; -- extend/edit layer --
 
 #include ../common/extend/extend2Base.ahk
 
@@ -94,6 +88,8 @@ SetupExtend2('LAlt')
 
 ; SetupExtend2('Space')
 ; extHKitself('', 'Space')
+
+;; ---------
 
 DisplayHelpImage()
 
@@ -104,9 +100,12 @@ DisplayHelpImage()
 
 return
 
-;------
+; ---- hotkeys ----
 
-; other hotkey defs
+; activate numpad in locked mode
+; press numpad layeAccess key to toggle back off
+]::CurrentLayer := Layers[numpadLayer]
 
+; other hotkeys
 #include ../common/commonHotkeys.ahk
 
