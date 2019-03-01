@@ -62,6 +62,55 @@ SetNoKeyChar(char)
     NoKeyChar := char
 }
 
+;----------
+
+AddMapping(f, t, shiftedLayer, layerDef)
+{
+    ; leading @ indicates dual mode key (in 'from')
+    ; (single click generates 'to' key, held down is modifier)
+    isDualModeKey := 0
+    if (SubStr(f,1,1) == '@') {
+        f := SubStr(f,2) ; strip @
+        isDualModeKey := 1
+    }
+
+	if (f == 'SP')
+		f := 'Space'
+	
+	if (t == 'SP')
+		t := 'Space'
+		
+	if (f == 'CL')
+		f := 'Capslock'
+	
+	if (t == 'CL')
+		t := 'Capslock'
+		
+
+	splitFrom := splitModsAndKey(f)
+	splitTo := splitModsAndKey(t)
+
+	; set flag indicating if the char to output is shifted (ie ! is Shift-1)
+	shiftedChars := 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	shiftedChars .='~!@#$`%^&*()_+{}|:"<>?'
+	if (InStr(shiftedChars, splitTo.key))
+		splitTo.isShifted := 1
+
+    splitTo.isDualMode := isDualModeKey
+        
+	; create hotkey for 'from' key if required
+	; note we DONT use modifiers, that's what layers are for !
+	createHotkey(splitFrom.key)
+	
+	; save this mapping in layer
+	if (shiftedLayer)
+		layerDef.mappingsSh[splitFrom.key] := splitTo
+	else
+		layerDef.mappings[splitFrom.key] := splitTo
+
+}
+
+
 ; add new key mappings for a layer
 ; when 'fromKey' is hit on this layer, will output 'toKey'
 ; _from/_to are space separated
@@ -90,7 +139,7 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	{
         msg := Format("AddMappings, From/to not same length {} {}!`n{} `n{}"
 						, froms.Length(), tos.Length()
-						, _from, _to, )
+						, froms, tos, )
 		MsgBox(msg)
 						; , SubStr(_from, 1, 16), SubStr(_to, 1, 16))
 		ExitApp
@@ -101,53 +150,50 @@ AddMappings(layerIndex, shiftedLayer, _from, _to)
 	{
 		f := froms[A_Index]
 		t := tos[A_Index]
-		
-        ; nothing to see here, move along
-        if (t == NoKeyChar)
-            continue
-            
-		if (f == 'SP')
-			f := 'Space'
-		
-		if (t == 'SP')
-			t := 'Space'
-			
-		if (f == 'CL')
-			f := 'Capslock'
-		
-		if (t == 'CL')
-			t := 'Capslock'
-			
-        ; leading @ indicates dual mode key (in 'from')
-        ; (single click generates 'to' key, held down is modifier)
-        isDualModeKey := 0
-        if (SubStr(f,1,1) == '@') {
-            f := SubStr(f,2) ; strip @
-            isDualModeKey := 1
-        }
-    
-		splitFrom := splitModsAndKey(f)
-		splitTo := splitModsAndKey(t)
 
-		; set flag indicating if the char to output is shifted (ie ! is Shift-1)
-		shiftedChars := 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-		shiftedChars .='~!@#$`%^&*()_+{}|:"<>?'
-		if (InStr(shiftedChars, splitTo.key))
-			splitTo.isShifted := 1
-
-        splitTo.isDualMode := isDualModeKey
-            
-		; create hotkey for 'from' key if required
-		; note we DONT use modifiers, that's what layers are for !
-		createHotkey(splitFrom.key)
-		
-		; save this mapping in layer
-		if (shiftedLayer)
-			layerDef.mappingsSh[splitFrom.key] := splitTo
-		else
-			layerDef.mappings[splitFrom.key] := splitTo
+		; skip this one if not mapped
+	    if (t != NoKeyChar)
+			AddMapping(f, t, shiftedLayer, layerDef)
 	}
 }
+
+
+
+AddMappingsOne(layerIndex, shiftedLayer, fromAndTos)
+{
+	; get layer def
+	layerDef := layers[layerIndex]
+	if (!layerDef) {
+		MsgBox "AddMappingsOne, layer " layerIndex " does not exist"
+		ExitApp
+	}
+
+	; loop on Lines
+	Loop Parse Trim(fromAndTos), '`n'
+	{
+		; split from / to into into array (separ = space)
+		line := Trim(A_LoopField)
+		line := RegExReplace(line, "\s{2,}", " ")
+		fromAndTo := StrSplit(str, A_Space)
+
+		nbrOfMappings := fromAndTo.Length() / 2
+		if (nbrOfMappings * 2 != fromAndTo.Length()) {
+	        msg := Format("AddMappingsOne, From/to not same length !`n{}", fromAndTo )
+			MsgBox(msg)
+			ExitApp
+		}
+
+		; process this Line
+		Loop nbrOfMappings
+		{
+			f := fromAndTo[A_Index]
+			t := fromAndTo[A_Index + nbrOfMappings]
+			msgbox('mapping ' f ' to ' t)
+		}
+	}
+
+}
+
 
 ;---------
 
