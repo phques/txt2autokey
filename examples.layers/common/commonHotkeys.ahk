@@ -35,10 +35,10 @@ return
 ^sc15D::OpenWinlistMenu()
 
 ; Ctrl-Win-p qwerty
-#^sc019::Send 'philippe.quesnel@gmail.com'
+#^sc019::Send 'philippe.quesnel'
 
 ; Ctrl-Win-q qwerty
-#^sc010::Send 'philippe.quesnel@cgi.com'
+#^sc010::Send 'philippe.quesnel@gmail.com'
 
 
 ; Win-Delete to close the current window
