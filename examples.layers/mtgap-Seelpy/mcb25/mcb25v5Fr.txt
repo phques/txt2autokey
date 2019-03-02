@@ -1,0 +1,49 @@
+2019-03-01
+mcb25 v5
+with 2 versions of layer2,
+one for puncs / syms
+and one for french accented chars / puncs / syms
+
+ / p o u     n d f v
+ g i a e   l r t s c
+ k , . y     h w m b
+
+ ? P O U     N D F V
+ G I A E   L R T S C
+ K ! @ Y     H W M B
+
+ + : ; /     $ q z |      [ ï ô û     - q z ]
+ ? - ( '   * x ) " >      ; î à é ê = x ' " ç
+ \ ! { =     j } [ ]      { ( â è     j ` ) }
+
+using traditional puncLayer layer3
+ $ < - > %   ~ [ ] @ 
+ \ ( " ) !   { = } ;
+   : * + #   & ^ _ | 
+
+---
+
+  /  p  o  u         n  d  f  v
+  g  i  a  e      l  r  t  s  c
+  k  ,  .  y         h  w  m  b
+
+  ?  P  O  U         N  D  F  V
+  G  I  A  E      L  R  T  S  C
+  K  !  @  Y         H  W  M  B
+
+  [  ï  ô  û         -  q  z  ]
+  ;  î  à  é  ê   =  x  '  "  ç
+  {  (  â  è         j  `  )  }
+
+  +  :  ;  /         $  q  z  |
+  ?  -  (  '      *  x  )  "  >
+  \  !  {  =         j  }  [  ]
+
+  $  <  -  >  %      ~  [  ]  @ 
+  \  (  "  )  !      {  =  }  ;
+     :  *  +  #      &  ^  _  | 
+
+ ,.-"_')(;=:/*!?$>{}[]\+|
+&<%@#^`~
+
+é è à ê ç ô â î û ù ï ü ë ö

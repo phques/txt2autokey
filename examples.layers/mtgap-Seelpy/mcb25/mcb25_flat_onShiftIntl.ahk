@@ -61,16 +61,6 @@ layer1sh := "
 ; main layer
 CreateLayer(1)
 
-;# test
-
-toto := "
-(Join`r`n
- a s d  u i o
-)"
-
-; AddMappingsOne(1, 0, toto)
-; exitapp
-
 AddMappings(1, 1, qwertyMask, layer1sh)
 AddMappings(1, 0, qwertyMask, layer1)
 AddMappings(1, 0, 'Capslock', ';')
