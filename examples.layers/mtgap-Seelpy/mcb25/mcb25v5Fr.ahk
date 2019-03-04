@@ -54,8 +54,8 @@ layer2Syms := "
 
 layer2French := "
 (Join`r`n
-     q w e r     u i o p      [ ï ô û     - q  z ]
-     a s d f g h j k l ;      ; î à é ê = x '  " ç
+     q w e r     u i o p      [ ï ô û     = q  z ]
+     a s d f g h j k l ;      ; î à é ê - x '  " ç
   @LSh z x c     m , . /      { ( â è     j `` ) }
 )"
 
