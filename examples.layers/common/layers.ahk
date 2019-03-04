@@ -1,3 +1,5 @@
+#MaxHotkeysPerInterval 200 
+
 ; functions to define layers of key mappings (àla AltGr),
 ; with this you can handle main layer and alt layers directly from code
 ; no need to use a conversion pgm from text to AHK for main layer etc..
@@ -6,6 +8,7 @@
 ; Layers[layerIndex] = layerDef
 ;   layerDef.index
 ;   layerDef.accessKey = accessKey
+;   layerDef.accessKeySc
 ;   layerDef.blockAccessKey = if true, normal press/release of this access key is not output
 ;   layerDef.mappings = {fromKey : toKey, ...}
 ;   layerDef.mappingsSh = {fromKey : toKey, ...}
@@ -235,8 +238,8 @@ CreateLayerAccessHotkey(layerDef, layerIndex, layerAccessKey)
     sc := GetKeySC(layerAccessKey)
     hotkeyName := Format("sc{:03x}", sc)
 
-    ; save real key 
-    layerDef.accessKey := hotkeyName
+    ; save key as formatted scancode
+    layerDef.accessKeySc := hotkeyName
     
     ; create function object with params that hotkey will call 
     fnDn := Func("onLayerAccessKey").Bind(layerIndex, 0)
@@ -317,7 +320,7 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
     if (!InStr('!', pressedModToFilterOut) && GetKeyState("Alt")) 
         mods .= "!"
 
-    ;OutputDebug("Send1 " mods toSend)
+    OutputDebug("Send1 " mods toSend)
     Send mods toSend
 }
 
@@ -325,14 +328,19 @@ simulateSendBlind(mods, toSend, pressedModToFilterOut)
 ; called by a hotkey to handle a key press/release 
 onLayerKey(key, up)
 {
-    OutputDebug("onLayerKey " key " up = " up ", layer " CurrentLayer.index)
+    updown := (up ? ' up' : ' down')
+    OutputDebug("onLayerKey " . key . updown . ", layer " CurrentLayer.index)
     
     if (!CurrentLayer)
         return
 
     keyName := GetKeyName(key)
 
-    ; last key is not a layer access key anymore
+    keySc := GetKeySC(key)
+    keySc := Format("sc{:03x}", keySc)
+
+
+    ; last key is not a layer access key anymore?
     ; we only care about DOWN keystrokes, 
     ; this fixes problems with layerAccessKeys that can also output soethin on press/release
     ; we otherwise can have cases where typing quickly makes the key NOT output something
@@ -340,9 +348,6 @@ onLayerKey(key, up)
       LastKeyDownWasLayerAccess := 0
     }
         
-    ; get destination/ouput/mapped key for this layer key
-    accessKey := CurrentLayer.accessKey
-    
     shiftDown := 0
     nbrShiftDown := 0
     if (GetKeyState("LShift")) {
@@ -370,6 +375,7 @@ onLayerKey(key, up)
     ; special case for dual mode Shift
     ; since 'shift is down' we get the shifted mappings above ^^
     ; but if there is no shifted mappings for Shift, then keyAndMods is empty
+    ; (and is the wrong one if no other Shift is down)
     if (!keyAndMods) {
         if (keyName == "LShift" || keyName == "RShift") {
             ; if this was the only shift key down,
@@ -385,94 +391,12 @@ onLayerKey(key, up)
 
         SetKeyDelay -1
 
-        ; handling of dual mode keys (single click generates key, held down is modifier)
-        ; only works with modifier key!
-        generatingDualModeOutput := 0
-        if (dualModeKeyDown) {
-            
-            ; Detect if we have consecutive dualMode key press and release
-
-            ; cant use A_PriorKey, if holding down Space as layer access,
-            ; then it will eventually repeat ! And we can end up w. Space Downs
-            ; between dualMode key down and Up
-            ; if (A_PriorKey == keyName) {
-
-            ; if it does say it is the same key, the use it
-            dualModeKeyRepeat := (A_PriorKey == keyName)
-
-            ; check if interrupted by repeating layer access key
-            if (!dualModeKeyRepeat) {
-                OutputDebug("!dualModeKeyRepeat " . key . " " . CurrentLayer.accessKey)
-                ; ignore repeating key for current layer
-                if (key == CurrentLayer.accessKey) {
-                    dualModeKeyRepeat := 1
-                    OutputDebug('dualModeKeyDown, ignore repeating key for current layer')
-                }
-            }
-
-            if (dualModeKeyRepeat) {
-
-                ; consecutive dual mode key events
-                OutputDebug('dualModeKeyDown, prior ==')
-
-                if (up) {
-                    OutputDebug("Send2 {Blind}{" key " Up}")
-                    ; key was held down, send dummy 'up' to release it
-                    Send "{Blind}{" key " Up}"
-                    
-                    ; shift key used as hotkey
-                    if (keyName == "LShift" || keyName == "RShift") {
-                        ; if this was the only shift key down,
-                        ; go back to non shifted level of the layer
-                        if (nbrShiftDown == 1) {
-                            OutputDebug("removing shiftdown")
-                            keyAndMods := CurrentLayer.mappings[key]
-                            ;pq leave this so we take care of removing Shift if out key is lowercase key
-                            ;shiftDown := 0
-                        }
-                    }
-                    
-                    OutputDebug("Send3 " keyAndMods.key " DownTemp")
-                    ; send initial Down for the generated output,
-                    ; the Up event is generated normally below
-                    Send "{Blind}{" keyAndMods.key " DownTemp}"
-                    generatingDualModeOutput := 1
-                }
-                else {
-                    ; key down repeat, skip
-                    return
-                }
-            }
-            else {
-                OutputDebug('dualModeKeyDown, prior !=, prior = ' A_PriorKey)
-            }
-
-            dualModeKeyDown := 0
-        } 
+        result := handleDualMode(key, keySc, keyName, up, keyAndMods, nbrShiftDown)
+        if (result.stop)
+            return
         
-        if (!generatingDualModeOutput) {
-            if (keyAndMods.isDualMode) {
-                ; non consecutive dual mode key event
-                if (up) {
-                    OutputDebug("Send4.1 " key " Up")
-                    ; key released after being used as modifier
-                    ; key was held down, send dummy 'up' to release it
-                    Send "{Blind}{" key " Up}"
-                    ;keyAndMods.dualModeKeyDown := 0
-                } 
-                else {
-                    OutputDebug("Send4.2 " key " DownTemp")
-                    ; send initial key down of modifier
-                    Send "{Blind}{" key " DownTemp}"
-                    ;keyAndMods.dualModeKeyDown := key
-                    dualModeKeyDown := 1
-                }
+        keyAndMods := result.keyAndMods
 
-                ; ****
-                return
-             }
-        }
-        
         ; modifiers need to be *before* the {}, ie ^{v}  not {^v}
         mods := keyAndMods.mods
         
@@ -483,12 +407,12 @@ onLayerKey(key, up)
         
         ;; Special handling for Alt, cant use Send Blind
         ; filter out the Alt, but manually pass through Shift / Ctrl
-        if (InStr(accessKey, "Alt")) {
+        if (InStr(CurrentLayer.accessKey, "Alt")) {
             ; simulate Send Blind, but w/o Alt 
             skip := '!'
             
+            ; AND w/o shift
             if (shiftDown && !keyAndMods.isShifted)
-                ; AND w/o shift
                 skip += '+'
 
             simulateSendBlind(mods, toSend, skip)
@@ -503,13 +427,14 @@ onLayerKey(key, up)
                 simulateSendBlind(mods, toSend, '+')
             } 
             else {
-                ; OutputDebug("Send {Blind}" mods toSend)
+                OutputDebug("Send {Blind}" mods toSend)
                 Send "{Blind}" mods toSend
             }
         }
     }
     else {
-        ; just send the original key
+        ; no mappings, just send the original key
+
         OutputDebug('no mapping ' key)
         if (up)
             Send "{Blind}{" key " up}"
@@ -517,6 +442,107 @@ onLayerKey(key, up)
             Send "{Blind}{" key " DownTemp}"
     }
     
+}
+
+handleDualMode(key, keySc, keyName, up, keyAndMods, nbrShiftDown)
+{
+    result := {}
+    result.keyAndMods := keyAndMods
+    result.stop := false
+
+    ; handling of dual mode keys (single click generates key, held down is modifier)
+    ; only works with modifier key!
+    generatingDualModeOutput := 0
+    if (dualModeKeyDown) {
+        
+        ; Detect if we have consecutive dualMode key press and release
+
+        ; cant use A_PriorKey, if holding down Space as layer access,
+        ; then it will eventually repeat ! And we can end up w. Space Downs
+        ; between dualMode key down and Up
+        ; if (A_PriorKey == keyName) {
+
+        dualModeKeyRepeat := (dualModeKeyDown == key)
+
+        ; check if interrupted by repeating layer access key
+        if (!dualModeKeyRepeat) {
+            OutputDebug("!dualModeKeyRepeat " . key . " " . CurrentLayer.accessKey)
+            OutputDebug(format("!dualModeKeyRepeat keySc {} accessKeySc {}",
+                keySc, CurrentLayer.accessKeySc))
+            ; ignore repeating key for current layer
+            if (keySc == CurrentLayer.accessKeySc) {
+                dualModeKeyRepeat := 1
+                OutputDebug('dualModeKeyDown, ignore repeating key for current layer')
+            }
+        }
+
+        if (dualModeKeyRepeat) {
+
+            ; consecutive dual mode key events
+            OutputDebug('dualModeKeyDown, prior ==')
+
+            if (up) {
+                OutputDebug("Send2 {Blind}{" key " Up}")
+                ; key was held down, send dummy 'up' to release it
+                Send "{Blind}{" key " Up}"
+                
+                ; shift as dual mode key
+                if (keyName == "LShift" || keyName == "RShift") {
+                    ; if this was the only shift key down,
+                    ; go back to non shifted level of the layer
+                    if (nbrShiftDown == 1) {
+                        OutputDebug("removing shiftdown")
+                        keyAndMods := CurrentLayer.mappings[key]
+                        result.keyAndMods := keyAndMods
+                        ;pq leave this so we take care of removing Shift if out key is lowercase key
+                        ;shiftDown := 0
+                    }
+                }
+                
+                OutputDebug("Send3 " keyAndMods.key " DownTemp")
+                ; send initial Down for the generated output,
+                ; the Up event is generated normally below
+                Send "{Blind}{" keyAndMods.key " DownTemp}"
+                generatingDualModeOutput := 1
+            }
+            else {
+                ; key down repeat, skip
+                result.stop := true
+                return result
+            }
+        }
+        else {
+            OutputDebug('dualModeKeyDown, prior !=, prior = ' A_PriorKey)
+        }
+
+        dualModeKeyDown := 0
+    } 
+    
+    if (!generatingDualModeOutput) {
+        if (keyAndMods.isDualMode) {
+            ; non consecutive dual mode key event
+            if (up) {
+                OutputDebug("Send4.1 " key " Up")
+                ; key released after being used as modifier
+                ; key was held down, send dummy 'up' to release it
+                Send "{Blind}{" key " Up}"
+                ;keyAndMods.dualModeKeyDown := 0
+            } 
+            else {
+                OutputDebug("Send4.2 " key " DownTemp")
+                ; send initial key down of modifier
+                Send "{Blind}{" key " DownTemp}"
+                ;keyAndMods.dualModeKeyDown := key
+                dualModeKeyDown := key
+            }
+
+            ; ****
+            result.stop := true
+            return result
+         }
+    }
+
+    return result
 }
 
 ;--------
@@ -537,6 +563,7 @@ onLayerAccessKey(layerIndex, up)
         ; no key was hit after this layer access key was released, 
         ; this is just a press/release of it, send it if so configured
         if (LastKeyDownWasLayerAccess && !CurrentLayer.blockAccessKey) {
+            OutputDebug('Send "{Blind}{" CurrentLayer.accessKey "}"')
             Send "{Blind}{" CurrentLayer.accessKey "}"
         }
         
