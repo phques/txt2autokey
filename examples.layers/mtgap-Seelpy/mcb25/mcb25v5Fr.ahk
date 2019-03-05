@@ -74,7 +74,9 @@ AddMappingsOne(2, 0, layer2Syms)
 AddMappingsOne(2, 1, layer2ShLetters)
 
 AddMappings(1, 0, 'Capslock', ';') 
-AddMappings(1,0, "b n", "LAlt RAlt")   ; add alt keys !
+AddMappings(1,0, "b", "LAlt")   ; add alt keys !
+AddMappings(1,0, "n", "backspace")
+; AddMappings(1,0, "b n", "LAlt RAlt")   ; add alt keys !
 
 
 ; -- punctuation / symbols layer --
