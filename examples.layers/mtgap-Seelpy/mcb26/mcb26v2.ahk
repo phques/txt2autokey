@@ -1,13 +1,12 @@
 ﻿/*
 
-2018-04-29
-  2019-03-01
-  v5, non wide ver
-  with puncs/sym vs french layer2, toggle win-ins
+2019-03-04
+26v2
 
 allcharsstd
-,.-"_')(;=:/*!?$>{}[]\+|
-&<%@#^`~
+,.-"_')(;=:/*!?$>{}[]\+|&<
+%@# 
+^`~ (not on layers)
 
 
 */
@@ -16,7 +15,7 @@ allcharsstd
 
 ; Global variables for pkl_guiLayers.ahk / layout image
 ; MUST be declared *before* scripts that use them
-global ImgsDir := A_ScriptDir . "\imgs\v5NonWide"
+global ImgsDir := A_ScriptDir . "\imgs"
 global ImgWidth := 150
 global ImgHeight := 50
 global CenterOnCurrWndMonitor := 1
@@ -30,34 +29,27 @@ global CenterOnCurrWndMonitor := 1
 
 layer1 := "
 (Join`r`n
-     q w e r    u i o p      / p o u     n d f v 
-     a s d f  h j k l ;      g i a e   l r t s c
-  @LSh z x c    m , . /      k , . y     h w m b
+     q w e r     u i o p      _  p  o  u         d  n  c  x
+     a s d f g h j k l ;      g  h  e  a  y   l  t  s  r  f
+  @LSh z x c     m , . /      k  ,  .  i         m  b  w  v
 )"
 
 layer1sh := "
-(Join`r`n
-     q w e r    u i o p      ? P O U     N D F V
-     a s d f  h j k l ;      G I A E   L R T S C
-  @LSh z x c    m , . /      K ! @ Y     H W M B
+(Join`r`n`
+     q w e r     u i o p      %  P  O  U         D  N  C  X
+     a s d f g h j k l ;      G  H  E  A  Y   L  T  S  R  F
+  @LSh z x c     m , . /      K  #  @  I         M  B  W  V
 )"
 
-
-layer2ShLetters := "i o j m    Q Z X J"
 
 layer2Syms := "
 (Join`r`n
-     q w e r    u i o p      + : ; /     $ q z |
-     a s d f  h j k l ;      ? - ( '   * x ) " >
-  @LSh z x c    m , . /      \ ! { =     j } [ ]
+     q w e r     u i o p      <  >  /  {         }  z  *  &
+     a s d f g h j k l ;      ?  ;  (  -  !   q  "  )  '  $
+  @LSh z x c     m , . /      \  [  ]  :         j  |  =  +
 )"
 
-layer2French := "
-(Join`r`n
-     q w e r     u i o p      [ ï ô û     = q  z ]
-     a s d f g h j k l ;      ; î à é ê - x '  " ç
-  @LSh z x c     m , . /      { ( â è     j `` ) }
-)"
+layer2ShLetters := "s m i   X J Q"
 
 
 ; -- main layer --
@@ -108,22 +100,6 @@ return
 ;------
 
 ; other hotkey defs
-
-
-;
-; Win-Ins
-; swap syms / French on layer2 (toggle)
-toggledToFrench := 0
-#Insert::
-  if (toggledToFrench) {
-    AddMappingsOne(2, 0, layer2Syms)
-    toggledToFrench := 0
-  } 
-  else {
-    AddMappingsOne(2, 0, layer2French)
-    toggledToFrench := 1
-  }
-return
 
 #include ../../common/commonHotkeys.ahk
 
