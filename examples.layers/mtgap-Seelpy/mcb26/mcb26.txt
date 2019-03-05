@@ -1,0 +1,176 @@
+instead of using as few keys as possible,
+try to use the max, comfortable ones + extra, let the optimizer place stuff !
+
+21keys
+4x3 x 2 + 2
+
+qwer   uiop
+asdfg hjkl;
+zxcv   m,./
+
+using  modified BEAKL 8-9 weights
+   150, 15, 10, 20, 50,   50, 20, 10, 15, 150,
+	50,  5,  5,  5, 20,   18,  5,  5,  5, 50, 
+	70, 20, 50, 10, 70,   70, 10, 50, 20, 70
+
+mask, matrix
+11110 01111
+11111 11111
+11110 01111
+
+111100111111111111111111001111
+
+allcharsstd
+,.-"_')(;=:/*!?$>{}[]\+|&<
+%@#^`~
+
+
+=================
+2019-03-04
+26v1
+
+base settings on this one
+
+setksize beak
+setmask 111100111111111111111111001111
+use abcdefghijklmnopqrstuvwxyz,.-"_')(;=:/*!?$>{}[]\+|&<
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+run
+
+Chance to use previous layout is now 0.634732.
+Number of swaps between rounds is now 14.
+Time elapsed: 0 hours, 12 minutes, 23 seconds
+
+Hands: 51% 48%
+Fingers: 3.0% 9.0% 20% 19% 0.00% 0.00% 19% 15% 11% 3.0%
+
+ <  >  /  !         *  q  $  &
+ \  x  (  -  {   }  "  )  '  ?
+ |  :  [  ;         j  ]  =  +
+
+ _  f  o  u         d  n  c  z
+ g  h  e  a  ,   m  t  s  r  p
+ k  y  .  i         l  b  w  v
+
+Fitness:       16210673
+Distance:      9984628
+Finger work:   0
+Inward rolls:  8.71%
+Outward rolls: 1.88%
+Same hand:     32.16%
+Same finger:   2.94%
+Row change:    13.93%
+Home jump:     2.69%
+Ring jump:     1.74%
+To center:     1.37%
+
+
+=================
+2019-03-04
+26v2
+
+setksize beak
+setmask 111100111111111111111111001111
+use abcdefghijklmnopqrstuvwxyz,.-"_')(;=:/*!?$>{}[]\+|&<
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set sameHand 20
+set homeJump 175
+set rowChangeDown 35
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 8.0% 20% 20% 0.00% 0.00% 19% 15% 11% 3.0%
+
+ <  >  /  {         }  z  *  &
+ ?  ;  (  -  !   q  "  )  '  $
+ \  [  ]  :         j  |  =  +
+
+ _  p  o  u         d  n  c  x
+ g  h  e  a  y   l  t  s  r  f
+ k  ,  .  i         m  b  w  v
+
+Fitness:       19765173
+Distance:      10288498
+Finger work:   0
+Inward rolls:  8.12%
+Outward rolls: 1.21%
+Same hand:     30.81%
+Same finger:   3.31%
+Row change:    13.63%
+Home jump:     1.54%
+Ring jump:     1.58%
+To center:     2.97%
+
+Chance to use previous layout is now 0.634732.
+Number of swaps between rounds is now 14.
+Time elapsed: 0 hours, 10 minutes, 58 seconds
+.. +
+Number of rounds in greatToBest() is now 1024.
+
+=================
+2019-03-04
+26v3
+
+setksize beak
+setmask 111100111111111111111111001111
+use abcdefghijklmnopqrstuvwxyz,.-"_')(;=:/*!?$>{}[]\+|&<
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 4
+set sameHand 20
+set homeJump 175
+set rowChangeDown 35
+set inRoll -15
+set outRoll 0
+run
+
+Hands: 51% 48%
+Fingers: 3.0% 8.0% 20% 20% 0.00% 0.00% 19% 15% 11% 3.0%
+
+ <  >  /  =         z  j  +  &
+ ?  '  (  -  :   *  "  )  !  $
+ \  [  ]  ;         q  {  }  |
+
+ _  p  o  u         l  d  c  x
+ g  h  e  a  y   m  n  t  s  b
+ k  ,  .  i         r  w  f  v
+
+Fitness:       20785768
+Distance:      10131048
+Finger work:   0
+Inward rolls:  6.40%
+Outward rolls: 0.00%
+Same hand:     30.62%
+Same finger:   2.79%
+Row change:    14.81%
+Home jump:     2.14%
+Ring jump:     1.55%
+To center:     1.97%
+
+Chance to use previous layout is now 0.634732.
+Number of swaps between rounds is now 14.
+Time elapsed: 0 hours, 10 minutes, 37 seconds
+Number of rounds in greatToBest() is now 1024.
+
+
+=================
+2019-03-04
+26v4
+
+setksize beak
+setmask 111100111111111111111111001111
+use abcdefghijklmnopqrstuvwxyz,.-"_')(;=:/*!?$>{}[]\+|&<
+set keepShiftPairLetters 0
+set keepShiftPairOther 0
+set numThreads 6
+set sameHand 35
+set homeJump 250
+set rowChangeDown 50
+set inRoll -5
+set outRoll 10
+run
+
