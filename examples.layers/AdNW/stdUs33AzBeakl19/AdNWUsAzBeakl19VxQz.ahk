@@ -34,7 +34,8 @@ layer1 := "
 (Join`r`n
   j u i o z  x d r l b 
   g h e a .  p t s n c ``
-  q y ' , /  k f w m v)"
+  q y ' , /  k f w m v
+)"
 
 layer1sh := "
 (Join`r`n
