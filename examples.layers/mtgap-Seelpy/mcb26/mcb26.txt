@@ -22,7 +22,7 @@ mask, matrix
 
 allcharsstd
 ,.-"_')(;=:/*!?$>{}[]\+|&<
-%@#^`~
+%@# ^`~
 
 
 =================
@@ -167,10 +167,32 @@ use abcdefghijklmnopqrstuvwxyz,.-"_')(;=:/*!?$>{}[]\+|&<
 set keepShiftPairLetters 0
 set keepShiftPairOther 0
 set numThreads 6
-set sameHand 35
-set homeJump 250
-set rowChangeDown 50
-set inRoll -5
-set outRoll 10
+set sameHand 40
+set homeJump 350
+set rowChangeDown 70
 run
+
+Hands: 49% 50%
+Fingers: 3.0% 11% 15% 20% 0.00% 0.00% 20% 20% 8.0% 3.0%
+
+ <  >  z  !         =  /  :  &
+ [  ;  "  k  q   $  -  (  )  ]
+ |  *  +  j         ?  {  }  \
+
+ x  c  n  d         u  o  p  _
+ f  r  s  t  l   i  a  e  h  g
+ v  w  b  m         y  .  ,  '
+
+Fitness:       24435783
+Distance:      10409178
+Finger work:   0
+Inward rolls:  8.03%
+Outward rolls: 1.36%
+Same hand:     30.38%
+Same finger:   3.34%
+Row change:    11.63%
+Home jump:     0.85%
+Ring jump:     1.20%
+To center:     5.02%
+
 
