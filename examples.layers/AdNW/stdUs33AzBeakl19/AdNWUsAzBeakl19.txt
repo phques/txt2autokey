@@ -31,8 +31,6 @@
                    3.551 seesaw           7.574 indir same finger
                   5.3 11.6 16.6 17.3 --.- --.- 17.3 18.9  9.0  4.0 Sh  1.0  1.8
 
------
-
 ----
 
 ./opt33 -2 englisch.txt -K kwezNew/stdUs33azBEAKL19pq2.cfg 
@@ -54,3 +52,77 @@
                    4.265 no hand altern. 43.961 two hand altern.
                    1.955 seesaw           7.532 indir same finger
                   3.7 12.5 18.9 13.0 --.- --.- 16.1 14.8 16.6  4.5 Sh  1.8  1.0
+
+---- 2019-03-16
+
+./opt27 -2 englisch.txt -K kwezNew/stdUs27azBEAKL19pq2.cfg 
+
+34               273.307 total effort   355.646 positional effort    left right
+                   2.095 same finger rp   1.983 shift same finger top 12.7 14.4
+  gui,   crlb     70.023 hand alternat.  27.473 shift hand alter. mid 26.4 24.1
+  phea   tsnf      2.502 inward/outward  25.278 inward or outward bot 12.3 10.0
+ ky.o    dwmv     13.421 adjacent        27.095 shift adjacent    sum 51.4 48.6
+                  6.2  9.1 20.0 16.2 --.- --.- 15.5 14.2 13.2  5.6 Sh  1.6  1.1
+
+  stdUs27azBEAKL19altpq2.cfg
+  =?;(   )z%[    
+  !q'x   j-"_    
+ *&+:    $#/]    
+                 
+
+
+./opt27 -t 4 -3 englisch.txt -K kwezNew/stdUs27azBEAKL19pq2.cfg 
+
+23               582.915 total effort   364.772 positional effort    left right
+                   1.617 same finger rp   0.764 shift same finger top 12.4 11.5
+  vcrm   .iuk     69.631 hand alternat.  29.058 shift hand alter. mid 24.0 26.4
+  psnt   aehg      2.279 inward/outward  26.147 inward or outward bot 12.7 13.0
+ wfld    o,yb     15.030 adjacent        20.232 shift adjacent    sum 49.1 50.9
+                   6.126 no hand altern. 42.852 two hand altern.
+                   4.219 seesaw           6.890 indir same finger
+                  5.8 11.7 16.7 14.9 --.- --.- 16.2 20.0  9.1  5.7 Sh  1.1  1.6
+
+swapped left/right
+ kui.  mrcv
+ ghea  tnsp
+ by,o  dlfw
+
+
+---
+
+./opt29 -2 englisch.txt -K kwezNew/stdUs29azBEAKL19pq2.cfg 
+
+16               199.885 total effort   338.525 positional effort    left right
+                   2.110 same finger rp   0.936 shift same finger top 10.9 14.3
+  qui.   crlb     70.982 hand alternat.  25.396 shift hand alter. mid 27.4 26.0
+  ghea, ftsnp      2.478 inward/outward  24.327 inward or outward bot 11.5  9.9
+ ky'o    dwmv     13.682 adjacent        27.794 shift adjacent    sum 49.8 50.2
+                  4.5  9.0 19.0 17.3 --.- --.- 17.5 14.2 13.2  5.4 Sh  1.8  1.0
+
+  kwezNew/stdUs29azBEAKL19altpq2.cfg
+  *!?(   &)%à
+  _jx;é `z-"/
+ [#ç:    $=+]
+
+
+./opt29 -t 4 -3 englisch.txt -K kwezNew/stdUs29azBEAKL19pq2.cfg 
+
+3                511.127 total effort   349.401 positional effort    left right
+                   1.606 same finger rp   0.936 shift same finger top 10.9 12.4
+  qui.   mrcv     70.982 hand alternat.  25.396 shift hand alter. mid 27.4 25.6
+  ghea, wtnsp      2.254 inward/outward  24.831 inward or outward bot 11.5 12.2
+ ky'o    dlfb     14.739 adjacent        22.401 shift adjacent    sum 49.8 50.2
+                   5.544 no hand altern. 43.913 two hand altern.
+                   3.715 seesaw           7.344 indir same finger
+                  4.5  9.0 19.0 17.3 --.- --.- 16.6 16.7 11.6  5.4 Sh  1.8  1.0
+
+!!just swapped, only diff is bit lower total effort!!
+13               508.434 total effort   349.401 positional effort    left right
+                   1.606 same finger rp   0.936 shift same finger top 12.4 10.9
+  vcrm   .iuq     70.982 hand alternat.  25.396 shift hand alter. mid 25.6 27.4
+  psntw ,aehg      2.254 inward/outward  24.831 inward or outward bot 12.2 11.5
+ bfld    o'yk     14.739 adjacent        22.401 shift adjacent    sum 50.2 49.8
+                   5.544 no hand altern. 43.913 two hand altern.
+                   3.715 seesaw           7.344 indir same finger
+                  5.4 11.6 16.7 16.6 --.- --.- 17.3 19.0  9.0  4.5 Sh  1.0  1.8
+
